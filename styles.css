@@ -941,3 +941,543 @@ section {
         font-size: 2.5rem;
     }
 }
+
+/* NAVIGATION ADDITIONS */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 1rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--text-white);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-purple);
+    transition: var(--transition-base);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-ctas {
+    display: flex;
+    align-items: center;
+}
+
+/* ACADEMY SECTION */
+.academy-section {
+    background: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.academy-lead-text {
+    font-size: 1.25rem;
+    color: var(--text-grey);
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+}
+
+.academy-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(220, 80, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* CURRICULUM ACCORDION */
+.curriculum-container {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.curriculum-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.curriculum-header h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.curriculum-header p {
+    color: var(--text-muted);
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordion-item {
+    background: rgba(30, 10, 70, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.accordion-item:hover {
+    border-color: rgba(220, 80, 255, 0.25);
+    background: rgba(30, 10, 70, 0.25);
+}
+
+.accordion-item.active {
+    border-color: rgba(244, 165, 0, 0.3);
+    background: rgba(30, 10, 70, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+}
+
+.week-number {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.week-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-white);
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+.accordion-icon {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    transition: transform var(--transition-base);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+    color: var(--accent-gold);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-inner {
+    padding: 0 2rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding-top: 1.5rem;
+}
+
+.accordion-inner h4 {
+    font-size: 1.1rem;
+    color: var(--text-white);
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.accordion-inner h4:first-of-type {
+    margin-top: 0;
+}
+
+.accordion-inner ul,
+.accordion-inner ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.accordion-inner li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-grey);
+}
+
+.accordion-inner li strong {
+    color: var(--text-white);
+}
+
+.assignment {
+    background: rgba(244, 165, 0, 0.05);
+    border: 1px dashed rgba(244, 165, 0, 0.25);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    color: var(--text-white);
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* COURSE FORMAT CARD */
+.course-format {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.format-card {
+    background: linear-gradient(135deg, rgba(220, 80, 255, 0.05) 0%, rgba(244, 165, 0, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+
+.format-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.format-card ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.format-card li {
+    font-size: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.format-card li::before {
+    content: '🚀';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.1rem;
+}
+
+/* PRICING GRID & CARDS */
+.pricing-options-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+    align-items: stretch;
+}
+
+.pricing-card.border-purple {
+    border: 1px solid rgba(220, 80, 255, 0.25);
+}
+
+.pricing-card.border-gold {
+    border: 1px solid rgba(244, 165, 0, 0.4);
+    position: relative;
+}
+
+.pricing-card.featured {
+    transform: scale(1.03);
+    background: rgba(30, 10, 70, 0.9);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(244, 165, 0, 0.1);
+}
+
+.badge-card {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(220, 80, 255, 0.1);
+    color: var(--accent-purple);
+    border: 1px solid rgba(220, 80, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.badge-card.gold {
+    background: rgba(244, 165, 0, 0.1);
+    color: var(--accent-gold);
+    border: 1px solid rgba(244, 165, 0, 0.3);
+}
+
+.corporate-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    margin-top: 3rem;
+    text-align: left;
+    gap: 2rem;
+}
+
+.corporate-banner-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.corporate-banner-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* ENROLLMENT WAITLIST SECTION */
+.enroll-section {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 6rem 0;
+}
+
+.enroll-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.enroll-card {
+    background: rgba(20, 10, 40, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 4rem 3rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.enroll-card h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.enroll-card p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.enroll-form {
+    text-align: left;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--text-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-purple);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(220, 80, 255, 0.15);
+}
+
+.form-group select option {
+    background: var(--bg-dark);
+    color: var(--text-white);
+}
+
+.form-message {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-message.success {
+    color: #00E676;
+}
+
+.form-message.error {
+    color: #FF4B4B;
+}
+
+/* CONSULTING SECTION */
+.consulting-section {
+    background: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.consulting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.consulting-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.consulting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(244, 165, 0, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.consulting-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.consulting-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.consulting-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.consulting-cta {
+    text-align: center;
+}
+
+.consulting-cta-inner {
+    background: linear-gradient(135deg, rgba(220, 80, 255, 0.05) 0%, rgba(244, 165, 0, 0.05) 100%);
+    border: 1px solid rgba(244, 165, 0, 0.2);
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.consulting-cta-inner h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.consulting-cta-inner p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* RESPONSIVE ADDITIONS */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Hide standard nav for simplicity on tablet/mobile */
+    }
+
+    .academy-benefits-grid,
+    .consulting-grid,
+    .pricing-options-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .corporate-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .format-card ul {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

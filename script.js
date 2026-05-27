@@ -76,4 +76,84 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = 'none';
         }
     });
+
+    // --- ACADEMY CURRICULUM ACCORDION ---
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const item = this.parentElement;
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.accordion-icon');
+            
+            // Check if item is already active
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('.accordion-content').style.maxHeight = null;
+                el.querySelector('.accordion-icon').textContent = '+';
+            });
+            
+            // If the clicked item was not active, open it
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.textContent = '-';
+            }
+        });
+    });
+
+    // Open first week by default on load
+    const firstAccordionHeader = document.querySelector('.accordion-header');
+    if (firstAccordionHeader) {
+        // Run slightly delayed to avoid transition bugs on load
+        setTimeout(() => {
+            firstAccordionHeader.click();
+        }, 300);
+    }
+
+    // --- ENQUIRY FORM SUBMISSION (Formspree) ---
+    // To activate: sign up at formspree.io, create a form, and replace the action URL
+    // in index.html with your endpoint: https://formspree.io/f/YOUR_FORM_ID
+    const enrollForm = document.getElementById('academy-enroll-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (enrollForm) {
+        enrollForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const origBtnText = submitBtn.innerHTML;
+            const formData = new FormData(this);
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="btn-text">Sending...</span>';
+            formStatus.className = 'form-message';
+            formStatus.textContent = '';
+
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    formStatus.className = 'form-message success';
+                    formStatus.textContent = '✨ Thank you — we\'ll be in touch within 48 hours.';
+                    enrollForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (err) {
+                formStatus.className = 'form-message error';
+                formStatus.textContent = 'Something went wrong. Please email us directly at naomi@clearedfortakeoff.com.au';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = origBtnText;
+            }
+        });
+    }
 });
