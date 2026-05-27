@@ -114,9 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
 
-    // --- ENQUIRY FORM SUBMISSION (Formspree) ---
-    // To activate: sign up at formspree.io, create a form, and replace the action URL
-    // in index.html with your endpoint: https://formspree.io/f/YOUR_FORM_ID
+    // --- ENQUIRY FORM SUBMISSION → MailerLite via /api/contact ---
     const enrollForm = document.getElementById('academy-enroll-form');
     const formStatus = document.getElementById('form-status');
 
@@ -126,18 +124,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const submitBtn = this.querySelector('button[type="submit"]');
             const origBtnText = submitBtn.innerHTML;
-            const formData = new FormData(this);
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="btn-text">Sending...</span>';
             formStatus.className = 'form-message';
             formStatus.textContent = '';
 
+            // Collect form values as JSON
+            const payload = {
+                name: document.getElementById('enroll-name').value,
+                email: document.getElementById('enroll-email').value,
+                role: document.getElementById('enroll-role').value,
+                enquiry_type: document.getElementById('enroll-package').value,
+                challenge: document.getElementById('enroll-challenge').value
+            };
+
             try {
-                const response = await fetch(this.action, {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
                 });
 
                 if (response.ok) {
@@ -145,11 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     formStatus.textContent = '✨ Thank you — we\'ll be in touch within 48 hours.';
                     enrollForm.reset();
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error('Submission failed');
                 }
             } catch (err) {
                 formStatus.className = 'form-message error';
-                formStatus.textContent = 'Something went wrong. Please email us directly at naomi@clearedfortakeoff.com.au';
+                formStatus.textContent = 'Something went wrong. Please email us directly at naomi@wildheartshq.com';
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = origBtnText;
