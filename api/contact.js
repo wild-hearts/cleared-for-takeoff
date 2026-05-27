@@ -5,7 +5,7 @@
 //   MAILERLITE_API_KEY  →  your MailerLite API token
 //   (Settings → Integrations → API in your MailerLite dashboard)
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     // Only accept POST
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
