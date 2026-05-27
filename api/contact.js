@@ -31,10 +31,10 @@ module.exports = async function handler(req, res) {
 
     // Map enquiry type to a readable label for MailerLite
     const enquiryLabels = {
-        'academy-standard': 'Academy Standard ($2,997)',
-        'academy-vip': 'Academy VIP ($4,997)',
+        'academy-cohort': 'Academy Live Cohort ($997)',
+        'academy-self-paced': 'Academy Self-Paced ($297)',
+        'workshop': 'Small Business Workshop ($2,497)',
         'consulting': 'Consulting / Organisation Training',
-        'corporate': 'Corporate Package ($12,997)',
         'general': 'General Enquiry'
     };
     const enquiryLabel = enquiryLabels[enquiry_type] || enquiry_type || 'Unknown';

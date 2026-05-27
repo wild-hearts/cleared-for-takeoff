@@ -710,16 +710,26 @@ section {
 
 .price-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 0.5rem 0;
 }
 
 .price-header h4 {
     margin: 0;
     font-size: 1.5rem;
+}
+
+.price-note {
+    flex-basis: 100%;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: -0.75rem;
 }
 
 .price {
@@ -1176,10 +1186,21 @@ section {
     margin-top: 1.5rem;
 }
 
+.module-fear {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(220, 80, 255, 0.3);
+    line-height: 1.5;
+}
+
 /* COURSE FORMAT CARD */
 .course-format {
-    max-width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .format-card {
@@ -1187,6 +1208,11 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 2.5rem;
+}
+
+.format-card-cohort {
+    background: linear-gradient(135deg, rgba(244, 165, 0, 0.07) 0%, rgba(220, 80, 255, 0.05) 100%);
+    border-color: rgba(244, 165, 0, 0.2);
 }
 
 .format-card h4 {
@@ -1457,7 +1483,8 @@ section {
 
     .academy-benefits-grid,
     .consulting-grid,
-    .pricing-options-container {
+    .pricing-options-container,
+    .course-format {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
