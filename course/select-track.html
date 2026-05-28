@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Track — Module 4</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a href="dashboard.html">← Back to dashboard</a>
+    </nav>
+</header>
+
+<div class="selection-page">
+
+    <div class="selection-intro">
+        <h1>Module 4 — Choose your track</h1>
+        <p>Pick one track for this module — the project or goal you want to work on. Each track is a ~25 minute deep-work session. You can come back to other tracks later.</p>
+    </div>
+
+    <p class="selection-counter">
+        <strong id="count-label">No track selected</strong>
+    </p>
+
+    <div class="path-grid" id="track-grid">
+
+        <div class="path-card" data-track="A" onclick="selectTrack(this)">
+            <div class="path-letter">A</div>
+            <h3>Write Something</h3>
+            <p>A memoir, family history, eulogy, speech, or piece of writing that has been waiting for the right tool.</p>
+        </div>
+
+        <div class="path-card" data-track="B" onclick="selectTrack(this)">
+            <div class="path-letter">B</div>
+            <h3>Start Something</h3>
+            <p>A business idea, community project, newsletter, or side income you have been turning over in your mind.</p>
+        </div>
+
+        <div class="path-card" data-track="C" onclick="selectTrack(this)">
+            <div class="path-letter">C</div>
+            <h3>Sort Something</h3>
+            <p>A retirement plan, renovation, significant trip, estate, or life transition that needs a proper plan.</p>
+        </div>
+
+        <div class="path-card" data-track="D" onclick="selectTrack(this)">
+            <div class="path-letter">D</div>
+            <h3>Learn Something</h3>
+            <p>A language, skill, creative practice, or subject — with AI as your tutor and practice partner.</p>
+        </div>
+
+    </div>
+
+    <button class="btn-primary" id="confirm-btn" onclick="confirmTrack()" disabled
+        style="max-width:320px;">
+        Confirm my track
+    </button>
+
+    <p style="margin-top:1rem; font-size:0.875rem; color:var(--text-muted);">
+        You can change your track later from the dashboard.
+    </p>
+
+</div>
+
+<script>
+    if (!localStorage.getItem('c4t_code') && !localStorage.getItem('c4t_preview')) {
+        window.location.href = 'index.html';
+    }
+
+    let selectedTrack = localStorage.getItem('c4t_track') || '';
+
+    // Restore UI
+    if (selectedTrack) {
+        const saved = document.querySelector(`[data-track="${selectedTrack}"]`);
+        if (saved) saved.classList.add('selected');
+        updateLabel();
+    }
+
+    function selectTrack(card) {
+        document.querySelectorAll('.path-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        selectedTrack = card.dataset.track;
+        updateLabel();
+    }
+
+    function updateLabel() {
+        const names = { A: 'Write Something', B: 'Start Something', C: 'Sort Something', D: 'Learn Something' };
+        document.getElementById('count-label').textContent = selectedTrack
+            ? `Track ${selectedTrack} selected — ${names[selectedTrack]}`
+            : 'No track selected';
+        document.getElementById('confirm-btn').disabled = !selectedTrack;
+    }
+
+    function confirmTrack() {
+        localStorage.setItem('c4t_track', selectedTrack);
+        window.location.href = 'watch.html?lesson=m04-intro';
+    }
+</script>
+
+</body>
+</html>

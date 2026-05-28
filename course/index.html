@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Access — Cleared For Takeoff</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a href="/">Back to site</a>
+    </nav>
+</header>
+
+<main class="access-page">
+    <div class="access-card">
+        <span class="icon">✈️</span>
+        <h1>Welcome back</h1>
+        <p>Enter your access code to continue the course, or try the free preview — no code required.</p>
+
+        <!-- Tab switcher -->
+        <div class="access-tabs">
+            <button class="access-tab active" data-tab="paid" onclick="switchTab('paid')">I have a code</button>
+            <button class="access-tab" data-tab="free" onclick="switchTab('free')">Free preview</button>
+        </div>
+
+        <!-- Paid access form -->
+        <div id="tab-paid">
+            <form class="access-form" id="access-form" onsubmit="submitCode(event)">
+                <div class="form-group">
+                    <label for="access-code">Your access code</label>
+                    <input
+                        type="text"
+                        id="access-code"
+                        placeholder="e.g. CFT-XXXX-XXXX"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                    >
+                </div>
+                <button type="submit" class="btn-primary" id="submit-btn">Continue to course</button>
+                <p class="form-error" id="form-error">That code doesn't look right. Please check it and try again.</p>
+            </form>
+
+            <p class="free-preview-link">
+                Don't have a code yet? <a href="/#pricing">See course options</a> or try the <a href="#" onclick="switchTab('free'); return false;">free preview</a> first.
+            </p>
+        </div>
+
+        <!-- Free preview -->
+        <div id="tab-free" style="display:none;">
+            <p style="color: var(--text-muted); font-size:0.9375rem; margin-bottom:1.5rem; text-align:left;">
+                Modules 1 and 2 are free. You'll need an access code to continue to Module 3 and beyond.
+            </p>
+            <button class="btn-primary" onclick="startFreePreview()">Start free preview</button>
+            <p class="free-preview-link" style="margin-top:1.25rem;">
+                Ready to get the full course? <a href="/#pricing">See options from $297</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+<script>
+    // ─── Check if already logged in ───────────────────────────────────────────
+    (function() {
+        const code = localStorage.getItem('c4t_code');
+        const preview = localStorage.getItem('c4t_preview');
+        if (code || preview) {
+            window.location.href = 'dashboard.html';
+        }
+    })();
+
+    // ─── Tab switcher ─────────────────────────────────────────────────────────
+    function switchTab(tab) {
+        document.getElementById('tab-paid').style.display = tab === 'paid' ? 'block' : 'none';
+        document.getElementById('tab-free').style.display = tab === 'free' ? 'block' : 'none';
+        document.querySelectorAll('.access-tab').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.tab === tab);
+        });
+    }
+
+    // ─── Access code submission ────────────────────────────────────────────────
+    async function submitCode(e) {
+        e.preventDefault();
+        const code  = document.getElementById('access-code').value.trim();
+        const btn   = document.getElementById('submit-btn');
+        const error = document.getElementById('form-error');
+
+        if (!code) return;
+
+        btn.disabled = true;
+        btn.textContent = 'Checking…';
+        error.classList.remove('visible');
+
+        try {
+            // Verify the code by requesting a known free lesson token
+            // The API returns 403 if the code is wrong, 200 if valid
+            const res = await fetch(`/api/video-token?lesson=m03-intro&code=${encodeURIComponent(code)}`);
+
+            if (res.status === 200 || res.status === 503) {
+                // 200 = valid code + video ready
+                // 503 = valid code but video not yet uploaded (still OK to grant access)
+                localStorage.setItem('c4t_code', code);
+                window.location.href = 'dashboard.html';
+            } else if (res.status === 403) {
+                error.classList.add('visible');
+                btn.disabled = false;
+                btn.textContent = 'Continue to course';
+            } else {
+                error.textContent = 'Something went wrong. Please try again.';
+                error.classList.add('visible');
+                btn.disabled = false;
+                btn.textContent = 'Continue to course';
+            }
+        } catch (err) {
+            error.textContent = 'Connection error. Please check your internet and try again.';
+            error.classList.add('visible');
+            btn.disabled = false;
+            btn.textContent = 'Continue to course';
+        }
+    }
+
+    // ─── Free preview ─────────────────────────────────────────────────────────
+    function startFreePreview() {
+        localStorage.setItem('c4t_preview', 'true');
+        window.location.href = 'dashboard.html';
+    }
+</script>
+
+</body>
+</html>

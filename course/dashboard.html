@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Course — Cleared For Takeoff</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a href="/" id="exit-link">← Back to site</a>
+        <a href="#" onclick="logout(); return false;" style="color:#F87171;">Sign out</a>
+    </nav>
+</header>
+
+<div class="page-wrap-wide">
+
+    <!-- Hero -->
+    <div class="dashboard-hero">
+        <h1 id="greeting">Your course</h1>
+        <p id="access-label">Loading…</p>
+        <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <p class="progress-label" id="progress-label"></p>
+    </div>
+
+    <!-- Module list (rendered by JS) -->
+    <div class="modules-grid" id="modules-grid">
+        <div style="text-align:center; padding:3rem; color:var(--text-muted);">Loading your course…</div>
+    </div>
+
+</div>
+
+<script>
+// ─── Course data (mirrored from video-library.js) ────────────────────────────
+// This is client-side only — no playback IDs are exposed here, just metadata.
+const MODULES = [
+    {
+        id: 1, title: 'Pre-Flight Checks', subtitle: 'Understanding AI before you use it', free: true,
+        lessons: [
+            { id: 'm01-intro',  title: 'Welcome to Cleared For Takeoff',          duration: '2:30'  },
+            { id: 'm01-l01',    title: 'What AI Actually Is',                     duration: '10:30' },
+            { id: 'm01-l02',    title: 'Three Things AI Does Well (and Badly)',   duration: '10:00' },
+            { id: 'm01-l03',    title: 'Choosing Your First Tool',                duration: '11:00' },
+            { id: 'm01-l04',    title: 'Signing Up Safely',                       duration: '10:00' },
+            { id: 'm01-l05',    title: 'Setting Up Your Account',                 duration: '10:00' },
+            { id: 'm01-l06',    title: 'Your First Hello',                        duration: '9:00'  },
+        ]
+    },
+    {
+        id: 2, title: 'Cleared For Taxi', subtitle: 'How to talk to AI well', free: true,
+        lessons: [
+            { id: 'm02-intro',  title: 'Module 2 Introduction',                              duration: '2:30'  },
+            { id: 'm02-l01',    title: 'Prompting in Plain English',                         duration: '12:00' },
+            { id: 'm02-l02',    title: 'The Four-Line Prompt',                               duration: '12:00' },
+            { id: 'm02-l03',    title: 'Ask AI to Ask You Better Questions',                 duration: '12:00' },
+            { id: 'm02-l04',    title: 'When to Be Specific, When to Be Vague, When to Start Over', duration: '12:00' },
+            { id: 'm02-l05',    title: 'Mistakes Everyone Makes',                            duration: '11:00' },
+            { id: 'm02-l06',    title: 'Saving and Reusing Prompts',                         duration: '10:00' },
+        ]
+    },
+    {
+        id: 3, title: 'Cleared For Takeoff', subtitle: 'AI for your actual life — pick 3 paths', free: false,
+        pickYourPath: true,
+        paths: [
+            { id: 'm03-path-a', letter: 'A', title: 'Writing Emails and Letters', duration: '14:00' },
+            { id: 'm03-path-b', letter: 'B', title: 'Summarising Documents',      duration: '13:00' },
+            { id: 'm03-path-c', letter: 'C', title: 'Planning',                   duration: '14:00' },
+            { id: 'm03-path-d', letter: 'D', title: 'Research and Fact-Finding',  duration: '14:00' },
+            { id: 'm03-path-e', letter: 'E', title: 'Health Information',         duration: '14:00' },
+            { id: 'm03-path-f', letter: 'F', title: 'Money and Admin',            duration: '14:00' },
+        ],
+        lessons: [
+            { id: 'm03-intro',  title: 'Module 3 Introduction', duration: '3:00', required: true },
+            { id: 'm03-path-a', title: 'Path A: Writing Emails and Letters', duration: '14:00', path: 'A' },
+            { id: 'm03-path-b', title: 'Path B: Summarising Documents',      duration: '13:00', path: 'B' },
+            { id: 'm03-path-c', title: 'Path C: Planning',                   duration: '14:00', path: 'C' },
+            { id: 'm03-path-d', title: 'Path D: Research and Fact-Finding',  duration: '14:00', path: 'D' },
+            { id: 'm03-path-e', title: 'Path E: Health Information',         duration: '14:00', path: 'E' },
+            { id: 'm03-path-f', title: 'Path F: Money and Admin',            duration: '14:00', path: 'F' },
+            { id: 'm03-close',  title: 'Module 3 Close',                     duration: '4:00',  required: true },
+        ]
+    },
+    {
+        id: 4, title: 'In The Air', subtitle: 'Deep work on one real project — pick 1 track', free: false,
+        pickYourTrack: true,
+        tracks: [
+            { id: 'm04-track-a', letter: 'A', title: 'Write Something', duration: '25:00' },
+            { id: 'm04-track-b', letter: 'B', title: 'Start Something', duration: '25:00' },
+            { id: 'm04-track-c', letter: 'C', title: 'Sort Something',  duration: '25:00' },
+            { id: 'm04-track-d', letter: 'D', title: 'Learn Something', duration: '25:00' },
+        ],
+        lessons: [
+            { id: 'm04-intro',    title: 'Module 4 Introduction', duration: '4:00',  required: true },
+            { id: 'm04-track-a',  title: 'Track A: Write Something', duration: '25:00', track: 'A' },
+            { id: 'm04-track-b',  title: 'Track B: Start Something', duration: '25:00', track: 'B' },
+            { id: 'm04-track-c',  title: 'Track C: Sort Something',  duration: '25:00', track: 'C' },
+            { id: 'm04-track-d',  title: 'Track D: Learn Something', duration: '25:00', track: 'D' },
+            { id: 'm04-close',    title: 'Module 4 Close',           duration: '4:00',  required: true },
+        ]
+    },
+    {
+        id: 5, title: 'Holding Pattern', subtitle: 'What to watch for, what to protect', free: false,
+        lessons: [
+            { id: 'm05-intro',  title: 'Module 5 Introduction',                              duration: '4:00'  },
+            { id: 'm05-l01',    title: 'Hallucinations — What They Are and How to Spot Them',duration: '11:00' },
+            { id: 'm05-l02',    title: 'Confidently Wrong and Quietly Right',                duration: '11:00' },
+            { id: 'm05-l03',    title: 'Scam Awareness',                                     duration: '12:00' },
+            { id: 'm05-l04',    title: 'Privacy and Australian Law',                         duration: '10:00' },
+            { id: 'm05-l05',    title: 'What Never to Put Into an AI Tool',                  duration: '10:00' },
+            { id: 'm05-l06',    title: 'Trust, Verify, Walk Away',                          duration: '11:00' },
+        ]
+    },
+    {
+        id: 6, title: 'Final Approach', subtitle: 'Building a lasting practice', free: false,
+        lessons: [
+            { id: 'm06-intro',  title: 'Module 6 Introduction',                         duration: '3:00'  },
+            { id: 'm06-l01',    title: 'Building Your Routine',                         duration: '10:00' },
+            { id: 'm06-l02',    title: 'When Not to Use AI',                            duration: '10:00' },
+            { id: 'm06-l03',    title: 'Staying Current — Following AI Without Panic',  duration: '10:00' },
+            { id: 'm06-l04',    title: 'Where to Go Next',                              duration: '10:00' },
+            { id: 'm06-l05',    title: 'Bringing Someone Along',                        duration: '10:00' },
+            { id: 'm06-l06',    title: 'Final Reflection and Graduation',               duration: '12:00' },
+        ]
+    }
+];
+
+// ─── State helpers ────────────────────────────────────────────────────────────
+const getCode     = () => localStorage.getItem('c4t_code');
+const isPreview   = () => !!localStorage.getItem('c4t_preview');
+const getProgress = () => JSON.parse(localStorage.getItem('c4t_progress') || '{}');
+const getPaths    = () => JSON.parse(localStorage.getItem('c4t_paths') || '[]');
+const getTrack    = () => localStorage.getItem('c4t_track') || '';
+
+function hasAccess(mod) {
+    if (mod.free) return true;
+    if (isPreview()) return false;
+    return !!getCode();
+}
+
+function isLessonVisible(lesson, mod) {
+    if (!lesson.path && !lesson.track) return true; // required lessons always shown
+    const paths = getPaths();
+    const track = getTrack();
+    if (lesson.path) return paths.includes(lesson.path);
+    if (lesson.track) return lesson.track === track;
+    return true;
+}
+
+// ─── Auth gate ────────────────────────────────────────────────────────────────
+(function() {
+    if (!getCode() && !isPreview()) {
+        window.location.href = 'index.html';
+    }
+})();
+
+// ─── Logout ───────────────────────────────────────────────────────────────────
+function logout() {
+    localStorage.removeItem('c4t_code');
+    localStorage.removeItem('c4t_preview');
+    window.location.href = 'index.html';
+}
+
+// ─── Progress tracking ────────────────────────────────────────────────────────
+function getTotalLessons() {
+    let total = 0;
+    const paths = getPaths();
+    const track = getTrack();
+    for (const mod of MODULES) {
+        for (const l of mod.lessons) {
+            if (!l.path && !l.track) { total++; continue; }
+            if (l.path && paths.includes(l.path)) total++;
+            if (l.track && l.track === track) total++;
+        }
+    }
+    return total;
+}
+
+function getCompletedCount() {
+    const progress = getProgress();
+    return Object.values(progress).filter(Boolean).length;
+}
+
+// ─── Render dashboard ─────────────────────────────────────────────────────────
+function render() {
+    const progress  = getProgress();
+    const paths     = getPaths();
+    const track     = getTrack();
+    const preview   = isPreview();
+    const total     = getTotalLessons();
+    const completed = getCompletedCount();
+    const pct       = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+    // Header
+    document.getElementById('greeting').textContent = preview
+        ? 'Free Preview — Modules 1 & 2'
+        : 'Your course';
+
+    document.getElementById('access-label').textContent = preview
+        ? 'You\'re viewing the free preview. Modules 1 and 2 are fully unlocked.'
+        : 'Full course access';
+
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-label').textContent =
+        completed === 0 ? 'No lessons completed yet — pick up where you left off below'
+        : `${completed} of ${total} lessons completed`;
+
+    // Modules
+    const grid = document.getElementById('modules-grid');
+    grid.innerHTML = '';
+
+    for (const mod of MODULES) {
+        const accessible = hasAccess(mod);
+        const needsPathSelection = accessible && mod.pickYourPath && paths.length < 3;
+        const needsTrackSelection = accessible && mod.pickYourTrack && !track;
+
+        // Count completions for this module
+        const moduleLessons = mod.lessons.filter(l => isLessonVisible(l, mod));
+        const moduleDone    = moduleLessons.filter(l => progress[l.id]).length;
+        const allDone       = moduleLessons.length > 0 && moduleDone === moduleLessons.length;
+
+        // Module card
+        const card = document.createElement('div');
+        card.className = 'module-card';
+
+        const numClass = allDone ? 'done' : !accessible ? 'locked' : '';
+        const numContent = allDone ? '✓' : mod.id;
+
+        const badgeClass = mod.free ? 'badge-free'
+            : !accessible ? 'badge-locked'
+            : 'badge-unlocked';
+        const badgeText = mod.free ? 'Free preview'
+            : !accessible ? '🔒 Locked'
+            : 'Unlocked';
+
+        card.innerHTML = `
+            <div class="module-card-header" onclick="toggleModule(this)">
+                <div class="module-meta">
+                    <div class="module-number ${numClass}">${numContent}</div>
+                    <div class="module-info">
+                        <h3>${mod.title}</h3>
+                        <p class="module-subtitle">${mod.subtitle}</p>
+                    </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                    <span class="module-badge ${badgeClass}">${badgeText}</span>
+                    <span class="module-chevron">▾</span>
+                </div>
+            </div>
+            <div class="lesson-list">${renderLessons(mod, accessible, needsPathSelection, needsTrackSelection, progress, paths, track)}</div>
+        `;
+
+        // Auto-open first accessible module with no completions
+        if (accessible && moduleDone === 0 && grid.querySelectorAll('.module-card.open').length === 0) {
+            card.classList.add('open');
+        }
+
+        grid.appendChild(card);
+    }
+}
+
+function renderLessons(mod, accessible, needsPathSelection, needsTrackSelection, progress, paths, track) {
+    if (!accessible) {
+        return `<div style="padding:1.25rem 1.75rem; color:var(--text-muted); font-size:0.9rem;">
+            🔒 Unlock with a course access code. <a href="/#pricing" style="color:var(--accent-purple);">See options</a>
+        </div>`;
+    }
+
+    let html = '';
+
+    if (needsPathSelection) {
+        html += `<div class="pick-banner">
+            <span>Pick your 3 paths to unlock Module 3 lessons</span>
+            <a href="select-paths.html">Choose paths →</a>
+        </div>`;
+    }
+
+    if (needsTrackSelection) {
+        html += `<div class="pick-banner">
+            <span>Choose your track to unlock Module 4</span>
+            <a href="select-track.html">Choose track →</a>
+        </div>`;
+    }
+
+    for (const lesson of mod.lessons) {
+        const visible   = isLessonVisible(lesson, mod);
+        const done      = !!progress[lesson.id];
+        const isPath    = !!lesson.path;
+        const isTrack   = !!lesson.track;
+        const greyedOut = (isPath && !paths.includes(lesson.path)) ||
+                          (isTrack && lesson.track !== track);
+
+        if (greyedOut && (needsPathSelection || needsTrackSelection)) continue;
+
+        const statusClass = done ? 'done' : '';
+        const statusIcon  = done ? '✓' : '';
+        const itemClass   = greyedOut ? 'lesson-item locked' : 'lesson-item';
+        const href        = greyedOut ? '#' : `watch.html?lesson=${lesson.id}`;
+
+        html += `<a class="${itemClass}" href="${href}" ${greyedOut ? 'onclick="return false"' : ''}>
+            <div class="lesson-status ${statusClass}">${statusIcon}</div>
+            <span class="lesson-title">${lesson.title}</span>
+            <span class="lesson-duration">${lesson.duration}</span>
+        </a>`;
+    }
+
+    return html;
+}
+
+function toggleModule(header) {
+    const card = header.closest('.module-card');
+    card.classList.toggle('open');
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+render();
+</script>
+
+</body>
+</html>

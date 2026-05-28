@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Paths — Module 3</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a href="dashboard.html">← Back to dashboard</a>
+    </nav>
+</header>
+
+<div class="selection-page">
+
+    <div class="selection-intro">
+        <h1>Module 3 — Pick your 3 paths</h1>
+        <p>Each path covers a specific type of task. Choose the three that are most useful to you right now. You can come back and watch the others later.</p>
+    </div>
+
+    <p class="selection-counter">
+        <strong id="count-label">0 of 3 selected</strong>
+    </p>
+
+    <div class="path-grid" id="path-grid">
+
+        <div class="path-card" data-path="A" onclick="togglePath(this)">
+            <div class="path-letter">A</div>
+            <h3>Writing Emails and Letters</h3>
+            <p>Complaints, requests, difficult messages, and replies you are not sure how to handle.</p>
+        </div>
+
+        <div class="path-card" data-path="B" onclick="togglePath(this)">
+            <div class="path-letter">B</div>
+            <h3>Summarising Documents</h3>
+            <p>Long documents explained in plain English — leases, policies, government letters, medical reports.</p>
+        </div>
+
+        <div class="path-card" data-path="C" onclick="togglePath(this)">
+            <div class="path-letter">C</div>
+            <h3>Planning</h3>
+            <p>Trips, events, home projects, and complex family logistics.</p>
+        </div>
+
+        <div class="path-card" data-path="D" onclick="togglePath(this)">
+            <div class="path-letter">D</div>
+            <h3>Research and Fact-Finding</h3>
+            <p>Understanding how things work, comparing options, preparing for appointments.</p>
+        </div>
+
+        <div class="path-card" data-path="E" onclick="togglePath(this)">
+            <div class="path-letter">E</div>
+            <h3>Health Information</h3>
+            <p>Understanding diagnoses, medications, and the health system — without replacing your doctor.</p>
+        </div>
+
+        <div class="path-card" data-path="F" onclick="togglePath(this)">
+            <div class="path-letter">F</div>
+            <h3>Money and Admin</h3>
+            <p>Financial statements, government agencies, insurance, superannuation, and budgeting basics.</p>
+        </div>
+
+    </div>
+
+    <button class="btn-primary" id="confirm-btn" onclick="confirmPaths()" disabled
+        style="max-width:320px;">
+        Confirm my 3 paths
+    </button>
+
+    <p style="margin-top:1rem; font-size:0.875rem; color:var(--text-muted);">
+        You can change your paths later from the dashboard.
+    </p>
+
+</div>
+
+<script>
+    if (!localStorage.getItem('c4t_code') && !localStorage.getItem('c4t_preview')) {
+        window.location.href = 'index.html';
+    }
+
+    // Load saved selection
+    let selected = JSON.parse(localStorage.getItem('c4t_paths') || '[]');
+
+    // Restore UI
+    document.querySelectorAll('.path-card').forEach(card => {
+        if (selected.includes(card.dataset.path)) {
+            card.classList.add('selected');
+        }
+    });
+    updateCounter();
+
+    function togglePath(card) {
+        const path = card.dataset.path;
+        if (selected.includes(path)) {
+            selected = selected.filter(p => p !== path);
+            card.classList.remove('selected');
+        } else if (selected.length < 3) {
+            selected.push(path);
+            card.classList.add('selected');
+        }
+        updateCounter();
+    }
+
+    function updateCounter() {
+        document.getElementById('count-label').textContent = `${selected.length} of 3 selected`;
+        document.getElementById('confirm-btn').disabled = selected.length !== 3;
+    }
+
+    function confirmPaths() {
+        localStorage.setItem('c4t_paths', JSON.stringify(selected));
+        window.location.href = 'watch.html?lesson=m03-intro';
+    }
+</script>
+
+</body>
+</html>

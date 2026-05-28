@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading… — Cleared For Takeoff</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+    <!-- Mux player web component -->
+    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" type="module" defer></script>
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a href="dashboard.html">← All modules</a>
+    </nav>
+</header>
+
+<!-- Watch layout: player + sidebar -->
+<div class="watch-layout" id="watch-layout" style="display:none;">
+
+    <!-- Main: player + title + nav -->
+    <div class="watch-main">
+
+        <div class="player-wrap" id="player-wrap">
+            <div class="player-placeholder" id="player-placeholder">
+                <div class="player-spinner"></div>
+                <p id="player-status">Loading…</p>
+            </div>
+        </div>
+
+        <h1 class="watch-title" id="watch-title"></h1>
+        <div class="watch-meta">
+            <span id="module-label"></span>
+            <span id="duration-label"></span>
+        </div>
+
+        <!-- Mark complete / incomplete -->
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+            <button class="btn-primary" id="complete-btn"
+                style="width:auto; padding:0.6rem 1.25rem; font-size:0.875rem;"
+                onclick="toggleComplete()">
+                Mark as complete
+            </button>
+            <span id="complete-status" style="font-size:0.875rem; color:var(--text-muted);"></span>
+        </div>
+
+        <!-- Prev / Next -->
+        <div class="lesson-nav">
+            <button class="btn-nav" id="btn-prev" onclick="navLesson(-1)">
+                <span class="nav-label">← Previous</span>
+                <span class="nav-title" id="prev-title">—</span>
+            </button>
+            <button class="btn-nav next" id="btn-next" onclick="navLesson(1)">
+                <span class="nav-label">Next →</span>
+                <span class="nav-title" id="next-title">—</span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Sidebar: lesson list for this module -->
+    <div class="watch-sidebar">
+        <div class="sidebar-module">
+            <div class="sidebar-module-title" id="sidebar-module-title"></div>
+            <div class="sidebar-lesson-list" id="sidebar-lesson-list"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Error state -->
+<div class="state-box" id="error-state" style="display:none;">
+    <div class="state-icon">⚠️</div>
+    <h2 id="error-title">Something went wrong</h2>
+    <p id="error-msg">Please try again or return to the dashboard.</p>
+    <a href="dashboard.html" class="btn-primary" style="display:inline-block; width:auto; padding:0.75rem 2rem; margin-top:1rem;">
+        Back to dashboard
+    </a>
+</div>
+
+<script>
+// ─── Course data (same as dashboard) ─────────────────────────────────────────
+const MODULES = [
+    {
+        id: 1, title: 'Pre-Flight Checks', free: true,
+        lessons: [
+            { id: 'm01-intro',  title: 'Welcome to Cleared For Takeoff',         duration: '2:30'  },
+            { id: 'm01-l01',    title: 'What AI Actually Is',                    duration: '10:30' },
+            { id: 'm01-l02',    title: 'Three Things AI Does Well (and Badly)',  duration: '10:00' },
+            { id: 'm01-l03',    title: 'Choosing Your First Tool',               duration: '11:00' },
+            { id: 'm01-l04',    title: 'Signing Up Safely',                      duration: '10:00' },
+            { id: 'm01-l05',    title: 'Setting Up Your Account',                duration: '10:00' },
+            { id: 'm01-l06',    title: 'Your First Hello',                       duration: '9:00'  },
+        ]
+    },
+    {
+        id: 2, title: 'Cleared For Taxi', free: true,
+        lessons: [
+            { id: 'm02-intro',  title: 'Module 2 Introduction',                              duration: '2:30'  },
+            { id: 'm02-l01',    title: 'Prompting in Plain English',                         duration: '12:00' },
+            { id: 'm02-l02',    title: 'The Four-Line Prompt',                               duration: '12:00' },
+            { id: 'm02-l03',    title: 'Ask AI to Ask You Better Questions',                 duration: '12:00' },
+            { id: 'm02-l04',    title: 'When to Be Specific, When to Be Vague, When to Start Over', duration: '12:00' },
+            { id: 'm02-l05',    title: 'Mistakes Everyone Makes',                            duration: '11:00' },
+            { id: 'm02-l06',    title: 'Saving and Reusing Prompts',                         duration: '10:00' },
+        ]
+    },
+    {
+        id: 3, title: 'Cleared For Takeoff', free: false, pickYourPath: true,
+        lessons: [
+            { id: 'm03-intro',  title: 'Module 3 Introduction',               duration: '3:00',  required: true },
+            { id: 'm03-path-a', title: 'Path A: Writing Emails and Letters',  duration: '14:00', path: 'A' },
+            { id: 'm03-path-b', title: 'Path B: Summarising Documents',       duration: '13:00', path: 'B' },
+            { id: 'm03-path-c', title: 'Path C: Planning',                    duration: '14:00', path: 'C' },
+            { id: 'm03-path-d', title: 'Path D: Research and Fact-Finding',   duration: '14:00', path: 'D' },
+            { id: 'm03-path-e', title: 'Path E: Health Information',          duration: '14:00', path: 'E' },
+            { id: 'm03-path-f', title: 'Path F: Money and Admin',             duration: '14:00', path: 'F' },
+            { id: 'm03-close',  title: 'Module 3 Close',                      duration: '4:00',  required: true },
+        ]
+    },
+    {
+        id: 4, title: 'In The Air', free: false, pickYourTrack: true,
+        lessons: [
+            { id: 'm04-intro',    title: 'Module 4 Introduction',    duration: '4:00',  required: true },
+            { id: 'm04-track-a',  title: 'Track A: Write Something', duration: '25:00', track: 'A' },
+            { id: 'm04-track-b',  title: 'Track B: Start Something', duration: '25:00', track: 'B' },
+            { id: 'm04-track-c',  title: 'Track C: Sort Something',  duration: '25:00', track: 'C' },
+            { id: 'm04-track-d',  title: 'Track D: Learn Something', duration: '25:00', track: 'D' },
+            { id: 'm04-close',    title: 'Module 4 Close',           duration: '4:00',  required: true },
+        ]
+    },
+    {
+        id: 5, title: 'Holding Pattern', free: false,
+        lessons: [
+            { id: 'm05-intro',  title: 'Module 5 Introduction',                              duration: '4:00'  },
+            { id: 'm05-l01',    title: 'Hallucinations — What They Are and How to Spot Them',duration: '11:00' },
+            { id: 'm05-l02',    title: 'Confidently Wrong and Quietly Right',                duration: '11:00' },
+            { id: 'm05-l03',    title: 'Scam Awareness',                                     duration: '12:00' },
+            { id: 'm05-l04',    title: 'Privacy and Australian Law',                         duration: '10:00' },
+            { id: 'm05-l05',    title: 'What Never to Put Into an AI Tool',                  duration: '10:00' },
+            { id: 'm05-l06',    title: 'Trust, Verify, Walk Away',                          duration: '11:00' },
+        ]
+    },
+    {
+        id: 6, title: 'Final Approach', free: false,
+        lessons: [
+            { id: 'm06-intro',  title: 'Module 6 Introduction',                         duration: '3:00'  },
+            { id: 'm06-l01',    title: 'Building Your Routine',                         duration: '10:00' },
+            { id: 'm06-l02',    title: 'When Not to Use AI',                            duration: '10:00' },
+            { id: 'm06-l03',    title: 'Staying Current — Following AI Without Panic',  duration: '10:00' },
+            { id: 'm06-l04',    title: 'Where to Go Next',                              duration: '10:00' },
+            { id: 'm06-l05',    title: 'Bringing Someone Along',                        duration: '10:00' },
+            { id: 'm06-l06',    title: 'Final Reflection and Graduation',               duration: '12:00' },
+        ]
+    }
+];
+
+// Build flat lesson list (respecting chosen paths/track)
+function buildLessonOrder() {
+    const paths = JSON.parse(localStorage.getItem('c4t_paths') || '[]');
+    const track = localStorage.getItem('c4t_track') || '';
+    const list  = [];
+
+    for (const mod of MODULES) {
+        for (const lesson of mod.lessons) {
+            if (lesson.path && !paths.includes(lesson.path)) continue;
+            if (lesson.track && lesson.track !== track) continue;
+            list.push({ ...lesson, moduleId: mod.id, moduleTitle: mod.title, moduleFree: mod.free });
+        }
+    }
+    return list;
+}
+
+// ─── State ────────────────────────────────────────────────────────────────────
+const getCode     = () => localStorage.getItem('c4t_code');
+const isPreview   = () => !!localStorage.getItem('c4t_preview');
+const getProgress = () => JSON.parse(localStorage.getItem('c4t_progress') || '{}');
+function saveProgress(lessonId, done) {
+    const p = getProgress();
+    if (done) p[lessonId] = true; else delete p[lessonId];
+    localStorage.setItem('c4t_progress', JSON.stringify(p));
+}
+
+// ─── Auth gate ────────────────────────────────────────────────────────────────
+if (!getCode() && !isPreview()) {
+    window.location.href = 'index.html';
+}
+
+// ─── Current lesson ───────────────────────────────────────────────────────────
+const params     = new URLSearchParams(window.location.search);
+const lessonId   = params.get('lesson');
+const lessonOrder = buildLessonOrder();
+const lessonIdx  = lessonOrder.findIndex(l => l.id === lessonId);
+
+function showError(title, msg) {
+    document.getElementById('error-title').textContent = title;
+    document.getElementById('error-msg').textContent   = msg;
+    document.getElementById('error-state').style.display = 'block';
+    document.getElementById('watch-layout').style.display = 'none';
+}
+
+if (!lessonId || lessonIdx === -1) {
+    showError('Lesson not found', 'That lesson doesn\'t exist or hasn\'t been added to your course yet.');
+} else {
+    init();
+}
+
+async function init() {
+    const lesson = lessonOrder[lessonIdx];
+    document.title = `${lesson.title} — Cleared For Takeoff`;
+
+    // Check access
+    if (!lesson.moduleFree && isPreview()) {
+        showError('Full course required', 'This lesson is not included in the free preview. Get full access to continue.');
+        return;
+    }
+
+    // Show layout
+    document.getElementById('watch-layout').style.display = '';
+
+    // Populate metadata
+    document.getElementById('watch-title').textContent  = lesson.title;
+    document.getElementById('module-label').textContent = `Module ${lesson.moduleId}: ${lesson.moduleTitle}`;
+    document.getElementById('duration-label').textContent = lesson.duration;
+
+    // Sidebar
+    renderSidebar(lesson);
+
+    // Nav buttons
+    const prev = lessonOrder[lessonIdx - 1];
+    const next = lessonOrder[lessonIdx + 1];
+
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+
+    btnPrev.disabled = !prev;
+    btnNext.disabled = !next;
+    if (prev) document.getElementById('prev-title').textContent = prev.title;
+    if (next) document.getElementById('next-title').textContent = next.title;
+
+    // Complete button state
+    updateCompleteButton(lesson.id);
+
+    // Load video
+    await loadVideo(lesson);
+}
+
+// ─── Load video via Mux ───────────────────────────────────────────────────────
+async function loadVideo(lesson) {
+    const code = getCode() || '';
+    const url  = `/api/video-token?lesson=${encodeURIComponent(lesson.id)}&code=${encodeURIComponent(code)}`;
+
+    try {
+        const res  = await fetch(url);
+        const data = await res.json();
+
+        if (res.status === 503) {
+            // Video not yet uploaded — show friendly message
+            showPlayerMessage('🎬', 'Coming soon', 'This lesson is being prepared. Check back shortly.');
+            return;
+        }
+
+        if (!res.ok) {
+            showPlayerMessage('🔒', 'Access required', data.error || 'You need a valid access code to watch this lesson.');
+            return;
+        }
+
+        // Mount the Mux player
+        mountPlayer(data.playbackId, data.token, lesson.title);
+
+    } catch (err) {
+        showPlayerMessage('⚠️', 'Could not load video', 'Please check your connection and refresh the page.');
+    }
+}
+
+function mountPlayer(playbackId, token, title) {
+    const wrap = document.getElementById('player-wrap');
+    wrap.innerHTML = ''; // Remove placeholder
+
+    const player = document.createElement('mux-player');
+    player.setAttribute('playback-id', playbackId);
+    if (token) player.setAttribute('playback-token', token);
+    player.setAttribute('stream-type', 'on-demand');
+    player.setAttribute('metadata-video-title', title);
+    player.setAttribute('accent-color', '#DC50FF');
+    player.style.width  = '100%';
+    player.style.height = '100%';
+    player.style.display = 'block';
+
+    // Mark as complete when video ends
+    player.addEventListener('ended', () => {
+        saveProgress(lessonId, true);
+        updateCompleteButton(lessonId);
+    });
+
+    wrap.appendChild(player);
+}
+
+function showPlayerMessage(icon, title, msg) {
+    document.getElementById('player-placeholder').innerHTML = `
+        <div style="font-size:2rem; margin-bottom:0.5rem;">${icon}</div>
+        <strong style="color:var(--text-white);">${title}</strong>
+        <p style="font-size:0.875rem; max-width:280px; text-align:center;">${msg}</p>
+    `;
+}
+
+// ─── Sidebar ──────────────────────────────────────────────────────────────────
+function renderSidebar(currentLesson) {
+    const mod = MODULES.find(m => m.id === currentLesson.moduleId);
+    if (!mod) return;
+
+    const paths = JSON.parse(localStorage.getItem('c4t_paths') || '[]');
+    const track = localStorage.getItem('c4t_track') || '';
+    const progress = getProgress();
+
+    document.getElementById('sidebar-module-title').textContent =
+        `Module ${mod.id}: ${mod.title}`;
+
+    const list = document.getElementById('sidebar-lesson-list');
+    list.innerHTML = '';
+
+    for (const l of mod.lessons) {
+        if (l.path && !paths.includes(l.path)) continue;
+        if (l.track && l.track !== track) continue;
+
+        const isCurrent = l.id === currentLesson.id;
+        const isDone    = !!progress[l.id];
+
+        const a = document.createElement('a');
+        a.className = `sidebar-lesson${isCurrent ? ' active' : ''}`;
+        a.href = `watch.html?lesson=${l.id}`;
+        a.innerHTML = `
+            <div class="sidebar-dot ${isDone ? 'done' : isCurrent ? 'active' : ''}">${isDone ? '✓' : ''}</div>
+            <span class="sidebar-lesson-title">${l.title}</span>
+        `;
+        list.appendChild(a);
+    }
+}
+
+// ─── Progress ─────────────────────────────────────────────────────────────────
+function toggleComplete() {
+    const progress = getProgress();
+    const done     = !!progress[lessonId];
+    saveProgress(lessonId, !done);
+    updateCompleteButton(lessonId);
+    renderSidebar(lessonOrder[lessonIdx]);
+}
+
+function updateCompleteButton(id) {
+    const done = !!getProgress()[id];
+    const btn  = document.getElementById('complete-btn');
+    const stat = document.getElementById('complete-status');
+    btn.textContent = done ? 'Mark as incomplete' : 'Mark as complete';
+    btn.style.background = done ? 'rgba(34,197,94,0.2)' : '';
+    btn.style.color = done ? 'var(--accent-green)' : '';
+    btn.style.borderColor = done ? 'var(--accent-green)' : '';
+    stat.textContent = done ? '✓ Completed' : '';
+}
+
+// ─── Navigation ───────────────────────────────────────────────────────────────
+function navLesson(dir) {
+    const target = lessonOrder[lessonIdx + dir];
+    if (target) {
+        window.location.href = `watch.html?lesson=${target.id}`;
+    }
+}
+</script>
+
+</body>
+</html>
