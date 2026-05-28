@@ -20,10 +20,10 @@
 </header>
 
 <main class="access-page">
-    <div class="access-card">
+    <div class="access-card" id="access-card">
         <span class="icon">✈️</span>
-        <h1>Welcome back</h1>
-        <p>Enter your access code to continue the course, or try the free preview — no code required.</p>
+        <h1 id="page-heading">Welcome back</h1>
+        <p id="page-subtext">Enter your access code to continue the course, or try the free preview — no code required.</p>
 
         <!-- Tab switcher -->
         <div class="access-tabs">
@@ -68,6 +68,15 @@
 </main>
 
 <script>
+    // ─── Post-purchase welcome message ───────────────────────────────────────
+    (function() {
+        if (new URLSearchParams(window.location.search).get('welcome') === '1') {
+            document.getElementById('page-heading').textContent = 'Payment successful!';
+            document.getElementById('page-subtext').innerHTML =
+                '🎉 Thank you — you\'re in! Check your inbox for your access code, then enter it below to get started.';
+        }
+    })();
+
     // ─── Check if already logged in ───────────────────────────────────────────
     (function() {
         const code = localStorage.getItem('c4t_code');
