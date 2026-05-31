@@ -237,6 +237,94 @@ section {
     overflow: hidden;
 }
 
+/* Module preview stack — hero visual for academy landing page */
+.module-preview-stack {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(220, 80, 255, 0.05);
+}
+
+.module-preview-header {
+    background: rgba(244, 165, 0, 0.12);
+    border-bottom: 1px solid rgba(244, 165, 0, 0.2);
+    padding: 0.875rem 1.25rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--accent-gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.module-row {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background var(--transition-fast);
+}
+
+.module-row:last-child {
+    border-bottom: none;
+}
+
+.module-row.free {
+    background: rgba(220, 80, 255, 0.04);
+}
+
+.mod-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.module-row.free .mod-num {
+    background: rgba(220, 80, 255, 0.18);
+    color: var(--accent-purple);
+}
+
+.mod-name {
+    flex: 1;
+    font-size: 0.9375rem;
+    color: var(--text-grey);
+    font-family: var(--font-body);
+}
+
+.mod-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.free-tag {
+    background: rgba(220, 80, 255, 0.18);
+    color: var(--accent-purple);
+}
+
+.paid-tag {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--text-muted);
+}
+
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
