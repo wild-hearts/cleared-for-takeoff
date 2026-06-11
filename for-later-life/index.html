@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleared for Take-Off Academy, AI for Grown-Ups</title>
+<meta name="description" content="Everyone around you seems to be using AI. This course takes you from curious-and-cautious to a calm, confident weekly habit, on your own terms, with no jargon and no rush.">
+<meta name="theme-color" content="#12283F">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --navy:#1B3A5B; --navyd:#12283F; --sky:#2E75B6; --light:#D5E8F0;
+    --cream:#F4F8FC; --grey:#5A6B7B; --ink:#1F2A36; --amber:#C8862B;
+    --accent:#C8862B; --accent-dark:#8F5E17; --accent-light:#F0C277;
+    --accent-rgb:200,134,43; --btn-ink:#12283F;
+    --ease-out:cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out:cubic-bezier(0.77, 0, 0.175, 1);
+    --shadow-card:0 1px 2px rgba(18,40,63,.04),0 6px 20px rgba(18,40,63,.07);
+    --shadow-lift:0 2px 4px rgba(18,40,63,.05),0 18px 38px rgba(18,40,63,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);background:var(--cream);
+    font-size:clamp(18px,1.02rem + .25vw,20px);line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.18}
+  h1,h2{letter-spacing:-0.01em}
+  h2{font-size:clamp(28px,2.6vw + 14px,38px);margin-bottom:18px}
+  a{color:inherit}
+  section{padding:clamp(64px,9vw,104px) 0;scroll-margin-top:84px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:13px;font-weight:700;color:var(--accent-dark);margin-bottom:14px}
+  .on-dark .eyebrow{color:var(--accent-light)}
+  ::selection{background:var(--light)}
+
+  .btn{position:relative;display:inline-block;background:var(--accent);color:var(--btn-ink);font-weight:700;
+    font-size:18px;padding:15px 32px;border-radius:10px;text-decoration:none;letter-spacing:.2px;
+    box-shadow:0 1px 2px rgba(var(--accent-rgb),.28),0 6px 16px rgba(var(--accent-rgb),.22);
+    transition:transform .16s var(--ease-out)}
+  .btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    box-shadow:0 2px 4px rgba(var(--accent-rgb),.22),0 10px 26px rgba(var(--accent-rgb),.32);
+    opacity:0;transition:opacity .2s var(--ease-out)}
+  .btn:active{transform:scale(0.97)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.65);color:#fff;box-shadow:none;
+    transition:transform .16s var(--ease-out),border-color .15s ease,background-color .15s ease}
+  .btn.ghost::after{box-shadow:none}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--amber);color:var(--navyd);font-weight:700;padding:10px 18px;z-index:99;border-radius:0 0 8px 0}
+  .skip:focus{left:0}
+  .skip:active{opacity:.85}
+
+  /* runway dash motif */
+  .dashes{height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 46px,transparent 46px 88px)}
+
+  /* ---------- header ---------- */
+  .site-head{position:sticky;top:0;z-index:40;background:rgba(18,40,63,.88);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:68px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .brand:active{opacity:.75}
+  .brand .mark{flex:0 0 auto}
+  .brand b{font-family:Georgia,serif;color:#fff;font-size:18px;letter-spacing:.02em;font-weight:700;line-height:1.2}
+  .brand small{display:block;color:#9fc0de;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .site-head nav{display:flex;align-items:center;gap:26px;font-size:16px}
+  .site-head nav a{color:#cfe0f0;text-decoration:none;padding:6px 2px;transition:color .15s ease}
+  .site-head nav a:active{color:#fff}
+  .site-head .btn{padding:10px 20px;font-size:16px}
+  @media(max-width:760px){.site-head nav a.lnk{display:none}}
+  .site-head::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:rgba(9,19,32,.97);box-shadow:0 10px 26px rgba(0,0,0,.35);
+    opacity:0;transition:opacity .25s ease}
+  .site-head.scrolled::before{opacity:1}
+  .scroll-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--amber);
+    transform:scaleX(0);transform-origin:0 50%;pointer-events:none;z-index:1}
+  .cnt{font-variant-numeric:tabular-nums}
+
+  /* ---------- hero ---------- */
+  .hero{background:
+      radial-gradient(1100px 500px at 78% 108%, rgba(200,134,43,.18), transparent 60%),
+      radial-gradient(900px 480px at 70% 115%, rgba(var(--accent-rgb),.22), transparent 62%),
+      linear-gradient(168deg,#0B1828 0%, var(--navyd) 42%, var(--navy) 100%);
+    color:#fff;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;
+    padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(72px,9vw,110px)}
+  .pill{display:inline-block;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);
+    color:#e3eef9;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    padding:8px 18px;border-radius:999px;margin-bottom:24px}
+  .hero h1{color:#fff;font-size:clamp(34px,4.6vw + 8px,56px);letter-spacing:-0.015em;margin-bottom:16px;text-wrap:balance}
+  .captain-tag{font-family:Georgia,serif;font-style:italic;font-size:clamp(19px,1.6vw + 12px,23px);color:var(--accent-light);margin-bottom:18px}
+  .hero p.sub{font-size:clamp(18px,1vw + 12px,21px);color:#d3e2f1;max-width:640px;margin-bottom:34px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .free{margin-top:20px;font-size:16px;color:#a9c4dd;display:flex;align-items:center;gap:9px}
+  .hero .free .ic{width:20px;height:20px;color:var(--amber)}
+  .hero-art{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 44px rgba(0,0,0,.4));border-radius:20px}
+  .hero-foot{position:absolute;left:0;right:0;bottom:0;height:7px;
+    background:repeating-linear-gradient(90deg,var(--amber) 0 52px,transparent 52px 100px)}
+  @media(max-width:880px){
+    .hero .wrap{grid-template-columns:1fr}
+    .hero-art{max-width:480px;margin:6px auto 0}
+  }
+
+  /* ---------- captain band ---------- */
+  .captain{background:linear-gradient(165deg,var(--navy) 0%,var(--navyd) 78%);color:#fff;position:relative}
+  .captain .lead{max-width:840px}
+  .captain h2{color:#fff;font-size:clamp(30px,3vw + 12px,42px)}
+  .captain h2 em{color:var(--accent-light);font-style:normal}
+  .captain .lead p{font-size:clamp(18px,1vw + 12px,21px);color:#dbe8f6}
+  .tenets{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+  @media(max-width:780px){.tenets{grid-template-columns:1fr}}
+  .tenet{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px 26px}
+  .tenet .badge{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    background:rgba(var(--accent-rgb),.18);border:1px solid rgba(var(--accent-rgb),.4);color:var(--accent-light);margin-bottom:16px}
+  .tenet .badge .ic{width:28px;height:28px}
+  .tenet h3{color:#fff;font-size:21px;margin-bottom:9px}
+  .tenet p{font-size:17px;line-height:1.6;color:#c7d8ea}
+  .tenet strong{color:#fff}
+
+  /* ---------- fear ---------- */
+  .fear{background:#fff}
+  .fear .card{display:flex;gap:20px;align-items:flex-start;border-left:6px solid var(--accent);
+    background:var(--cream);padding:30px 32px;border-radius:16px;margin:20px 0 26px;
+    box-shadow:var(--shadow-card)}
+  .fear .card .qmark{flex:0 0 auto;color:var(--accent);width:34px;height:34px;margin-top:4px}
+  .fear blockquote{font-family:Georgia,serif;font-style:italic;font-size:clamp(20px,1.4vw + 13px,25px);color:var(--navy);line-height:1.45}
+  .fear .answer{font-size:clamp(18px,.9vw + 13px,20px);max-width:800px;color:#33424f}
+  @media(max-width:560px){.fear .card{padding:24px 20px}.fear .card .qmark{display:none}}
+
+  /* ---------- modules ---------- */
+  .modules{background:var(--cream)}
+  .flightpath{display:block;width:100%;height:auto;margin:34px 0 14px}
+  @media(max-width:700px){.flightpath{display:none}}
+  .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  @media(max-width:980px){.mod-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){.mod-grid{grid-template-columns:1fr}}
+  .mod{position:relative;background:#fff;border:1px solid #dce6f0;border-radius:16px;padding:26px 24px;
+    box-shadow:var(--shadow-card);transition:transform .2s var(--ease-out)}
+  .mod::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    box-shadow:var(--shadow-lift);opacity:0;transition:opacity .2s var(--ease-out)}
+  .mod .top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .mod-no{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;
+    font-family:Georgia,serif;font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center}
+  .mod .top .ic{width:26px;height:26px;color:var(--grey);margin-left:auto}
+  .mod h3{font-size:21px;margin-bottom:7px}
+  .mod p{font-size:17px;line-height:1.6;color:#41525f}
+  .mod .freebadge{position:absolute;top:-12px;right:16px;background:var(--accent);color:var(--btn-ink);
+    font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:999px;
+    box-shadow:0 1px 2px rgba(var(--accent-rgb),.3),0 4px 10px rgba(var(--accent-rgb),.25)}
+  .mod-note{margin-top:26px;font-size:16px;color:var(--grey)}
+
+  /* ---------- outcomes ---------- */
+  .outcomes{background:linear-gradient(160deg,var(--navy),var(--navyd));color:#fff;position:relative}
+  .outcomes h2{color:#fff}
+  .outcomes ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px 44px;margin-top:30px;max-width:920px}
+  @media(max-width:680px){.outcomes ul{grid-template-columns:1fr}}
+  .outcomes li{display:flex;gap:14px;font-size:clamp(18px,.9vw + 13px,20px);color:#e7f0f9;align-items:flex-start;padding:4px 0}
+  .outcomes .tick{flex:0 0 auto;width:26px;height:26px;color:var(--accent-light);margin-top:2px}
+
+  /* ---------- included ---------- */
+  .included{background:#fff}
+  .inc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 32px;margin-top:38px}
+  @media(max-width:980px){.inc-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){.inc-grid{grid-template-columns:1fr}}
+  .inc .badge{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    background:var(--light);color:var(--navy);margin-bottom:16px}
+  .inc .badge .ic{width:27px;height:27px}
+  .inc h3{font-size:20px;margin-bottom:7px}
+  .inc p{font-size:17px;line-height:1.6;color:#41525f}
+
+  /* ---------- author ---------- */
+  .author{background:var(--cream)}
+  .author .grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:center;max-width:920px}
+  @media(max-width:680px){.author .grid{grid-template-columns:1fr}}
+  .author .portrait{width:170px;height:170px}
+  .author p{font-size:clamp(18px,.9vw + 13px,20px);color:#3a4855;margin-bottom:14px;max-width:680px}
+
+  /* ---------- pricing ---------- */
+  .pricing{background:#fff}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+  @media(max-width:760px){.price-grid{grid-template-columns:1fr}}
+  .plan{background:var(--cream);border:1px solid #dce6f0;border-radius:20px;padding:36px 32px;
+    box-shadow:var(--shadow-card);display:flex;flex-direction:column}
+  .plan.feature{border:2px solid var(--accent);background:#fff;position:relative}
+  .plan.feature .ribbon{position:absolute;top:-14px;left:30px;background:var(--accent);color:var(--btn-ink);
+    font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:999px}
+  .plan .tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--accent-dark)}
+  .plan h3{font-size:24px;margin:8px 0 6px}
+  .plan .amt{font-size:clamp(38px,3vw + 20px,46px);font-family:Georgia,serif;color:var(--navy);font-weight:700;letter-spacing:-0.01em}
+  .plan .amt small{font-size:16px;color:var(--grey);font-weight:400;letter-spacing:0}
+  .plan ul{list-style:none;margin:18px 0 26px;flex:1}
+  .plan li{padding:9px 0 9px 32px;position:relative;font-size:17px;line-height:1.6;color:#41525f;border-bottom:1px solid #e4ecf4}
+  .plan li .tick{position:absolute;left:0;top:11px;width:20px;height:20px;color:var(--accent-dark)}
+  .plan .btn{align-self:flex-start}
+  .note{font-size:16px;color:var(--grey);margin-top:26px;max-width:820px}
+
+  /* ---------- footer ---------- */
+  .runway-strip{display:block;width:100%;height:auto;background:#0B1828;margin-bottom:-1px}
+  footer{background:#0B1828;color:#9fb6cc;font-size:16px;padding:8px 0 40px}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  footer .tagline{font-family:Georgia,serif;font-style:italic;color:#cfe0f0}
+  footer a{color:#cfe0f0;text-decoration:none;transition:color .15s ease}
+  footer a:active{color:#fff}
+
+  /* ---------- hover (precise pointers only) ---------- */
+  @media (hover: hover) and (pointer: fine){
+    .btn:hover{transform:translateY(-1px)}
+    .btn:hover::after{opacity:1}
+    .btn:active{transform:translateY(0) scale(0.97)}
+    .btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+    .site-head nav a:hover{color:#fff}
+    .mod:hover{transform:translateY(-3px)}
+    .mod:hover::after{opacity:1}
+    footer a:hover{color:#fff;text-decoration:underline}
+  }
+
+  /* ---------- motion ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}
+    html.js .reveal.in-view{opacity:1;transform:none}
+    html.js .tenets .reveal:nth-child(2){transition-delay:60ms}
+    html.js .tenets .reveal:nth-child(3){transition-delay:120ms}
+    html.js .mod-grid .reveal:nth-child(2),html.js .inc-grid .reveal:nth-child(2){transition-delay:50ms}
+    html.js .mod-grid .reveal:nth-child(3),html.js .inc-grid .reveal:nth-child(3){transition-delay:100ms}
+    html.js .mod-grid .reveal:nth-child(4),html.js .inc-grid .reveal:nth-child(4){transition-delay:150ms}
+    html.js .mod-grid .reveal:nth-child(5),html.js .inc-grid .reveal:nth-child(5){transition-delay:200ms}
+    html.js .mod-grid .reveal:nth-child(6),html.js .inc-grid .reveal:nth-child(6){transition-delay:250ms}
+    html.js .price-grid .reveal:nth-child(2){transition-delay:70ms}
+    html.js .hero .pill,html.js .hero h1,html.js .hero .captain-tag,html.js .hero .sub,
+    html.js .hero .cta-row,html.js .hero .free,html.js .hero-art{animation:rise .6s var(--ease-out) both}
+    html.js .hero h1{animation-delay:50ms}
+    html.js .hero .captain-tag{animation-delay:100ms}
+    html.js .hero .sub{animation-delay:150ms}
+    html.js .hero .cta-row{animation-delay:200ms}
+    html.js .hero .free{animation-delay:250ms}
+    html.js .hero-art{animation-duration:.7s;animation-delay:120ms}
+    .tw{animation:twinkle 3.2s ease-in-out infinite}
+    .tw2{animation:twinkle 4.4s ease-in-out 1.3s infinite}
+    .blink{animation:blink 2.4s steps(1) infinite}
+    .float{animation:floaty 8s ease-in-out infinite}
+    /* flight path: scroll-drawn line, waypoints pop as the line reaches them, plane travels the path */
+    html.js .flightpath .fp-mask-line{stroke-dasharray:1;stroke-dashoffset:1}
+    html.js .flightpath.fp-go .fp-mask-line{stroke-dashoffset:0;transition:stroke-dashoffset 1.5s linear .15s}
+    html.js .flightpath .fp-wp{opacity:0;transform:scale(.95);transform-box:fill-box;transform-origin:center}
+    html.js .flightpath.fp-go .fp-wp{opacity:1;transform:scale(1);transition:opacity .4s var(--ease-out),transform .4s var(--ease-out)}
+    html.js .flightpath.fp-go .fp-wp:nth-of-type(1){transition-delay:.2s}
+    html.js .flightpath.fp-go .fp-wp:nth-of-type(2){transition-delay:.48s}
+    html.js .flightpath.fp-go .fp-wp:nth-of-type(3){transition-delay:.75s}
+    html.js .flightpath.fp-go .fp-wp:nth-of-type(4){transition-delay:1.03s}
+    html.js .flightpath.fp-go .fp-wp:nth-of-type(5){transition-delay:1.3s}
+    html.js .flightpath.fp-go .fp-wp:nth-of-type(6){transition-delay:1.58s}
+    @supports (offset-distance:0%){
+      html.js .flightpath .fp-plane{offset-path:path('M40 198 C240 188 420 162 610 108 C760 64 870 42 965 26');offset-rotate:auto;offset-distance:0%;transform:none}
+      html.js .flightpath.fp-go .fp-plane{offset-distance:31%;transition:offset-distance .47s linear .15s}
+    }
+    @supports not (offset-distance:0%){
+      html.js .flightpath .fp-plane{transform:translate(40px,198px) rotate(-5deg)}
+      html.js .flightpath.fp-go .fp-plane{transform:translate(325px,160px) rotate(-9deg);transition:transform .5s var(--ease-out) .15s}
+    }
+    /* section arrival: eyebrow wipe-in */
+    html.js .reveal .eyebrow{clip-path:inset(0 100% 0 0)}
+    html.js .reveal.in-view .eyebrow{clip-path:inset(0 0 0 0);transition:clip-path .35s var(--ease-out) .08s}
+    /* living details: slow runway centreline shimmer */
+    .strip-dashes>*{animation:shim 6.6s linear infinite}
+    .strip-dashes>:nth-child(3n+2){animation-delay:-2.2s}
+    .strip-dashes>:nth-child(3n){animation-delay:-4.4s}
+    /* hero CTA: two quiet glow pulses, then stops */
+    .hero .cta-row .btn:not(.ghost)::before{content:"";position:absolute;inset:-4px;border-radius:14px;pointer-events:none;opacity:0;
+      box-shadow:0 0 0 5px rgba(var(--accent-rgb),.20),0 0 28px 8px rgba(var(--accent-rgb),.38);
+      animation:ctaglow 8s ease-in-out 3.4s 2 both}
+    @keyframes shim{0%,100%{opacity:1}50%{opacity:.62}}
+    @keyframes ctaglow{0%,11%,100%{opacity:0}5%{opacity:1}}
+    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    @keyframes twinkle{0%,100%{opacity:.95}50%{opacity:.25}}
+    @keyframes blink{0%,55%{opacity:1}60%,100%{opacity:.15}}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html.js .reveal{opacity:0;transition:opacity .3s ease}
+    html.js .reveal.in-view{opacity:1}
+  }
+
+  /* ============================================================
+     REFINED PREMIUM + ELECTRIC AI FLEET + GALAXY SKY (site rollout)
+     Static or transform/opacity. Reduced-motion + JS-off safe.
+     ============================================================ */
+  body::after{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.04;mix-blend-mode:soft-light;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3{text-wrap:balance}
+  p{text-wrap:pretty}
+  .eyebrow{display:inline-flex;align-items:center;gap:11px}
+  .eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:var(--accent);flex:0 0 auto;box-shadow:0 0 10px rgba(var(--accent-rgb),.5)}
+  .on-dark .eyebrow::before{background:var(--accent-light)}
+  .card,.mod,.plan,.crew,.feat,.rec,.not,.door{box-shadow:var(--shadow-card),inset 0 1px 0 rgba(255,255,255,.65)}
+  .btn:not(.ghost){background:linear-gradient(180deg,var(--accent-light) -30%,var(--accent) 52%,var(--accent-dark) 250%)}
+  .hero-art{transition:transform .4s var(--ease-out);will-change:transform}
+  .sigarc{stroke-dasharray:3 11}
+  .captain::before,.outcomes::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(680px 320px at 86% -10%, rgba(200,134,43,.13), transparent 62%),
+      radial-gradient(900px 520px at 16% 6%, rgba(46,117,182,.24), transparent 60%),
+      radial-gradient(720px 600px at 82% 118%, rgba(58,150,200,.18), transparent 64%),
+      radial-gradient(1300px 300px at 60% 42%, rgba(120,200,235,.07), transparent 72%)}
+  .captain>.wrap,.outcomes>.wrap{position:relative;z-index:1}
+  .captain::after,.outcomes::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;mix-blend-mode:screen;opacity:.72;background-repeat:repeat;background-size:480px 480px;
+    background-image:url("<svg%20xmlns='http%3A//www.w3.org/2000/svg'%20width='480'%20height='480'><g%20fill='%23ffffff'%20opacity='.9'><circle%20cx='96'%20cy='72'%20r='1.3'/><circle%20cx='200'%20cy='260'%20r='1.4'/><circle%20cx='290'%20cy='120'%20r='1.2'/><circle%20cx='360'%20cy='250'%20r='1.3'/><circle%20cx='120'%20cy='420'%20r='1.2'/><circle%20cx='340'%20cy='430'%20r='1.3'/><circle%20cx='430'%20cy='40'%20r='1.1'/><circle%20cx='24'%20cy='38'%20r='1.1'/><circle%20cx='250'%20cy='40'%20r='1.2'/><circle%20cx='180'%20cy='470'%20r='1.1'/></g><g%20fill='%23ffffff'%20opacity='.55'><circle%20cx='150'%20cy='30'%20r='1'/><circle%20cx='240'%20cy='60'%20r='1'/><circle%20cx='300'%20cy='300'%20r='0.9'/><circle%20cx='320'%20cy='40'%20r='0.9'/><circle%20cx='400'%20cy='320'%20r='1'/><circle%20cx='40'%20cy='300'%20r='1'/><circle%20cx='200'%20cy='400'%20r='0.9'/><circle%20cx='250'%20cy='440'%20r='1'/><circle%20cx='450'%20cy='440'%20r='1'/><circle%20cx='176'%20cy='110'%20r='0.9'/><circle%20cx='410'%20cy='150'%20r='0.9'/><circle%20cx='420'%20cy='360'%20r='0.9'/><circle%20cx='140'%20cy='250'%20r='0.95'/></g><g%20fill='%23ffffff'%20opacity='.32'><circle%20cx='60'%20cy='140'%20r='0.7'/><circle%20cx='130'%20cy='200'%20r='0.6'/><circle%20cx='210'%20cy='160'%20r='0.6'/><circle%20cx='264'%20cy='210'%20r='0.7'/><circle%20cx='340'%20cy='180'%20r='0.6'/><circle%20cx='380'%20cy='90'%20r='0.7'/><circle%20cx='450'%20cy='220'%20r='0.6'/><circle%20cx='80'%20cy='360'%20r='0.7'/><circle%20cx='160'%20cy='330'%20r='0.6'/><circle%20cx='300'%20cy='380'%20r='0.7'/><circle%20cx='380'%20cy='400'%20r='0.6'/><circle%20cx='20'%20cy='200'%20r='0.7'/><circle%20cx='60'%20cy='240'%20r='0.6'/><circle%20cx='440'%20cy='290'%20r='0.7'/><circle%20cx='380'%20cy='40'%20r='0.6'/><circle%20cx='110'%20cy='150'%20r='0.6'/><circle%20cx='230'%20cy='330'%20r='0.6'/><circle%20cx='470'%20cy='120'%20r='0.6'/></g><g%20fill='%239CC9F0'%20opacity='.6'><circle%20cx='110'%20cy='90'%20r='1'/><circle%20cx='280'%20cy='170'%20r='1.1'/><circle%20cx='370'%20cy='300'%20r='1'/><circle%20cx='70'%20cy='180'%20r='0.9'/><circle%20cx='330'%20cy='80'%20r='1'/><circle%20cx='190'%20cy='200'%20r='0.9'/></g></svg>")}
+  .outcomes::after{background-position:140px 60px}
+  @media (hover: hover) and (pointer: fine){
+    .card:hover,.mod:hover,.plan:hover,.crew:hover,.door:hover,.feat:hover{border-color:var(--accent-light)}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .aurora{animation:aurora 10s ease-in-out infinite}
+    .ai-a{animation:aidriftA 11s ease-in-out infinite}
+    .ai-b{animation:aidriftB 9s ease-in-out -.6s infinite}
+    .ai-c{animation:aidriftC 13s ease-in-out -1.2s infinite}
+    .sig{animation:sigpulse 3.4s ease-in-out infinite}
+    .sig.s2{animation-delay:-.6s}.sig.s3{animation-delay:-1.2s}.sig.s4{animation-delay:-1.8s}
+    .sig.s5{animation-delay:-2.4s}.sig.s6{animation-delay:-3s}
+    .sigarc{animation:sigflow 2.4s linear infinite}
+    .sigarc.s2{animation-duration:3.1s}.sigarc.s3{animation-duration:2s}
+    .captain::after,.outcomes::after{animation:skybreathe 8s ease-in-out infinite}
+    .outcomes::after{animation-delay:-2.6s}
+    @keyframes aurora{0%,100%{opacity:.16;transform:translateX(0)}50%{opacity:.3;transform:translateX(10px)}}
+    @keyframes aidriftA{0%,100%{transform:translate(0,0)}50%{transform:translate(9px,-11px)}}
+    @keyframes aidriftB{0%,100%{transform:translate(0,0)}50%{transform:translate(-11px,-7px)}}
+    @keyframes aidriftC{0%,100%{transform:translate(0,0)}50%{transform:translate(8px,-12px)}}
+    @keyframes sigpulse{0%,100%{opacity:.3}50%{opacity:1}}
+    @keyframes sigflow{to{stroke-dashoffset:-28}}
+    @keyframes skybreathe{0%,100%{opacity:.58}50%{opacity:.82}}
+  }
+  @media (prefers-reduced-motion: reduce){ .hero-art{transition:none} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Cleared For Take-Off Academy, home">
+      <svg class="mark" width="42" height="42" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+        <path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/>
+        <path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/>
+        <g fill="#C8862B"><rect x="12" y="36" width="5" height="2.4" rx="1.2"/><rect x="21" y="36" width="5" height="2.4" rx="1.2"/><rect x="30" y="36" width="5" height="2.4" rx="1.2"/></g>
+      </svg>
+      <span><b>Cleared For Take-Off</b><small>Academy &middot; AI for Grown-Ups</small></span>
+    </a>
+    <nav aria-label="Page sections">
+      <a class="lnk" href="#flightplan">Flight plan</a>
+      <a class="lnk" href="#outcomes">Outcomes</a>
+      <a class="lnk" href="#included">What&rsquo;s included</a>
+      <a class="lnk" href="#pricing">Pricing</a>
+      <a class="lnk" href="/#audiences">All audiences</a>
+      <a class="btn" href="#pricing">Start free &rarr;</a>
+    </nav>
+  </div>
+  <span class="scroll-progress" aria-hidden="true"></span>
+</header>
+
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="pill">AI for grown-ups, from scratch</span>
+      <h1>Start from zero. Arrive confident.</h1>
+      <p class="captain-tag">You&rsquo;re the Captain. The crew is here to teach you.</p>
+      <p class="sub">Everyone around you seems to be using AI, some brilliantly, most badly and not telling you. This course takes you from curious-and-cautious to a calm, confident weekly habit, on your own terms, with no jargon and no rush.</p>
+      <div class="cta-row">
+        <a href="#pricing" class="btn">Start free preview &rarr;</a>
+        <a href="#flightplan" class="btn ghost">See the flight plan</a>
+      </div>
+      <p class="free"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 19.5 6v5.5c0 4.6-3.2 7.7-7.5 9.3-4.3-1.6-7.5-4.7-7.5-9.3V6Z"/><path d="m8.6 11.6 2.3 2.3 4.5-4.7"/></svg> Modules 1 &amp; 2 are completely free. No payment required to start.</p>
+    </div>
+    <div>
+      <svg class="hero-art" viewBox="0 0 620 560" role="img" aria-labelledby="heroArtTitle" focusable="false">
+  <title id="heroArtTitle">A stylised light aircraft climbing from a runway at dawn, amber centreline dashes glowing below</title>
+  <defs>
+    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08131F"/>
+      <stop offset=".42" stop-color="#12283F"/>
+      <stop offset=".72" stop-color="#1B3A5B"/>
+      <stop offset="1" stop-color="#2B5076"/>
+    </linearGradient>
+    <radialGradient id="dawnG" cx=".5" cy="1.05" r=".95">
+      <stop offset="0" stop-color="#C8862B" stop-opacity=".5"/>
+      <stop offset=".35" stop-color="#C8862B" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#C8862B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tarmacG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13283E"/>
+      <stop offset="1" stop-color="#0A1726"/>
+    </linearGradient>
+    <radialGradient id="planeGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#F4F8FC" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#F4F8FC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softB" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+    <clipPath id="frame"><rect width="620" height="560" rx="20"/></clipPath>
+    <radialGradient id="vig" cx=".5" cy=".44" r=".72">
+      <stop offset=".55" stop-color="#06101B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#06101B" stop-opacity=".4"/>
+    </radialGradient>
+    <radialGradient id="aiGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#74D0EC" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#74D0EC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="auroraG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E75B6" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5BC8E8" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2E75B6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="620" height="560" fill="url(#skyG)"/>
+    <rect width="620" height="560" fill="url(#dawnG)"/>
+
+    <!-- electric aurora: a faint AI-signal ribbon across the night -->
+    <path class="aurora" d="M-40 156 C150 112 260 182 430 142 C540 120 624 156 668 134"
+          fill="none" stroke="url(#auroraG)" stroke-width="42" opacity=".2" filter="url(#softB)"/>
+
+    <!-- stars -->
+    <g class="px-s" fill="#D5E8F0">
+      <circle cx="58" cy="64" r="1.6" class="tw"/><circle cx="132" cy="38" r="1.1"/>
+      <circle cx="208" cy="86" r="1.3" class="tw2"/><circle cx="296" cy="44" r="1.7" class="tw"/>
+      <circle cx="372" cy="92" r="1.1"/><circle cx="448" cy="40" r="1.4" class="tw2"/>
+      <circle cx="528" cy="74" r="1.7" class="tw"/><circle cx="582" cy="128" r="1.1"/>
+      <circle cx="86" cy="150" r="1.2" class="tw2"/><circle cx="174" cy="190" r="1"/>
+      <circle cx="490" cy="158" r="1.3" class="tw"/><circle cx="560" cy="220" r="1"/>
+      <circle cx="38" cy="236" r="1.3" class="tw"/><circle cx="246" cy="142" r="1"/>
+      <circle cx="330" cy="120" r="1.2" class="tw2"/><circle cx="416" cy="208" r="1.1"/>
+    </g>
+
+    <!-- clouds -->
+    <g class="px-c" fill="#D5E8F0" filter="url(#softB)">
+      <g opacity=".10"><ellipse cx="110" cy="270" rx="86" ry="18"/><ellipse cx="158" cy="256" rx="52" ry="14"/></g>
+      <g opacity=".08"><ellipse cx="498" cy="252" rx="92" ry="17"/><ellipse cx="452" cy="240" rx="48" ry="12"/></g>
+      <g opacity=".07"><ellipse cx="300" cy="330" rx="120" ry="16"/></g>
+    </g>
+    <g class="px-c2" fill="#C8862B" opacity=".12" filter="url(#softB)">
+      <ellipse cx="190" cy="360" rx="100" ry="14"/><ellipse cx="470" cy="385" rx="80" ry="12"/>
+    </g>
+
+    <!-- THE AI FLEET: small craft and live signals flying all around the Captain -->
+    <g class="aifleet">
+      <g fill="none" stroke="#74D0EC" stroke-width="1.6" stroke-linecap="round" opacity=".75">
+        <path class="sigarc" d="M150 126 C206 150 246 214 240 288"/>
+        <path class="sigarc s2" d="M512 222 C462 206 420 198 356 178"/>
+        <path class="sigarc s3" d="M126 102 C204 124 254 122 312 102"/>
+      </g>
+      <g fill="#CFF3FF" filter="url(#glow)">
+        <circle class="sig" cx="96" cy="178" r="2.8"/>
+        <circle class="sig s2" cx="262" cy="150" r="2.3"/>
+        <circle class="sig s3" cx="332" cy="96" r="3"/>
+        <circle class="sig s4" cx="430" cy="206" r="2.5"/>
+        <circle class="sig s5" cx="506" cy="138" r="2.8"/>
+        <circle class="sig s6" cx="566" cy="296" r="2.4"/>
+      </g>
+      <g class="ai-a">
+        <ellipse cx="150" cy="120" rx="34" ry="24" fill="url(#aiGlow)"/>
+        <g transform="translate(150 120) rotate(-18) scale(.52)">
+          <path d="M30 0 L-22 -13 L-10 1 Z" fill="#D5E8F0"/>
+          <path d="M30 0 L-10 1 L-16 15 Z" fill="#9CC9F0"/>
+        </g>
+      </g>
+      <g class="ai-b">
+        <ellipse cx="528" cy="232" rx="28" ry="20" fill="url(#aiGlow)"/>
+        <g transform="translate(528 232) rotate(-24) scale(.42)">
+          <path d="M30 0 L-22 -13 L-10 1 Z" fill="#F0C277"/>
+          <path d="M30 0 L-10 1 L-16 15 Z" fill="#C8862B"/>
+        </g>
+      </g>
+      <g class="ai-c">
+        <ellipse cx="206" cy="316" rx="30" ry="21" fill="url(#aiGlow)"/>
+        <g transform="translate(206 316) rotate(-12) scale(.46)">
+          <path d="M30 0 L-22 -13 L-10 1 Z" fill="#EAF4FB"/>
+          <path d="M30 0 L-10 1 L-16 15 Z" fill="#74D0EC"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ground & horizon glow -->
+    <rect x="0" y="428" width="620" height="132" fill="#0A1828"/>
+    <rect x="0" y="424" width="620" height="6" fill="#C8862B" opacity=".25" filter="url(#softB)"/>
+
+    <!-- runway -->
+    <polygon points="262,430 358,430 588,560 32,560" fill="url(#tarmacG)"/>
+    <polyline points="262,430 32,560" stroke="#2E4A66" stroke-width="2" fill="none"/>
+    <polyline points="358,430 588,560" stroke="#2E4A66" stroke-width="2" fill="none"/>
+    <!-- amber centreline dashes -->
+    <g class="strip-dashes" fill="#C8862B">
+      <polygon points="308.6,437 311.4,437 311.8,447 308.2,447"/>
+      <polygon points="307.9,455 312.1,455 312.7,469 307.3,469"/>
+      <polygon points="307,479 313,479 313.9,497 306.1,497"/>
+      <polygon points="305.9,508 314.1,508 315.3,532 304.7,532"/>
+      <polygon points="304.5,541 315.5,541 316.9,560 303.1,560"/>
+    </g>
+    <g fill="#C8862B" opacity=".35" filter="url(#softB)">
+      <polygon points="305.9,508 314.1,508 315.3,532 304.7,532"/>
+      <polygon points="304.5,541 315.5,541 316.9,560 303.1,560"/>
+    </g>
+    <!-- threshold -->
+    <g fill="#D5E8F0" opacity=".8">
+      <rect x="286" y="430" width="6" height="3.4"/><rect x="298" y="430" width="6" height="3.4"/>
+      <rect x="316" y="430" width="6" height="3.4"/><rect x="328" y="430" width="6" height="3.4"/>
+    </g>
+    <!-- edge lights -->
+    <g fill="#E8C77D">
+      <circle cx="241" cy="442" r="2"/><circle cx="205" cy="462" r="2.4"/><circle cx="160" cy="487" r="2.8"/>
+      <circle cx="104" cy="519" r="3.2"/><circle cx="42" cy="553" r="3.6"/>
+      <circle cx="379" cy="442" r="2"/><circle cx="415" cy="462" r="2.4"/><circle cx="460" cy="487" r="2.8"/>
+      <circle cx="516" cy="519" r="3.2"/><circle cx="578" cy="553" r="3.6"/>
+    </g>
+
+    <!-- climb trail -->
+    <path d="M310 432 C322 372 316 308 352 252 S418 196 442 178"
+          fill="none" stroke="#F0C277" stroke-width="3" stroke-linecap="round"
+          stroke-dasharray="1 14" opacity=".9"/>
+
+    <!-- cinematic vignette: deepens the edges, keeps the climb the focus -->
+    <rect width="620" height="560" fill="url(#vig)"/>
+
+    <!-- aircraft -->
+    <g class="float">
+      <ellipse cx="452" cy="168" rx="86" ry="60" fill="url(#planeGlow)"/>
+      <g transform="translate(452 168) rotate(-21)">
+        <path d="M58 0 L-44 -25 L-22 3 Z" fill="#F4F8FC"/>
+        <path d="M58 0 L-22 3 L-36 30 Z" fill="#F0C277"/>
+        <path d="M58 0 L-22 3 L-26 14 Z" fill="#A9C4DD"/>
+        <path d="M-44 -25 L-22 3 L-36 12 Z" fill="#D5E8F0"/>
+      </g>
+    </g>
+  </g>
+  <rect width="620" height="560" rx="20" fill="none" stroke="rgba(213,232,240,.16)" stroke-width="1.5"/>
+</svg>
+    </div>
+  </div>
+  <div class="hero-foot" aria-hidden="true"></div>
+</header>
+
+<section class="captain on-dark" aria-labelledby="captain-h">
+  <div class="dashes" style="position:absolute;top:0;left:0;right:0" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="lead reveal">
+      <div class="eyebrow">The whole philosophy in one idea</div>
+      <h2 id="captain-h">You are the <em>Captain.</em> The crew is here to teach you.</h2>
+      <p>This isn&rsquo;t a course where you sit back and let the technology fly. From the first minute, you&rsquo;re in the pilot&rsquo;s seat of your own journey with AI. You set the destination. You make the calls. You keep control of the aircraft, always.</p>
+    </div>
+    <div class="tenets">
+      <div class="tenet reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><polygon points="15.5,8.5 13.4,13.4 8.5,15.5 10.6,10.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+        <h3>You command</h3>
+        <p>AI never flies the plane. It reads the instruments, drafts the flight plan and hands you the options. <strong>Every decision stays yours.</strong></p>
+      </div>
+      <div class="tenet reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.6c0 4.1-4 7.4-9 7.4-1 0-2-.13-2.9-.38L4 20l1.2-3.4C3.8 15.3 3 13.5 3 11.6 3 7.5 7 4.2 12 4.2s9 3.3 9 7.4Z"/><circle cx="8.5" cy="11.7" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="11.7" r=".9" fill="currentColor" stroke="none"/><circle cx="15.5" cy="11.7" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        <h3>The crew serves &amp; teaches</h3>
+        <p>You’ll meet the crew gently, one at a time: <strong>Claude</strong> and <strong>ChatGPT</strong> first, with the others introduced only when you’re ready. We don’t sell one tool; we help you choose. They do the heavy lifting <strong>and</strong> teach you the controls. They never take them.</p>
+      </div>
+      <div class="tenet reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="4.2"/><path d="M7.8 11.4 2.5 8.6c1.8 4 3.4 5.4 5.6 5.9M16.2 11.4l5.3-2.8c-1.8 4-3.4 5.4-5.6 5.9"/><path d="m12 8.8.9 1.8 2 .3-1.4 1.4.3 2-1.8-1-1.8 1 .3-2-1.4-1.4 2-.3z" fill="currentColor" stroke="none"/></svg></span>
+        <h3>You graduate in command</h3>
+        <p>You finish not as a nervous passenger hoping the tech behaves, but as a <strong>confident captain</strong> who knows when to call the crew and when to fly solo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fear" aria-labelledby="fear-h">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The fear we answer before lesson one</div>
+      <h2 id="fear-h" class="visually-strong">Let&rsquo;s name it before lesson one</h2>
+      <div class="card">
+        <svg class="qmark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.5 17H6c-1.7 0-2.5-1-2.5-2.6V9.8C3.5 7 5.6 5 8.6 5h.7v2.6h-.5c-1.5 0-2.4.9-2.4 2.3v.5h3.1Zm10 0H16c-1.7 0-2.5-1-2.5-2.6V9.8C13.5 7 15.6 5 18.6 5h.7v2.6h-.5c-1.5 0-2.4.9-2.4 2.3v.5h3.1Z"/></svg>
+        <blockquote>“I don’t even know where to start, and everyone seems to already know.”</blockquote>
+      </div>
+      <p class="answer">You’re not a beginner because you’re slow. You’re a beginner because the technology is new. That’s a fact, not a failing. Every lesson is built with that in mind: plain English, your own device, your own pace, and a full module on staying safe from scams.</p>
+    </div>
+  </div>
+</section>
+
+<section class="modules" id="flightplan" aria-labelledby="fp-h">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The 6-module flight plan</div>
+      <h2 id="fp-h">The same journey, told for you</h2>
+      <svg class="flightpath" viewBox="0 0 1000 250" role="img" aria-label="The six-module flight plan: a dashed flight path climbing through six numbered waypoints, with the aircraft currently between modules two and three" focusable="false"><defs><mask id="fpm" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="250"><path class="fp-mask-line" d="M40 198 C240 188 420 162 610 108 C760 64 870 42 965 26" pathLength="1" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/></mask></defs><path mask="url(#fpm)" d="M40 198 C240 188 420 162 610 108 C760 64 870 42 965 26" fill="none" stroke="#9DB4C9" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 13"/><g class="fp-wp"><circle cx="70" cy="192" r="24" fill="none" stroke="#C8862B" stroke-width="2.5" stroke-dasharray="4 5"/><circle cx="70" cy="192" r="17" fill="#C8862B"/><text x="70" y="198" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#12283F">1</text><text x="70" y="160" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#8F5E17">FREE</text><text x="70" y="236" text-anchor="middle" font-size="14" fill="#41525F">Pre-Flight Checks</text></g><g class="fp-wp"><circle cx="240" cy="178" r="24" fill="none" stroke="#C8862B" stroke-width="2.5" stroke-dasharray="4 5"/><circle cx="240" cy="178" r="17" fill="#C8862B"/><text x="240" y="184" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#12283F">2</text><text x="240" y="146" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#8F5E17">FREE</text><text x="240" y="222" text-anchor="middle" font-size="14" fill="#41525F">Cleared For Taxi</text></g><g class="fp-wp"><circle cx="410" cy="152" r="17" fill="#1B3A5B"/><text x="410" y="158" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#FFFFFF">3</text><text x="410" y="196" text-anchor="middle" font-size="14" fill="#41525F">Cleared For Takeoff</text></g><g class="fp-wp"><circle cx="580" cy="112" r="17" fill="#1B3A5B"/><text x="580" y="118" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#FFFFFF">4</text><text x="580" y="156" text-anchor="middle" font-size="14" fill="#41525F">In The Air</text></g><g class="fp-wp"><circle cx="750" cy="68" r="17" fill="#1B3A5B"/><text x="750" y="74" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#FFFFFF">5</text><text x="750" y="112" text-anchor="middle" font-size="14" fill="#41525F">Holding Pattern</text></g><g class="fp-wp"><circle cx="920" cy="34" r="17" fill="#1B3A5B"/><text x="920" y="40" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="17" fill="#FFFFFF">6</text><text x="920" y="78" text-anchor="middle" font-size="14" fill="#41525F">Final Approach</text></g><g class="fp-plane" transform="translate(325 160) rotate(-9)"><g class="float"><path d="M26 0 L-19 -11 L-9 1 Z" fill="#8F5E17"/><path d="M26 0 L-9 1 L-15 13 Z" fill="#C8862B"/></g></g></svg>
+    </div>
+    <div class="mod-grid">
+      <article class="mod reveal"><span class="freebadge">Free preview</span>
+        <div class="top"><div class="mod-no" aria-hidden="true">1</div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.2" width="14" height="17" rx="2"/><path d="M9 4.2V3h6v1.2"/><path d="m8.3 10 1.4 1.4 2.4-2.6M14 10.4h2.8M8.3 15l1.4 1.4 2.4-2.6M14 15.4h2.8"/></svg></div>
+        <h3>Module 1: Pre-Flight Checks</h3>
+        <p>What AI is and isn’t, choosing a tool, and a safe, private setup from scratch.</p>
+      </article>
+      <article class="mod reveal"><span class="freebadge">Free preview</span>
+        <div class="top"><div class="mod-no" aria-hidden="true">2</div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.6c0 4.1-4 7.4-9 7.4-1 0-2-.13-2.9-.38L4 20l1.2-3.4C3.8 15.3 3 13.5 3 11.6 3 7.5 7 4.2 12 4.2s9 3.3 9 7.4Z"/><circle cx="8.5" cy="11.7" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="11.7" r=".9" fill="currentColor" stroke="none"/><circle cx="15.5" cy="11.7" r=".9" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Module 2: Cleared For Taxi</h3>
+        <p>Talking to AI in plain English: the four simple controls that make it work.</p>
+      </article>
+      <article class="mod reveal">
+        <div class="top"><div class="mod-no" aria-hidden="true">3</div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18.5h17M4 14.8l13.6-5.4c1.4-.55 2.7.1 3 1.1.3 1.05-.5 2.1-1.9 2.4L6 15.4l-3-3.4 1.8-.5 2 1.6" fill="none"/></svg></div>
+        <h3>Module 3: Cleared For Takeoff</h3>
+        <p>Real life: emails, summarising letters, planning, health info and money/admin.</p>
+      </article>
+      <article class="mod reveal">
+        <div class="top"><div class="mod-no" aria-hidden="true">4</div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><polygon points="15.5,8.5 13.4,13.4 8.5,15.5 10.6,10.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Module 4: In The Air</h3>
+        <p>One real project you care about: a memoir, a trip, a family history, a new skill.</p>
+      </article>
+      <article class="mod reveal">
+        <div class="top"><div class="mod-no" aria-hidden="true">5</div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.2" opacity=".55"/><path d="M12 12 18 6.6"/><circle cx="15" cy="8.6" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Module 5: Holding Pattern</h3>
+        <p>Scam-aware and privacy-first: voice cloning, fake invoices, and how to protect yourself.</p>
+      </article>
+      <article class="mod reveal">
+        <div class="top"><div class="mod-no" aria-hidden="true">6</div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="4.2"/><path d="M7.8 11.4 2.5 8.6c1.8 4 3.4 5.4 5.6 5.9M16.2 11.4l5.3-2.8c-1.8 4-3.4 5.4-5.6 5.9"/><path d="m12 8.8.9 1.8 2 .3-1.4 1.4.3 2-1.8-1-1.8 1 .3-2-1.4-1.4 2-.3z" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Module 6: Final Approach</h3>
+        <p>A one-page routine, and bringing a partner or friend along with you.</p>
+      </article>
+    </div>
+    <p class="mod-note">Modules 1 &amp; 2 are a free preview: try the controls before you buy the seat.</p>
+  </div>
+</section>
+
+<section class="outcomes on-dark" id="outcomes" aria-labelledby="out-h">
+  <div class="wrap reveal">
+    <div class="eyebrow">When you take the controls</div>
+    <h2 id="out-h">By graduation, you&rsquo;re flying in command, with&hellip;</h2>
+    <ul>
+      <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg><span>A working AI setup on your own phone, tablet or laptop</span></li>
+      <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg><span>A one-page weekly routine you’ll actually follow</span></li>
+      <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg><span>A real project completed, start to finish</span></li>
+      <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg><span>The confidence to spot a wrong answer or a scam</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="included" id="included" aria-labelledby="inc-h">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Everything in the kit bag</div>
+      <h2 id="inc-h">What&rsquo;s included</h2>
+      <p style="max-width:760px;color:#3a4855">One course, told four ways for four audiences. Whichever path you choose, the full kit comes with it.</p>
+    </div>
+    <div class="inc-grid">
+      <div class="inc reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><polygon points="10,8.2 16.2,12 10,15.8" fill="currentColor" stroke="none"/></svg></span>
+        <h3>Six modules of video</h3>
+        <p>Roughly <span class="cnt" data-n="6">6</span> to <span class="cnt" data-n="8">8</span> hours of plain-English lessons, broken into short, watchable pieces.</p>
+      </div>
+      <div class="inc reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="12.5" rx="2"/><path d="M9 21h6M12 17v4"/><path d="m7.5 9.5 2.5 2-2.5 2M12.5 13.5h4"/></svg></span>
+        <h3>Screen-recorded walkthroughs</h3>
+        <p>Watch the exact clicks, the exact prompts and the real results. Nothing hidden, nothing sped up.</p>
+      </div>
+      <div class="inc reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.2" width="14" height="17" rx="2"/><path d="M9 4.2V3h6v1.2"/><path d="m8.3 10 1.4 1.4 2.4-2.6M14 10.4h2.8M8.3 15l1.4 1.4 2.4-2.6M14 15.4h2.8"/></svg></span>
+        <h3>One-page cheat sheet per module</h3>
+        <p>Print it, stick it next to the keyboard, and fly with it until you don’t need it.</p>
+      </div>
+      <div class="inc reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20M8.5 7.5h7M8.5 11h5"/></svg></span>
+        <h3>The Cleared To Try workbook</h3>
+        <p>Guided exercises that turn watching into doing, one small win at a time.</p>
+      </div>
+      <div class="inc reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="11" rx="2"/><path d="M9 9V7.2A1.2 1.2 0 0 1 10.2 6h3.6A1.2 1.2 0 0 1 15 7.2V9M3 13.5h18M10.4 13.5v2.4M13.6 13.5v2.4"/></svg></span>
+        <h3>The Tool Hangar</h3>
+        <p>A plain-English guide to the wider AI fleet, so you know which tool suits which job.</p>
+      </div>
+      <div class="inc reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 3.5V8h-4.5"/></svg></span>
+        <h3>Lifetime access + quarterly updates</h3>
+        <p>The tools keep changing. Your course keeps up, at no extra cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="author" aria-labelledby="bio-h">
+  <div class="wrap">
+    <div class="grid reveal">
+      <svg class="portrait" viewBox="0 0 160 160" role="img" aria-label="Illustrated badge: a captain&rsquo;s wings emblem for Naomi Shiels" focusable="false">
+        <circle cx="80" cy="80" r="76" fill="#1B3A5B"/>
+        <circle cx="80" cy="80" r="76" fill="none" stroke="#C8862B" stroke-width="3"/>
+        <circle cx="80" cy="80" r="62" fill="none" stroke="rgba(213,232,240,.35)" stroke-width="1.5" stroke-dasharray="3 7"/>
+        <path d="M80 52l7 14.5 16 2.2-11.6 11 2.8 15.8L80 88l-14.2 7.5 2.8-15.8L57 68.7l16-2.2z" fill="#C8862B"/>
+        <path d="M48 84c-11-4-19-10-24-18 9 1.5 17 5 24 10.5zm64 0c11-4 19-10 24-18-9 1.5-17 5-24 10.5z" fill="#D5E8F0"/>
+        <text x="80" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#D5E8F0" letter-spacing="2">CAPTAIN</text>
+      </svg>
+      <div>
+        <div class="eyebrow">Who built this</div>
+        <h2 id="bio-h">Naomi Shiels</h2>
+        <p>A Canberra-based former linguist, lawyer and commercial aviation manager, and the founder of Wild Hearts Publishing. She has written 14 books and made 216 songs with AI, and she builds with these tools every day.</p>
+        <p>She is not an engineer. She learned to use AI the same way you will, by showing up, trying things, failing at some, and keeping what worked. This course is what she kept.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing" aria-labelledby="price-h">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The runway is clear</div>
+      <h2 id="price-h">Choose your path</h2>
+    </div>
+    <div class="price-grid">
+      <div class="plan reveal">
+        <div class="tag">Self-paced</div>
+        <h3>Go at your own pace</h3>
+        <div class="amt">$<span class="cnt" data-n="297">297</span> <small>AUD + GST</small></div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>All <span class="cnt" data-n="6">6</span> modules (~<span class="cnt" data-n="6">6</span>&ndash;<span class="cnt" data-n="8">8</span> hours of video)</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>Screen-recorded walkthroughs</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>One-page cheat sheet per module</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>Cleared To Try workbook</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>The Tool Hangar: guide to the wider AI fleet</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>Lifetime access + quarterly updates</li>
+        </ul>
+        <a href="/api/create-checkout" class="btn">Enrol now &rarr;</a>
+      </div>
+      <div class="plan feature reveal">
+        <span class="ribbon">Most popular</span>
+        <div class="tag">Live cohort</div>
+        <h3>With a real human in the room</h3>
+        <div class="amt">$<span class="cnt" data-n="997">997</span> <small>AUD + GST</small></div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>Everything in the self-paced course</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>6 live group sessions (60 min each)</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>1:1 Pre-Flight Brief + Final Approach calls</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>Private community (not Facebook)</li>
+          <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>6 months of fortnightly office hours</li>
+        </ul>
+        <a href="/#contact" class="btn">Join the waitlist &rarr;</a>
+      </div>
+    </div>
+    <p class="note">Modules 1 &amp; 2 are free to preview, no payment details, no commitment. Also available: <em>Cleared For Take-Off</em>, the book, $12.99 AUD. Training a whole team? Workshops and institutional programs are available separately.</p>
+  </div>
+</section>
+</main>
+
+<svg class="runway-strip" viewBox="0 0 1200 110" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A quiet runway at night with a control tower, amber centreline lights glowing" focusable="false">
+  <rect width="1200" height="110" fill="#0B1828"/>
+  <g fill="#D5E8F0">
+    <circle cx="90" cy="22" r="1.3" class="tw"/><circle cx="240" cy="14" r="1"/>
+    <circle cx="420" cy="26" r="1.2" class="tw2"/><circle cx="640" cy="12" r="1.4" class="tw"/>
+    <circle cx="840" cy="24" r="1"/><circle cx="1010" cy="16" r="1.2" class="tw2"/><circle cx="1150" cy="30" r="1"/>
+  </g>
+  <!-- AI signals over the night runway: the fleet motif, bookended -->
+  <g fill="none" stroke="#74D0EC" stroke-width="1.4" stroke-linecap="round" opacity=".7"><path class="sigarc" d="M250 30 C300 20 340 33 410 24"/></g>
+  <g fill="#CFF3FF"><circle class="sig" cx="250" cy="30" r="1.8"/><circle class="sig s3" cx="410" cy="24" r="1.6"/></g>
+  <g transform="translate(332 26) rotate(-8) scale(.42)"><path d="M30 0 L-22 -13 L-10 1 Z" fill="#EAF4FB"/><path d="M30 0 L-10 1 L-16 15 Z" fill="#74D0EC"/></g>
+  <rect x="0" y="64" width="1200" height="46" fill="#091422"/>
+  <!-- control tower -->
+  <g>
+    <rect x="1056" y="34" width="14" height="32" fill="#142B43"/>
+    <polygon points="1044,24 1082,24 1076,38 1050,38" fill="#1B3A5B"/>
+    <rect x="1048" y="26" width="30" height="6" fill="#2E4A66"/>
+    <line x1="1063" y1="24" x2="1063" y2="10" stroke="#2E4A66" stroke-width="2"/>
+    <circle cx="1063" cy="8" r="3" fill="#C8862B" class="blink"/>
+    <rect x="1052" y="29" width="6" height="3.5" fill="#E8C77D" opacity=".85"/>
+    <rect x="1062" y="29" width="6" height="3.5" fill="#E8C77D" opacity=".6"/>
+  </g>
+  <!-- runway surface -->
+  <rect x="0" y="74" width="1200" height="26" fill="#0E1F33"/>
+  <g class="strip-dashes" fill="#C8862B">
+    <rect x="20" y="85" width="44" height="4" rx="2"/><rect x="104" y="85" width="44" height="4" rx="2"/>
+    <rect x="188" y="85" width="44" height="4" rx="2"/><rect x="272" y="85" width="44" height="4" rx="2"/>
+    <rect x="356" y="85" width="44" height="4" rx="2"/><rect x="440" y="85" width="44" height="4" rx="2"/>
+    <rect x="524" y="85" width="44" height="4" rx="2"/><rect x="608" y="85" width="44" height="4" rx="2"/>
+    <rect x="692" y="85" width="44" height="4" rx="2"/><rect x="776" y="85" width="44" height="4" rx="2"/>
+    <rect x="860" y="85" width="44" height="4" rx="2"/><rect x="944" y="85" width="44" height="4" rx="2"/>
+    <rect x="1028" y="85" width="44" height="4" rx="2"/><rect x="1112" y="85" width="44" height="4" rx="2"/>
+  </g>
+  <g fill="#E8C77D" opacity=".9">
+    <circle cx="60" cy="76" r="1.6"/><circle cx="260" cy="76" r="1.6"/><circle cx="460" cy="76" r="1.6"/>
+    <circle cx="660" cy="76" r="1.6"/><circle cx="860" cy="76" r="1.6"/><circle cx="1160" cy="76" r="1.6"/>
+    <circle cx="60" cy="98" r="1.6"/><circle cx="260" cy="98" r="1.6"/><circle cx="460" cy="98" r="1.6"/>
+    <circle cx="660" cy="98" r="1.6"/><circle cx="860" cy="98" r="1.6"/><circle cx="1160" cy="98" r="1.6"/>
+  </g>
+</svg>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="tagline">You are the Captain. The crew is here to teach you.</div>
+      <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing &middot; clearedfortakeoff.com.au</div>
+    </div>
+    <nav aria-label="Footer"><a href="/">Academy</a> &middot; <a href="/book/">The Book</a> &middot; <a href="/#consulting">Consulting</a> &middot; <a href="/#audiences">All audiences</a> &middot; <a href="#pricing">Enrol</a></nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  var fp = document.querySelector('.flightpath');
+  var mOK = window.matchMedia && matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  function showAll(){ els.forEach(function(e){ e.classList.add('in-view'); }); if(fp){ fp.classList.add('fp-go'); } }
+  if(!('IntersectionObserver' in window)){ showAll(); }
+  else{
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in-view'); io.unobserve(en.target); }
+      });
+    },{threshold:.1, rootMargin:'0px 0px -32px 0px'});
+    els.forEach(function(e){ io.observe(e); });
+    if(fp){
+      var iof = new IntersectionObserver(function(es){
+        es.forEach(function(en){ if(en.isIntersecting){ fp.classList.add('fp-go'); iof.disconnect(); } });
+      },{threshold:.45});
+      iof.observe(fp);
+    }
+    if(mOK){
+      var ioc = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting){ return; }
+          ioc.unobserve(en.target);
+          var el = en.target, n = parseInt(el.getAttribute('data-n'),10) || 0;
+          if(!n){ return; }
+          el.style.display = 'inline-block';
+          el.style.minWidth = el.offsetWidth + 'px';
+          var t0 = null;
+          function tick(t){
+            if(t0 === null){ t0 = t; }
+            var p = Math.min((t - t0) / 600, 1), e = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(e * n);
+            if(p < 1){ requestAnimationFrame(tick); }
+          }
+          requestAnimationFrame(tick);
+        });
+      },{threshold:.6});
+      document.querySelectorAll('.cnt').forEach(function(c){ ioc.observe(c); });
+    }
+  }
+  if(mOK){
+    var head = document.querySelector('.site-head');
+    var bar = document.querySelector('.scroll-progress');
+    var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var art = document.querySelector('.hero-art');
+    var pxs = art ? art.querySelector('.px-s') : null;
+    var pxc = art ? art.querySelector('.px-c') : null;
+    var pxc2 = art ? art.querySelector('.px-c2') : null;
+    var queued = false;
+    function frame(){
+      queued = false;
+      var y = window.pageYOffset || 0;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if(bar){ bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')'; }
+      if(head){ head.classList.toggle('scrolled', y > 80); }
+      if(fine){
+        if(pxs){ pxs.style.transform = 'translate3d(0,' + Math.min(y * .03, 14) + 'px,0)'; }
+        if(pxc){ pxc.style.transform = 'translate3d(0,' + Math.min(y * .055, 20) + 'px,0)'; }
+        if(pxc2){ pxc2.style.transform = 'translate3d(0,' + Math.min(y * .07, 20) + 'px,0)'; }
+      }
+    }
+    window.addEventListener('scroll', function(){ if(!queued){ queued = true; requestAnimationFrame(frame); } }, {passive:true});
+    frame();
+
+    if(fine){
+      var hero = document.querySelector('.hero');
+      if(hero && art){
+        var hQ = false, hX = 0, hY = 0;
+        hero.addEventListener('mousemove', function(ev){
+          var r = hero.getBoundingClientRect();
+          hX = (ev.clientX - r.left) / r.width - .5;
+          hY = (ev.clientY - r.top) / r.height - .5;
+          if(!hQ){ hQ = true; requestAnimationFrame(function(){
+            hQ = false;
+            art.style.transform = 'translate3d(' + (hX * 11).toFixed(2) + 'px,' + (hY * 9).toFixed(2) + 'px,0)';
+          }); }
+        }, {passive:true});
+        hero.addEventListener('mouseleave', function(){ art.style.transform = ''; });
+      }
+    }
+  }
+})();
+</script>
+</body>
+</html>
