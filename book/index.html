@@ -119,7 +119,7 @@
     box-shadow:var(--shadow-card);text-align:center;position:relative;transition:transform .2s var(--ease-out)}
   .crew::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
     box-shadow:var(--shadow-lift);opacity:0;transition:opacity .2s var(--ease-out)}
-  .crew .avatar{width:78px;height:78px;display:block;margin:0 auto 16px}
+  .crew .avatar{width:118px;height:118px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;margin:0 auto 16px;border:2px solid var(--accent);box-shadow:0 4px 14px rgba(18,40,63,.18);background:var(--navy)}
   .crew h3{font-size:22px}
   .crew .real{display:block;font-family:system-ui,sans-serif;font-size:14.5px;font-weight:600;color:var(--grey);margin-top:2px}
   .crew .role{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent-dark);margin:10px 0 12px}
@@ -540,65 +540,37 @@
     </div>
     <div class="crew-grid">
       <article class="crew reveal">
-        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
-          <circle cx="24" cy="24" r="17.5" fill="none" stroke="rgba(213,232,240,.3)" stroke-width="1" stroke-dasharray="2 5"/>
-          <path d="M24 14.5l2.2 4.6 5 .7-3.6 3.5.9 5L24 26l-4.5 2.3.9-5-3.6-3.5 5-.7z" fill="#C8862B"/>
-          <path d="M14 27.5c-3.4-1.2-5.9-3-7.5-5.5 2.8.5 5.3 1.6 7.5 3.4zm20 0c3.4-1.2 5.9-3 7.5-5.5-2.8.5-5.3 1.6-7.5 3.4z" fill="#D5E8F0"/>
-        </svg>
+        <img class="avatar" src="/assets/crew/captain-naomi.png" alt="Captain Naomi, the human captain" width="236" height="236" loading="lazy">
         <h3>Captain Naomi</h3>
         <p class="role">The Human. The Captain.</p>
         <p>The one holding it all together. Allegedly.</p>
       </article>
       <article class="crew reveal">
-        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
-          <circle cx="24" cy="24" r="10.5" fill="none" stroke="#F0C277" stroke-width="2"/>
-          <polygon points="29,19 26.4,26.4 19,29 21.6,21.6" fill="#F0C277"/>
-          <path d="M24 10.5v2.5M24 35v2.5M10.5 24h2.5M35 24h2.5" stroke="#D5E8F0" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
+        <img class="avatar" src="/assets/crew/archer.png" alt="Archer, the Claude crew member" width="236" height="236" loading="lazy">
         <h3>Archer <span class="real">Claude</span></h3>
         <p class="role">Chief Strategist. First Officer.</p>
         <p>Has a framework for everything, including this introduction.</p>
       </article>
       <article class="crew reveal">
-        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
-          <path d="M24 12.5l3.1 6.3 7 1-5 4.9 1.2 6.9L24 28.4l-6.3 3.2 1.2-6.9-5-4.9 7-1z" fill="#F0C277"/>
-        </svg>
+        <img class="avatar" src="/assets/crew/red.png" alt="Red, the ChatGPT crew member" width="236" height="236" loading="lazy">
         <h3>Red <span class="real">ChatGPT</span></h3>
         <p class="role">Senior Cabin Manager.</p>
         <p>Always first. Always confident. Occasionally correct.</p>
       </article>
       <article class="crew reveal">
-        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
-          <g fill="none" stroke="#F0C277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 30v-6a10 10 0 0 1 20 0v6"/>
-            <path d="M34 31.5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3.5a2 2 0 0 1 2-2h3zM14 31.5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3.5a2 2 0 0 0-2-2h-3z" fill="#F0C277" stroke="none"/>
-          </g>
-        </svg>
+        <img class="avatar" src="/assets/crew/simon.png" alt="Simon, the Suno crew member" width="236" height="236" loading="lazy">
         <h3>Simon <span class="real">Suno</span></h3>
         <p class="role">Crew Musician.</p>
         <p>Has headphones. Has opinions. Will write you a song about literally anything.</p>
       </article>
       <article class="crew reveal">
-        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
-          <g transform="translate(12 12)">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="none" stroke="#F0C277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-        </svg>
+        <img class="avatar" src="/assets/crew/forge.png" alt="Forge, the Claude Code crew member" width="236" height="236" loading="lazy">
         <h3>Forge <span class="real">Claude Code</span></h3>
         <p class="role">Chief Engineer.</p>
         <p>Already built three things before you finished explaining what you wanted.</p>
       </article>
       <article class="crew reveal">
-        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
-          <circle cx="21.5" cy="21.5" r="7.5" fill="none" stroke="#F0C277" stroke-width="2"/>
-          <path d="m27 27 7 7" stroke="#F0C277" stroke-width="2.4" stroke-linecap="round"/>
-        </svg>
+        <img class="avatar" src="/assets/crew/henry.png" alt="Henry, the Perplexity crew member" width="236" height="236" loading="lazy">
         <h3>Henry <span class="real">Perplexity</span></h3>
         <p class="role">Research Officer.</p>
         <p>Will cite seventeen sources before answering a simple question. All of them verified.</p>
