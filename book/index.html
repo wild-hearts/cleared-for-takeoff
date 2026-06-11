@@ -1,357 +1,856 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cleared for Take-Off — The Book | Naomi Shiels</title>
-    <meta name="description"
-        content="The funny, no-nonsense guide to soaring with AI. No engineering degree required. Available on Amazon, Apple Books, Kobo, Google Play and wildheartshq.com.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleared For Take-Off, the Book: Your Funny, No-Nonsense Guide to Soaring With AI</title>
+<meta name="description" content="The irreverent, practical playbook for humans who want to use AI brilliantly. From your first awkward prompt to running a full AI crew, while you stay in the captain's seat. $12.99 AUD.">
+<meta name="theme-color" content="#12283F">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --navy:#1B3A5B; --navyd:#12283F; --sky:#2E75B6; --skyd:#205B8E; --skyl:#9CC9F0;
+    --light:#D5E8F0; --cream:#F4F8FC; --grey:#5A6B7B; --ink:#1F2A36; --amber:#C8862B;
+    --accent:#C8862B; --accent-dark:#8F5E17; --accent-light:#F0C277;
+    --accent-rgb:200,134,43; --btn-ink:#12283F;
+    --ease-out:cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out:cubic-bezier(0.77, 0, 0.175, 1);
+    --shadow-card:0 1px 2px rgba(18,40,63,.04),0 6px 20px rgba(18,40,63,.07);
+    --shadow-lift:0 2px 4px rgba(18,40,63,.05),0 18px 38px rgba(18,40,63,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);background:var(--cream);
+    font-size:clamp(18px,1.02rem + .25vw,20px);line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.18}
+  h1,h2{letter-spacing:-0.01em}
+  h2{font-size:clamp(28px,2.6vw + 14px,38px);margin-bottom:18px}
+  a{color:inherit}
+  section{padding:clamp(64px,9vw,104px) 0;scroll-margin-top:84px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:13px;font-weight:700;color:var(--accent-dark);margin-bottom:14px}
+  .on-dark .eyebrow{color:var(--accent-light)}
+  .sub-lead{max-width:760px;color:#3a4855;font-size:clamp(18px,.9vw + 13px,20px)}
+  ::selection{background:var(--light)}
+
+  .btn{position:relative;display:inline-block;background:var(--accent);color:var(--btn-ink);font-weight:700;
+    font-size:18px;padding:15px 32px;border-radius:10px;text-decoration:none;letter-spacing:.2px;
+    box-shadow:0 1px 2px rgba(var(--accent-rgb),.28),0 6px 16px rgba(var(--accent-rgb),.22);
+    transition:transform .16s var(--ease-out)}
+  .btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    box-shadow:0 2px 4px rgba(var(--accent-rgb),.22),0 10px 26px rgba(var(--accent-rgb),.32);
+    opacity:0;transition:opacity .2s var(--ease-out)}
+  .btn:active{transform:scale(0.97)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.65);color:#fff;box-shadow:none;
+    transition:transform .16s var(--ease-out),border-color .15s ease,background-color .15s ease}
+  .btn.ghost::after{box-shadow:none}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--amber);color:var(--navyd);font-weight:700;padding:10px 18px;z-index:99;border-radius:0 0 8px 0}
+  .skip:focus{left:0}
+  .skip:active{opacity:.85}
+
+  .dashes{height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 46px,transparent 46px 88px)}
+
+  /* ---------- header ---------- */
+  .site-head{position:sticky;top:0;z-index:40;background:rgba(18,40,63,.88);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:68px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .brand:active{opacity:.75}
+  .brand .mark{flex:0 0 auto}
+  .brand b{font-family:Georgia,serif;color:#fff;font-size:18px;letter-spacing:.02em;font-weight:700;line-height:1.2}
+  .brand small{display:block;color:#9fc0de;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .site-head nav{display:flex;align-items:center;gap:22px;font-size:16px}
+  .site-head nav a{color:#cfe0f0;text-decoration:none;padding:6px 2px;transition:color .15s ease}
+  .site-head nav a:active{color:#fff}
+  .site-head nav a[aria-current="page"]{color:#fff;font-weight:700}
+  .site-head .btn{padding:10px 20px;font-size:16px;border-radius:999px}
+  @media(max-width:880px){.site-head nav a.lnk{display:none}}
+  .site-head::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:rgba(9,19,32,.97);box-shadow:0 10px 26px rgba(0,0,0,.35);
+    opacity:0;transition:opacity .25s ease}
+  .site-head.scrolled::before{opacity:1}
+  .scroll-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--amber);
+    transform:scaleX(0);transform-origin:0 50%;pointer-events:none;z-index:1}
+  .cnt{font-variant-numeric:tabular-nums}
+
+  /* ---------- hero (warmer, book edition) ---------- */
+  .hero{background:
+      radial-gradient(1100px 520px at 76% 108%, rgba(200,134,43,.30), transparent 62%),
+      radial-gradient(900px 480px at 24% 114%, rgba(216,154,62,.18), transparent 62%),
+      linear-gradient(168deg,#0B1828 0%, #142B43 40%, var(--navy) 100%);
+    color:#fff;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;
+    padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(72px,9vw,110px)}
+  .pill{display:inline-block;background:rgba(var(--accent-rgb),.16);border:1px solid rgba(240,194,119,.45);
+    color:#F6DCAE;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    padding:8px 18px;border-radius:999px;margin-bottom:24px}
+  .hero h1{color:#fff;font-size:clamp(32px,3.8vw + 8px,50px);letter-spacing:-0.015em;margin-bottom:18px;text-wrap:balance}
+  .hero p.sub{font-size:clamp(18px,1vw + 12px,21px);color:#e7d9bd;max-width:640px;margin-bottom:16px}
+  .hero p.body{font-size:clamp(17px,.85vw + 12px,19px);color:#c9d9ea;max-width:640px;margin-bottom:22px}
+  .hero p.body em{color:#fff;font-style:italic}
+  .pull{font-family:Georgia,serif;font-style:italic;font-size:clamp(19px,1.2vw + 13px,23px);color:var(--accent-light);
+    border-left:4px solid var(--accent);padding:4px 0 4px 18px;max-width:600px;margin-bottom:30px;line-height:1.5}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .avail{margin-top:20px;font-size:16px;color:#c2b495}
+  .hero .avail a{color:var(--accent-light);text-decoration:underline;text-underline-offset:3px;transition:color .15s ease}
+  .hero .avail a:active{color:#fff}
+  .hero-art{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 44px rgba(0,0,0,.4));border-radius:20px}
+  .hero-foot{position:absolute;left:0;right:0;bottom:0;height:7px;
+    background:repeating-linear-gradient(90deg,var(--amber) 0 52px,transparent 52px 100px)}
+  @media(max-width:880px){
+    .hero .wrap{grid-template-columns:1fr}
+    .hero-art{max-width:480px;margin:6px auto 0}
+  }
+
+  /* ---------- crew ---------- */
+  .crewsec{background:var(--cream)}
+  .crewsec .head-ic{width:30px;height:30px;color:var(--accent-dark);vertical-align:-4px;margin-left:6px}
+  .crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+  @media(max-width:980px){.crew-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.crew-grid{grid-template-columns:1fr}}
+  .crew{background:#fff;border:1px solid #dce6f0;border-radius:16px;padding:30px 24px 26px;
+    box-shadow:var(--shadow-card);text-align:center;position:relative;transition:transform .2s var(--ease-out)}
+  .crew::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    box-shadow:var(--shadow-lift);opacity:0;transition:opacity .2s var(--ease-out)}
+  .crew .avatar{width:78px;height:78px;display:block;margin:0 auto 16px}
+  .crew h3{font-size:22px}
+  .crew .real{display:block;font-family:system-ui,sans-serif;font-size:14.5px;font-weight:600;color:var(--grey);margin-top:2px}
+  .crew .role{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent-dark);margin:10px 0 12px}
+  .crew p{font-size:16.5px;line-height:1.55;color:#41525f;font-style:italic}
+  .crew-line{margin-top:30px;font-size:17.5px;color:#33424f;max-width:680px}
+  .crew-line a{color:var(--accent-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  /* ---------- everyone (instrument readout) ---------- */
+  .everyone{background:linear-gradient(165deg,var(--navy) 0%,var(--navyd) 78%);color:#fff;position:relative}
+  .everyone h2{color:#fff;font-size:clamp(30px,3vw + 12px,42px)}
+  .everyone .punch{font-family:Georgia,serif;font-style:italic;font-size:clamp(20px,1.4vw + 13px,25px);color:var(--accent-light);margin-bottom:18px}
+  .everyone p{max-width:760px;color:#dbe8f6;font-size:clamp(18px,1vw + 12px,21px);margin-bottom:14px}
+  .everyone p strong{color:#fff}
+  .chips{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;list-style:none}
+  .chip{display:inline-flex;align-items:center;gap:11px;background:rgba(213,232,240,.06);
+    border:1px solid rgba(213,232,240,.22);border-radius:10px;padding:11px 18px;
+    font-size:13.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#E8C77D}
+  .chip .led{width:9px;height:9px;border-radius:50%;background:var(--amber);
+    box-shadow:0 0 9px rgba(200,134,43,.85);flex:0 0 auto}
+
+  /* ---------- author story ---------- */
+  .story{background:#fff}
+  .story .measure{max-width:680px;margin:0 auto}
+  .story h2{font-size:clamp(30px,3vw + 12px,44px);margin-bottom:26px}
+  .story p{font-family:Georgia,"Times New Roman",serif;font-size:clamp(19px,.9vw + 14px,22px);
+    line-height:1.78;color:#33424f;margin-bottom:22px}
+  .story p:first-of-type::first-letter{font-size:3.1em;float:left;line-height:.84;padding:5px 12px 0 0;color:var(--accent);font-weight:700}
+  .story .closer{font-style:italic;color:var(--navy)}
+
+  /* ---------- about the author ---------- */
+  .author{background:var(--cream)}
+  .author .grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:center;max-width:920px}
+  @media(max-width:680px){.author .grid{grid-template-columns:1fr}}
+  .author .portrait{width:170px;height:170px}
+  .author p{font-size:clamp(18px,.9vw + 13px,20px);color:#3a4855;margin-bottom:14px;max-width:680px}
+  .author .kept{font-family:Georgia,serif;font-style:italic;color:var(--navy)}
+
+  /* ---------- flight manifest ---------- */
+  .mani{background:#fff;padding-top:0}
+  .mani-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+  @media(max-width:700px){.mani-grid{grid-template-columns:1fr}}
+  .mcard{background:var(--cream);border:1px solid #dce6f0;border-radius:16px;padding:30px 28px;
+    box-shadow:var(--shadow-card);position:relative;transition:transform .2s var(--ease-out)}
+  .mcard::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    box-shadow:var(--shadow-lift);opacity:0;transition:opacity .2s var(--ease-out)}
+  .mcard .num{font-family:Georgia,serif;font-size:clamp(40px,3vw + 22px,52px);font-weight:700;color:var(--accent);line-height:1;margin-bottom:10px}
+  .mcard .badge{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    background:#F3E3C3;color:var(--accent-dark);margin-bottom:14px}
+  .mcard .badge .ic{width:28px;height:28px}
+  .mcard h3{font-size:21px;margin-bottom:8px}
+  .mcard p{font-size:17px;line-height:1.6;color:#41525f}
+
+  /* ---------- get your copy ---------- */
+  .buy{background:var(--cream)}
+  .buy .center{text-align:center}
+  .plan{background:#fff;border:2px solid var(--accent);border-radius:20px;padding:38px 34px;
+    box-shadow:var(--shadow-card);max-width:520px;margin:34px auto 0;position:relative;text-align:left}
+  .plan .ribbon{position:absolute;top:-14px;left:30px;background:var(--accent);color:var(--btn-ink);
+    font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:999px}
+  .plan .tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--accent-dark)}
+  .plan h3{font-size:26px;margin:8px 0 6px}
+  .plan .amt{font-size:clamp(38px,3vw + 20px,46px);font-family:Georgia,serif;color:var(--navy);font-weight:700;letter-spacing:-0.01em}
+  .plan .amt small{font-size:16px;color:var(--grey);font-weight:400;letter-spacing:0}
+  .plan ul{list-style:none;margin:18px 0 26px}
+  .plan li{padding:9px 0 9px 32px;position:relative;font-size:17px;line-height:1.6;color:#41525f;border-bottom:1px solid #e4ecf4}
+  .plan li:last-child{border-bottom:0}
+  .plan li .tick{position:absolute;left:0;top:11px;width:20px;height:20px;color:var(--accent-dark)}
+  .plan .avail{font-size:15.5px;color:var(--grey);margin-top:14px}
+  .buy .xlink{margin-top:34px;font-size:18px;color:#33424f}
+  .buy .xlink a{color:var(--accent-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  /* ---------- footer ---------- */
+  .runway-strip{display:block;width:100%;height:auto;background:#0B1828;margin-bottom:-1px}
+  footer{background:#0B1828;color:#9fb6cc;font-size:16px;padding:8px 0 40px}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  footer .tagline{font-family:Georgia,serif;font-style:italic;color:#cfe0f0}
+  footer a{color:#cfe0f0;text-decoration:none;transition:color .15s ease}
+  footer a:active{color:#fff}
+
+  /* ---------- hover (precise pointers only) ---------- */
+  @media (hover: hover) and (pointer: fine){
+    .btn:hover{transform:translateY(-1px)}
+    .btn:hover::after{opacity:1}
+    .btn:active{transform:translateY(0) scale(0.97)}
+    .btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+    .site-head nav a:hover{color:#fff}
+    .crew:hover{transform:translateY(-3px)}
+    .crew:hover::after{opacity:1}
+    .mcard:hover{transform:translateY(-3px)}
+    .mcard:hover::after{opacity:1}
+    .hero .avail a:hover{color:#fff}
+    .crew-line a:hover{color:var(--navy)}
+    .buy .xlink a:hover{color:var(--navy)}
+    footer a:hover{color:#fff;text-decoration:underline}
+  }
+
+  /* ---------- motion ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}
+    html.js .reveal.in-view{opacity:1;transform:none}
+    html.js .crew-grid .reveal:nth-child(2),html.js .mani-grid .reveal:nth-child(2){transition-delay:60ms}
+    html.js .crew-grid .reveal:nth-child(3),html.js .mani-grid .reveal:nth-child(3){transition-delay:120ms}
+    html.js .crew-grid .reveal:nth-child(4),html.js .mani-grid .reveal:nth-child(4){transition-delay:180ms}
+    html.js .crew-grid .reveal:nth-child(5){transition-delay:240ms}
+    html.js .crew-grid .reveal:nth-child(6){transition-delay:300ms}
+    html.js .hero .pill,html.js .hero h1,html.js .hero .sub,html.js .hero .body,
+    html.js .hero .pull,html.js .hero .cta-row,html.js .hero .avail,html.js .hero-art{animation:rise .6s var(--ease-out) both}
+    html.js .hero h1{animation-delay:50ms}
+    html.js .hero .sub{animation-delay:100ms}
+    html.js .hero .body{animation-delay:150ms}
+    html.js .hero .pull{animation-delay:200ms}
+    html.js .hero .cta-row{animation-delay:250ms}
+    html.js .hero .avail{animation-delay:300ms}
+    html.js .hero-art{animation-duration:.7s;animation-delay:120ms}
+    .tw{animation:twinkle 3.2s ease-in-out infinite}
+    .tw2{animation:twinkle 4.4s ease-in-out 1.3s infinite}
+    .blink{animation:blink 2.4s steps(1) infinite}
+    .float{animation:floaty 8s ease-in-out infinite}
+    /* instrument readout: chips blink on in sequence once, then hold */
+    html.js .chips .chip{opacity:0}
+    html.js .in-view .chips .chip{animation:chipOn .9s var(--ease-out) .15s forwards}
+    html.js .in-view .chips .chip:nth-child(2){animation-delay:.55s}
+    html.js .in-view .chips .chip:nth-child(3){animation-delay:.95s}
+    .chip .led{animation:ledpulse 3.4s ease-in-out infinite}
+    .chip:nth-child(2) .led{animation-delay:-1.1s}
+    .chip:nth-child(3) .led{animation-delay:-2.2s}
+    /* section arrival: eyebrow wipe-in */
+    html.js .reveal .eyebrow{clip-path:inset(0 100% 0 0)}
+    html.js .reveal.in-view .eyebrow{clip-path:inset(0 0 0 0);transition:clip-path .35s var(--ease-out) .08s}
+    /* living details: slow runway centreline shimmer */
+    .strip-dashes>*{animation:shim 6.6s linear infinite}
+    .strip-dashes>:nth-child(3n+2){animation-delay:-2.2s}
+    .strip-dashes>:nth-child(3n){animation-delay:-4.4s}
+    /* hero CTA: two quiet glow pulses, then stops */
+    .hero .cta-row .btn:not(.ghost)::before{content:"";position:absolute;inset:-4px;border-radius:14px;pointer-events:none;opacity:0;
+      box-shadow:0 0 0 5px rgba(var(--accent-rgb),.20),0 0 28px 8px rgba(var(--accent-rgb),.38);
+      animation:ctaglow 8s ease-in-out 3.4s 2 both}
+    @keyframes shim{0%,100%{opacity:1}50%{opacity:.62}}
+    @keyframes ctaglow{0%,11%,100%{opacity:0}5%{opacity:1}}
+    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    @keyframes twinkle{0%,100%{opacity:.95}50%{opacity:.25}}
+    @keyframes blink{0%,55%{opacity:1}60%,100%{opacity:.15}}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes chipOn{0%{opacity:0}16%{opacity:1}30%{opacity:.25}46%{opacity:1}62%{opacity:.45}100%{opacity:1}}
+    @keyframes ledpulse{0%,100%{opacity:1}50%{opacity:.45}}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html.js .reveal{opacity:0;transition:opacity .3s ease}
+    html.js .reveal.in-view{opacity:1}
+  }
+
+  /* ============================================================
+     REFINED PREMIUM + ELECTRIC AI FLEET + GALAXY SKY (site rollout)
+     Static or transform/opacity. Reduced-motion + JS-off safe.
+     ============================================================ */
+  body::after{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.04;mix-blend-mode:soft-light;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  h1,h2,h3{text-wrap:balance}
+  p{text-wrap:pretty}
+  .eyebrow{display:inline-flex;align-items:center;gap:11px}
+  .eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:var(--accent);flex:0 0 auto;box-shadow:0 0 10px rgba(var(--accent-rgb),.5)}
+  .on-dark .eyebrow::before{background:var(--accent-light)}
+  .card,.mod,.plan,.crew,.feat,.rec,.not,.door{box-shadow:var(--shadow-card),inset 0 1px 0 rgba(255,255,255,.65)}
+  .btn:not(.ghost){background:linear-gradient(180deg,var(--accent-light) -30%,var(--accent) 52%,var(--accent-dark) 250%)}
+  .hero-art{transition:transform .4s var(--ease-out);will-change:transform}
+  .sigarc{stroke-dasharray:3 11}
+  .everyone::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(680px 320px at 86% -10%, rgba(200,134,43,.13), transparent 62%),
+      radial-gradient(900px 520px at 16% 6%, rgba(46,117,182,.24), transparent 60%),
+      radial-gradient(720px 600px at 82% 118%, rgba(58,150,200,.18), transparent 64%),
+      radial-gradient(1300px 300px at 60% 42%, rgba(120,200,235,.07), transparent 72%)}
+  .everyone>.wrap{position:relative;z-index:1}
+  .everyone::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;mix-blend-mode:screen;opacity:.72;background-repeat:repeat;background-size:480px 480px;
+    background-image:url("<svg%20xmlns='http%3A//www.w3.org/2000/svg'%20width='480'%20height='480'><g%20fill='%23ffffff'%20opacity='.9'><circle%20cx='96'%20cy='72'%20r='1.3'/><circle%20cx='200'%20cy='260'%20r='1.4'/><circle%20cx='290'%20cy='120'%20r='1.2'/><circle%20cx='360'%20cy='250'%20r='1.3'/><circle%20cx='120'%20cy='420'%20r='1.2'/><circle%20cx='340'%20cy='430'%20r='1.3'/><circle%20cx='430'%20cy='40'%20r='1.1'/><circle%20cx='24'%20cy='38'%20r='1.1'/><circle%20cx='250'%20cy='40'%20r='1.2'/><circle%20cx='180'%20cy='470'%20r='1.1'/></g><g%20fill='%23ffffff'%20opacity='.55'><circle%20cx='150'%20cy='30'%20r='1'/><circle%20cx='240'%20cy='60'%20r='1'/><circle%20cx='300'%20cy='300'%20r='0.9'/><circle%20cx='320'%20cy='40'%20r='0.9'/><circle%20cx='400'%20cy='320'%20r='1'/><circle%20cx='40'%20cy='300'%20r='1'/><circle%20cx='200'%20cy='400'%20r='0.9'/><circle%20cx='250'%20cy='440'%20r='1'/><circle%20cx='450'%20cy='440'%20r='1'/><circle%20cx='176'%20cy='110'%20r='0.9'/><circle%20cx='410'%20cy='150'%20r='0.9'/><circle%20cx='420'%20cy='360'%20r='0.9'/><circle%20cx='140'%20cy='250'%20r='0.95'/></g><g%20fill='%23ffffff'%20opacity='.32'><circle%20cx='60'%20cy='140'%20r='0.7'/><circle%20cx='130'%20cy='200'%20r='0.6'/><circle%20cx='210'%20cy='160'%20r='0.6'/><circle%20cx='264'%20cy='210'%20r='0.7'/><circle%20cx='340'%20cy='180'%20r='0.6'/><circle%20cx='380'%20cy='90'%20r='0.7'/><circle%20cx='450'%20cy='220'%20r='0.6'/><circle%20cx='80'%20cy='360'%20r='0.7'/><circle%20cx='160'%20cy='330'%20r='0.6'/><circle%20cx='300'%20cy='380'%20r='0.7'/><circle%20cx='380'%20cy='400'%20r='0.6'/><circle%20cx='20'%20cy='200'%20r='0.7'/><circle%20cx='60'%20cy='240'%20r='0.6'/><circle%20cx='440'%20cy='290'%20r='0.7'/><circle%20cx='380'%20cy='40'%20r='0.6'/><circle%20cx='110'%20cy='150'%20r='0.6'/><circle%20cx='230'%20cy='330'%20r='0.6'/><circle%20cx='470'%20cy='120'%20r='0.6'/></g><g%20fill='%239CC9F0'%20opacity='.6'><circle%20cx='110'%20cy='90'%20r='1'/><circle%20cx='280'%20cy='170'%20r='1.1'/><circle%20cx='370'%20cy='300'%20r='1'/><circle%20cx='70'%20cy='180'%20r='0.9'/><circle%20cx='330'%20cy='80'%20r='1'/><circle%20cx='190'%20cy='200'%20r='0.9'/></g></svg>")}
+  @media (hover: hover) and (pointer: fine){
+    .card:hover,.mod:hover,.plan:hover,.crew:hover,.door:hover,.feat:hover{border-color:var(--accent-light)}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .aurora{animation:aurora 10s ease-in-out infinite}
+    .ai-a{animation:aidriftA 11s ease-in-out infinite}
+    .ai-b{animation:aidriftB 9s ease-in-out -.6s infinite}
+    .ai-c{animation:aidriftC 13s ease-in-out -1.2s infinite}
+    .sig{animation:sigpulse 3.4s ease-in-out infinite}
+    .sig.s2{animation-delay:-.6s}.sig.s3{animation-delay:-1.2s}.sig.s4{animation-delay:-1.8s}
+    .sig.s5{animation-delay:-2.4s}.sig.s6{animation-delay:-3s}
+    .sigarc{animation:sigflow 2.4s linear infinite}
+    .sigarc.s2{animation-duration:3.1s}.sigarc.s3{animation-duration:2s}
+    .everyone::after{animation:skybreathe 8s ease-in-out infinite}
+    @keyframes aurora{0%,100%{opacity:.16;transform:translateX(0)}50%{opacity:.3;transform:translateX(10px)}}
+    @keyframes aidriftA{0%,100%{transform:translate(0,0)}50%{transform:translate(9px,-11px)}}
+    @keyframes aidriftB{0%,100%{transform:translate(0,0)}50%{transform:translate(-11px,-7px)}}
+    @keyframes aidriftC{0%,100%{transform:translate(0,0)}50%{transform:translate(8px,-12px)}}
+    @keyframes sigpulse{0%,100%{opacity:.3}50%{opacity:1}}
+    @keyframes sigflow{to{stroke-dashoffset:-28}}
+    @keyframes skybreathe{0%,100%{opacity:.58}50%{opacity:.82}}
+  }
+  @media (prefers-reduced-motion: reduce){ .hero-art{transition:none} }
+</style>
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Navigation / Header -->
-    <header class="site-header">
-        <div class="container header-container">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"
-                        stroke="#F4A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M21 8L12 13L3 8" stroke="#F4A500" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                <a href="/" style="color: inherit; text-decoration: none;">C4TO</a>
-            </div>
-            <nav class="nav-links">
-                <a href="/" class="nav-link">Academy</a>
-                <a href="/book/" class="nav-link" style="color: var(--accent-gold);">The Book</a>
-                <a href="/#consulting" class="nav-link">Consulting</a>
-                <a href="/#pricing" class="nav-link">Pricing</a>
-            </nav>
-            <div class="nav-ctas">
-                <a href="/course/" class="nav-link" style="font-size:0.875rem; opacity:0.7;">Student login</a>
-                <a href="#buy" class="btn btn-sm btn-primary btn-glow">Get the Book</a>
-            </div>
-        </div>
-    </header>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Cleared For Take-Off Academy, home">
+      <svg class="mark" width="42" height="42" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+        <path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/>
+        <path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/>
+        <g fill="#C8862B"><rect x="12" y="36" width="5" height="2.4" rx="1.2"/><rect x="21" y="36" width="5" height="2.4" rx="1.2"/><rect x="30" y="36" width="5" height="2.4" rx="1.2"/></g>
+      </svg>
+      <span><b>Cleared For Take-Off</b><small>Academy &middot; AI for Grown-Ups</small></span>
+    </a>
+    <nav aria-label="Site">
+      <a class="lnk" href="/book/" aria-current="page">The Book</a>
+      <a class="lnk" href="/#flightplan">Academy</a>
+      <a class="lnk" href="/#consulting">Consulting</a>
+      <a class="lnk" href="/#pricing">Pricing</a>
+      <a class="lnk" href="/course/">Student login</a>
+      <a class="btn" href="#buy">Get the Book</a>
+    </nav>
+  </div>
+  <span class="scroll-progress" aria-hidden="true"></span>
+</header>
 
-    <!-- Hero Section -->
-    <section id="book" class="hero target-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge fade-in-up">Permission Granted</div>
-                <h1 class="fade-in-up delay-1">Your Funny, No-Nonsense Guide to <br><span class="highlight">Soaring With
-                        AI</span></h1>
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="pill">Permission Granted</span>
+      <h1>Your Funny, No-Nonsense Guide to Soaring With AI</h1>
+      <p class="sub">No engineering degree required. No technical background needed. No idea what half the terms mean. You&rsquo;re in the right place.</p>
+      <p class="body"><em>Cleared for Take-Off</em> is the irreverent, practical playbook for humans who want to use AI brilliantly. And actually enjoy the process. You&rsquo;ll go from your first awkward prompt to running a full AI crew that does the heavy lifting while you stay in the captain&rsquo;s seat.</p>
+      <p class="pull">You don&rsquo;t need to understand AI. You need to know how to talk to it. This book shows you exactly how.</p>
+      <div class="cta-row">
+        <a href="#buy" class="btn">Get Your Copy &rarr;</a>
+        <a href="#crew" class="btn ghost">Meet the Crew</a>
+      </div>
+      <p class="avail">Available on Amazon, Apple Books, Kobo, Google Play and <a href="https://wildheartshq.com">wildheartshq.com</a></p>
+    </div>
+    <div>
+      <svg class="hero-art" viewBox="0 0 620 560" role="img" aria-labelledby="heroArtTitle" focusable="false">
+  <title id="heroArtTitle">A stylised light aircraft climbing from a warm dawn runway, its trail tracing a playful loop on the way up</title>
+  <defs>
+    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08131F"/>
+      <stop offset=".42" stop-color="#12283F"/>
+      <stop offset=".72" stop-color="#1B3A5B"/>
+      <stop offset="1" stop-color="#33567C"/>
+    </linearGradient>
+    <radialGradient id="dawnG" cx=".5" cy="1.05" r=".95">
+      <stop offset="0" stop-color="#D89A3E" stop-opacity=".62"/>
+      <stop offset=".35" stop-color="#C8862B" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#C8862B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tarmacG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13283E"/>
+      <stop offset="1" stop-color="#0A1726"/>
+    </linearGradient>
+    <radialGradient id="planeGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#F4F8FC" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#F4F8FC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softB" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+    <clipPath id="frame"><rect width="620" height="560" rx="20"/></clipPath>
+    <radialGradient id="vig" cx=".5" cy=".44" r=".72">
+      <stop offset=".55" stop-color="#06101B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#06101B" stop-opacity=".4"/>
+    </radialGradient>
+    <radialGradient id="aiGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#74D0EC" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#74D0EC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="auroraG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E75B6" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5BC8E8" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2E75B6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="620" height="560" fill="url(#skyG)"/>
+    <rect width="620" height="560" fill="url(#dawnG)"/>
 
-                <p class="hero-lead-text fade-in-up delay-1">
-                    No engineering degree required. No technical background needed. No idea what half the terms mean. You're in the right place.
-                </p>
+    <!-- electric aurora: a faint AI-signal ribbon across the night -->
+    <path class="aurora" d="M-40 156 C150 112 260 182 430 142 C540 120 624 156 668 134"
+          fill="none" stroke="url(#auroraG)" stroke-width="42" opacity=".2" filter="url(#softB)"/>
 
-                <p class="hero-subtitle fade-in-up delay-2">
-                    Cleared for Take-Off is the irreverent, practical playbook for humans who want to use AI brilliantly. And actually enjoy the process. You'll go from your first awkward prompt to running a full AI crew
-                    that does the heavy lifting while you stay in the captain's seat.
-                </p>
-                <p class="hero-subtitle fade-in-up delay-2">
-                    <strong>You don't need to understand AI. You need to know how to talk to it.</strong>
-                </p>
-                <p class="hero-subtitle fade-in-up delay-2">
-                    This book shows you exactly how.
-                </p>
+    <!-- stars -->
+    <g class="px-s" fill="#D5E8F0">
+      <circle cx="58" cy="64" r="1.6" class="tw"/><circle cx="132" cy="38" r="1.1"/>
+      <circle cx="208" cy="86" r="1.3" class="tw2"/><circle cx="296" cy="44" r="1.7" class="tw"/>
+      <circle cx="372" cy="92" r="1.1"/><circle cx="448" cy="40" r="1.4" class="tw2"/>
+      <circle cx="528" cy="74" r="1.7" class="tw"/><circle cx="582" cy="128" r="1.1"/>
+      <circle cx="86" cy="150" r="1.2" class="tw2"/><circle cx="174" cy="190" r="1"/>
+      <circle cx="490" cy="158" r="1.3" class="tw"/><circle cx="560" cy="220" r="1"/>
+      <circle cx="38" cy="236" r="1.3" class="tw"/><circle cx="246" cy="142" r="1"/>
+      <circle cx="330" cy="120" r="1.2" class="tw2"/><circle cx="416" cy="208" r="1.1"/>
+    </g>
 
-                <div class="hero-cta fade-in-up delay-3">
-                    <a href="#buy" class="btn btn-primary btn-glow" style="margin-bottom: 1rem;">
-                        <span class="btn-text">Get Your Copy &rarr;</span>
-                    </a>
-                    <div class="avail-text">Available on Amazon, Apple Books, Kobo, Google Play and wildheartshq.com
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual fade-in delay-2">
-                <div class="book-mockup">
-                    <div class="book-cover">
-                        <img src="../assets/Cover.jpg" alt="Cleared for Take-Off Book Cover" class="cover-image">
-                    </div>
-                    <div class="book-spine"></div>
-                    <div class="book-pages"></div>
-                    <div class="glow-effect"></div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-blur blur-1"></div>
-        <div class="bg-blur blur-2"></div>
-    </section>
+    <!-- clouds -->
+    <g class="px-c" fill="#D5E8F0" filter="url(#softB)">
+      <g opacity=".10"><ellipse cx="110" cy="270" rx="86" ry="18"/><ellipse cx="158" cy="256" rx="52" ry="14"/></g>
+      <g opacity=".08"><ellipse cx="498" cy="252" rx="92" ry="17"/><ellipse cx="452" cy="240" rx="48" ry="12"/></g>
+      <g opacity=".07"><ellipse cx="300" cy="330" rx="120" ry="16"/></g>
+    </g>
+    <g class="px-c2" fill="#D89A3E" opacity=".16" filter="url(#softB)">
+      <ellipse cx="190" cy="360" rx="100" ry="14"/><ellipse cx="470" cy="385" rx="80" ry="12"/>
+    </g>
 
-    <!-- Meet the Crew Section -->
-    <section id="crew" class="crew-section target-section">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Meet the <span class="highlight">Crew 🛩️</span></h2>
-                <div class="rule-gold center"></div>
-                <p>Every great flight needs a great crew. Here's who's running Heartliner One.</p>
-            </div>
+    <!-- THE AI FLEET: small craft and live signals flying all around the Captain -->
+    <g class="aifleet">
+      <g fill="none" stroke="#74D0EC" stroke-width="1.6" stroke-linecap="round" opacity=".75">
+        <path class="sigarc" d="M150 126 C206 150 246 214 240 288"/>
+        <path class="sigarc s2" d="M512 222 C462 206 420 198 356 178"/>
+        <path class="sigarc s3" d="M126 102 C204 124 254 122 312 102"/>
+      </g>
+      <g fill="#CFF3FF" filter="url(#glow)">
+        <circle class="sig" cx="96" cy="178" r="2.8"/>
+        <circle class="sig s2" cx="262" cy="150" r="2.3"/>
+        <circle class="sig s3" cx="332" cy="96" r="3"/>
+        <circle class="sig s4" cx="430" cy="206" r="2.5"/>
+        <circle class="sig s5" cx="506" cy="138" r="2.8"/>
+        <circle class="sig s6" cx="566" cy="296" r="2.4"/>
+      </g>
+      <g class="ai-a">
+        <ellipse cx="150" cy="120" rx="34" ry="24" fill="url(#aiGlow)"/>
+        <g transform="translate(150 120) rotate(-18) scale(.52)">
+          <path d="M30 0 L-22 -13 L-10 1 Z" fill="#D5E8F0"/>
+          <path d="M30 0 L-10 1 L-16 15 Z" fill="#9CC9F0"/>
+        </g>
+      </g>
+      <g class="ai-b">
+        <ellipse cx="528" cy="232" rx="28" ry="20" fill="url(#aiGlow)"/>
+        <g transform="translate(528 232) rotate(-24) scale(.42)">
+          <path d="M30 0 L-22 -13 L-10 1 Z" fill="#F0C277"/>
+          <path d="M30 0 L-10 1 L-16 15 Z" fill="#C8862B"/>
+        </g>
+      </g>
+      <g class="ai-c">
+        <ellipse cx="206" cy="316" rx="30" ry="21" fill="url(#aiGlow)"/>
+        <g transform="translate(206 316) rotate(-12) scale(.46)">
+          <path d="M30 0 L-22 -13 L-10 1 Z" fill="#EAF4FB"/>
+          <path d="M30 0 L-10 1 L-16 15 Z" fill="#74D0EC"/>
+        </g>
+      </g>
+    </g>
 
-            <div class="crew-grid">
-                <div class="crew-card fade-in-up">
-                    <div class="crew-image-placeholder">
-                        <img src="../assets/crew/captain-naomi.png?v=3" alt="Captain Naomi" class="crew-image">
-                    </div>
-                    <h3>Captain Naomi</h3>
-                    <div class="crew-role">The Human. The Captain.</div>
-                    <p>The one holding it all together. Allegedly.</p>
-                </div>
-                <div class="crew-card fade-in-up delay-1">
-                    <div class="crew-image-placeholder">
-                        <img src="../assets/crew/archer.png?v=3" alt="Archer (Claude)" class="crew-image">
-                    </div>
-                    <h3>Archer (Claude)</h3>
-                    <div class="crew-role">Chief Strategist. First Officer.</div>
-                    <p>Has a framework for everything, including this introduction.</p>
-                </div>
-                <div class="crew-card fade-in-up delay-2">
-                    <div class="crew-image-placeholder">
-                        <img src="../assets/crew/red.png?v=3" alt="Red (ChatGPT)" class="crew-image">
-                    </div>
-                    <h3>Red (ChatGPT)</h3>
-                    <div class="crew-role">Senior Cabin Manager.</div>
-                    <p>Always first. Always confident. Occasionally correct.</p>
-                </div>
-                <div class="crew-card fade-in-up">
-                    <div class="crew-image-placeholder">
-                        <img src="../assets/crew/simon.png?v=3" alt="Simon (Suno)" class="crew-image">
-                    </div>
-                    <h3>Simon (Suno)</h3>
-                    <div class="crew-role">Crew Musician.</div>
-                    <p>Has headphones. Has opinions. Will write you a song about literally anything.</p>
-                </div>
-                <div class="crew-card fade-in-up delay-1">
-                    <div class="crew-image-placeholder">
-                        <img src="../assets/crew/forge.png?v=3" alt="Forge (Claude Code)" class="crew-image">
-                    </div>
-                    <h3>Forge (Claude Code)</h3>
-                    <div class="crew-role">Chief Engineer.</div>
-                    <p>Already built three things before you finished explaining what you wanted.</p>
-                </div>
-                <div class="crew-card fade-in-up delay-2">
-                    <div class="crew-image-placeholder">
-                        <img src="../assets/crew/henry.png?v=3" alt="Henry (Perplexity)" class="crew-image">
-                    </div>
-                    <h3>Henry (Perplexity)</h3>
-                    <div class="crew-role">Research Officer.</div>
-                    <p>Will cite seventeen sources before answering a simple question. All of them verified.</p>
-                </div>
-            </div>
+    <!-- ground & horizon glow -->
+    <rect x="0" y="428" width="620" height="132" fill="#0A1828"/>
+    <rect x="0" y="424" width="620" height="6" fill="#D89A3E" opacity=".3" filter="url(#softB)"/>
 
-            <div class="crew-footer fade-in-up delay-3">
-                <p>Want to know what each crew member does, and when to call them in? It's all in the book.</p>
-            </div>
-        </div>
-    </section>
+    <!-- runway -->
+    <polygon points="262,430 358,430 588,560 32,560" fill="url(#tarmacG)"/>
+    <polyline points="262,430 32,560" stroke="#2E4A66" stroke-width="2" fill="none"/>
+    <polyline points="358,430 588,560" stroke="#2E4A66" stroke-width="2" fill="none"/>
+    <!-- amber centreline dashes -->
+    <g class="strip-dashes" fill="#C8862B">
+      <polygon points="308.6,437 311.4,437 311.8,447 308.2,447"/>
+      <polygon points="307.9,455 312.1,455 312.7,469 307.3,469"/>
+      <polygon points="307,479 313,479 313.9,497 306.1,497"/>
+      <polygon points="305.9,508 314.1,508 315.3,532 304.7,532"/>
+      <polygon points="304.5,541 315.5,541 316.9,560 303.1,560"/>
+    </g>
+    <g fill="#C8862B" opacity=".35" filter="url(#softB)">
+      <polygon points="305.9,508 314.1,508 315.3,532 304.7,532"/>
+      <polygon points="304.5,541 315.5,541 316.9,560 303.1,560"/>
+    </g>
+    <!-- threshold -->
+    <g fill="#D5E8F0" opacity=".8">
+      <rect x="286" y="430" width="6" height="3.4"/><rect x="298" y="430" width="6" height="3.4"/>
+      <rect x="316" y="430" width="6" height="3.4"/><rect x="328" y="430" width="6" height="3.4"/>
+    </g>
+    <!-- edge lights -->
+    <g fill="#E8C77D">
+      <circle cx="241" cy="442" r="2"/><circle cx="205" cy="462" r="2.4"/><circle cx="160" cy="487" r="2.8"/>
+      <circle cx="104" cy="519" r="3.2"/><circle cx="42" cy="553" r="3.6"/>
+      <circle cx="379" cy="442" r="2"/><circle cx="415" cy="462" r="2.4"/><circle cx="460" cy="487" r="2.8"/>
+      <circle cx="516" cy="519" r="3.2"/><circle cx="578" cy="553" r="3.6"/>
+    </g>
 
-    <!-- The Problem Section -->
-    <section class="problem-section target-section">
-        <div class="container">
-            <div class="grid-2">
-                <div class="problem-text slide-in-left">
-                    <h2>Everyone around you is using AI.</h2>
-                    <div class="rule-gold"></div>
-                    <p class="lead">Some brilliantly. Most badly and not telling you.</p>
-                    <p>A handful have quietly built something that looks like a team: a crew of digital collaborators
-                        that drafts, edits, designs, records, and automates.</p>
-                    <p>This book is about how to become one of those people.</p>
-                </div>
-                <div class="problem-visual slide-in-right">
-                    <div class="status-box">
-                        <div class="status-item">
-                            <div class="status-dot red"></div>
-                            <span>Overwhelm Detected</span>
-                        </div>
-                        <div class="status-item">
-                            <div class="status-dot yellow"></div>
-                            <span>Hype Filter Active</span>
-                        </div>
-                        <div class="status-item active">
-                            <div class="status-dot green"></div>
-                            <span>Awaiting Clearance</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- climb trail with a gentle loop -->
+    <path d="M310 432 C320 380 303 332 343 296 C383 261 432 286 408 316 C386 343 341 314 364 270 C383 234 420 198 442 178"
+          fill="none" stroke="#F0C277" stroke-width="3" stroke-linecap="round"
+          stroke-dasharray="1 14" opacity=".9"/>
 
-    <!-- The Silence Section -->
-    <section class="silence-section target-section">
-        <div class="container silence-container">
-            <div class="silence-content text-center fade-in-up">
-                <h2>Every author knows the silence.</h2>
-                <div class="rule-gold center"></div>
-                <p>You write something. Pour months into it. Rewrite it. Believe in it. Then you send it out into
-                    the world. And you wait. And you hear nothing. No feedback. No response. No one to tell you whether
-                    it's brilliant or broken or somewhere painfully in between.</p>
-                <p>I met ChatGPT in Malaysia. Dabbled, questioned it. Filed it away and came home. It wasn't until the
-                    past two years that I understood what it could actually do. Not as a writing tool. As the
-                    editor I never had. The one who would actually respond.</p>
-                <p>That is not a productivity tool. That is what every author deserves and almost none of us get:
-                    someone in the room who has actually read the work and is willing to be honest about it.</p>
-                <p>The AI didn't write this book. But it refused to let me write a bad one.</p>
-                <p class="lead highlight-text">And if it ended the silence for me, it can end it for you.</p>
-            </div>
-        </div>
-    </section>
+    <!-- cinematic vignette: deepens the edges, keeps the climb the focus -->
+    <rect width="620" height="560" fill="url(#vig)"/>
 
-    <!-- The Author Section -->
-    <section class="author-section target-section">
-        <div class="container">
-            <div class="grid-2">
-                <div class="author-visual slide-in-left">
-                    <div class="author-image-placeholder">
-                        <img src="../assets/crew/captain-naomi.png?v=3" alt="Naomi Shiels" class="author-image">
-                    </div>
-                </div>
-                <div class="author-text slide-in-right">
-                    <h2>About the Author</h2>
-                    <div class="rule-gold"></div>
-                    <p>Naomi Shiels is a Canberra-based former linguist, lawyer and commercial aviation manager. She is the founder of Wild Hearts Publishing. She has written 14 books. She has made 216 songs using AI. She builds with these tools every day.</p>
-                    <p>She is not an engineer. She did not go to a tech conference and come home converted. She learned to use AI the same way you will: by showing up, trying things, failing at some of them, and keeping what worked.</p>
-                    <p>This book is what she kept.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- aircraft -->
+    <g class="float">
+      <ellipse cx="452" cy="168" rx="86" ry="60" fill="url(#planeGlow)"/>
+      <g transform="translate(452 168) rotate(-21)">
+        <path d="M58 0 L-44 -25 L-22 3 Z" fill="#F4F8FC"/>
+        <path d="M58 0 L-22 3 L-36 30 Z" fill="#F0C277"/>
+        <path d="M58 0 L-22 3 L-26 14 Z" fill="#A9C4DD"/>
+        <path d="M-44 -25 L-22 3 L-36 12 Z" fill="#D5E8F0"/>
+      </g>
+    </g>
+  </g>
+  <rect width="620" height="560" rx="20" fill="none" stroke="rgba(240,194,119,.22)" stroke-width="1.5"/>
+</svg>
+    </div>
+  </div>
+  <div class="hero-foot" aria-hidden="true"></div>
+</header>
 
-    <!-- What's Inside Section -->
-    <section class="features-section target-section">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Flight <span class="highlight">Manifest</span></h2>
-                <div class="rule-gold center"></div>
-                <p>Everything you need to build momentum. Nothing you don't.</p>
-            </div>
+<section class="crewsec" id="crew" aria-labelledby="crew-h">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Heartliner One, boarding now</div>
+      <h2 id="crew-h">Meet the Crew<svg class="head-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18.5h17M4 14.8l13.6-5.4c1.4-.55 2.7.1 3 1.1.3 1.05-.5 2.1-1.9 2.4L6 15.4l-3-3.4 1.8-.5 2 1.6" fill="none"/></svg></h2>
+      <p class="sub-lead">Every great flight needs a great crew. Here&rsquo;s who&rsquo;s running Heartliner One.</p>
+    </div>
+    <div class="crew-grid">
+      <article class="crew reveal">
+        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+          <circle cx="24" cy="24" r="17.5" fill="none" stroke="rgba(213,232,240,.3)" stroke-width="1" stroke-dasharray="2 5"/>
+          <path d="M24 14.5l2.2 4.6 5 .7-3.6 3.5.9 5L24 26l-4.5 2.3.9-5-3.6-3.5 5-.7z" fill="#C8862B"/>
+          <path d="M14 27.5c-3.4-1.2-5.9-3-7.5-5.5 2.8.5 5.3 1.6 7.5 3.4zm20 0c3.4-1.2 5.9-3 7.5-5.5-2.8.5-5.3 1.6-7.5 3.4z" fill="#D5E8F0"/>
+        </svg>
+        <h3>Captain Naomi</h3>
+        <p class="role">The Human. The Captain.</p>
+        <p>The one holding it all together. Allegedly.</p>
+      </article>
+      <article class="crew reveal">
+        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+          <circle cx="24" cy="24" r="10.5" fill="none" stroke="#F0C277" stroke-width="2"/>
+          <polygon points="29,19 26.4,26.4 19,29 21.6,21.6" fill="#F0C277"/>
+          <path d="M24 10.5v2.5M24 35v2.5M10.5 24h2.5M35 24h2.5" stroke="#D5E8F0" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h3>Archer <span class="real">Claude</span></h3>
+        <p class="role">Chief Strategist. First Officer.</p>
+        <p>Has a framework for everything, including this introduction.</p>
+      </article>
+      <article class="crew reveal">
+        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+          <path d="M24 12.5l3.1 6.3 7 1-5 4.9 1.2 6.9L24 28.4l-6.3 3.2 1.2-6.9-5-4.9 7-1z" fill="#F0C277"/>
+        </svg>
+        <h3>Red <span class="real">ChatGPT</span></h3>
+        <p class="role">Senior Cabin Manager.</p>
+        <p>Always first. Always confident. Occasionally correct.</p>
+      </article>
+      <article class="crew reveal">
+        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+          <g fill="none" stroke="#F0C277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 30v-6a10 10 0 0 1 20 0v6"/>
+            <path d="M34 31.5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3.5a2 2 0 0 1 2-2h3zM14 31.5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3.5a2 2 0 0 0-2-2h-3z" fill="#F0C277" stroke="none"/>
+          </g>
+        </svg>
+        <h3>Simon <span class="real">Suno</span></h3>
+        <p class="role">Crew Musician.</p>
+        <p>Has headphones. Has opinions. Will write you a song about literally anything.</p>
+      </article>
+      <article class="crew reveal">
+        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+          <g transform="translate(12 12)">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="none" stroke="#F0C277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+        <h3>Forge <span class="real">Claude Code</span></h3>
+        <p class="role">Chief Engineer.</p>
+        <p>Already built three things before you finished explaining what you wanted.</p>
+      </article>
+      <article class="crew reveal">
+        <svg class="avatar" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/>
+          <circle cx="21.5" cy="21.5" r="7.5" fill="none" stroke="#F0C277" stroke-width="2"/>
+          <path d="m27 27 7 7" stroke="#F0C277" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <h3>Henry <span class="real">Perplexity</span></h3>
+        <p class="role">Research Officer.</p>
+        <p>Will cite seventeen sources before answering a simple question. All of them verified.</p>
+      </article>
+    </div>
+    <p class="crew-line reveal">Want to know what each crew member does, and when to call them in? <a href="#buy">It&rsquo;s all in the book.</a></p>
+  </div>
+</section>
 
-            <div class="feature-grid">
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                stroke="#DC50FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M12 16V12" stroke="#DC50FF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M12 8H12.01" stroke="#DC50FF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3>20 Tool Crew Manifest</h3>
-                    <p>Inside look at 20 specific AI tools and exactly how to brief them to act as your ultimate digital
-                        collaborators.</p>
-                </div>
-                <div class="feature-card fade-in-up delay-1">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#DC50FF" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3>50 Steal-able Prompts</h3>
-                    <p>Stop guessing. Grab 50 proven, ready-to-use prompts that will get you moving at the speed of
-                        thought today.</p>
-                </div>
-                <div class="feature-card fade-in-up delay-2">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"
-                                stroke="#DC50FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M10 22H14" stroke="#DC50FF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M12 18V22" stroke="#DC50FF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3>The Real Failures</h3>
-                    <p>The honest truth and spectacular failures nobody posts on LinkedIn, saving you from making the
-                        same expensive mistakes.</p>
-                </div>
-                <div class="feature-card fade-in-up delay-3">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#DC50FF" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M2 17L12 22L22 17" stroke="#DC50FF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M2 12L12 17L22 12" stroke="#DC50FF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3>Practical Philosophy</h3>
-                    <p>The core philosophy behind staying fluent, grounded, and sane while AI technology changes rapidly
-                        under you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="everyone on-dark" aria-labelledby="ev-h">
+  <div class="dashes" style="position:absolute;top:0;left:0;right:0" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The quiet truth</div>
+      <h2 id="ev-h">Everyone around you is using AI.</h2>
+      <p class="punch">Some brilliantly. Most badly and not telling you.</p>
+      <p>A handful have quietly built something that looks like a team: a crew of digital collaborators that drafts, edits, designs, records, and automates.</p>
+      <p><strong>This book is about how to become one of those people.</strong></p>
+      <ul class="chips" aria-label="Cockpit status readout">
+        <li class="chip"><span class="led" aria-hidden="true"></span> Overwhelm Detected</li>
+        <li class="chip"><span class="led" aria-hidden="true"></span> Hype Filter Active</li>
+        <li class="chip"><span class="led" aria-hidden="true"></span> Awaiting Clearance</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Book Pricing -->
-    <section id="buy" class="runway-section target-section">
-        <div class="container fade-in">
-            <h2>Get Your Copy</h2>
-            <div class="rule-gold center"></div>
-            <p class="runway-lead">Available everywhere books are sold.</p>
+<section class="story" aria-labelledby="story-h">
+  <div class="wrap">
+    <div class="measure reveal">
+      <div class="eyebrow">Why this book exists</div>
+      <h2 id="story-h">Every author knows the silence.</h2>
+      <p>You write something. Pour months into it. Rewrite it. Believe in it. Then you send it out into the world. And you wait. And you hear nothing. No feedback. No response. No one to tell you whether it&rsquo;s brilliant or broken or somewhere painfully in between.</p>
+      <p>I met ChatGPT in Malaysia. Dabbled, questioned it. Filed it away and came home. It wasn&rsquo;t until the past two years that I understood what it could actually do. Not as a writing tool. As the editor I never had. The one who would actually respond.</p>
+      <p>That is not a productivity tool. That is what every author deserves and almost none of us get: someone in the room who has actually read the work and is willing to be honest about it.</p>
+      <p class="closer">The AI didn&rsquo;t write this book. But it refused to let me write a bad one.</p>
+      <p class="closer">And if it ended the silence for me, it can end it for you.</p>
+    </div>
+  </div>
+</section>
 
-            <div class="pricing-options-container" style="justify-content: center;">
-                <div class="pricing-card border-purple" style="max-width: 420px;">
-                    <div class="badge-card">The Book</div>
-                    <div class="price-header">
-                        <h4>Cleared for Take-Off</h4>
-                        <div class="price">$12.99 <span class="currency">AUD</span></div>
-                    </div>
-                    <ul class="includes-list">
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#F4A500" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg> Full Ebook (PDF &amp; EPUB)</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#F4A500" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg> 20 Tool Crew Manifest</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#F4A500" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg> 50 Steal-able Prompts</li>
-                    </ul>
-                    <button class="btn btn-outline btn-block cta-buy">
-                        <span class="btn-text">Buy Ebook Now</span>
-                    </button>
-                    <div class="secure-text">Available on Amazon, Apple Books, Kobo &amp; Google Play</div>
-                </div>
-            </div>
+<section class="author" aria-labelledby="bio-h">
+  <div class="wrap">
+    <div class="grid reveal">
+      <svg class="portrait" viewBox="0 0 160 160" role="img" aria-label="Illustrated badge: a captain&rsquo;s wings emblem for Naomi Shiels" focusable="false">
+        <circle cx="80" cy="80" r="76" fill="#1B3A5B"/>
+        <circle cx="80" cy="80" r="76" fill="none" stroke="#C8862B" stroke-width="3"/>
+        <circle cx="80" cy="80" r="62" fill="none" stroke="rgba(213,232,240,.35)" stroke-width="1.5" stroke-dasharray="3 7"/>
+        <path d="M80 52l7 14.5 16 2.2-11.6 11 2.8 15.8L80 88l-14.2 7.5 2.8-15.8L57 68.7l16-2.2z" fill="#C8862B"/>
+        <path d="M48 84c-11-4-19-10-24-18 9 1.5 17 5 24 10.5zm64 0c11-4 19-10 24-18-9 1.5-17 5-24 10.5z" fill="#D5E8F0"/>
+        <text x="80" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#D5E8F0" letter-spacing="2">CAPTAIN</text>
+      </svg>
+      <div>
+        <div class="eyebrow">About the Author</div>
+        <h2 id="bio-h">Naomi Shiels</h2>
+        <p>Naomi Shiels is a Canberra-based former linguist, lawyer and commercial aviation manager. She is the founder of Wild Hearts Publishing. She has written <span class="cnt" data-n="14">14</span> books. She has made <span class="cnt" data-n="216">216</span> songs using AI. She builds with these tools every day.</p>
+        <p>She is not an engineer. She did not go to a tech conference and come home converted. She learned to use AI the same way you will: by showing up, trying things, failing at some of them, and keeping what worked.</p>
+        <p class="kept">This book is what she kept.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div style="text-align:center; margin-top: 2.5rem;">
-                <p style="color: var(--text-muted); font-size: 0.9375rem;">Want more than the book?</p>
-                <a href="/" class="btn btn-sm btn-outline">See the C4TO Academy &rarr;</a>
-            </div>
-        </div>
-        <div class="runway-lines"></div>
-    </section>
+<section class="mani" aria-labelledby="mani-h" style="padding-top:clamp(64px,9vw,104px)">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The Flight Manifest</div>
+      <h2 id="mani-h">Everything you need to build momentum. Nothing you don&rsquo;t.</h2>
+    </div>
+    <div class="mani-grid">
+      <article class="mcard reveal">
+        <div class="num" aria-hidden="true"><span class="cnt" data-n="20">20</span></div>
+        <h3>20 Tool Crew Manifest</h3>
+        <p>Inside look at 20 specific AI tools and exactly how to brief them to act as your ultimate digital collaborators.</p>
+      </article>
+      <article class="mcard reveal">
+        <div class="num" aria-hidden="true"><span class="cnt" data-n="50">50</span></div>
+        <h3>50 Steal-able Prompts</h3>
+        <p>Stop guessing. Grab 50 proven, ready-to-use prompts that will get you moving at the speed of thought today.</p>
+      </article>
+      <article class="mcard reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 3 19h18Z"/><path d="M12 10v4M12 16.6v.4"/></svg></span>
+        <h3>The Real Failures</h3>
+        <p>The honest truth and spectacular failures nobody posts on LinkedIn, saving you from making the same expensive mistakes.</p>
+      </article>
+      <article class="mcard reveal">
+        <span class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><polygon points="15.5,8.5 13.4,13.4 8.5,15.5 10.6,10.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+        <h3>Practical Philosophy</h3>
+        <p>The core philosophy behind staying fluent, grounded, and sane while AI technology changes rapidly under you.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Naomi Shiels / Wild Hearts Publishing. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<section class="buy" id="buy" aria-labelledby="buy-h">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Available everywhere books are sold.</div>
+      <h2 id="buy-h">Get Your Copy</h2>
+    </div>
+    <div class="plan reveal">
+      <span class="ribbon">The Book</span>
+      <div class="tag">Ebook edition</div>
+      <h3>Cleared for Take-Off</h3>
+      <div class="amt">$12.99 <small>AUD</small></div>
+      <ul>
+        <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>Full Ebook (PDF &amp; EPUB)</li>
+        <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>20 Tool Crew Manifest</li>
+        <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path d="m7.5 12.2 3 3 6-6.4"/></svg>50 Steal-able Prompts</li>
+      </ul>
+      <a href="#buy" class="btn">Buy Ebook Now</a>
+      <p class="avail">Available on Amazon, Apple Books, Kobo &amp; Google Play.</p>
+    </div>
+    <p class="xlink center reveal" style="text-align:center">Want more than the book? <a href="/#flightplan">See the C4TO Academy &rarr;</a></p>
+  </div>
+</section>
+</main>
 
-    <script src="../script.js"></script>
+<svg class="runway-strip" viewBox="0 0 1200 110" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A quiet runway at night with a control tower, amber centreline lights glowing" focusable="false">
+  <rect width="1200" height="110" fill="#0B1828"/>
+  <g fill="#D5E8F0">
+    <circle cx="90" cy="22" r="1.3" class="tw"/><circle cx="240" cy="14" r="1"/>
+    <circle cx="420" cy="26" r="1.2" class="tw2"/><circle cx="640" cy="12" r="1.4" class="tw"/>
+    <circle cx="840" cy="24" r="1"/><circle cx="1010" cy="16" r="1.2" class="tw2"/><circle cx="1150" cy="30" r="1"/>
+  </g>
+  <!-- AI signals over the night runway: the fleet motif, bookended -->
+  <g fill="none" stroke="#74D0EC" stroke-width="1.4" stroke-linecap="round" opacity=".7"><path class="sigarc" d="M250 30 C300 20 340 33 410 24"/></g>
+  <g fill="#CFF3FF"><circle class="sig" cx="250" cy="30" r="1.8"/><circle class="sig s3" cx="410" cy="24" r="1.6"/></g>
+  <g transform="translate(332 26) rotate(-8) scale(.42)"><path d="M30 0 L-22 -13 L-10 1 Z" fill="#EAF4FB"/><path d="M30 0 L-10 1 L-16 15 Z" fill="#74D0EC"/></g>
+  <rect x="0" y="64" width="1200" height="46" fill="#091422"/>
+  <!-- control tower -->
+  <g>
+    <rect x="1056" y="34" width="14" height="32" fill="#142B43"/>
+    <polygon points="1044,24 1082,24 1076,38 1050,38" fill="#1B3A5B"/>
+    <rect x="1048" y="26" width="30" height="6" fill="#2E4A66"/>
+    <line x1="1063" y1="24" x2="1063" y2="10" stroke="#2E4A66" stroke-width="2"/>
+    <circle cx="1063" cy="8" r="3" fill="#C8862B" class="blink"/>
+    <rect x="1052" y="29" width="6" height="3.5" fill="#E8C77D" opacity=".85"/>
+    <rect x="1062" y="29" width="6" height="3.5" fill="#E8C77D" opacity=".6"/>
+  </g>
+  <!-- runway surface -->
+  <rect x="0" y="74" width="1200" height="26" fill="#0E1F33"/>
+  <g class="strip-dashes" fill="#C8862B">
+    <rect x="20" y="85" width="44" height="4" rx="2"/><rect x="104" y="85" width="44" height="4" rx="2"/>
+    <rect x="188" y="85" width="44" height="4" rx="2"/><rect x="272" y="85" width="44" height="4" rx="2"/>
+    <rect x="356" y="85" width="44" height="4" rx="2"/><rect x="440" y="85" width="44" height="4" rx="2"/>
+    <rect x="524" y="85" width="44" height="4" rx="2"/><rect x="608" y="85" width="44" height="4" rx="2"/>
+    <rect x="692" y="85" width="44" height="4" rx="2"/><rect x="776" y="85" width="44" height="4" rx="2"/>
+    <rect x="860" y="85" width="44" height="4" rx="2"/><rect x="944" y="85" width="44" height="4" rx="2"/>
+    <rect x="1028" y="85" width="44" height="4" rx="2"/><rect x="1112" y="85" width="44" height="4" rx="2"/>
+  </g>
+  <g fill="#E8C77D" opacity=".9">
+    <circle cx="60" cy="76" r="1.6"/><circle cx="260" cy="76" r="1.6"/><circle cx="460" cy="76" r="1.6"/>
+    <circle cx="660" cy="76" r="1.6"/><circle cx="860" cy="76" r="1.6"/><circle cx="1160" cy="76" r="1.6"/>
+    <circle cx="60" cy="98" r="1.6"/><circle cx="260" cy="98" r="1.6"/><circle cx="460" cy="98" r="1.6"/>
+    <circle cx="660" cy="98" r="1.6"/><circle cx="860" cy="98" r="1.6"/><circle cx="1160" cy="98" r="1.6"/>
+  </g>
+</svg>
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="tagline">The AI didn&rsquo;t write this book. But it refused to let me write a bad one.</div>
+      <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing. All rights reserved.</div>
+    </div>
+    <nav aria-label="Footer"><a href="/">Academy</a> &middot; <a href="/#consulting">Consulting</a> &middot; <a href="/#pricing">Pricing</a> &middot; <a href="/#audiences">All audiences</a> &middot; <a href="#buy">Get the Book</a></nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  var fp = document.querySelector('.flightpath');
+  var mOK = window.matchMedia && matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  function showAll(){ els.forEach(function(e){ e.classList.add('in-view'); }); if(fp){ fp.classList.add('fp-go'); } }
+  if(!('IntersectionObserver' in window)){ showAll(); }
+  else{
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in-view'); io.unobserve(en.target); }
+      });
+    },{threshold:.1, rootMargin:'0px 0px -32px 0px'});
+    els.forEach(function(e){ io.observe(e); });
+    if(fp){
+      var iof = new IntersectionObserver(function(es){
+        es.forEach(function(en){ if(en.isIntersecting){ fp.classList.add('fp-go'); iof.disconnect(); } });
+      },{threshold:.45});
+      iof.observe(fp);
+    }
+    if(mOK){
+      var ioc = new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting){ return; }
+          ioc.unobserve(en.target);
+          var el = en.target, n = parseInt(el.getAttribute('data-n'),10) || 0;
+          if(!n){ return; }
+          el.style.display = 'inline-block';
+          el.style.minWidth = el.offsetWidth + 'px';
+          var t0 = null;
+          function tick(t){
+            if(t0 === null){ t0 = t; }
+            var p = Math.min((t - t0) / 600, 1), e = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(e * n);
+            if(p < 1){ requestAnimationFrame(tick); }
+          }
+          requestAnimationFrame(tick);
+        });
+      },{threshold:.6});
+      document.querySelectorAll('.cnt').forEach(function(c){ ioc.observe(c); });
+    }
+  }
+  if(mOK){
+    var head = document.querySelector('.site-head');
+    var bar = document.querySelector('.scroll-progress');
+    var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var art = document.querySelector('.hero-art');
+    var pxs = art ? art.querySelector('.px-s') : null;
+    var pxc = art ? art.querySelector('.px-c') : null;
+    var pxc2 = art ? art.querySelector('.px-c2') : null;
+    var queued = false;
+    function frame(){
+      queued = false;
+      var y = window.pageYOffset || 0;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if(bar){ bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')'; }
+      if(head){ head.classList.toggle('scrolled', y > 80); }
+      if(fine){
+        if(pxs){ pxs.style.transform = 'translate3d(0,' + Math.min(y * .03, 14) + 'px,0)'; }
+        if(pxc){ pxc.style.transform = 'translate3d(0,' + Math.min(y * .055, 20) + 'px,0)'; }
+        if(pxc2){ pxc2.style.transform = 'translate3d(0,' + Math.min(y * .07, 20) + 'px,0)'; }
+      }
+    }
+    window.addEventListener('scroll', function(){ if(!queued){ queued = true; requestAnimationFrame(frame); } }, {passive:true});
+    frame();
+
+    if(fine){
+      var hero = document.querySelector('.hero');
+      if(hero && art){
+        var hQ = false, hX = 0, hY = 0;
+        hero.addEventListener('mousemove', function(ev){
+          var r = hero.getBoundingClientRect();
+          hX = (ev.clientX - r.left) / r.width - .5;
+          hY = (ev.clientY - r.top) / r.height - .5;
+          if(!hQ){ hQ = true; requestAnimationFrame(function(){
+            hQ = false;
+            art.style.transform = 'translate3d(' + (hX * 11).toFixed(2) + 'px,' + (hY * 9).toFixed(2) + 'px,0)';
+          }); }
+        }, {passive:true});
+        hero.addEventListener('mouseleave', function(){ art.style.transform = ''; });
+      }
+    }
+  }
+})();
+</script>
 </body>
-
 </html>
