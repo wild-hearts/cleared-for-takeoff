@@ -9,6 +9,9 @@
 // free: true  → accessible without an access code (Modules 1 and 2, free preview)
 // free: false → requires a valid COURSE_ACCESS_CODE to watch
 
+// Lesson lists match the V2 scripts: six videos per module (the welcome is folded
+// into Video 1, the Cleared To Try into Video 6). Module 3 is linear (all six
+// paths). Module 4 keeps "pick 1 track" (intro + 4 tracks + close).
 const MODULES = [
     {
         id: 1,
@@ -17,13 +20,12 @@ const MODULES = [
         subtitle: 'Understanding AI before you use it',
         free: true,
         lessons: [
-            { id: 'm01-intro',  title: 'Welcome to Cleared For Takeoff',         duration: '2:30',  playbackId: 'PENDING' },
-            { id: 'm01-l01',    title: 'What AI Actually Is',                    duration: '10:30', playbackId: 'PENDING' },
-            { id: 'm01-l02',    title: 'Three Things AI Does Well (and Badly)',  duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm01-l03',    title: 'Choosing Your First Tool',               duration: '11:00', playbackId: 'PENDING' },
-            { id: 'm01-l04',    title: 'Signing Up Safely',                      duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm01-l05',    title: 'Setting Up Your Account',                duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm01-l06',    title: 'Your First Hello',                       duration: '9:00',  playbackId: 'PENDING' },
+            { id: 'm01-l01', title: 'What AI actually is (and isn\'t)',                 duration: '7:00', playbackId: 'PENDING' },
+            { id: 'm01-l02', title: 'Three things it does well, three it does badly',   duration: '7:00', playbackId: 'PENDING' },
+            { id: 'm01-l03', title: 'Choosing your first tool',                         duration: '7:00', playbackId: 'PENDING' },
+            { id: 'm01-l04', title: 'Signing up safely',                                duration: '9:00', playbackId: 'PENDING' },
+            { id: 'm01-l05', title: 'Setting up so it doesn\'t train on you',           duration: '7:00', playbackId: 'PENDING' },
+            { id: 'm01-l06', title: 'Your dashboard, and your first hello',             duration: '9:00', playbackId: 'PENDING' },
         ]
     },
     {
@@ -33,49 +35,44 @@ const MODULES = [
         subtitle: 'How to talk to AI well',
         free: true,
         lessons: [
-            { id: 'm02-intro',  title: 'Module 2 Introduction',                              duration: '2:30',  playbackId: 'PENDING' },
-            { id: 'm02-l01',    title: 'Prompting in Plain English',                         duration: '12:00', playbackId: 'PENDING' },
-            { id: 'm02-l02',    title: 'The Four-Line Prompt',                               duration: '12:00', playbackId: 'PENDING' },
-            { id: 'm02-l03',    title: 'Ask AI to Ask You Better Questions',                 duration: '12:00', playbackId: 'PENDING' },
-            { id: 'm02-l04',    title: 'When to Be Specific, When to Be Vague, When to Start Over', duration: '12:00', playbackId: 'PENDING' },
-            { id: 'm02-l05',    title: 'Mistakes Everyone Makes',                            duration: '11:00', playbackId: 'PENDING' },
-            { id: 'm02-l06',    title: 'Saving and Reusing Prompts',                         duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm02-l01', title: 'Prompting in plain English',           duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm02-l02', title: 'The four flight controls',             duration: '11:00', playbackId: 'PENDING' },
+            { id: 'm02-l03', title: 'How to make it interview you',         duration: '9:00',  playbackId: 'PENDING' },
+            { id: 'm02-l04', title: 'Specific, vague, or start again',      duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm02-l05', title: 'Mistakes everyone makes in week one',  duration: '11:00', playbackId: 'PENDING' },
+            { id: 'm02-l06', title: 'Saving prompts, and your Cleared To Try', duration: '10:00', playbackId: 'PENDING' },
         ]
     },
     {
         id: 3,
         slug: 'module-03',
         title: 'Cleared For Takeoff',
-        subtitle: 'AI for your actual life: pick 3 paths',
+        subtitle: 'AI for your actual life, six everyday paths',
         free: false,
-        pickYourPath: true,
-        pathCount: 3,
         lessons: [
-            { id: 'm03-intro',   title: 'Module 3 Introduction',       duration: '3:00',  playbackId: 'PENDING', required: true },
-            { id: 'm03-path-a',  title: 'Path A: Writing Emails and Letters', duration: '14:00', playbackId: 'PENDING', path: 'A' },
-            { id: 'm03-path-b',  title: 'Path B: Summarising Documents',      duration: '13:00', playbackId: 'PENDING', path: 'B' },
-            { id: 'm03-path-c',  title: 'Path C: Planning',                   duration: '14:00', playbackId: 'PENDING', path: 'C' },
-            { id: 'm03-path-d',  title: 'Path D: Research and Fact-Finding',  duration: '14:00', playbackId: 'PENDING', path: 'D' },
-            { id: 'm03-path-e',  title: 'Path E: Health Information',         duration: '14:00', playbackId: 'PENDING', path: 'E' },
-            { id: 'm03-path-f',  title: 'Path F: Money and Admin',            duration: '14:00', playbackId: 'PENDING', path: 'F' },
-            { id: 'm03-close',   title: 'Module 3 Close',              duration: '4:00',  playbackId: 'PENDING', required: true },
+            { id: 'm03-l01', title: 'Welcome to the air, and Path A: Writing',        duration: '13:00', playbackId: 'PENDING' },
+            { id: 'm03-l02', title: 'Path B: Summarising long things',                duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm03-l03', title: 'Path C: Planning anything',                      duration: '11:00', playbackId: 'PENDING' },
+            { id: 'm03-l04', title: 'Path D: Research that doesn\'t lie to you',      duration: '11:00', playbackId: 'PENDING' },
+            { id: 'm03-l05', title: 'Path E: Health information, calmly',             duration: '9:00',  playbackId: 'PENDING' },
+            { id: 'm03-l06', title: 'Path F: Money and admin, and your Cleared To Try', duration: '12:00', playbackId: 'PENDING' },
         ]
     },
     {
         id: 4,
         slug: 'module-04',
         title: 'In The Air',
-        subtitle: 'Deep work on one real project: pick 1 track',
+        subtitle: 'Deep work on one real project, pick 1 track',
         free: false,
         pickYourTrack: true,
         trackCount: 1,
         lessons: [
-            { id: 'm04-intro',    title: 'Module 4 Introduction',   duration: '4:00',  playbackId: 'PENDING', required: true },
-            { id: 'm04-track-a',  title: 'Track A: Write Something', duration: '25:00', playbackId: 'PENDING', track: 'A' },
-            { id: 'm04-track-b',  title: 'Track B: Start Something', duration: '25:00', playbackId: 'PENDING', track: 'B' },
-            { id: 'm04-track-c',  title: 'Track C: Sort Something',  duration: '25:00', playbackId: 'PENDING', track: 'C' },
-            { id: 'm04-track-d',  title: 'Track D: Learn Something', duration: '25:00', playbackId: 'PENDING', track: 'D' },
-            { id: 'm04-close',    title: 'Module 4 Close',           duration: '4:00',  playbackId: 'PENDING', required: true },
+            { id: 'm04-l01',     title: 'Choosing your project',                       duration: '12:00', playbackId: 'PENDING', required: true },
+            { id: 'm04-track-a', title: 'Track A: Write something',                    duration: '12:00', playbackId: 'PENDING', track: 'A' },
+            { id: 'm04-track-b', title: 'Track B: Start something',                    duration: '12:00', playbackId: 'PENDING', track: 'B' },
+            { id: 'm04-track-c', title: 'Track C: Sort something',                     duration: '12:00', playbackId: 'PENDING', track: 'C' },
+            { id: 'm04-track-d', title: 'Track D: Learn something',                    duration: '12:00', playbackId: 'PENDING', track: 'D' },
+            { id: 'm04-l06',     title: 'Locking your scope, and your Cleared To Try', duration: '12:00', playbackId: 'PENDING', required: true },
         ]
     },
     {
@@ -85,13 +82,12 @@ const MODULES = [
         subtitle: 'What to watch for, what to protect',
         free: false,
         lessons: [
-            { id: 'm05-intro',  title: 'Module 5 Introduction',                           duration: '4:00',  playbackId: 'PENDING' },
-            { id: 'm05-l01',    title: 'Hallucinations: What They Are and How to Spot Them', duration: '11:00', playbackId: 'PENDING' },
-            { id: 'm05-l02',    title: 'Confidently Wrong and Quietly Right',             duration: '11:00', playbackId: 'PENDING' },
-            { id: 'm05-l03',    title: 'Scam Awareness',                                  duration: '12:00', playbackId: 'PENDING' },
-            { id: 'm05-l04',    title: 'Privacy and Australian Law',                      duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm05-l05',    title: 'What Never to Put Into an AI Tool',               duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm05-l06',    title: 'Trust, Verify, Walk Away',                       duration: '11:00', playbackId: 'PENDING' },
+            { id: 'm05-l01', title: 'Hallucinations: when the crew makes things up',   duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm05-l02', title: 'Confidently wrong vs quietly right',              duration: '9:00',  playbackId: 'PENDING' },
+            { id: 'm05-l03', title: 'The five scams to see coming',                    duration: '14:00', playbackId: 'PENDING' },
+            { id: 'm05-l04', title: 'Your privacy rights, in plain English',           duration: '8:00',  playbackId: 'PENDING' },
+            { id: 'm05-l05', title: 'The never-share list',                            duration: '8:00',  playbackId: 'PENDING' },
+            { id: 'm05-l06', title: 'Trust, verify, or walk away, and your Cleared To Try', duration: '10:00', playbackId: 'PENDING' },
         ]
     },
     {
@@ -101,13 +97,12 @@ const MODULES = [
         subtitle: 'Building a lasting practice',
         free: false,
         lessons: [
-            { id: 'm06-intro',  title: 'Module 6 Introduction',                        duration: '3:00',  playbackId: 'PENDING' },
-            { id: 'm06-l01',    title: 'Building Your Routine',                        duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm06-l02',    title: 'When Not to Use AI',                           duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm06-l03',    title: 'Staying Current: Following AI Without Panic', duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm06-l04',    title: 'Where to Go Next',                             duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm06-l05',    title: 'Bringing Someone Along',                       duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm06-l06',    title: 'Final Reflection and Graduation',              duration: '12:00', playbackId: 'PENDING' },
+            { id: 'm06-l01', title: 'One page, one habit, one tool',                   duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm06-l02', title: 'Knowing when NOT to use AI',                      duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm06-l03', title: 'Staying current without staying anxious',         duration: '9:00',  playbackId: 'PENDING' },
+            { id: 'm06-l04', title: 'Paid tools: worth it, and not',                   duration: '9:00',  playbackId: 'PENDING' },
+            { id: 'm06-l05', title: 'Bringing someone along',                          duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm06-l06', title: 'Final reflection, and your last Cleared To Try',  duration: '10:00', playbackId: 'PENDING' },
         ]
     }
 ];
