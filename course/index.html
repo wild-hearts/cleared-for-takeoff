@@ -23,41 +23,46 @@
     <div class="access-card" id="access-card">
         <span class="icon">✈️</span>
         <h1 id="page-heading">Welcome back</h1>
-        <p id="page-subtext">Enter your access code to continue the course, or try the free preview — no code required.</p>
+        <p id="page-subtext">Sign in with your email to continue the course, or try the free preview — no account needed.</p>
 
         <!-- Tab switcher -->
         <div class="access-tabs">
-            <button class="access-tab active" data-tab="paid" onclick="switchTab('paid')">I have a code</button>
+            <button class="access-tab active" data-tab="paid" onclick="switchTab('paid')">Sign in</button>
             <button class="access-tab" data-tab="free" onclick="switchTab('free')">Free preview</button>
         </div>
 
-        <!-- Paid access form -->
+        <!-- Sign-in (magic link) -->
         <div id="tab-paid">
-            <form class="access-form" id="access-form" onsubmit="submitCode(event)">
+            <form class="access-form" id="signin-form" onsubmit="sendLink(event)">
                 <div class="form-group">
-                    <label for="access-code">Your access code</label>
+                    <label for="email">Your email</label>
                     <input
-                        type="text"
-                        id="access-code"
-                        placeholder="e.g. CFT-XXXX-XXXX"
-                        autocomplete="off"
+                        type="email"
+                        id="email"
+                        placeholder="the email you purchased with"
+                        autocomplete="email"
                         autocapitalize="off"
                         spellcheck="false"
+                        required
                     >
                 </div>
-                <button type="submit" class="btn-primary" id="submit-btn">Continue to course</button>
-                <p class="form-error" id="form-error">That code doesn't look right. Please check it and try again.</p>
+                <button type="submit" class="btn-primary" id="submit-btn">Email me a sign-in link</button>
+                <p class="form-error" id="form-error">Something went wrong. Please check the email and try again.</p>
             </form>
 
+            <p class="free-preview-link" id="sent-msg" style="display:none;">
+                Check your inbox. We have sent a sign-in link to <strong id="sent-to"></strong>. It works once and expires shortly.
+            </p>
+
             <p class="free-preview-link">
-                Don't have a code yet? <a href="/#pricing">See course options</a> or try the <a href="#" onclick="switchTab('free'); return false;">free preview</a> first.
+                Don't have access yet? <a href="/#pricing">See course options</a> or try the <a href="#" onclick="switchTab('free'); return false;">free preview</a> first.
             </p>
         </div>
 
         <!-- Free preview -->
         <div id="tab-free" style="display:none;">
             <p style="color: var(--text-muted); font-size:0.9375rem; margin-bottom:1.5rem; text-align:left;">
-                Modules 1 and 2 are free. You'll need an access code to continue to Module 3 and beyond.
+                Modules 1 and 2 are free. You'll need to sign in to continue to Module 3 and beyond.
             </p>
             <button class="btn-primary" onclick="startFreePreview()">Start free preview</button>
             <p class="free-preview-link" style="margin-top:1.25rem;">
@@ -67,23 +72,21 @@
     </div>
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script>
     // ─── Post-purchase welcome message ───────────────────────────────────────
-    (function() {
-        if (new URLSearchParams(window.location.search).get('welcome') === '1') {
-            document.getElementById('page-heading').textContent = 'Payment successful!';
-            document.getElementById('page-subtext').innerHTML =
-                '🎉 Thank you — you\'re in! Check your inbox for your access code, then enter it below to get started.';
-        }
-    })();
+    if (new URLSearchParams(window.location.search).get('welcome') === '1') {
+        document.getElementById('page-heading').textContent = 'Payment successful!';
+        document.getElementById('page-subtext').innerHTML =
+            'Thank you, you\'re in. Sign in with the email you purchased with and we\'ll send you a one-click sign-in link.';
+    }
 
-    // ─── Check if already logged in ───────────────────────────────────────────
-    (function() {
-        const code = localStorage.getItem('c4t_code');
-        const preview = localStorage.getItem('c4t_preview');
-        if (code || preview) {
-            window.location.href = 'dashboard.html';
-        }
+    // ─── Already signed in (or free preview active)? Go to the dashboard. ─────
+    (async function () {
+        if (isPreview()) { window.location.href = 'dashboard.html'; return; }
+        const session = await currentSession();
+        if (session) window.location.href = 'dashboard.html';
     })();
 
     // ─── Tab switcher ─────────────────────────────────────────────────────────
@@ -95,44 +98,35 @@
         });
     }
 
-    // ─── Access code submission ────────────────────────────────────────────────
-    async function submitCode(e) {
+    // ─── Magic-link sign in ───────────────────────────────────────────────────
+    async function sendLink(e) {
         e.preventDefault();
-        const code  = document.getElementById('access-code').value.trim();
+        const email = document.getElementById('email').value.trim();
         const btn   = document.getElementById('submit-btn');
         const error = document.getElementById('form-error');
-
-        if (!code) return;
+        if (!email) return;
 
         btn.disabled = true;
-        btn.textContent = 'Checking…';
+        btn.textContent = 'Sending…';
         error.classList.remove('visible');
 
         try {
-            // Verify the code by requesting a known free lesson token
-            // The API returns 403 if the code is wrong, 200 if valid
-            const res = await fetch(`/api/video-token?lesson=m03-intro&code=${encodeURIComponent(code)}`);
-
-            if (res.status === 200 || res.status === 503) {
-                // 200 = valid code + video ready
-                // 503 = valid code but video not yet uploaded (still OK to grant access)
-                localStorage.setItem('c4t_code', code);
-                window.location.href = 'dashboard.html';
-            } else if (res.status === 403) {
-                error.classList.add('visible');
-                btn.disabled = false;
-                btn.textContent = 'Continue to course';
-            } else {
-                error.textContent = 'Something went wrong. Please try again.';
-                error.classList.add('visible');
-                btn.disabled = false;
-                btn.textContent = 'Continue to course';
-            }
+            const { error: err } = await sb.auth.signInWithOtp({
+                email,
+                options: {
+                    emailRedirectTo: location.origin + '/course/dashboard.html',
+                    shouldCreateUser: false,   // accounts are created by the Stripe webhook on purchase
+                },
+            });
+            if (err) throw err;
+            document.getElementById('signin-form').style.display = 'none';
+            document.getElementById('sent-to').textContent = email;
+            document.getElementById('sent-msg').style.display = 'block';
         } catch (err) {
-            error.textContent = 'Connection error. Please check your internet and try again.';
+            console.error(err);
             error.classList.add('visible');
             btn.disabled = false;
-            btn.textContent = 'Continue to course';
+            btn.textContent = 'Email me a sign-in link';
         }
     }
 

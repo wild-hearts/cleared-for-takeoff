@@ -1,20 +1,25 @@
 /* Cleared For Takeoff — Course Interface Styles */
 
 :root {
-    --bg-dark: #0D0820;
-    --bg-light: #1E0A46;
-    --bg-surface: #160730;
-    --bg-card: rgba(255, 255, 255, 0.04);
-    --bg-card-hover: rgba(255, 255, 255, 0.08);
-    --accent-purple: #DC50FF;
-    --accent-gold: #F4A500;
+    /* Galaxy-navy surfaces — matches the homepage night-sky palette (no purple) */
+    --bg-dark: #0A1A2D;
+    --bg-light: #14304C;
+    --bg-surface: #0F2438;
+    --bg-card: rgba(255, 255, 255, 0.045);
+    --bg-card-hover: rgba(116, 208, 236, 0.10);
+    /* Brand accents — cyan AI-signal (primary) + amber (CTAs), as on the homepage */
+    --accent: #74D0EC;
+    --accent-strong: #4FB3D9;
+    --accent-amber: #C8862B;
+    --accent-amber-light: #F0C277;
     --accent-green: #22C55E;
     --text-white: #FFFFFF;
-    --text-grey: #E0E0E0;
-    --text-muted: #A09BAA;
-    --border: rgba(255, 255, 255, 0.1);
+    --text-grey: #D8E4F0;
+    --text-muted: #8DA3B8;
+    --border: rgba(255, 255, 255, 0.12);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --star: rgba(255, 255, 255, 0.9);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,14 +28,70 @@ html { scroll-behavior: smooth; }
 
 body {
     font-family: var(--font-body);
-    background: var(--bg-dark);
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+    /* deep navy galaxy: nebula clouds (cyan + blue) over a soft galactic core */
+    background:
+        radial-gradient(60% 55% at 80% 4%,  rgba(116, 208, 236, 0.20), transparent 70%),
+        radial-gradient(55% 50% at 8% 98%,  rgba(46, 117, 182, 0.22), transparent 70%),
+        radial-gradient(48% 45% at 50% 48%, rgba(120, 180, 230, 0.12), transparent 72%),
+        linear-gradient(160deg, #0A1A2D 0%, #12283F 50%, #0A1A2D 100%);
     background-attachment: fixed;
     color: var(--text-grey);
     line-height: 1.6;
     min-height: 100vh;
     font-size: 1.0625rem;
+    position: relative;
 }
+
+/* Galaxy starfield — two tiled parallax layers (hundreds of stars), drifting so
+   it feels like flying through the night sky. */
+body::before, body::after {
+    content: "";
+    position: fixed;
+    inset: -40%;
+    z-index: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+/* Layer 1: dense fine stars (a star tile repeated across the whole field) */
+body::before {
+    background-image:
+        radial-gradient(1px 1px at 25px 35px,    #fff, transparent),
+        radial-gradient(1px 1px at 80px 120px,   rgba(255,255,255,.8), transparent),
+        radial-gradient(1.5px 1.5px at 135px 60px, #fff, transparent),
+        radial-gradient(1px 1px at 175px 155px,  rgba(255,255,255,.7), transparent),
+        radial-gradient(1px 1px at 50px 185px,   rgba(174,224,243,.85), transparent),
+        radial-gradient(1.5px 1.5px at 110px 20px, #fff, transparent),
+        radial-gradient(1px 1px at 15px 95px,    rgba(255,255,255,.75), transparent),
+        radial-gradient(1px 1px at 205px 100px,  #fff, transparent),
+        radial-gradient(1px 1px at 230px 30px,   rgba(255,255,255,.7), transparent),
+        radial-gradient(1px 1px at 160px 210px,  rgba(174,224,243,.8), transparent);
+    background-size: 260px 240px;
+    opacity: .92;
+    animation: starTwinkle 5s ease-in-out infinite, starDriftA 70s ease-in-out infinite alternate;
+}
+/* Layer 2: brighter, larger feature stars, slower drift (parallax depth) */
+body::after {
+    background-image:
+        radial-gradient(2px 2px at 60px 80px,     #fff, transparent),
+        radial-gradient(2.5px 2.5px at 230px 180px, rgba(174,224,243,.95), transparent),
+        radial-gradient(2px 2px at 360px 60px,    #fff, transparent),
+        radial-gradient(2px 2px at 150px 300px,   #fff, transparent),
+        radial-gradient(2.5px 2.5px at 330px 260px, rgba(116,208,236,.95), transparent),
+        radial-gradient(2px 2px at 40px 220px,    #fff, transparent);
+    background-size: 420px 360px;
+    opacity: .95;
+    animation: starTwinkle2 7.5s ease-in-out infinite, starDriftB 100s ease-in-out infinite alternate;
+}
+@keyframes starTwinkle  { 0%, 100% { opacity: .9;  } 50% { opacity: .55; } }
+@keyframes starTwinkle2 { 0%, 100% { opacity: .95; } 50% { opacity: .6;  } }
+@keyframes starDriftA { from { transform: translate3d(0,0,0); } to { transform: translate3d(-2.5%, -3.5%, 0); } }
+@keyframes starDriftB { from { transform: translate3d(0,0,0); } to { transform: translate3d(2%, -2.2%, 0); } }
+@media (prefers-reduced-motion: reduce) {
+    body::before, body::after { animation: none; }
+}
+
+/* keep page content above the starfield */
+body > * { position: relative; z-index: 1; }
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
@@ -38,7 +99,7 @@ h1, h2, h3, h4 {
     line-height: 1.2;
 }
 
-a { color: var(--accent-purple); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; }
 a:hover { opacity: 0.85; }
 
 /* ─── COURSE HEADER ─── */
@@ -49,7 +110,7 @@ a:hover { opacity: 0.85; }
     justify-content: space-between;
     padding: 1.25rem 2rem;
     border-bottom: 1px solid var(--border);
-    background: rgba(13, 8, 32, 0.8);
+    background: rgba(10, 26, 45, 0.8);
     backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
@@ -64,7 +125,7 @@ a:hover { opacity: 0.85; }
     letter-spacing: -0.01em;
 }
 
-.course-logo span { color: var(--accent-purple); }
+.course-logo span { color: var(--accent); }
 
 .header-nav {
     display: flex;
@@ -153,8 +214,9 @@ a:hover { opacity: 0.85; }
 }
 
 .access-tab.active {
-    background: var(--accent-purple);
-    color: white;
+    background: var(--accent);
+    color: #0A1A2D;
+    font-weight: 600;
 }
 
 .access-form { text-align: left; }
@@ -185,7 +247,7 @@ a:hover { opacity: 0.85; }
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--accent-purple);
+    border-color: var(--accent);
 }
 
 .form-group input::placeholder { color: var(--text-muted); }
@@ -194,8 +256,8 @@ a:hover { opacity: 0.85; }
     display: block;
     width: 100%;
     padding: 1rem;
-    background: var(--accent-purple);
-    color: white;
+    background: var(--accent-amber);
+    color: #0A1A2D;
     border: none;
     border-radius: 10px;
     font-family: var(--font-heading);
@@ -227,7 +289,7 @@ a:hover { opacity: 0.85; }
     text-align: center;
 }
 
-.free-preview-link a { color: var(--accent-purple); }
+.free-preview-link a { color: var(--accent); }
 
 /* ─── DASHBOARD ─── */
 
@@ -256,7 +318,7 @@ a:hover { opacity: 0.85; }
 
 .progress-bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-purple), var(--accent-gold));
+    background: linear-gradient(90deg, var(--accent), var(--accent-amber));
     border-radius: 100px;
     transition: width 0.6s ease;
 }
@@ -283,7 +345,7 @@ a:hover { opacity: 0.85; }
     transition: border-color 0.2s;
 }
 
-.module-card:hover { border-color: rgba(220, 80, 255, 0.3); }
+.module-card:hover { border-color: rgba(116, 208, 236, 0.3); }
 
 .module-card-header {
     padding: 1.5rem 1.75rem;
@@ -306,15 +368,15 @@ a:hover { opacity: 0.85; }
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: rgba(220, 80, 255, 0.15);
-    border: 1px solid rgba(220, 80, 255, 0.3);
+    background: rgba(116, 208, 236, 0.15);
+    border: 1px solid rgba(116, 208, 236, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--accent-purple);
+    color: var(--accent);
     flex-shrink: 0;
 }
 
@@ -350,9 +412,9 @@ a:hover { opacity: 0.85; }
 }
 
 .badge-free {
-    background: rgba(244, 165, 0, 0.15);
-    color: var(--accent-gold);
-    border: 1px solid rgba(244, 165, 0, 0.3);
+    background: rgba(200, 134, 43, 0.15);
+    color: var(--accent-amber);
+    border: 1px solid rgba(200, 134, 43, 0.3);
 }
 
 .badge-locked {
@@ -362,9 +424,9 @@ a:hover { opacity: 0.85; }
 }
 
 .badge-unlocked {
-    background: rgba(220, 80, 255, 0.1);
-    color: var(--accent-purple);
-    border: 1px solid rgba(220, 80, 255, 0.3);
+    background: rgba(116, 208, 236, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(116, 208, 236, 0.3);
 }
 
 .module-chevron {
@@ -426,9 +488,9 @@ a:hover { opacity: 0.85; }
 }
 
 .lesson-status.current {
-    background: rgba(220, 80, 255, 0.15);
-    border-color: var(--accent-purple);
-    color: var(--accent-purple);
+    background: rgba(116, 208, 236, 0.15);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .lesson-title {
@@ -445,12 +507,12 @@ a:hover { opacity: 0.85; }
 /* Path / track selection */
 
 .pick-banner {
-    background: rgba(244, 165, 0, 0.08);
-    border: 1px solid rgba(244, 165, 0, 0.2);
+    background: rgba(200, 134, 43, 0.08);
+    border: 1px solid rgba(200, 134, 43, 0.2);
     border-radius: 10px;
     padding: 0.875rem 1rem 0.875rem 1.75rem;
     font-size: 0.875rem;
-    color: var(--accent-gold);
+    color: var(--accent-amber);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -458,7 +520,7 @@ a:hover { opacity: 0.85; }
 }
 
 .pick-banner a {
-    color: var(--accent-gold);
+    color: var(--accent-amber);
     font-weight: 600;
     white-space: nowrap;
     text-decoration: underline;
@@ -508,8 +570,8 @@ a:hover { opacity: 0.85; }
 .player-spinner {
     width: 36px;
     height: 36px;
-    border: 3px solid rgba(220, 80, 255, 0.2);
-    border-top-color: var(--accent-purple);
+    border: 3px solid rgba(116, 208, 236, 0.2);
+    border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
@@ -560,7 +622,7 @@ a:hover { opacity: 0.85; }
     text-align: left;
 }
 
-.btn-nav:hover { border-color: var(--accent-purple); background: var(--bg-card-hover); }
+.btn-nav:hover { border-color: var(--accent); background: var(--bg-card-hover); }
 .btn-nav:disabled { opacity: 0.3; cursor: not-allowed; }
 .btn-nav:disabled:hover { border-color: var(--border); background: var(--bg-card); }
 
@@ -615,8 +677,8 @@ a:hover { opacity: 0.85; }
 .sidebar-lesson:hover { background: var(--bg-card-hover); }
 
 .sidebar-lesson.active {
-    background: rgba(220, 80, 255, 0.1);
-    border-left: 2px solid var(--accent-purple);
+    background: rgba(116, 208, 236, 0.1);
+    border-left: 2px solid var(--accent);
 }
 
 .sidebar-dot {
@@ -639,9 +701,9 @@ a:hover { opacity: 0.85; }
 }
 
 .sidebar-dot.active {
-    background: rgba(220, 80, 255, 0.15);
-    border-color: var(--accent-purple);
-    color: var(--accent-purple);
+    background: rgba(116, 208, 236, 0.15);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .sidebar-lesson-title { font-size: 0.85rem; line-height: 1.35; }
@@ -671,11 +733,11 @@ a:hover { opacity: 0.85; }
     user-select: none;
 }
 
-.path-card:hover { border-color: rgba(220, 80, 255, 0.4); background: var(--bg-card-hover); }
+.path-card:hover { border-color: rgba(116, 208, 236, 0.4); background: var(--bg-card-hover); }
 
 .path-card.selected {
-    border-color: var(--accent-purple);
-    background: rgba(220, 80, 255, 0.08);
+    border-color: var(--accent);
+    background: rgba(116, 208, 236, 0.08);
 }
 
 .path-card .path-letter {
@@ -683,9 +745,9 @@ a:hover { opacity: 0.85; }
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    background: rgba(220, 80, 255, 0.15);
-    border: 1px solid rgba(220, 80, 255, 0.3);
-    color: var(--accent-purple);
+    background: rgba(116, 208, 236, 0.15);
+    border: 1px solid rgba(116, 208, 236, 0.3);
+    color: var(--accent);
     font-family: var(--font-heading);
     font-weight: 700;
     text-align: center;
@@ -702,7 +764,7 @@ a:hover { opacity: 0.85; }
     margin-bottom: 1.25rem;
 }
 
-.selection-counter strong { color: var(--accent-gold); }
+.selection-counter strong { color: var(--accent-amber); }
 
 /* ─── EMPTY / ERROR STATES ─── */
 
