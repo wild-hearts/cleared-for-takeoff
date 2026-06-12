@@ -102,6 +102,17 @@ h1, h2, h3, h4 {
 a { color: var(--accent); text-decoration: none; }
 a:hover { opacity: 0.85; }
 
+/* Visible keyboard focus across the course interface */
+a:focus-visible,
+button:focus-visible,
+.access-tab:focus-visible,
+.btn-primary:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
 /* ─── COURSE HEADER ─── */
 
 .course-header {
