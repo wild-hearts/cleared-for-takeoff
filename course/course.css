@@ -28,8 +28,11 @@ html { scroll-behavior: smooth; }
 
 body {
     font-family: var(--font-body);
-    background: var(--bg-dark);
-    background: linear-gradient(160deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+    /* deep navy galaxy with two faint nebula glows, matching the homepage night sky */
+    background:
+        radial-gradient(1100px 720px at 80% -10%, rgba(116, 208, 236, 0.14), transparent 60%),
+        radial-gradient(950px 680px at 6% 112%, rgba(46, 117, 182, 0.14), transparent 58%),
+        linear-gradient(160deg, var(--bg-dark) 0%, var(--bg-light) 55%, #0A1A2D 100%);
     background-attachment: fixed;
     color: var(--text-grey);
     line-height: 1.6;
@@ -38,29 +41,68 @@ body {
     position: relative;
 }
 
-/* Galaxy starfield — subtle night-sky dots over the navy, matching the homepage */
-body::before {
+/* Galaxy starfield — two parallax layers drifting slowly so it feels like flying */
+body::before, body::after {
     content: "";
     position: fixed;
-    inset: 0;
+    inset: -30%;
     z-index: 0;
     pointer-events: none;
-    background-image:
-        radial-gradient(1.5px 1.5px at 12% 18%, var(--star), transparent),
-        radial-gradient(1.5px 1.5px at 78% 9%, var(--star), transparent),
-        radial-gradient(1px 1px at 33% 62%, var(--star), transparent),
-        radial-gradient(1.5px 1.5px at 64% 44%, var(--star), transparent),
-        radial-gradient(1px 1px at 89% 71%, var(--star), transparent),
-        radial-gradient(1px 1px at 5% 83%, var(--star), transparent),
-        radial-gradient(1.5px 1.5px at 47% 27%, var(--star), transparent),
-        radial-gradient(1px 1px at 22% 41%, var(--star), transparent),
-        radial-gradient(1px 1px at 92% 33%, var(--star), transparent),
-        radial-gradient(1px 1px at 56% 88%, var(--star), transparent);
-    opacity: 0.5;
-    animation: starTwinkle 4.5s ease-in-out infinite;
+    will-change: transform, opacity;
 }
-@keyframes starTwinkle { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.22; } }
-@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+/* Layer 1: dense fine stars, faster drift */
+body::before {
+    background-image:
+        radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent),
+        radial-gradient(1px 1px at 22% 41%, rgba(255,255,255,.85), transparent),
+        radial-gradient(1.5px 1.5px at 33% 9%, #fff, transparent),
+        radial-gradient(1px 1px at 41% 63%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1.5px 1.5px at 47% 27%, #fff, transparent),
+        radial-gradient(1px 1px at 8% 73%, rgba(174,224,243,.9), transparent),
+        radial-gradient(1px 1px at 56% 88%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1.5px 1.5px at 64% 44%, #fff, transparent),
+        radial-gradient(1px 1px at 71% 14%, rgba(255,255,255,.85), transparent),
+        radial-gradient(1px 1px at 78% 9%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 84% 56%, rgba(255,255,255,.9), transparent),
+        radial-gradient(1px 1px at 89% 71%, rgba(116,208,236,.9), transparent),
+        radial-gradient(1px 1px at 92% 33%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1px 1px at 5% 38%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1.5px 1.5px at 17% 84%, #fff, transparent),
+        radial-gradient(1px 1px at 28% 52%, rgba(255,255,255,.75), transparent),
+        radial-gradient(1px 1px at 38% 92%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1.5px 1.5px at 52% 6%, #fff, transparent),
+        radial-gradient(1px 1px at 61% 70%, rgba(255,255,255,.8), transparent),
+        radial-gradient(1px 1px at 74% 80%, rgba(174,224,243,.85), transparent),
+        radial-gradient(1.5px 1.5px at 96% 88%, #fff, transparent),
+        radial-gradient(1px 1px at 3% 58%, rgba(255,255,255,.8), transparent);
+    opacity: .9;
+    animation: starTwinkle 5s ease-in-out infinite, starDriftA 70s ease-in-out infinite alternate;
+}
+/* Layer 2: fewer, brighter stars, slower drift (parallax depth) */
+body::after {
+    background-image:
+        radial-gradient(2px 2px at 18% 24%, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 44% 70%, #fff, transparent),
+        radial-gradient(2px 2px at 67% 30%, rgba(174,224,243,.95), transparent),
+        radial-gradient(2px 2px at 82% 78%, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 9% 64%, #fff, transparent),
+        radial-gradient(2px 2px at 31% 12%, rgba(255,255,255,.95), transparent),
+        radial-gradient(2px 2px at 58% 52%, #fff, transparent),
+        radial-gradient(2.5px 2.5px at 90% 18%, rgba(116,208,236,.95), transparent),
+        radial-gradient(2px 2px at 73% 60%, #fff, transparent),
+        radial-gradient(2px 2px at 14% 90%, #fff, transparent),
+        radial-gradient(2px 2px at 49% 34%, rgba(255,255,255,.9), transparent),
+        radial-gradient(2px 2px at 26% 78%, #fff, transparent);
+    opacity: .95;
+    animation: starTwinkle2 7.5s ease-in-out infinite, starDriftB 100s ease-in-out infinite alternate;
+}
+@keyframes starTwinkle  { 0%, 100% { opacity: .9;  } 50% { opacity: .55; } }
+@keyframes starTwinkle2 { 0%, 100% { opacity: .95; } 50% { opacity: .6;  } }
+@keyframes starDriftA { from { transform: translate3d(0,0,0); } to { transform: translate3d(-2.5%, -3.5%, 0); } }
+@keyframes starDriftB { from { transform: translate3d(0,0,0); } to { transform: translate3d(2%, -2.2%, 0); } }
+@media (prefers-reduced-motion: reduce) {
+    body::before, body::after { animation: none; }
+}
 
 /* keep page content above the starfield */
 body > * { position: relative; z-index: 1; }
