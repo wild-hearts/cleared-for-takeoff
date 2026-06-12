@@ -39,6 +39,8 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script>
 // ─── Course data (mirrored from video-library.js) ────────────────────────────
 // This is client-side only — no playback IDs are exposed here, just metadata.
@@ -133,60 +135,68 @@ const MODULES = [
     }
 ];
 
-// ─── State helpers ────────────────────────────────────────────────────────────
-const getCode     = () => localStorage.getItem('c4t_code');
-const isPreview   = () => !!localStorage.getItem('c4t_preview');
-const getProgress = () => JSON.parse(localStorage.getItem('c4t_progress') || '{}');
-const getPaths    = () => JSON.parse(localStorage.getItem('c4t_paths') || '[]');
-const getTrack    = () => localStorage.getItem('c4t_track') || '';
+// ─── State (loaded from Supabase on init) ──────────────────────────────────────
+// isPreview(), hasFullAccess(), currentSession(), signOut(), sb live in supabase-config.js
+const STATE = { fullAccess: false, preview: false, progress: {}, paths: [], track: '' };
+
+const getProgress = () => STATE.progress;
+const getPaths    = () => STATE.paths;
+const getTrack    = () => STATE.track;
 
 function hasAccess(mod) {
     if (mod.free) return true;
-    if (isPreview()) return false;
-    return !!getCode();
+    return STATE.fullAccess;            // preview / unentitled users see free modules only
 }
 
 function isLessonVisible(lesson, mod) {
     if (!lesson.path && !lesson.track) return true; // required lessons always shown
-    const paths = getPaths();
-    const track = getTrack();
-    if (lesson.path) return paths.includes(lesson.path);
-    if (lesson.track) return lesson.track === track;
+    if (lesson.path) return STATE.paths.includes(lesson.path);
+    if (lesson.track) return lesson.track === STATE.track;
     return true;
 }
 
-// ─── Auth gate ────────────────────────────────────────────────────────────────
-(function() {
-    if (!getCode() && !isPreview()) {
-        window.location.href = 'index.html';
-    }
-})();
-
 // ─── Logout ───────────────────────────────────────────────────────────────────
-function logout() {
-    localStorage.removeItem('c4t_code');
-    localStorage.removeItem('c4t_preview');
-    window.location.href = 'index.html';
-}
+function logout() { signOut(); }        // signOut() handles sign-out + redirect
 
 // ─── Progress tracking ────────────────────────────────────────────────────────
 function getTotalLessons() {
     let total = 0;
-    const paths = getPaths();
-    const track = getTrack();
     for (const mod of MODULES) {
         for (const l of mod.lessons) {
             if (!l.path && !l.track) { total++; continue; }
-            if (l.path && paths.includes(l.path)) total++;
-            if (l.track && l.track === track) total++;
+            if (l.path && STATE.paths.includes(l.path)) total++;
+            if (l.track && l.track === STATE.track) total++;
         }
     }
     return total;
 }
 
 function getCompletedCount() {
-    const progress = getProgress();
-    return Object.values(progress).filter(Boolean).length;
+    return Object.values(STATE.progress).filter(Boolean).length;
+}
+
+// ─── Init: load access + progress from Supabase, then render ────────────────────
+async function init() {
+    // Path/track selections stay local for now (low-stakes; server-side later).
+    STATE.paths = JSON.parse(localStorage.getItem('c4t_paths') || '[]');
+    STATE.track = localStorage.getItem('c4t_track') || '';
+
+    if (isPreview()) {
+        STATE.preview  = true;
+        STATE.progress = JSON.parse(localStorage.getItem('c4t_progress') || '{}');
+        return render();
+    }
+
+    const session = await currentSession();
+    if (!session) { window.location.href = 'index.html'; return; }
+
+    STATE.fullAccess = await hasFullAccess();
+
+    const { data } = await sb.from('progress').select('lesson_id').eq('status', 'completed');
+    STATE.progress = {};
+    (data || []).forEach(r => { STATE.progress[r.lesson_id] = true; });
+
+    render();
 }
 
 // ─── Render dashboard ─────────────────────────────────────────────────────────
@@ -204,9 +214,10 @@ function render() {
         ? 'Free Preview — Modules 1 & 2'
         : 'Your course';
 
-    document.getElementById('access-label').textContent = preview
-        ? 'You\'re viewing the free preview. Modules 1 and 2 are fully unlocked.'
-        : 'Full course access';
+    document.getElementById('access-label').textContent =
+        preview            ? 'You\'re viewing the free preview. Modules 1 and 2 are fully unlocked.'
+        : STATE.fullAccess ? 'Full course access'
+        :                    'Modules 1 and 2 are unlocked. Upgrade to unlock the rest.';
 
     document.getElementById('progress-fill').style.width = pct + '%';
     document.getElementById('progress-label').textContent =
@@ -321,7 +332,7 @@ function toggleModule(header) {
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
-render();
+init();
 </script>
 
 </body>

@@ -81,12 +81,17 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script>
-    if (!localStorage.getItem('c4t_code') && !localStorage.getItem('c4t_preview')) {
-        window.location.href = 'index.html';
-    }
+    // Auth gate: require a signed-in session (or active free preview).
+    (async function () {
+        if (isPreview()) return;
+        const session = await currentSession();
+        if (!session) window.location.href = 'index.html';
+    })();
 
-    // Load saved selection
+    // Load saved selection (path choices remain local for now)
     let selected = JSON.parse(localStorage.getItem('c4t_paths') || '[]');
 
     // Restore UI

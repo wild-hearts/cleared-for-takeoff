@@ -84,6 +84,8 @@
     </a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script>
 // ─── Course data (same as dashboard) ─────────────────────────────────────────
 const MODULES = [
@@ -177,26 +179,40 @@ function buildLessonOrder() {
     return list;
 }
 
-// ─── State ────────────────────────────────────────────────────────────────────
-const getCode     = () => localStorage.getItem('c4t_code');
-const isPreview   = () => !!localStorage.getItem('c4t_preview');
-const getProgress = () => JSON.parse(localStorage.getItem('c4t_progress') || '{}');
-function saveProgress(lessonId, done) {
-    const p = getProgress();
-    if (done) p[lessonId] = true; else delete p[lessonId];
-    localStorage.setItem('c4t_progress', JSON.stringify(p));
+// ─── State (loaded from Supabase) ──────────────────────────────────────────────
+// isPreview(), hasFullAccess(), currentSession(), sb live in supabase-config.js
+let SESSION = null, PREVIEW = false, FULL_ACCESS = false, PROGRESS = {};
+const getProgress = () => PROGRESS;
+
+async function loadProgress() {
+    if (SESSION) {
+        const { data } = await sb.from('progress').select('lesson_id').eq('status', 'completed');
+        PROGRESS = {}; (data || []).forEach(r => { PROGRESS[r.lesson_id] = true; });
+    } else {
+        PROGRESS = JSON.parse(localStorage.getItem('c4t_progress') || '{}');
+    }
 }
 
-// ─── Auth gate ────────────────────────────────────────────────────────────────
-if (!getCode() && !isPreview()) {
-    window.location.href = 'index.html';
+async function saveProgress(lessonId, done) {
+    if (done) PROGRESS[lessonId] = true; else delete PROGRESS[lessonId];
+    if (SESSION) {
+        if (done) {
+            await sb.from('progress').upsert(
+                { user_id: SESSION.user.id, lesson_id: lessonId, status: 'completed' },
+                { onConflict: 'user_id,lesson_id' });
+        } else {
+            await sb.from('progress').delete().eq('lesson_id', lessonId);  // RLS scopes to this user
+        }
+    } else {
+        localStorage.setItem('c4t_progress', JSON.stringify(PROGRESS));
+    }
 }
 
 // ─── Current lesson ───────────────────────────────────────────────────────────
-const params     = new URLSearchParams(window.location.search);
-const lessonId   = params.get('lesson');
+const params      = new URLSearchParams(window.location.search);
+const lessonId    = params.get('lesson');
 const lessonOrder = buildLessonOrder();
-const lessonIdx  = lessonOrder.findIndex(l => l.id === lessonId);
+const lessonIdx   = lessonOrder.findIndex(l => l.id === lessonId);
 
 function showError(title, msg) {
     document.getElementById('error-title').textContent = title;
@@ -205,19 +221,27 @@ function showError(title, msg) {
     document.getElementById('watch-layout').style.display = 'none';
 }
 
-if (!lessonId || lessonIdx === -1) {
-    showError('Lesson not found', 'That lesson doesn\'t exist or hasn\'t been added to your course yet.');
-} else {
+// ─── Bootstrap: resolve session + access + progress, then start ────────────────
+(async function bootstrap() {
+    PREVIEW = isPreview();
+    SESSION = await currentSession();
+    if (!SESSION && !PREVIEW) { window.location.href = 'index.html'; return; }
+    FULL_ACCESS = SESSION ? await hasFullAccess() : false;
+    await loadProgress();
+    if (!lessonId || lessonIdx === -1) {
+        showError('Lesson not found', 'That lesson doesn\'t exist or hasn\'t been added to your course yet.');
+        return;
+    }
     init();
-}
+})();
 
 async function init() {
     const lesson = lessonOrder[lessonIdx];
     document.title = `${lesson.title} — Cleared For Takeoff`;
 
     // Check access
-    if (!lesson.moduleFree && isPreview()) {
-        showError('Full course required', 'This lesson is not included in the free preview. Get full access to continue.');
+    if (!lesson.moduleFree && !FULL_ACCESS) {
+        showError('Full course required', 'This lesson is not included in the free preview. Sign in with your course account to continue.');
         return;
     }
 
@@ -253,11 +277,12 @@ async function init() {
 
 // ─── Load video via Mux ───────────────────────────────────────────────────────
 async function loadVideo(lesson) {
-    const code = getCode() || '';
-    const url  = `/api/video-token?lesson=${encodeURIComponent(lesson.id)}&code=${encodeURIComponent(code)}`;
+    const url     = `/api/video-token?lesson=${encodeURIComponent(lesson.id)}`;
+    const headers = {};
+    if (SESSION) headers['Authorization'] = 'Bearer ' + SESSION.access_token;
 
     try {
-        const res  = await fetch(url);
+        const res  = await fetch(url, { headers });
         const data = await res.json();
 
         if (res.status === 503) {
@@ -344,10 +369,9 @@ function renderSidebar(currentLesson) {
 }
 
 // ─── Progress ─────────────────────────────────────────────────────────────────
-function toggleComplete() {
-    const progress = getProgress();
-    const done     = !!progress[lessonId];
-    saveProgress(lessonId, !done);
+async function toggleComplete() {
+    const done = !!PROGRESS[lessonId];
+    await saveProgress(lessonId, !done);
     updateCompleteButton(lessonId);
     renderSidebar(lessonOrder[lessonIdx]);
 }

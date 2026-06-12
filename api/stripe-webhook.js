@@ -3,13 +3,14 @@
 // POST /api/stripe-webhook
 //
 // Receives events from Stripe. On successful payment:
-//   1. Adds the student to MailerLite "C4TO Course Students" group
-//   2. MailerLite automation sends them a welcome email with their access code
+//   1. Creates the buyer's Supabase account + an active entitlement (course access)
+//   2. Adds the student to MailerLite "C4TO Course Students" group (onboarding email)
 //
 // Required Vercel environment variables:
-//   STRIPE_WEBHOOK_SECRET      →  From Stripe → Developers → Webhooks → endpoint secret (whsec_...)
-//   MAILERLITE_API_KEY         →  Already set
-//   COURSE_ACCESS_CODE         →  The code students enter at /course/ (you choose this)
+//   STRIPE_WEBHOOK_SECRET       →  From Stripe → Developers → Webhooks → endpoint secret (whsec_...)
+//   MAILERLITE_API_KEY          →  Already set
+//   SUPABASE_URL                →  Supabase project URL
+//   SUPABASE_SERVICE_ROLE_KEY   →  Supabase service-role/secret key (server only)
 //
 // In Stripe, set the webhook to listen for: checkout.session.completed
 
@@ -60,10 +61,16 @@ module.exports = async function handler(req, res) {
         console.log(`New course purchase: ${email}`);
 
         if (email) {
+            // Grant course access: create the Supabase account + entitlement.
+            try {
+                await grantSupabaseAccess(email, session.id);
+            } catch (err) {
+                console.error('Supabase grant error (non-fatal):', err.message);
+            }
+            // Add to the mailing list for onboarding/marketing.
             try {
                 await addStudentToMailerLite(email, name);
             } catch (err) {
-                // Log but don't fail — Stripe will retry on 5xx
                 console.error('MailerLite error (non-fatal):', err.message);
             }
         }
@@ -126,6 +133,59 @@ function verifyStripeSignature(payload, signature, secret) {
     });
 
     if (!valid) throw new Error('Signature mismatch');
+}
+
+// ─── Grant Supabase access (create user + entitlement) ───────────────────────
+// On payment we create the buyer's Supabase account and write an entitlement,
+// so when they request a magic link they sign straight into an unlocked course.
+// Idempotent: re-running for the same Stripe session will not double-grant.
+async function grantSupabaseAccess(email, sessionId) {
+    const SB_URL  = process.env.SUPABASE_URL;
+    const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!SB_URL || !SERVICE) throw new Error('SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not set');
+
+    const headers = {
+        apikey: SERVICE,
+        Authorization: `Bearer ${SERVICE}`,
+        'Content-Type': 'application/json',
+    };
+
+    // 1. Create the auth user (email pre-confirmed so magic link works straight away).
+    let userId;
+    const createRes = await fetch(`${SB_URL}/auth/v1/admin/users`, {
+        method: 'POST', headers,
+        body: JSON.stringify({ email, email_confirm: true }),
+    });
+    if (createRes.ok) {
+        userId = (await createRes.json()).id;
+    } else if (createRes.status === 422 || createRes.status === 409) {
+        // Already exists — look them up. NOTE: verify the ?email= filter against the
+        // deployed GoTrue version; we also scan the returned page defensively.
+        const listRes = await fetch(
+            `${SB_URL}/auth/v1/admin/users?email=${encodeURIComponent(email)}`, { headers });
+        const list = await listRes.json();
+        const match = (list.users || []).find(u => (u.email || '').toLowerCase() === email.toLowerCase());
+        userId = match && match.id;
+    } else {
+        throw new Error(`admin createUser ${createRes.status}: ${await createRes.text()}`);
+    }
+    if (!userId) throw new Error('could not resolve Supabase user id');
+
+    // 2. Write the entitlement. stripe_session_id is unique, so duplicates are ignored.
+    const entRes = await fetch(`${SB_URL}/rest/v1/entitlements`, {
+        method: 'POST',
+        headers: { ...headers, Prefer: 'resolution=ignore-duplicates' },
+        body: JSON.stringify({
+            user_id: userId,
+            product: 'self_paced',
+            status: 'active',
+            stripe_session_id: sessionId,
+        }),
+    });
+    if (!entRes.ok && entRes.status !== 409) {
+        throw new Error(`entitlement insert ${entRes.status}: ${await entRes.text()}`);
+    }
+    console.log(`Supabase access granted: ${email}`);
 }
 
 // ─── Add student to MailerLite ───────────────────────────────────────────────
