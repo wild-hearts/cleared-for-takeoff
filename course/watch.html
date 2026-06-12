@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading… — Cleared For Takeoff</title>
+    <title>Loading… · Cleared For Takeoff</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,11 +54,11 @@
         <div class="lesson-nav">
             <button class="btn-nav" id="btn-prev" onclick="navLesson(-1)">
                 <span class="nav-label">← Previous</span>
-                <span class="nav-title" id="prev-title">—</span>
+                <span class="nav-title" id="prev-title"></span>
             </button>
             <button class="btn-nav next" id="btn-next" onclick="navLesson(1)">
                 <span class="nav-label">Next →</span>
-                <span class="nav-title" id="next-title">—</span>
+                <span class="nav-title" id="next-title"></span>
             </button>
         </div>
 
@@ -141,7 +141,7 @@ const MODULES = [
         id: 5, title: 'Holding Pattern', free: false,
         lessons: [
             { id: 'm05-intro',  title: 'Module 5 Introduction',                              duration: '4:00'  },
-            { id: 'm05-l01',    title: 'Hallucinations — What They Are and How to Spot Them',duration: '11:00' },
+            { id: 'm05-l01',    title: 'Hallucinations: What They Are and How to Spot Them',duration: '11:00' },
             { id: 'm05-l02',    title: 'Confidently Wrong and Quietly Right',                duration: '11:00' },
             { id: 'm05-l03',    title: 'Scam Awareness',                                     duration: '12:00' },
             { id: 'm05-l04',    title: 'Privacy and Australian Law',                         duration: '10:00' },
@@ -155,7 +155,7 @@ const MODULES = [
             { id: 'm06-intro',  title: 'Module 6 Introduction',                         duration: '3:00'  },
             { id: 'm06-l01',    title: 'Building Your Routine',                         duration: '10:00' },
             { id: 'm06-l02',    title: 'When Not to Use AI',                            duration: '10:00' },
-            { id: 'm06-l03',    title: 'Staying Current — Following AI Without Panic',  duration: '10:00' },
+            { id: 'm06-l03',    title: 'Staying Current: Following AI Without Panic',  duration: '10:00' },
             { id: 'm06-l04',    title: 'Where to Go Next',                              duration: '10:00' },
             { id: 'm06-l05',    title: 'Bringing Someone Along',                        duration: '10:00' },
             { id: 'm06-l06',    title: 'Final Reflection and Graduation',               duration: '12:00' },
@@ -237,7 +237,7 @@ function showError(title, msg) {
 
 async function init() {
     const lesson = lessonOrder[lessonIdx];
-    document.title = `${lesson.title} — Cleared For Takeoff`;
+    document.title = `${lesson.title} · Cleared For Takeoff`;
 
     // Check access
     if (!lesson.moduleFree && !FULL_ACCESS) {
@@ -286,7 +286,7 @@ async function loadVideo(lesson) {
         const data = await res.json();
 
         if (res.status === 503) {
-            // Video not yet uploaded — show friendly message
+            // Video not yet uploaded, show friendly message
             showPlayerMessage('🎬', 'Coming soon', 'This lesson is being prepared. Check back shortly.');
             return;
         }

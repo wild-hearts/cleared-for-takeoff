@@ -1,4 +1,4 @@
-// Cleared For Takeoff — Video Library
+// Cleared For Takeoff Video Library
 // Maps lesson IDs to Mux playback IDs and metadata
 //
 // SETUP: After uploading each video to Mux, copy the Playback ID from the Mux
@@ -46,7 +46,7 @@ const MODULES = [
         id: 3,
         slug: 'module-03',
         title: 'Cleared For Takeoff',
-        subtitle: 'AI for your actual life — pick 3 paths',
+        subtitle: 'AI for your actual life: pick 3 paths',
         free: false,
         pickYourPath: true,
         pathCount: 3,
@@ -65,7 +65,7 @@ const MODULES = [
         id: 4,
         slug: 'module-04',
         title: 'In The Air',
-        subtitle: 'Deep work on one real project — pick 1 track',
+        subtitle: 'Deep work on one real project: pick 1 track',
         free: false,
         pickYourTrack: true,
         trackCount: 1,
@@ -86,7 +86,7 @@ const MODULES = [
         free: false,
         lessons: [
             { id: 'm05-intro',  title: 'Module 5 Introduction',                           duration: '4:00',  playbackId: 'PENDING' },
-            { id: 'm05-l01',    title: 'Hallucinations — What They Are and How to Spot Them', duration: '11:00', playbackId: 'PENDING' },
+            { id: 'm05-l01',    title: 'Hallucinations: What They Are and How to Spot Them', duration: '11:00', playbackId: 'PENDING' },
             { id: 'm05-l02',    title: 'Confidently Wrong and Quietly Right',             duration: '11:00', playbackId: 'PENDING' },
             { id: 'm05-l03',    title: 'Scam Awareness',                                  duration: '12:00', playbackId: 'PENDING' },
             { id: 'm05-l04',    title: 'Privacy and Australian Law',                      duration: '10:00', playbackId: 'PENDING' },
@@ -104,7 +104,7 @@ const MODULES = [
             { id: 'm06-intro',  title: 'Module 6 Introduction',                        duration: '3:00',  playbackId: 'PENDING' },
             { id: 'm06-l01',    title: 'Building Your Routine',                        duration: '10:00', playbackId: 'PENDING' },
             { id: 'm06-l02',    title: 'When Not to Use AI',                           duration: '10:00', playbackId: 'PENDING' },
-            { id: 'm06-l03',    title: 'Staying Current — Following AI Without Panic', duration: '10:00', playbackId: 'PENDING' },
+            { id: 'm06-l03',    title: 'Staying Current: Following AI Without Panic', duration: '10:00', playbackId: 'PENDING' },
             { id: 'm06-l04',    title: 'Where to Go Next',                             duration: '10:00', playbackId: 'PENDING' },
             { id: 'm06-l05',    title: 'Bringing Someone Along',                       duration: '10:00', playbackId: 'PENDING' },
             { id: 'm06-l06',    title: 'Final Reflection and Graduation',              duration: '12:00', playbackId: 'PENDING' },

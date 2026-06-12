@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Course — Cleared For Takeoff</title>
+    <title>Your Course · Cleared For Takeoff</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@
 <script src="supabase-config.js"></script>
 <script>
 // ─── Course data (mirrored from video-library.js) ────────────────────────────
-// This is client-side only — no playback IDs are exposed here, just metadata.
+// This is client-side only, no playback IDs are exposed here, just metadata.
 const MODULES = [
     {
         id: 1, title: 'Pre-Flight Checks', subtitle: 'Understanding AI before you use it', free: true,
@@ -70,7 +70,7 @@ const MODULES = [
         ]
     },
     {
-        id: 3, title: 'Cleared For Takeoff', subtitle: 'AI for your actual life — pick 3 paths', free: false,
+        id: 3, title: 'Cleared For Takeoff', subtitle: 'AI for your actual life: pick 3 paths', free: false,
         pickYourPath: true,
         paths: [
             { id: 'm03-path-a', letter: 'A', title: 'Writing Emails and Letters', duration: '14:00' },
@@ -92,7 +92,7 @@ const MODULES = [
         ]
     },
     {
-        id: 4, title: 'In The Air', subtitle: 'Deep work on one real project — pick 1 track', free: false,
+        id: 4, title: 'In The Air', subtitle: 'Deep work on one real project: pick 1 track', free: false,
         pickYourTrack: true,
         tracks: [
             { id: 'm04-track-a', letter: 'A', title: 'Write Something', duration: '25:00' },
@@ -113,7 +113,7 @@ const MODULES = [
         id: 5, title: 'Holding Pattern', subtitle: 'What to watch for, what to protect', free: false,
         lessons: [
             { id: 'm05-intro',  title: 'Module 5 Introduction',                              duration: '4:00'  },
-            { id: 'm05-l01',    title: 'Hallucinations — What They Are and How to Spot Them',duration: '11:00' },
+            { id: 'm05-l01',    title: 'Hallucinations: What They Are and How to Spot Them',duration: '11:00' },
             { id: 'm05-l02',    title: 'Confidently Wrong and Quietly Right',                duration: '11:00' },
             { id: 'm05-l03',    title: 'Scam Awareness',                                     duration: '12:00' },
             { id: 'm05-l04',    title: 'Privacy and Australian Law',                         duration: '10:00' },
@@ -127,7 +127,7 @@ const MODULES = [
             { id: 'm06-intro',  title: 'Module 6 Introduction',                         duration: '3:00'  },
             { id: 'm06-l01',    title: 'Building Your Routine',                         duration: '10:00' },
             { id: 'm06-l02',    title: 'When Not to Use AI',                            duration: '10:00' },
-            { id: 'm06-l03',    title: 'Staying Current — Following AI Without Panic',  duration: '10:00' },
+            { id: 'm06-l03',    title: 'Staying Current: Following AI Without Panic',  duration: '10:00' },
             { id: 'm06-l04',    title: 'Where to Go Next',                              duration: '10:00' },
             { id: 'm06-l05',    title: 'Bringing Someone Along',                        duration: '10:00' },
             { id: 'm06-l06',    title: 'Final Reflection and Graduation',               duration: '12:00' },
@@ -211,7 +211,7 @@ function render() {
 
     // Header
     document.getElementById('greeting').textContent = preview
-        ? 'Free Preview — Modules 1 & 2'
+        ? 'Free Preview: Modules 1 & 2'
         : 'Your course';
 
     document.getElementById('access-label').textContent =
@@ -221,7 +221,7 @@ function render() {
 
     document.getElementById('progress-fill').style.width = pct + '%';
     document.getElementById('progress-label').textContent =
-        completed === 0 ? 'No lessons completed yet — pick up where you left off below'
+        completed === 0 ? 'No lessons completed yet, pick up where you left off below'
         : `${completed} of ${total} lessons completed`;
 
     // Modules
