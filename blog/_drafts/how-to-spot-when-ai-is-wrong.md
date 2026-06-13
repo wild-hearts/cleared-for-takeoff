@@ -51,6 +51,8 @@ That last point is also a safety line. You are the Captain. AI is the crew. Neve
 
 The same technology that drafts a friendly email can draft a very convincing lie. Scammers have noticed. In Australia this is no longer rare, and the old advice about "watch for bad spelling" has stopped working, because the spelling is now perfect.
 
+The scale is worth knowing, because it is easy to think this only happens to other people. Australians reported [more than 2 billion dollars in scam losses in 2024](https://www.scamwatch.gov.au/system/files/targeting-scams-report-2024.pdf), according to the National Anti-Scam Centre, and losses rose again through 2025. The biggest single category by money lost is investment scams, followed by payment-redirection and romance scams. These are not fringe crimes. They are an industry, and AI has made the convincing part cheap.
+
 Here is what is actually circulating:
 
 - **Voice cloning and family-emergency scams.** A few seconds of audio, often lifted from social media, is enough to mimic a voice. You get a call or a voice message that sounds like your son, your mum, a grandchild, upset and needing money fast. The voice is fake. The panic is the weapon.

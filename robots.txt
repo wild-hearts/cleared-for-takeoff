@@ -5,4 +5,66 @@ Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
+# We welcome AI answer engines and their crawlers, so the academy can be
+# found and cited in AI answers (GEO). They follow the same rules as above.
+User-agent: GPTBot
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /course/
+Disallow: /api/
+Disallow: /blog/_drafts/
+
 Sitemap: https://www.clearedfortakeoff.com.au/sitemap.xml
