@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids & Teens · Cleared For Takeoff</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+    <style>
+        /* Kids track switcher, built from the existing tokens */
+        .track-switch{display:flex;gap:0.5rem;margin:0 auto 1.5rem;max-width:max-content}
+        .track-switch a{padding:0.5rem 1.25rem;border-radius:999px;text-decoration:none;font-weight:600;
+            font-size:0.9rem;border:1px solid var(--border, rgba(255,255,255,.15));color:var(--text-muted)}
+        .track-switch a.active{background:var(--accent);color:#0A1A2D;border-color:var(--accent)}
+        .cred-banner{display:flex;align-items:center;gap:0.6rem;justify-content:center;margin-top:0.75rem;
+            font-size:0.95rem;color:var(--text-muted)}
+        .cred-banner b{color:var(--text-white,#fff)}
+        .week-num{flex:0 0 auto;width:2rem;text-align:center;font-weight:700;color:var(--text-muted);font-size:0.85rem}
+        .lesson-item.locked .week-num{opacity:.5}
+    </style>
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a href="/" id="exit-link">← Back to site</a>
+        <a href="#" onclick="logout(); return false;" style="color:#F87171;">Sign out</a>
+    </nav>
+</header>
+
+<div class="page-wrap-wide">
+
+    <!-- Track switcher -->
+    <div class="track-switch">
+        <a href="kids.html?track=junior" id="sw-junior">Junior AI Navigators (8–11)</a>
+        <a href="kids.html?track=senior" id="sw-senior">Senior AI Pilots (12–16)</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="dashboard-hero">
+        <h1 id="track-title">Loading…</h1>
+        <p id="track-blurb"></p>
+        <p class="cred-banner">Earns the <b id="cred-name"></b></p>
+        <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <p class="progress-label" id="progress-label"></p>
+        <p id="access-label" style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem;"></p>
+    </div>
+
+    <!-- Weeks (rendered by JS) -->
+    <div class="modules-grid" id="weeks-grid">
+        <div style="text-align:center; padding:3rem; color:var(--text-muted);">Loading your course…</div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="kids-library.js"></script>
+<script>
+// ─── Which track? (?track=junior|senior, default junior) ──────────────────────
+const params   = new URLSearchParams(window.location.search);
+const trackKey = (params.get('track') === 'senior') ? 'senior' : 'junior';
+const TRACK    = KIDS_TRACKS[trackKey];
+
+const STATE = { access: false, progress: {} };
+
+function logout() { signOut(); }
+
+// A week is accessible if it is the free preview or the parent holds the track.
+function weekAccessible(week) { return week.free || STATE.access; }
+
+async function init() {
+    // Highlight the active switch + tint the accent to the track colour.
+    document.getElementById('sw-' + trackKey).classList.add('active');
+    document.documentElement.style.setProperty('--accent', TRACK.accent);
+
+    const session = await currentSession();
+    if (!session) { window.location.href = 'index.html?next=kids&track=' + trackKey; return; }
+
+    STATE.access = await hasKidsTrackAccess(trackKey);
+
+    const { data } = await sb.from('progress').select('lesson_id').eq('status', 'completed');
+    STATE.progress = {};
+    (data || []).forEach(r => { STATE.progress[r.lesson_id] = true; });
+
+    render();
+}
+
+function render() {
+    document.getElementById('track-title').textContent = TRACK.title + ' (' + TRACK.ages + ')';
+    document.getElementById('track-blurb').textContent = TRACK.blurb;
+    document.getElementById('cred-name').textContent   = TRACK.credential;
+
+    const total     = TRACK.weeks.length;
+    const completed = TRACK.weeks.filter(w => STATE.progress[w.id]).length;
+    const pct       = total > 0 ? Math.round((completed / total) * 100) : 0;
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-label').textContent =
+        completed === 0 ? 'No lessons completed yet, start with Week 1 below'
+        : completed + ' of ' + total + ' weeks completed';
+    document.getElementById('access-label').textContent = STATE.access
+        ? 'Full track access'
+        : 'Week 1 is a free preview. Enrol to unlock all ten weeks.';
+
+    const grid = document.getElementById('weeks-grid');
+    const card = document.createElement('div');
+    card.className = 'module-card open';
+
+    let rows = '';
+    for (const week of TRACK.weeks) {
+        const accessible = weekAccessible(week);
+        const done       = !!STATE.progress[week.id];
+        const itemClass  = accessible ? 'lesson-item' : 'lesson-item locked';
+        const href       = accessible ? ('kids-watch.html?track=' + trackKey + '&lesson=' + week.id) : '#';
+        const badge      = week.free ? '<span class="module-badge badge-free">Free preview</span>'
+                         : !accessible ? '<span class="module-badge badge-locked">🔒 Locked</span>' : '';
+        rows += `
+            <a class="${itemClass}" href="${href}" ${accessible ? '' : 'onclick="return false"'}>
+                <span class="week-num">W${week.week}</span>
+                <div class="lesson-status ${done ? 'done' : ''}">${done ? '✓' : ''}</div>
+                <span class="lesson-title">${week.title}<br><span style="font-size:0.8rem;color:var(--text-muted);font-weight:400;">${week.subtitle}</span></span>
+                <span class="lesson-duration">${badge} ${week.duration}</span>
+            </a>`;
+    }
+
+    card.innerHTML = `
+        <div class="module-card-header" style="cursor:default;">
+            <div class="module-meta">
+                <div class="module-info">
+                    <h3>Your ten-week flight plan</h3>
+                    <p class="module-subtitle">An animated instructor guides every lesson. Do the activity after each one.</p>
+                </div>
+            </div>
+        </div>
+        <div class="lesson-list" style="display:block;">${rows}</div>`;
+
+    grid.innerHTML = '';
+    grid.appendChild(card);
+}
+
+init();
+</script>
+
+</body>
+</html>

@@ -107,6 +107,43 @@ const MODULES = [
     }
 ];
 
+// ── Kids & Teens tracks ──────────────────────────────────────────────────────
+// Two tracks, ten weekly lessons each. Week 1 of each track is a free preview.
+// Lesson IDs match course/kids-library.js (jr-w01..jr-w10, sr-w01..sr-w10).
+// 'free' is per-lesson here (only Week 1), unlike the adult module-level 'free'.
+const KIDS_TRACKS = [
+    {
+        id: 'junior', slug: 'junior', title: 'Junior AI Navigators', kids: true,
+        lessons: [
+            { id: 'jr-w01', title: 'What is AI?',                  duration: '9:00',  playbackId: 'PENDING', free: true  },
+            { id: 'jr-w02', title: 'Talking to AI safely',         duration: '9:00',  playbackId: 'PENDING', free: false },
+            { id: 'jr-w03', title: 'Machines that see',            duration: '9:00',  playbackId: 'PENDING', free: false },
+            { id: 'jr-w04', title: 'Train your first classifier',  duration: '10:00', playbackId: 'PENDING', free: false },
+            { id: 'jr-w05', title: 'When AI gets it wrong',        duration: '9:00',  playbackId: 'PENDING', free: false },
+            { id: 'jr-w06', title: 'AI storytelling',              duration: '10:00', playbackId: 'PENDING', free: false },
+            { id: 'jr-w07', title: 'Scratch helpers',              duration: '10:00', playbackId: 'PENDING', free: false },
+            { id: 'jr-w08', title: 'Safe and smart online',        duration: '9:00',  playbackId: 'PENDING', free: false },
+            { id: 'jr-w09', title: 'Build week',                   duration: '9:00',  playbackId: 'PENDING', free: false },
+            { id: 'jr-w10', title: 'Showcase week',                duration: '9:00',  playbackId: 'PENDING', free: false },
+        ],
+    },
+    {
+        id: 'senior', slug: 'senior', title: 'Senior AI Pilots', kids: true,
+        lessons: [
+            { id: 'sr-w01', title: 'How AI systems work',             duration: '13:00', playbackId: 'PENDING', free: true  },
+            { id: 'sr-w02', title: 'Prompt design and evaluation',    duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w03', title: 'Data and labelling',              duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w04', title: 'Building an image model',         duration: '14:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w05', title: 'Bias, fairness and failure',      duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w06', title: 'AI-assisted storytelling and media', duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w07', title: 'Human-centred design',            duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w08', title: 'Ethics, privacy and copyright',   duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w09', title: 'Capstone sprint',                 duration: '13:00', playbackId: 'PENDING', free: false },
+            { id: 'sr-w10', title: 'Demo day and reflection',         duration: '13:00', playbackId: 'PENDING', free: false },
+        ],
+    },
+];
+
 // Flat lookup map: lessonId → { ...lesson, module: moduleObj }
 const LESSON_MAP = {};
 for (const mod of MODULES) {
@@ -114,5 +151,15 @@ for (const mod of MODULES) {
         LESSON_MAP[lesson.id] = { ...lesson, moduleData: mod };
     }
 }
+// Kids lessons: 'free' lives on the lesson; moduleData carries the track + a
+// free flag derived from the lesson so the token endpoint can gate uniformly.
+for (const track of KIDS_TRACKS) {
+    for (const lesson of track.lessons) {
+        LESSON_MAP[lesson.id] = {
+            ...lesson,
+            moduleData: { id: track.id, slug: track.slug, title: track.title, kids: true, free: lesson.free === true },
+        };
+    }
+}
 
-module.exports = { MODULES, LESSON_MAP };
+module.exports = { MODULES, KIDS_TRACKS, LESSON_MAP };

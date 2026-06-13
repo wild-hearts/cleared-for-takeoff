@@ -82,11 +82,19 @@
             'Thank you, you\'re in. Sign in with the email you purchased with and we\'ll send you a one-click sign-in link.';
     }
 
-    // ─── Already signed in (or free preview active)? Go to the dashboard. ─────
+    // ─── Where to send the user after sign-in ────────────────────────────────
+    // Default is the adult dashboard. ?next=kids&track=junior|senior routes a
+    // parent to the kids course instead.
+    const _q = new URLSearchParams(window.location.search);
+    const NEXT_DEST = _q.get('next') === 'kids'
+        ? 'kids.html?track=' + (_q.get('track') === 'senior' ? 'senior' : 'junior')
+        : 'dashboard.html';
+
+    // ─── Already signed in (or free preview active)? Go to the destination. ───
     (async function () {
         if (isPreview()) { window.location.href = 'dashboard.html'; return; }
         const session = await currentSession();
-        if (session) window.location.href = 'dashboard.html';
+        if (session) window.location.href = NEXT_DEST;
     })();
 
     // ─── Tab switcher ─────────────────────────────────────────────────────────
@@ -114,7 +122,7 @@
             const { error: err } = await sb.auth.signInWithOtp({
                 email,
                 options: {
-                    emailRedirectTo: location.origin + '/course/dashboard.html',
+                    emailRedirectTo: location.origin + '/course/' + NEXT_DEST,
                     shouldCreateUser: false,   // accounts are created by the Stripe webhook on purchase
                 },
             });
