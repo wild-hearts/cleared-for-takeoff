@@ -51,7 +51,6 @@ module.exports = async function handler(req, res) {
             'metadata[entitlement_product]': product.entitlement,
             'success_url':                   `${domain}${product.success}`,
             'cancel_url':                    `${domain}/#pricing`,
-            'automatic_tax[enabled]':        'true',
             'customer_creation':             'always',
             'billing_address_collection':    'auto',
             'payment_method_types[0]':       'card',
