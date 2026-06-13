@@ -8,7 +8,7 @@
 //
 // Required Vercel environment variables:
 //   STRIPE_SECRET_KEY          →  From Stripe dashboard → Developers → API Keys
-//   STRIPE_PRICE_ID_SELF_PACED →  Price ID for the $297 self-paced course (price_...)
+//   STRIPE_PRICE_ID_SELF_PACED →  Price ID for the self-paced course (currently $49) (price_...)
 
 module.exports = async function handler(req, res) {
     if (req.method !== 'GET') {
