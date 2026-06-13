@@ -86,9 +86,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.clearedfortakeoff.com.au/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.clearedfortakeoff.com.au/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clearedfortakeoff.com.au/blog/prompt-library/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clearedfortakeoff.com.au/blog/which-ai-tool-to-start-with/</loc>
