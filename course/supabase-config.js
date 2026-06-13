@@ -23,12 +23,15 @@ async function currentSession() {
     return data.session || null;
 }
 
-// Does the signed-in user hold an active paid entitlement?
+// Does the signed-in user hold an active entitlement to the ADULT course?
+// Excludes kids-only entitlements so buying a kids track does not unlock the
+// adult course. Any non-kids active entitlement (e.g. 'self_paced') grants it.
 async function hasFullAccess() {
     const { data, error } = await sb
         .from('entitlements')
         .select('product')
         .eq('status', 'active')
+        .not('product', 'in', '(kids-junior,kids-senior,kids-all)')
         .limit(1);
     if (error) { console.error('entitlement check failed', error); return false; }
     return (data || []).length > 0;
