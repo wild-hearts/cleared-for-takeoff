@@ -61,9 +61,16 @@ module.exports = async function handler(req, res) {
         // original self-paced behaviour for any session without metadata.
         const product = session.metadata?.entitlement_product || 'self_paced';
 
-        console.log(`New purchase: ${email} (${product})`);
+        // Only course products auto-grant a Supabase login + entitlement. Other
+        // purchases (e.g. group-training Payment Links, which should set their
+        // metadata entitlement_product to 'group') are handled manually, so a
+        // group buyer is NOT given a free course login.
+        const COURSE_PRODUCTS = ['self_paced', 'kids-junior', 'kids-senior', 'kids-all'];
+        const isCourse = COURSE_PRODUCTS.includes(product);
 
-        if (email) {
+        console.log(`New purchase: ${email} (${product}${isCourse ? '' : ', no auto-grant'})`);
+
+        if (email && isCourse) {
             // Grant access: create the Supabase account + the matching entitlement.
             try {
                 await grantSupabaseAccess(email, session.id, product);
