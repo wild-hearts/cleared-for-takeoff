@@ -57,13 +57,16 @@ module.exports = async function handler(req, res) {
         const session = event.data.object;
         const email   = session.customer_details?.email;
         const name    = session.customer_details?.name || '';
+        // Which product was bought (set by create-checkout). Default keeps the
+        // original self-paced behaviour for any session without metadata.
+        const product = session.metadata?.entitlement_product || 'self_paced';
 
-        console.log(`New course purchase: ${email}`);
+        console.log(`New purchase: ${email} (${product})`);
 
         if (email) {
-            // Grant course access: create the Supabase account + entitlement.
+            // Grant access: create the Supabase account + the matching entitlement.
             try {
-                await grantSupabaseAccess(email, session.id);
+                await grantSupabaseAccess(email, session.id, product);
             } catch (err) {
                 console.error('Supabase grant error (non-fatal):', err.message);
             }
@@ -139,7 +142,7 @@ function verifyStripeSignature(payload, signature, secret) {
 // On payment we create the buyer's Supabase account and write an entitlement,
 // so when they request a magic link they sign straight into an unlocked course.
 // Idempotent: re-running for the same Stripe session will not double-grant.
-async function grantSupabaseAccess(email, sessionId) {
+async function grantSupabaseAccess(email, sessionId, product = 'self_paced') {
     const SB_URL  = process.env.SUPABASE_URL;
     const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY;
     if (!SB_URL || !SERVICE) throw new Error('SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not set');
@@ -177,7 +180,7 @@ async function grantSupabaseAccess(email, sessionId) {
         headers: { ...headers, Prefer: 'resolution=ignore-duplicates' },
         body: JSON.stringify({
             user_id: userId,
-            product: 'self_paced',
+            product: product,
             status: 'active',
             stripe_session_id: sessionId,
         }),
