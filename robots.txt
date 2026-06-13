@@ -3,5 +3,6 @@ Allow: /
 # Private course area (gated, no public content to index)
 Disallow: /course/
 Disallow: /api/
+Disallow: /blog/_drafts/
 
 Sitemap: https://www.clearedfortakeoff.com.au/sitemap.xml

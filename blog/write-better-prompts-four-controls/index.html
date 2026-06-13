@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Write better prompts: the four controls that change everything | Cleared For Take-Off</title>
+<meta name="description" content="A plain method for steering AI: context, role, format and iteration, with real before-and-after examples you can copy today.">
+<meta name="theme-color" content="#12283F">
+<link rel="canonical" href="https://www.clearedfortakeoff.com.au/blog/write-better-prompts-four-controls/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Write better prompts: the four controls that change everything">
+<meta property="og:description" content="A plain method for steering AI: context, role, format and iteration, with real before-and-after examples you can copy today.">
+<meta property="og:url" content="https://www.clearedfortakeoff.com.au/blog/write-better-prompts-four-controls/">
+<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Naomi Shiels">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Write better prompts: the four controls that change everything",
+  "description": "A plain method for steering AI: context, role, format and iteration, with real before-and-after examples you can copy today.",
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "image": "https://www.clearedfortakeoff.com.au/assets/og-image.png",
+  "mainEntityOfPage": "https://www.clearedfortakeoff.com.au/blog/write-better-prompts-four-controls/",
+  "author": {
+    "@type": "Person",
+    "name": "Naomi Shiels",
+    "jobTitle": "Founder, Cleared For Take-Off Academy",
+    "url": "https://www.clearedfortakeoff.com.au/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cleared For Take-Off Academy",
+    "url": "https://www.clearedfortakeoff.com.au/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.clearedfortakeoff.com.au/assets/og-image.png"
+    }
+  }
+}
+</script>
+<style>
+  :root{--navy:#1B3A5B;--navyd:#12283F;--sky:#2E75B6;--cream:#F4F8FC;--ink:#1F2A36;--grey:#5A6B7B;--accent:#C8862B;--accent-dark:#8F5E17;--accent-light:#F0C277}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:18px;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent-dark)}
+  .head{background:var(--navyd);color:#fff;position:sticky;top:0;z-index:20}
+  .head .wrap{max-width:1040px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand b{font-family:Georgia,serif;color:#fff;font-size:17px}
+  .brand small{display:block;color:#9fc0de;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .head nav a{color:#cfe0f0;text-decoration:none;font-size:15px;margin-left:18px}
+  .head nav a:hover{color:#fff}
+  h1,h2,h3{font-family:Georgia,serif;color:var(--navy);line-height:1.2}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:700;color:var(--accent-dark)}
+  /* article */
+  article{max-width:720px;margin:0 auto;padding:44px 24px 24px}
+  article h1{font-size:clamp(30px,4.5vw,44px);letter-spacing:-0.01em;margin-bottom:14px;text-wrap:balance}
+  .byline{display:flex;align-items:center;gap:10px;color:var(--grey);font-size:15.5px;margin-bottom:8px;flex-wrap:wrap}
+  .byline b{color:var(--navy)}
+  .dash{height:6px;background:repeating-linear-gradient(90deg,var(--accent) 0 30px,transparent 30px 56px);margin:22px 0 30px}
+  .body h2{font-size:clamp(23px,2.4vw,28px);margin:34px 0 12px}
+  .body h3{font-size:20px;margin:24px 0 8px}
+  .body p{margin-bottom:18px;color:#2c3a47}
+  .body ul,.body ol{margin:0 0 18px 26px}
+  .body li{margin-bottom:9px;color:#2c3a47}
+  .body strong{color:var(--navy)}
+  .body blockquote{border-left:4px solid var(--accent);background:#fff;padding:14px 20px;margin:0 0 18px;border-radius:0 10px 10px 0;font-style:italic;color:var(--navy)}
+  .body h2:first-child,.body > h2:nth-of-type(1){scroll-margin-top:80px}
+  .body a{text-underline-offset:2px}
+  /* author box (E-E-A-T) */
+  .author{max-width:720px;margin:36px auto 0;padding:24px;background:#fff;border:1px solid #dce6f0;border-radius:16px;display:flex;gap:18px;align-items:flex-start}
+  .author .av{flex:0 0 auto;width:60px;height:60px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center}
+  .author .av svg{width:34px;height:34px}
+  .author h3{font-size:18px;margin-bottom:4px}
+  .author p{font-size:15.5px;color:#41525f;margin:0}
+  .cta{max-width:720px;margin:28px auto 0;padding:22px 24px;background:linear-gradient(160deg,var(--navy),var(--navyd));color:#fff;border-radius:16px}
+  .cta p{margin:0 0 14px;color:#dbe8f6}
+  .btn{display:inline-block;background:var(--accent);color:var(--navyd);font-weight:700;text-decoration:none;padding:12px 24px;border-radius:10px}
+  /* hub */
+  .hub{max-width:1040px;margin:0 auto;padding:48px 24px}
+  .hub h1{font-size:clamp(30px,4vw,40px);margin:8px 0 10px}
+  .hub .lead{color:#3a4855;max-width:680px;margin-bottom:34px;font-size:19px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+  .card{display:flex;flex-direction:column;background:#fff;border:1px solid #dce6f0;border-radius:16px;padding:26px;text-decoration:none;color:inherit;transition:transform .15s ease,border-color .15s ease}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent-light)}
+  .card h2{font-size:21px;margin-bottom:10px}
+  .card p{color:#41525f;font-size:16px;flex:1}
+  .card .meta{color:var(--grey);font-size:14px;margin-top:14px}
+  .card .go{color:var(--accent-dark);font-weight:700;margin-top:10px;font-size:15px}
+  .foot{background:#0B1828;color:#9fb6cc;font-size:14px;padding:26px 24px;margin-top:48px}
+  .foot .wrap{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .foot a{color:#cfe0f0;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+  <a class="brand" href="/"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/><path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/><path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/></svg><span><b>Cleared For Take-Off</b><small>Academy</small></span></a>
+  <nav><a href="/blog/">All articles</a><a href="/#pricing">The course</a></nav>
+</div></header>
+<article>
+  <h1>Write better prompts: the four controls that change everything</h1>
+  <div class="byline"><b>Naomi Shiels</b><span>&middot;</span><span>13 June 2026</span><span>&middot;</span><span>7 min read</span></div>
+  <div class="dash" aria-hidden="true"></div>
+  <div class="body">
+<p>Most people who feel let down by AI are not using a bad tool. They
+are giving it a vague instruction and getting a vague answer back. That
+is not a fault in the machine. It is a steering problem, and steering is
+a skill you can learn in an afternoon.</p>
+<p>I am Naomi Shiels. I run Cleared For Take-Off Academy, and I use
+these tools every single day to write and to run a small publishing
+business. I am not an engineer. I learned this the way you will, by
+typing something, watching it come back a bit flat, and working out what
+I left out. What follows is the exact method I teach in the course,
+given to you here for free, because it works and because you should not
+have to pay to find out that you were one sentence away from a good
+answer.</p>
+<h2 id="quick-answer">Quick answer</h2>
+<p>A good prompt has four controls. <strong>Context</strong> (who it is
+for and what the situation is), <strong>Role</strong> (the kind of
+helper you want it to be), <strong>Format</strong> (exactly what you
+want back), and <strong>Iteration</strong> (treating it as a
+conversation and refining). Add those four and the same tool gives you a
+far better result. You still check any facts yourself.</p>
+<h2 id="the-core-idea-it-answers-the-question-you-actually-asked">The
+core idea: it answers the question you actually asked</h2>
+<p>AI does not read your mind. It reads your words. If your words are
+loose, it fills the gaps with the most average, generic version of an
+answer, because that is the safest guess. The fix is not magic phrasing.
+It is telling it the things you were keeping in your own head.</p>
+<p>Think of it the way I do at the Academy. You are the Captain. The AI
+is the crew. A good crew is fast and capable, but it needs a clear
+instruction to do good work. Give it that, and it will surprise you.</p>
+<h2 id="control-one-context">Control one: Context</h2>
+<p>Context is everything the AI cannot see but you can. Who is this for.
+What is the situation. What matters to you. Any limits.</p>
+<p><strong>Before:</strong> “Write an email asking for a refund.”</p>
+<p>That gives you a stiff, generic template that could be from anyone,
+about anything.</p>
+<p><strong>After:</strong> “Write an email to my energy provider asking
+for a refund. They overcharged me $140 across two bills after I gave
+them a meter reading they ignored. I have been a customer for six years
+and I am annoyed but I want to stay polite and firm, not rude. Keep it
+short.”</p>
+<p>Same task. The second one has a real situation in it, so the answer
+has something to work with.</p>
+<h2 id="control-two-role">Control two: Role</h2>
+<p>You can tell the AI what kind of helper to be. This sounds like a
+gimmick. It is not. Asking it to take a role pulls it toward the right
+tone and the right knowledge.</p>
+<p><strong>Before:</strong> “Help me understand this letter from my
+landlord.”</p>
+<p><strong>After:</strong> “Act as a calm tenancy advisor who explains
+things in plain English. Here is a letter from my landlord. Tell me what
+it actually means, what my options are, and what I should be careful
+about.”</p>
+<p>“Act as a patient GP receptionist.” “Act as a careful proofreader who
+does not change my voice.” “Act as a friend who is good with money and
+will be honest with me.” The role sets the lane.</p>
+<h2 id="control-three-format">Control three: Format</h2>
+<p>Tell it the shape you want back. If you do not, you tend to get three
+paragraphs of prose when you wanted a list, or a list when you wanted
+one tidy email.</p>
+<p><strong>Before:</strong> “Give me ideas for my mum’s 70th.”</p>
+<p><strong>After:</strong> “Give me five options for my mum’s 70th
+birthday lunch. She loves gardens and hates loud restaurants. For each
+option give me a one-line description and a rough cost per head. Put it
+in a table.”</p>
+<p>Now you can actually use the answer. “A short email.” “A five-point
+list.” “A table.” “One paragraph, no jargon.” “Three subject lines, that
+is all.” Say the shape out loud.</p>
+<h2 id="control-four-iteration">Control four: Iteration</h2>
+<p>This is the one people skip, and it is the one that matters most. The
+first answer is a draft, not a verdict. It is a conversation. You do not
+start again. You nudge.</p>
+<p>“Make it warmer.” “That is too long, halve it.” “Less corporate.”
+“Give me three versions, one polite, one firm, one a bit cheeky.” “Keep
+the second paragraph, rewrite the rest.” “You have made it sound like a
+robot, write it the way a real person speaks.”</p>
+<p>The mistake I see most often is someone reading the first reply,
+deciding AI is not for them, and closing the tab. The good stuff is
+almost always in the second or third turn.</p>
+<h2 id="a-full-worked-example">A full worked example</h2>
+<p>Here is one real task, start to finish.</p>
+<p><strong>The vague prompt:</strong> “Write a complaint email to my
+power company.”</p>
+<p>The weak result is a flat, formal note. “Dear Sir or Madam, I am
+writing to express my dissatisfaction.” No detail, no amount, no sense
+of you. It could not actually be sent without heavy editing, because it
+knows nothing about your case.</p>
+<p><strong>The steered prompt</strong>, using all four controls:</p>
+<p>“Act as someone who writes clear, firm, polite complaint letters
+(role). Write an email to my energy provider, Origin (context). They
+overcharged me $140 across two bills because they ignored the meter
+reading I submitted on 3 May. I have been with them six years and have
+always paid on time. I want the $140 credited and an explanation. Keep
+it under 150 words, polite but firm, and end with a clear request for a
+reply within ten business days (format).”</p>
+<p>That gives you something you can almost send as is. And if the tone
+is a touch sharp, you say “soften the opening line” and it does
+(iteration). Four controls, one good email, about ninety seconds of
+work.</p>
+<h2 id="the-trick-that-beats-all-four-make-it-interview-you">The trick
+that beats all four: make it interview you</h2>
+<p>When you are not sure what to ask for, hand the work back. Try
+this:</p>
+<p>“I want to plan a 70th birthday lunch for my mum but I have not
+thought it all through. Before you suggest anything, ask me the
+questions you need answered to do this well. One question at a
+time.”</p>
+<p>Now the AI draws the context out of you instead of guessing. It will
+ask about budget, numbers, her tastes, the date, how far people are
+travelling. By the time it answers, it knows enough to be genuinely
+useful, and you did not have to know how to write the perfect prompt.
+This single move has saved me more time than any other.</p>
+<h2 id="one-honest-caution">One honest caution</h2>
+<p>Steering improves wording, structure and tone. It does not make the
+AI correct. These tools will state a wrong fact, a wrong date, a wrong
+dollar figure or a made-up rule with total confidence, and good steering
+can make that wrong answer sound even more convincing.</p>
+<p>So hold the line I teach at the Academy. <strong>Shape with it,
+verify its facts.</strong> Use it to draft the email, then check the
+actual amount on your actual bill. Use it to explain the tenancy law,
+then confirm it against the real source before you act. And never put
+passwords, bank, card or ID details into any AI tool. You are the
+Captain. The crew does the lifting. You sign off.</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Do I need special wording or magic phrases?</strong>
+No. Plain English is fine. You are not casting a spell, you are briefing
+a capable helper. The four controls matter far more than clever
+phrasing.</p>
+<p><strong>Does this work on ChatGPT, Claude, Gemini and
+Copilot?</strong> Yes. Context, role, format and iteration work on all
+of the main tools, because they are about being clear, not about one
+product’s settings.</p>
+<p><strong>What is the single biggest improvement I can make
+today?</strong> Stop accepting the first answer. Treat it as a
+conversation and refine. That one habit lifts your results more than
+anything else.</p>
+<p>If you want to practise this with your hands rather than just read
+about it, Module 2 of the free starter walks you through these four
+controls on your own real tasks.</p>
+
+  </div>
+</article>
+<div class="author">
+  <div class="av"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/><path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/><path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/></svg></div>
+  <div><h3>Written by Naomi Shiels</h3>
+  <p>Naomi is the founder of Cleared For Take-Off Academy and Wild Hearts Publishing. A Canberra-based former linguist, lawyer and commercial aviation manager, she has written 14 books and made 216 songs with AI, and she uses these tools every day. She is not an engineer. She learned AI the way you will, by showing up and trying things.</p></div>
+</div>
+<div class="cta">
+  <p>Cleared For Take-Off is a calm, plain-English AI course for everyday adults. Module 1 is free, with no payment details.</p>
+  <a class="btn" href="/#pricing">Start free &rarr;</a>
+</div>
+<footer class="foot"><div class="wrap">
+  <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
+  <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
+</div></footer>
+</body>
+</html>
