@@ -1,6 +1,6 @@
 // Cleared For Takeoff — Mux Signed Token API
 //
-// GET /api/video-token?lesson=m01-intro   (with Authorization: Bearer <supabase access token>)
+// GET /api/video-token?lesson=m01-l01   (with Authorization: Bearer <supabase access token>)
 //
 // Returns a short-lived signed JWT that the Mux player uses to stream a video.
 // Free-preview lessons (Modules 1 and 2) work without sign-in.

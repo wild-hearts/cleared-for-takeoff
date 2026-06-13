@@ -5,6 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cleared For Take-Off Academy, AI for Grown-Ups</title>
 <meta name="description" content="Six modules. A few hours of video. You go from curious and cautious to using AI confidently, on your own terms. No jargon, no hype. Modules 1 and 2 are completely free.">
+<link rel="canonical" href="https://www.clearedfortakeoff.com.au/">
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cleared For Take-Off Academy">
+<meta property="og:title" content="Cleared For Take-Off Academy, AI for Grown-Ups">
+<meta property="og:description" content="Go from curious and cautious to using AI confidently. Six short modules, no jargon, no hype. Modules 1 and 2 are completely free.">
+<meta property="og:url" content="https://www.clearedfortakeoff.com.au/">
+<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cleared For Take-Off Academy: AI for Grown-Ups">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cleared For Take-Off Academy, AI for Grown-Ups">
+<meta name="twitter:description" content="Go from curious and cautious to using AI confidently. Six short modules, no jargon, no hype. Modules 1 and 2 are free.">
+<meta name="twitter:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.clearedfortakeoff.com.au/#org",
+      "name": "Cleared For Take-Off Academy",
+      "url": "https://www.clearedfortakeoff.com.au/",
+      "description": "Calm, jargon-free AI training for everyday adults.",
+      "publisher": { "@type": "Organization", "name": "Wild Hearts Publishing" },
+      "founder": { "@type": "Person", "name": "Naomi Shiels" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.clearedfortakeoff.com.au/#website",
+      "name": "Cleared For Take-Off Academy",
+      "url": "https://www.clearedfortakeoff.com.au/",
+      "publisher": { "@id": "https://www.clearedfortakeoff.com.au/#org" }
+    },
+    {
+      "@type": "Course",
+      "name": "Cleared For Take-Off: AI for Grown-Ups",
+      "description": "Six short modules that take everyday adults from curious and cautious to using AI confidently and safely. No jargon, no hype. Modules 1 and 2 are completely free.",
+      "provider": { "@id": "https://www.clearedfortakeoff.com.au/#org" },
+      "inLanguage": "en-AU",
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "297",
+        "priceCurrency": "AUD",
+        "url": "https://www.clearedfortakeoff.com.au/#pricing"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT6H"
+      }
+    }
+  ]
+}
+</script>
 <meta name="theme-color" content="#12283F">
 <script>document.documentElement.classList.add('js');</script>
 <style>
@@ -70,13 +127,37 @@
   .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
   .brand:active{opacity:.75}
   .brand .mark{flex:0 0 auto}
-  .brand b{font-family:Georgia,serif;color:#fff;font-size:18px;letter-spacing:.02em;font-weight:700;line-height:1.2}
+  .brand b{font-family:Georgia,serif;color:#fff;font-size:18px;letter-spacing:.02em;font-weight:700;line-height:1.2;white-space:nowrap}
   .brand small{display:block;color:#9fc0de;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  @media(max-width:560px){
+    .site-head .wrap{gap:8px}
+    .brand{gap:9px}
+    .brand b{font-size:15.5px}
+    .brand small{font-size:9.5px;letter-spacing:.1em}
+    .site-head .btn{padding:9px 14px;font-size:14px}
+    .navtoggle{margin-left:-2px}
+  }
   .site-head nav{display:flex;align-items:center;gap:22px;font-size:16px}
+  .site-head .navlinks{display:flex;align-items:center;gap:22px}
   .site-head nav a{color:#cfe0f0;text-decoration:none;padding:6px 2px;transition:color .15s ease}
   .site-head nav a:active{color:#fff}
   .site-head .btn{padding:10px 20px;font-size:16px;border-radius:999px}
-  @media(max-width:880px){.site-head nav a.lnk{display:none}}
+  .navtoggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:10px;background:none;border:0;cursor:pointer;margin-left:2px}
+  .navtoggle span{display:block;height:2px;width:100%;background:#cfe0f0;border-radius:2px;transition:transform .22s ease,opacity .2s ease}
+  .site-head.nav-open .navtoggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .site-head.nav-open .navtoggle span:nth-child(2){opacity:0}
+  .site-head.nav-open .navtoggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:880px){
+    .navtoggle{display:flex}
+    .site-head .navlinks{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(18,40,63,.98);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      padding:6px 22px 18px;border-top:1px solid rgba(255,255,255,.08);box-shadow:0 24px 48px rgba(0,0,0,.45);
+      opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .18s ease,transform .18s ease,visibility .18s ease}
+    .site-head.nav-open .navlinks{opacity:1;visibility:visible;transform:none}
+    .site-head .navlinks .lnk{padding:15px 2px;font-size:18px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .site-head .navlinks .lnk:last-child{border-bottom:0}
+  }
+  @media(prefers-reduced-motion:reduce){.navtoggle span,.site-head .navlinks{transition:none}}
   .site-head::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
     background:rgba(9,19,32,.97);box-shadow:0 10px 26px rgba(0,0,0,.35);
     opacity:0;transition:opacity .25s ease}
@@ -527,12 +608,17 @@
       <span><b>Cleared For Take-Off</b><small>Academy &middot; AI for Grown-Ups</small></span>
     </a>
     <nav aria-label="Site">
-      <a class="lnk" href="/book/">The Book</a>
-      <a class="lnk" href="#flightplan">Academy</a>
-      <a class="lnk" href="#consulting">Consulting</a>
-      <a class="lnk" href="#pricing">Pricing</a>
-      <a class="lnk" href="/course/">Student login</a>
+      <div class="navlinks" id="site-nav-mobile">
+        <a class="lnk" href="/book/">The Book</a>
+        <a class="lnk" href="#flightplan">Academy</a>
+        <a class="lnk" href="#consulting">Consulting</a>
+        <a class="lnk" href="#pricing">Pricing</a>
+        <a class="lnk" href="/course/">Student login</a>
+      </div>
       <a class="btn" href="#pricing">Enroll Now</a>
+      <button class="navtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </div>
   <span class="scroll-progress" aria-hidden="true"></span>
@@ -847,7 +933,7 @@
       <details class="acc-item reveal">
         <summary>
           <span class="acc-no" aria-hidden="true">3</span>
-          <span class="acc-head"><h3>Cleared For Takeoff</h3><span class="acc-meta">90 mins &middot; pick-your-path: choose 3 of 6</span></span>
+          <span class="acc-head"><h3>Cleared For Takeoff</h3><span class="acc-meta">six everyday paths</span></span>
           <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </summary>
         <div class="acc-body">
@@ -1350,6 +1436,24 @@
       })
       .finally(function(){ btn.disabled=false; btn.innerHTML=orig; });
   });
+})();
+/* Mobile nav toggle */
+(function(){
+  var head = document.querySelector('.site-head');
+  var btn = head && head.querySelector('.navtoggle');
+  var panel = document.getElementById('site-nav-mobile');
+  if(!btn || !panel) return;
+  function setOpen(open){
+    head.classList.toggle('nav-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!head.classList.contains('nav-open')); });
+  panel.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function(e){ if(head.classList.contains('nav-open') && !head.contains(e.target)) setOpen(false); });
+  // close the menu if resized up to desktop
+  matchMedia('(min-width:881px)').addEventListener('change', function(m){ if(m.matches) setOpen(false); });
 })();
 </script>
 </body>

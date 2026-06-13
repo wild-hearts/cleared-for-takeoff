@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Track — Module 4</title>
+    <title>Choose Your Track · Module 4</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,8 @@
 <div class="selection-page">
 
     <div class="selection-intro">
-        <h1>Module 4 — Choose your track</h1>
-        <p>Pick one track for this module — the project or goal you want to work on. Each track is a ~25 minute deep-work session. You can come back to other tracks later.</p>
+        <h1>Module 4: Choose your track</h1>
+        <p>Pick one track for this module: the project or goal you want to work on. Each track is a ~25 minute deep-work session. You can come back to other tracks later.</p>
     </div>
 
     <p class="selection-counter">
@@ -53,7 +53,7 @@
         <div class="path-card" data-track="D" onclick="selectTrack(this)">
             <div class="path-letter">D</div>
             <h3>Learn Something</h3>
-            <p>A language, skill, creative practice, or subject — with AI as your tutor and practice partner.</p>
+            <p>A language, skill, creative practice, or subject, with AI as your tutor and practice partner.</p>
         </div>
 
     </div>
@@ -98,14 +98,14 @@
     function updateLabel() {
         const names = { A: 'Write Something', B: 'Start Something', C: 'Sort Something', D: 'Learn Something' };
         document.getElementById('count-label').textContent = selectedTrack
-            ? `Track ${selectedTrack} selected — ${names[selectedTrack]}`
+            ? `Track ${selectedTrack} selected: ${names[selectedTrack]}`
             : 'No track selected';
         document.getElementById('confirm-btn').disabled = !selectedTrack;
     }
 
     function confirmTrack() {
         localStorage.setItem('c4t_track', selectedTrack);
-        window.location.href = 'watch.html?lesson=m04-intro';
+        window.location.href = 'watch.html?lesson=m04-l01';
     }
 </script>
 

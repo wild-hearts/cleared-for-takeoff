@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+# Private course area (gated, no public content to index)
+Disallow: /course/
+Disallow: /api/
+
+Sitemap: https://www.clearedfortakeoff.com.au/sitemap.xml
