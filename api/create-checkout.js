@@ -68,7 +68,7 @@ module.exports = async function handler(req, res) {
         if (!response.ok) {
             const err = await response.json();
             console.error('Stripe API error:', err.error?.message);
-            return res.status(502).json({ error: 'Could not create checkout session', details: err.error?.message });
+            return res.status(502).json({ error: 'Could not create checkout session' });
         }
 
         const session = await response.json();
