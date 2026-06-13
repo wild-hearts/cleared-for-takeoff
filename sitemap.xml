@@ -31,6 +31,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.clearedfortakeoff.com.au/for-trades/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clearedfortakeoff.com.au/for-health/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clearedfortakeoff.com.au/for-nonprofits/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clearedfortakeoff.com.au/for-education/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clearedfortakeoff.com.au/for-hospitality-retail/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clearedfortakeoff.com.au/for-property/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.clearedfortakeoff.com.au/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

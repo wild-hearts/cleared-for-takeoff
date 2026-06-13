@@ -363,7 +363,7 @@
 
   /* ---------- audience doors ---------- */
   .audiences{background:#fff}
-  .door-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+  .door-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:30px}
   @media(max-width:980px){.door-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:540px){.door-grid{grid-template-columns:1fr}}
   .door{display:flex;flex-direction:column;gap:7px;background:var(--cream);border:1px solid #dce6f0;
@@ -1216,7 +1216,7 @@
     <div class="reveal">
       <div class="eyebrow">One course, many doors</div>
       <h2 id="aud-h">Pick the door that sounds like you</h2>
-      <p class="sub-lead">The same six modules, told four ways. Each page speaks your language; the flight plan underneath is identical.</p>
+      <p class="sub-lead">The same six modules, told in your language. There are a lot of different lines of work, so find the door that sounds most like you. The flight plan underneath is identical.</p>
     </div>
     <div class="door-grid">
       <a class="door reveal" href="/for-creators/" style="--d:#B14FA0">
@@ -1237,6 +1237,36 @@
       <a class="door reveal" href="/for-later-life/" style="--d:#C8862B">
         <b>For later life</b>
         <span>Curious, cautious, and exactly on time.</span>
+        <span class="go">Board here &rarr;</span>
+      </a>
+      <a class="door reveal" href="/for-trades/" style="--d:#B5651D">
+        <b>For trades &amp; construction</b>
+        <span>On the tools all day, doing the quotes and admin after hours.</span>
+        <span class="go">Board here &rarr;</span>
+      </a>
+      <a class="door reveal" href="/for-health/" style="--d:#2E9E8F">
+        <b>For health &amp; care</b>
+        <span>Practices and practitioners, the writing around care, with patient data kept out.</span>
+        <span class="go">Board here &rarr;</span>
+      </a>
+      <a class="door reveal" href="/for-nonprofits/" style="--d:#4A7BB5">
+        <b>For non-profits &amp; community</b>
+        <span>Stretched-thin teams and volunteers doing more with less.</span>
+        <span class="go">Board here &rarr;</span>
+      </a>
+      <a class="door reveal" href="/for-education/" style="--d:#3F8E5C">
+        <b>For educators &amp; trainers</b>
+        <span>Teachers and trainers reclaiming planning time, the honest way.</span>
+        <span class="go">Board here &rarr;</span>
+      </a>
+      <a class="door reveal" href="/for-hospitality-retail/" style="--d:#C77D3A">
+        <b>For hospitality &amp; retail</b>
+        <span>Cafes, venues and shops doing the socials between shifts.</span>
+        <span class="go">Board here &rarr;</span>
+      </a>
+      <a class="door reveal" href="/for-property/" style="--d:#5B8DA6">
+        <b>For real estate &amp; property</b>
+        <span>Agents and managers drafting the listings and the constant comms.</span>
         <span class="go">Board here &rarr;</span>
       </a>
     </div>
