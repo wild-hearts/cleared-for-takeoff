@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading… · Cleared For Takeoff</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="course.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" type="module" defer></script>
+</head>
+<body>
+
+<header class="course-header">
+    <div class="course-logo">Cleared For <span>Takeoff</span></div>
+    <nav class="header-nav">
+        <a id="back-link" href="kids.html?track=junior">← All weeks</a>
+    </nav>
+</header>
+
+<div class="watch-layout" id="watch-layout" style="display:none;">
+    <div class="watch-main">
+        <div class="player-wrap" id="player-wrap">
+            <div class="player-placeholder" id="player-placeholder">
+                <div class="player-spinner"></div>
+                <p id="player-status">Loading…</p>
+            </div>
+        </div>
+
+        <h1 class="watch-title" id="watch-title"></h1>
+        <div class="watch-meta">
+            <span id="module-label"></span>
+            <span id="duration-label"></span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+            <button class="btn-primary" id="complete-btn"
+                style="width:auto; padding:0.6rem 1.25rem; font-size:0.875rem;"
+                onclick="toggleComplete()">Mark as complete</button>
+            <span id="complete-status" style="font-size:0.875rem; color:var(--text-muted);"></span>
+        </div>
+
+        <div class="lesson-nav">
+            <button class="btn-nav" id="btn-prev" onclick="navLesson(-1)">
+                <span class="nav-label">← Previous</span>
+                <span class="nav-title" id="prev-title"></span>
+            </button>
+            <button class="btn-nav next" id="btn-next" onclick="navLesson(1)">
+                <span class="nav-label">Next →</span>
+                <span class="nav-title" id="next-title"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="watch-sidebar">
+        <div class="sidebar-module">
+            <div class="sidebar-module-title" id="sidebar-module-title"></div>
+            <div class="sidebar-lesson-list" id="sidebar-lesson-list"></div>
+        </div>
+    </div>
+</div>
+
+<div class="state-box" id="error-state" style="display:none;">
+    <div class="state-icon">⚠️</div>
+    <h2 id="error-title">Something went wrong</h2>
+    <p id="error-msg">Please try again or return to your course.</p>
+    <a id="error-back" href="kids.html?track=junior" class="btn-primary" style="display:inline-block; width:auto; padding:0.75rem 2rem; margin-top:1rem;">Back to your course</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="kids-library.js"></script>
+<script>
+const params   = new URLSearchParams(window.location.search);
+const trackKey = (params.get('track') === 'senior') ? 'senior' : 'junior';
+const lessonId = params.get('lesson');
+const TRACK    = KIDS_TRACKS[trackKey];
+
+// Wire the back links to the right track.
+document.getElementById('back-link').href = 'kids.html?track=' + trackKey;
+document.getElementById('error-back').href = 'kids.html?track=' + trackKey;
+document.documentElement.style.setProperty('--accent', TRACK.accent);
+
+const lessonOrder = TRACK.weeks;
+const lessonIdx   = lessonOrder.findIndex(w => w.id === lessonId);
+
+let SESSION = null, ACCESS = false, PROGRESS = {};
+const getProgress = () => PROGRESS;
+
+async function loadProgress() {
+    const { data } = await sb.from('progress').select('lesson_id').eq('status', 'completed');
+    PROGRESS = {}; (data || []).forEach(r => { PROGRESS[r.lesson_id] = true; });
+}
+async function saveProgress(id, done) {
+    if (done) PROGRESS[id] = true; else delete PROGRESS[id];
+    if (done) {
+        await sb.from('progress').upsert(
+            { user_id: SESSION.user.id, lesson_id: id, status: 'completed' },
+            { onConflict: 'user_id,lesson_id' });
+    } else {
+        await sb.from('progress').delete().eq('lesson_id', id);
+    }
+}
+
+function showError(title, msg) {
+    document.getElementById('error-title').textContent = title;
+    document.getElementById('error-msg').textContent   = msg;
+    document.getElementById('error-state').style.display = 'block';
+    document.getElementById('watch-layout').style.display = 'none';
+}
+
+(async function bootstrap() {
+    SESSION = await currentSession();
+    if (!SESSION) { window.location.href = 'index.html?next=kids&track=' + trackKey; return; }
+    ACCESS = await hasKidsTrackAccess(trackKey);
+    await loadProgress();
+    if (!lessonId || lessonIdx === -1) {
+        showError('Lesson not found', 'That lesson does not exist in this track yet.');
+        return;
+    }
+    init();
+})();
+
+async function init() {
+    const week = lessonOrder[lessonIdx];
+    document.title = week.title + ' · Cleared For Takeoff';
+
+    if (!week.free && !ACCESS) {
+        showError('Enrolment required', 'This week is not part of the free preview. Enrol in ' + TRACK.title + ' to unlock all ten weeks.');
+        return;
+    }
+
+    document.getElementById('watch-layout').style.display = '';
+    document.getElementById('watch-title').textContent  = week.title;
+    document.getElementById('module-label').textContent = TRACK.title + ', Week ' + week.week;
+    document.getElementById('duration-label').textContent = week.duration;
+
+    renderSidebar(week);
+
+    const prev = lessonOrder[lessonIdx - 1];
+    const next = lessonOrder[lessonIdx + 1];
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    btnPrev.disabled = !prev;
+    btnNext.disabled = !next;
+    if (prev) document.getElementById('prev-title').textContent = prev.title;
+    if (next) document.getElementById('next-title').textContent = next.title;
+
+    updateCompleteButton(week.id);
+    await loadVideo(week);
+}
+
+async function loadVideo(week) {
+    const url = '/api/video-token?lesson=' + encodeURIComponent(week.id);
+    const headers = { Authorization: 'Bearer ' + SESSION.access_token };
+    try {
+        const res  = await fetch(url, { headers });
+        const data = await res.json();
+        if (res.status === 503) { showPlayerMessage('🎬', 'Coming soon', 'This lesson is being prepared. Check back shortly.'); return; }
+        if (!res.ok)           { showPlayerMessage('🔒', 'Enrolment required', data.error || 'Enrol to watch this lesson.'); return; }
+        mountPlayer(data.playbackId, data.token, week.title);
+    } catch (err) {
+        showPlayerMessage('⚠️', 'Could not load video', 'Please check your connection and refresh the page.');
+    }
+}
+
+function mountPlayer(playbackId, token, title) {
+    const wrap = document.getElementById('player-wrap');
+    wrap.innerHTML = '';
+    const player = document.createElement('mux-player');
+    player.setAttribute('playback-id', playbackId);
+    if (token) player.setAttribute('playback-token', token);
+    player.setAttribute('stream-type', 'on-demand');
+    player.setAttribute('metadata-video-title', title);
+    player.setAttribute('accent-color', TRACK.accent);
+    player.style.width = '100%'; player.style.height = '100%'; player.style.display = 'block';
+    player.addEventListener('ended', () => { saveProgress(lessonId, true); updateCompleteButton(lessonId); });
+    wrap.appendChild(player);
+}
+
+function showPlayerMessage(icon, title, msg) {
+    document.getElementById('player-placeholder').innerHTML =
+        '<div style="font-size:2rem; margin-bottom:0.5rem;">' + icon + '</div>' +
+        '<strong style="color:var(--text-white);">' + title + '</strong>' +
+        '<p style="font-size:0.875rem; max-width:280px; text-align:center;">' + msg + '</p>';
+}
+
+function renderSidebar(current) {
+    document.getElementById('sidebar-module-title').textContent = TRACK.title;
+    const list = document.getElementById('sidebar-lesson-list');
+    list.innerHTML = '';
+    for (const w of TRACK.weeks) {
+        const isCurrent = w.id === current.id;
+        const isDone    = !!PROGRESS[w.id];
+        const locked    = !w.free && !ACCESS;
+        const a = document.createElement('a');
+        a.className = 'sidebar-lesson' + (isCurrent ? ' active' : '') + (locked ? ' locked' : '');
+        a.href = locked ? '#' : ('kids-watch.html?track=' + trackKey + '&lesson=' + w.id);
+        if (locked) a.setAttribute('onclick', 'return false');
+        a.innerHTML =
+            '<div class="sidebar-dot ' + (isDone ? 'done' : isCurrent ? 'active' : '') + '">' + (isDone ? '✓' : (locked ? '🔒' : '')) + '</div>' +
+            '<span class="sidebar-lesson-title">W' + w.week + '. ' + w.title + '</span>';
+        list.appendChild(a);
+    }
+}
+
+async function toggleComplete() {
+    const done = !!PROGRESS[lessonId];
+    await saveProgress(lessonId, !done);
+    updateCompleteButton(lessonId);
+    renderSidebar(lessonOrder[lessonIdx]);
+}
+function updateCompleteButton(id) {
+    const done = !!getProgress()[id];
+    const btn  = document.getElementById('complete-btn');
+    const stat = document.getElementById('complete-status');
+    btn.textContent = done ? 'Mark as incomplete' : 'Mark as complete';
+    btn.style.background = done ? 'rgba(34,197,94,0.2)' : '';
+    btn.style.color = done ? 'var(--accent-green)' : '';
+    btn.style.borderColor = done ? 'var(--accent-green)' : '';
+    stat.textContent = done ? '✓ Completed' : '';
+}
+function navLesson(dir) {
+    const target = lessonOrder[lessonIdx + dir];
+    if (target) window.location.href = 'kids-watch.html?track=' + trackKey + '&lesson=' + target.id;
+}
+</script>
+
+</body>
+</html>

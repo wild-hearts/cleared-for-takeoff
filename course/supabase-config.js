@@ -34,6 +34,25 @@ async function hasFullAccess() {
     return (data || []).length > 0;
 }
 
+// Does the signed-in user hold access to a kids track? Track-aware: checks the
+// entitlement product. The Stripe webhook sets product to 'kids-junior',
+// 'kids-senior', or 'kids-all' on purchase. Until kids sales open, this returns
+// false, so paid weeks stay locked while Week 1 (free) stays open.
+async function hasKidsTrackAccess(track) {
+    const products = track === 'junior' ? ['kids-junior', 'kids-all']
+                   : track === 'senior' ? ['kids-senior', 'kids-all']
+                   : [];
+    if (!products.length) return false;
+    const { data, error } = await sb
+        .from('entitlements')
+        .select('product')
+        .eq('status', 'active')
+        .in('product', products)
+        .limit(1);
+    if (error) { console.error('kids entitlement check failed', error); return false; }
+    return (data || []).length > 0;
+}
+
 // Free preview is account-free (Modules 1 and 2 only).
 const isPreview = () => localStorage.getItem('c4t_preview') === 'true';
 
