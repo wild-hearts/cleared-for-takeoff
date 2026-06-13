@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Stop AI From Training on Your Data | Cleared For Take-Off</title>
+<meta name="description" content="A plain, honest guide to turning off model training in ChatGPT, Claude, Gemini and Copilot, plus the limits of what that setting really does.">
+<meta name="theme-color" content="#12283F">
+<link rel="canonical" href="https://www.clearedfortakeoff.com.au/blog/stop-ai-training-on-your-data/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Stop AI From Training on Your Data">
+<meta property="og:description" content="A plain, honest guide to turning off model training in ChatGPT, Claude, Gemini and Copilot, plus the limits of what that setting really does.">
+<meta property="og:url" content="https://www.clearedfortakeoff.com.au/blog/stop-ai-training-on-your-data/">
+<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Naomi Shiels">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Stop AI From Training on Your Data",
+  "description": "A plain, honest guide to turning off model training in ChatGPT, Claude, Gemini and Copilot, plus the limits of what that setting really does.",
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "image": "https://www.clearedfortakeoff.com.au/assets/og-image.png",
+  "mainEntityOfPage": "https://www.clearedfortakeoff.com.au/blog/stop-ai-training-on-your-data/",
+  "author": {
+    "@type": "Person",
+    "name": "Naomi Shiels",
+    "jobTitle": "Founder, Cleared For Take-Off Academy",
+    "url": "https://www.clearedfortakeoff.com.au/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cleared For Take-Off Academy",
+    "url": "https://www.clearedfortakeoff.com.au/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.clearedfortakeoff.com.au/assets/og-image.png"
+    }
+  }
+}
+</script>
+<style>
+  :root{--navy:#1B3A5B;--navyd:#12283F;--sky:#2E75B6;--cream:#F4F8FC;--ink:#1F2A36;--grey:#5A6B7B;--accent:#C8862B;--accent-dark:#8F5E17;--accent-light:#F0C277}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:18px;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent-dark)}
+  .head{background:var(--navyd);color:#fff;position:sticky;top:0;z-index:20}
+  .head .wrap{max-width:1040px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand b{font-family:Georgia,serif;color:#fff;font-size:17px}
+  .brand small{display:block;color:#9fc0de;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .head nav a{color:#cfe0f0;text-decoration:none;font-size:15px;margin-left:18px}
+  .head nav a:hover{color:#fff}
+  h1,h2,h3{font-family:Georgia,serif;color:var(--navy);line-height:1.2}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:700;color:var(--accent-dark)}
+  /* article */
+  article{max-width:720px;margin:0 auto;padding:44px 24px 24px}
+  article h1{font-size:clamp(30px,4.5vw,44px);letter-spacing:-0.01em;margin-bottom:14px;text-wrap:balance}
+  .byline{display:flex;align-items:center;gap:10px;color:var(--grey);font-size:15.5px;margin-bottom:8px;flex-wrap:wrap}
+  .byline b{color:var(--navy)}
+  .dash{height:6px;background:repeating-linear-gradient(90deg,var(--accent) 0 30px,transparent 30px 56px);margin:22px 0 30px}
+  .body h2{font-size:clamp(23px,2.4vw,28px);margin:34px 0 12px}
+  .body h3{font-size:20px;margin:24px 0 8px}
+  .body p{margin-bottom:18px;color:#2c3a47}
+  .body ul,.body ol{margin:0 0 18px 26px}
+  .body li{margin-bottom:9px;color:#2c3a47}
+  .body strong{color:var(--navy)}
+  .body blockquote{border-left:4px solid var(--accent);background:#fff;padding:14px 20px;margin:0 0 18px;border-radius:0 10px 10px 0;font-style:italic;color:var(--navy)}
+  .body h2:first-child,.body > h2:nth-of-type(1){scroll-margin-top:80px}
+  .body a{text-underline-offset:2px}
+  /* author box (E-E-A-T) */
+  .author{max-width:720px;margin:36px auto 0;padding:24px;background:#fff;border:1px solid #dce6f0;border-radius:16px;display:flex;gap:18px;align-items:flex-start}
+  .author .av{flex:0 0 auto;width:60px;height:60px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center}
+  .author .av svg{width:34px;height:34px}
+  .author h3{font-size:18px;margin-bottom:4px}
+  .author p{font-size:15.5px;color:#41525f;margin:0}
+  .cta{max-width:720px;margin:28px auto 0;padding:22px 24px;background:linear-gradient(160deg,var(--navy),var(--navyd));color:#fff;border-radius:16px}
+  .cta p{margin:0 0 14px;color:#dbe8f6}
+  .btn{display:inline-block;background:var(--accent);color:var(--navyd);font-weight:700;text-decoration:none;padding:12px 24px;border-radius:10px}
+  /* hub */
+  .hub{max-width:1040px;margin:0 auto;padding:48px 24px}
+  .hub h1{font-size:clamp(30px,4vw,40px);margin:8px 0 10px}
+  .hub .lead{color:#3a4855;max-width:680px;margin-bottom:34px;font-size:19px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+  .card{display:flex;flex-direction:column;background:#fff;border:1px solid #dce6f0;border-radius:16px;padding:26px;text-decoration:none;color:inherit;transition:transform .15s ease,border-color .15s ease}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent-light)}
+  .card h2{font-size:21px;margin-bottom:10px}
+  .card p{color:#41525f;font-size:16px;flex:1}
+  .card .meta{color:var(--grey);font-size:14px;margin-top:14px}
+  .card .go{color:var(--accent-dark);font-weight:700;margin-top:10px;font-size:15px}
+  .foot{background:#0B1828;color:#9fb6cc;font-size:14px;padding:26px 24px;margin-top:48px}
+  .foot .wrap{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .foot a{color:#cfe0f0;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+  <a class="brand" href="/"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/><path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/><path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/></svg><span><b>Cleared For Take-Off</b><small>Academy</small></span></a>
+  <nav><a href="/blog/">All articles</a><a href="/#pricing">The course</a></nav>
+</div></header>
+<article>
+  <h1>How to Stop AI From Training on Your Data</h1>
+  <div class="byline"><b>Naomi Shiels</b><span>&middot;</span><span>13 June 2026</span><span>&middot;</span><span>7 min read</span></div>
+  <div class="dash" aria-hidden="true"></div>
+  <div class="body">
+<p>If you have ever typed something into ChatGPT and then thought,
+“wait, where does that go?”, this article is for you. The worry is real
+and the fix is mostly simple. There is one setting in each tool that
+decides whether your conversations get used to improve the model. Most
+people never touch it because they never knew it was there.</p>
+<p>I use these tools every day. I have written 14 books and made 216
+songs with AI, and I am not an engineer. I learned this the same way you
+will, by clicking around until I understood what each switch actually
+did. So let me save you the clicking.</p>
+<h2 id="quick-answer">Quick answer</h2>
+<p>In most consumer AI tools, your chats can be used to train the model
+unless you turn that off. To stop it:</p>
+<ul>
+<li><strong>ChatGPT:</strong> Settings, then Data Controls, then turn
+off “Improve the model for everyone”.</li>
+<li><strong>Claude:</strong> On consumer plans it does not train on your
+chats by default. Check the privacy setting to confirm.</li>
+<li><strong>Gemini:</strong> Go to your Google Account, find Gemini Apps
+Activity, and turn it off.</li>
+<li><strong>Copilot:</strong> A personal Microsoft account and a work
+(Microsoft 365) account behave differently. Work accounts are usually
+protected already. For personal, look in the privacy settings.</li>
+</ul>
+<p>One honest caveat, which I will come back to: turning off training
+does not make your chats private. Your words are still sent to the
+company and processed on their servers. Treat anything you type as if a
+careful stranger might one day read it.</p>
+<h2 id="what-training-on-your-data-actually-means">What “training on
+your data” actually means</h2>
+<p>When a company trains an AI model, it feeds the model huge amounts of
+text so it gets better at predicting and responding. “Training on your
+data” means your conversations could be added to that pile and used to
+shape future versions of the model.</p>
+<p>Here is what it does <strong>not</strong> mean. It does not mean a
+human is sitting there reading your chat live. It does not mean your
+exact words get repeated back to a stranger tomorrow. The risk is
+subtler and longer term: a model that has been trained on your text
+could, in rare cases, reproduce fragments of sensitive information, and
+your data sits inside the company’s systems either way.</p>
+<p>So this setting is worth changing. It is not a panic button. It is
+good hygiene, like locking your car even in a quiet street.</p>
+<h2 id="chatgpt-openai">ChatGPT (OpenAI)</h2>
+<p>This is the one most people use, so start here.</p>
+<ol type="1">
+<li>Open ChatGPT and click your name or profile picture, usually bottom
+left.</li>
+<li>Go to <strong>Settings</strong>, then <strong>Data
+Controls</strong>.</li>
+<li>Find the option called <strong>“Improve the model for
+everyone”</strong> and switch it off.</li>
+</ol>
+<p>When that is off, OpenAI says your new conversations will not be used
+to train its models. Older chats from before you changed it may already
+be in the system, so this protects you going forward, not backward.</p>
+<p>There is also a <strong>Temporary Chat</strong> option, the little
+speech-bubble or ghost icon near the top of a new chat. A temporary chat
+is not saved to your history and is not used for training. I use it for
+anything I want to ask once and forget, like a quick health question or
+something I would not want sitting in my sidebar.</p>
+<h2 id="claude-anthropic">Claude (Anthropic)</h2>
+<p>Claude is a bit different, and in a good way for the cautious. On the
+standard consumer plans, <strong>Anthropic does not use your
+conversations to train its models by default.</strong> That is the
+starting position, not something you have to switch on.</p>
+<p>Menus change and policies get updated, so do not just take my word
+for it. Open Settings, look for a <strong>Privacy</strong> section, and
+confirm the current state for your account. If there is ever an option
+to opt in to sharing your chats for improvement, you will see it there,
+and you can leave it off.</p>
+<p>This is the calmest of the four to set up, but the honest limit below
+still applies: your messages are still sent to and processed by
+Anthropic.</p>
+<h2 id="gemini-google">Gemini (Google)</h2>
+<p>Gemini ties into your Google Account, which is both convenient and
+the thing to watch.</p>
+<ol type="1">
+<li>Go to your <strong>Google Account</strong> (myaccount.google.com)
+while signed in.</li>
+<li>Look for <strong>Gemini Apps Activity</strong>. You can also reach
+it from inside the Gemini app under Activity or the settings menu.</li>
+<li><strong>Turn it off.</strong></li>
+</ol>
+<p>With Gemini Apps Activity off, your future conversations are not
+saved into that activity log and are not used to improve Google’s models
+in the same way. You can also delete past activity from the same screen,
+which I would do at the same time. One thing to know: even with this
+off, Google may keep conversations for a short period for safety and to
+run the service, so it is not instant invisibility.</p>
+<h2 id="copilot-microsoft">Copilot (Microsoft)</h2>
+<p>Copilot is the one where <strong>the type of account changes
+everything</strong>, so read this part twice.</p>
+<ul>
+<li>If you use Copilot through a <strong>work or school Microsoft 365
+account</strong>, your organisation usually has data protection built
+in, and your prompts are generally not used to train the public models.
+This is often called commercial data protection. Your IT team controls
+the finer settings.</li>
+<li>If you use the <strong>free, personal Copilot</strong> with a
+regular Microsoft account, you are in consumer territory. Look in
+Copilot’s settings or your Microsoft account privacy dashboard for the
+option covering model training and personalisation, and turn it
+off.</li>
+</ul>
+<p>If you are not sure which account you are on, check the email address
+Copilot is signed in with. A company or school address means work
+account. A personal Outlook, Hotmail or Gmail address means
+consumer.</p>
+<p>A note that applies to all four: these companies redesign their menus
+often. If a label has moved or been renamed, do not give up. Look for
+the words <strong>data</strong>, <strong>privacy</strong>,
+<strong>activity</strong>, <strong>training</strong>, or <strong>improve
+the model</strong>. The control is almost always near one of those.</p>
+<h2 id="the-never-share-list">The never-share list</h2>
+<p>Changing a setting is the easy part. The bigger protection is what
+you choose not to type in the first place. Never paste these into any AI
+tool, no matter how the privacy settings are configured:</p>
+<ul>
+<li>Passwords, PINs or security codes.</li>
+<li>Bank account, credit card or other financial numbers.</li>
+<li>Passport, licence, tax file or other ID numbers.</li>
+<li>Other people’s private details. Your client’s address, your friend’s
+diagnosis, your child’s school routine. It is not yours to share.</li>
+<li>Full medical or legal documents that still carry names and
+identifying information.</li>
+</ul>
+<p>Think of it like this: you are the Captain, and AI is the crew. The
+crew is brilliant and fast, but you do not hand the crew the keys to the
+safe.</p>
+<h2 id="the-honest-limit-off-does-not-mean-private">The honest limit:
+off does not mean private</h2>
+<p>This is the part most articles skip, so I will not. <strong>Turning
+off training does not make your conversation private.</strong> Your text
+still travels to the company, gets processed on their servers, and may
+be stored for a while for safety, troubleshooting and legal reasons.
+Staff can review flagged content. None of that stops just because
+training is off.</p>
+<p>The training switch lowers one specific risk. It does not turn the
+tool into a sealed diary. The right mindset is simple: treat anything
+you type as if a careful stranger might read it one day. If you would
+not be comfortable with that, do not type it.</p>
+<h2 id="a-practical-habit-that-actually-works">A practical habit that
+actually works</h2>
+<p>Here is what I do, and it takes no real effort once it is a
+habit.</p>
+<ul>
+<li>For sensitive one-offs, use a <strong>temporary or incognito
+chat</strong> rather than your normal saved one.</li>
+<li><strong>Strip the identifying details before you paste.</strong>
+Swap real names for “my colleague”, change the actual numbers, remove
+the address. The AI can still help you draft the email or understand the
+contract clause without knowing exactly who is involved.</li>
+<li>Do the privacy settings once per tool, then forget about them.</li>
+</ul>
+<p>That combination gives you most of the safety with almost none of the
+fuss.</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>If I turn off training, are my old chats safe?</strong>
+Mostly the change protects you from that point forward. Conversations
+from before you switched it off may already be in the system. Delete old
+chats and activity where the tool lets you, for extra peace of mind.</p>
+<p><strong>Is the paid version more private than the free one?</strong>
+Sometimes, yes. Paid and business tiers often come with stronger data
+protection by default, especially work accounts. But you should still
+check the actual setting rather than assume the money bought you
+privacy.</p>
+<p><strong>Can the company still see what I type if training is
+off?</strong> Yes, potentially. The data is still sent to and stored by
+them, and staff can review flagged content. “Not used for training” and
+“private” are two different things. Plan for the second, not just the
+first.</p>
+<p>If you want a calm, step-by-step walkthrough of setting all of this
+up safely, the free Module 1 of Cleared For Take-Off Academy covers a
+private setup from scratch.</p>
+
+  </div>
+</article>
+<div class="author">
+  <div class="av"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/><path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/><path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/></svg></div>
+  <div><h3>Written by Naomi Shiels</h3>
+  <p>Naomi is the founder of Cleared For Take-Off Academy and Wild Hearts Publishing. A Canberra-based former linguist, lawyer and commercial aviation manager, she has written 14 books and made 216 songs with AI, and she uses these tools every day. She is not an engineer. She learned AI the way you will, by showing up and trying things.</p></div>
+</div>
+<div class="cta">
+  <p>Cleared For Take-Off is a calm, plain-English AI course for everyday adults. Module 1 is free, with no payment details.</p>
+  <a class="btn" href="/#pricing">Start free &rarr;</a>
+</div>
+<footer class="foot"><div class="wrap">
+  <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
+  <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
+</div></footer>
+</body>
+</html>
