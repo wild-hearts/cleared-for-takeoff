@@ -6,7 +6,7 @@
 //
 // Mux dashboard → Video → click the video → copy "Playback ID"
 //
-// free: true  → accessible without an access code (Modules 1 and 2, free preview)
+// free: true  → accessible without an access code (Module 1 only, free preview)
 // free: false → requires a valid COURSE_ACCESS_CODE to watch
 
 // Lesson lists match the V2 scripts: six videos per module (the welcome is folded
@@ -33,7 +33,7 @@ const MODULES = [
         slug: 'module-02',
         title: 'Cleared For Taxi',
         subtitle: 'How to talk to AI well',
-        free: true,
+        free: false,
         lessons: [
             { id: 'm02-l01', title: 'Prompting in plain English',           duration: '10:00', playbackId: 'PENDING' },
             { id: 'm02-l02', title: 'The four flight controls',             duration: '11:00', playbackId: 'PENDING' },

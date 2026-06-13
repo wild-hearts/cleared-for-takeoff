@@ -57,7 +57,7 @@ const MODULES = [
         ]
     },
     {
-        id: 2, title: 'Cleared For Taxi', subtitle: 'How to talk to AI well', free: true,
+        id: 2, title: 'Cleared For Taxi', subtitle: 'How to talk to AI well', free: false,
         lessons: [
             { id: 'm02-l01', title: 'Prompting in plain English',              duration: '10:00' },
             { id: 'm02-l02', title: 'The four flight controls',                duration: '11:00' },
@@ -196,13 +196,13 @@ function render() {
 
     // Header
     document.getElementById('greeting').textContent = preview
-        ? 'Free Preview: Modules 1 & 2'
+        ? 'Free Preview: Module 1'
         : 'Your course';
 
     document.getElementById('access-label').textContent =
-        preview            ? 'You\'re viewing the free preview. Modules 1 and 2 are fully unlocked.'
+        preview            ? 'You\'re viewing the free preview. Module 1 is fully unlocked.'
         : STATE.fullAccess ? 'Full course access'
-        :                    'Modules 1 and 2 are unlocked. Upgrade to unlock the rest.';
+        :                    'Module 1 is unlocked. Upgrade to unlock the rest.';
 
     document.getElementById('progress-fill').style.width = pct + '%';
     document.getElementById('progress-label').textContent =
