@@ -53,7 +53,7 @@ async function hasKidsTrackAccess(track) {
     return (data || []).length > 0;
 }
 
-// Free preview is account-free (Modules 1 and 2 only).
+// Free preview is account-free (Module 1 only).
 const isPreview = () => localStorage.getItem('c4t_preview') === 'true';
 
 async function signOut() {
