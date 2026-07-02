@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.clearedfortakeoff.com.au/book/">
 <meta property="og:type" content="book">
 <meta property="og:title" content="Cleared For Take-Off, the Book: Your Funny, No-Nonsense Guide to Soaring With AI">
-<meta property="og:description" content="The irreverent, practical playbook for humans who want to use AI brilliantly. From your first awkward prompt to running a full AI crew, while you stay in the captain's seat. <meta name="description" content="The irreverent, practical playbook for humans who want to use AI brilliantly. From your first awkward prompt to running a full AI crew, while you stay in the captain's seat. $12.99 AUD.">2.99 AUD.">
+<meta property="og:description" content="The irreverent, practical playbook for humans who want to use AI brilliantly. From your first awkward prompt to running a full AI crew, while you stay in the captain's seat. $12.99 AUD.">
 <meta property="og:url" content="https://www.clearedfortakeoff.com.au/book/">
 <meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -335,6 +335,16 @@
     @keyframes skybreathe{0%,100%{opacity:.58}50%{opacity:.82}}
   }
   @media (prefers-reduced-motion: reduce){ .hero-art{transition:none} }
+
+  /* night-flight layer */
+  .hero .wrap{position:relative;z-index:2}
+  .shimmer{background:linear-gradient(100deg,#C8862B 10%,#F0C277 32%,#F4F8FC 50%,#F0C277 68%,#C8862B 90%);
+    background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 16px rgba(200,134,43,.35))}
+  @media (prefers-reduced-motion: no-preference){
+    .shimmer{animation:shimmerSlide 5.5s ease-in-out infinite}
+    @keyframes shimmerSlide{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+  }
 </style>
 </head>
 <body>
@@ -364,11 +374,11 @@
 </header>
 
 <main id="main">
-<header class="hero" id="top">
+<header class="hero" id="top" data-nightsky data-density="1">
   <div class="wrap">
     <div>
       <span class="pill">Permission Granted</span>
-      <h1>Your Funny, No-Nonsense Guide to Soaring With AI</h1>
+      <h1>Your Funny, No-Nonsense Guide to <span class="shimmer">Soaring With AI</span></h1>
       <p class="sub">No engineering degree required. No technical background needed. No idea what half the terms mean. You&rsquo;re in the right place.</p>
       <p class="body"><em>Cleared for Take-Off</em> is the irreverent, practical playbook for humans who want to use AI brilliantly. And actually enjoy the process. You&rsquo;ll go from your first awkward prompt to running a full AI crew that does the heavy lifting while you stay in the captain&rsquo;s seat.</p>
       <p class="pull">You don&rsquo;t need to understand AI. You need to know how to talk to it. This book shows you exactly how.</p>
@@ -841,5 +851,6 @@
   }
 })();
 </script>
+<script src="/assets/nightsky.js" defer></script>
 </body>
 </html>
