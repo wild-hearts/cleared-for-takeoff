@@ -2,8 +2,8 @@
    glowing flight arcs. Vanilla port of the Academy's canvas engine.
    Respects prefers-reduced-motion (renders one static frame). */
 (function () {
-  var host = document.querySelector('[data-nightsky]');
-  if (!host) return;
+  document.querySelectorAll('[data-nightsky]').forEach(initNightSky);
+  function initNightSky(host) {
 
   var canvas = document.createElement('canvas');
   canvas.setAttribute('aria-hidden', 'true');
@@ -17,6 +17,8 @@
   var w = 0, h = 0, stars = [], raf = 0, running = false;
 
   var COLORS = ['244, 248, 252', '244, 248, 252', '200, 134, 43', '156, 201, 240'];
+  var density = parseFloat(host.getAttribute('data-density') || '1');
+  var wantGlobe = host.getAttribute('data-globe') !== 'false';
 
   function resize() {
     var r = host.getBoundingClientRect();
@@ -27,7 +29,7 @@
   }
 
   function seed() {
-    var count = Math.round((w * h) / 6500);
+    var count = Math.round((w * h) / 6500 * density);
     stars = [];
     for (var i = 0; i < count; i++) {
       stars.push({
@@ -150,7 +152,7 @@
       ctx.fillStyle = 'rgba(' + st.color + ', ' + alpha + ')';
       ctx.fillRect(st.x, st.y, st.size, st.size);
     }
-    drawGlobe(t);
+    if (wantGlobe) drawGlobe(t);
     raf = requestAnimationFrame(frame);
   }
 
@@ -164,7 +166,7 @@
       ctx.fillStyle = 'rgba(' + st.color + ', ' + st.base + ')';
       ctx.fillRect(st.x, st.y, st.size, st.size);
     }
-    drawGlobe(12);
+    if (wantGlobe) drawGlobe(12);
     return;
   }
 
@@ -176,5 +178,6 @@
     }).observe(canvas);
   } else {
     running = true; last = performance.now(); raf = requestAnimationFrame(frame);
+  }
   }
 })();

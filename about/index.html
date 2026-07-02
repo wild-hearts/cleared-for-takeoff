@@ -92,6 +92,25 @@
   .foot{background:#0B1828;color:#9fb6cc;font-size:14px;padding:26px 24px;margin-top:48px}
   .foot .wrap{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .foot a{color:#cfe0f0;text-decoration:none}
+
+  /* night-flight hero */
+  .nf-hero{position:relative;overflow:hidden;color:#fff;
+    background:radial-gradient(900px 480px at 70% 115%, rgba(46,117,182,.22), transparent 62%),
+      linear-gradient(168deg,#0B1828 0%, #12283F 42%, #1B3A5B 100%);
+    padding:clamp(64px,9vw,110px) 24px}
+  .nf-hero .inner{position:relative;z-index:2;max-width:840px;margin:0 auto;text-align:center}
+  .nf-hero h1{color:#fff;font-family:Georgia,serif;font-size:clamp(34px,4.2vw + 8px,56px);
+    letter-spacing:-0.015em;line-height:1.15;margin:0 0 14px}
+  .nf-hero .byline-hero{color:#a9c4dd;font-size:17px}
+  .nf-hero .byline-hero b{color:#F0C277}
+  .shimmer{background:linear-gradient(100deg,#C8862B 10%,#F0C277 32%,#F4F8FC 50%,#F0C277 68%,#C8862B 90%);
+    background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 16px rgba(200,134,43,.35))}
+  @media (prefers-reduced-motion: no-preference){
+    .shimmer{animation:shimmerSlide 5.5s ease-in-out infinite}
+    @keyframes shimmerSlide{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+  }
+  article > h1, article > .byline{display:none}
 </style>
 </head>
 <body>
@@ -99,6 +118,13 @@
   <a class="brand" href="/"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/><path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/><path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/></svg><span><b>Cleared For Take-Off</b><small>Academy</small></span></a>
   <nav><a href="/blog/">All articles</a><a href="/#pricing">The course</a></nav>
 </div></header>
+
+<header class="nf-hero" data-nightsky data-density="1">
+  <div class="inner">
+    <h1>About <span class="shimmer">Cleared For Take-Off</span></h1>
+    <p class="byline-hero"><b>Naomi Shiels</b> · Founder · Former aviation manager, linguist and lawyer</p>
+  </div>
+</header>
 <article>
 <h1 style="display:none">About</h1><h1 id="about-cleared-for-take-off">About Cleared For Take-Off</h1>
 <p class="byline">
@@ -156,5 +182,6 @@ whether this is for you.</p>
   <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
   <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
 </div></footer>
+<script src="/assets/nightsky.js" defer></script>
 </body>
 </html>

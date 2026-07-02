@@ -352,6 +352,16 @@
     @keyframes skybreathe{0%,100%{opacity:.58}50%{opacity:.82}}
   }
   @media (prefers-reduced-motion: reduce){ .hero-art{transition:none} }
+
+  /* night-flight layer */
+  .hero .wrap{position:relative;z-index:2}
+  .shimmer{background:linear-gradient(100deg,#C8862B 10%,#F0C277 32%,#F4F8FC 50%,#F0C277 68%,#C8862B 90%);
+    background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 16px rgba(200,134,43,.35))}
+  @media (prefers-reduced-motion: no-preference){
+    .shimmer{animation:shimmerSlide 5.5s ease-in-out infinite}
+    @keyframes shimmerSlide{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+  }
 </style>
 
 <style>
@@ -449,11 +459,11 @@
 </header>
 
 <main id="main">
-<header class="hero" id="top">
+<header class="hero" id="top" data-nightsky data-density="1">
   <div class="wrap">
     <div>
       <span class="pill comingpill">New &middot; in development</span>
-      <h1>AI courses for kids and teenagers</h1>
+      <h1>AI courses for <span class="shimmer">kids and teenagers</span></h1>
       <p class="captain-tag">Ages 8 to 16. Two tracks. One animated instructor.</p>
       <p class="sub">The same flight-school approach we built for grown-ups, made for young people. Children learn what AI really is, how to use it well, and how to stay safe with it, guided by an animated instructor at a pace that suits their age. They finish with a real credential to show for it.</p>
       <div class="cta-row">
@@ -1025,5 +1035,6 @@
   });
 })();
 </script>
+<script src="/assets/nightsky.js" defer></script>
 </body>
 </html>
