@@ -166,13 +166,62 @@
     transform:scaleX(0);transform-origin:0 50%;pointer-events:none;z-index:1}
   .cnt{font-variant-numeric:tabular-nums}
 
+
+
+  /* take-off sequence */
+  .takeoff-wrap{position:relative;height:240vh}
+  .hero.takeoff-stage{position:sticky !important;top:0;height:100dvh;display:flex;align-items:center;overflow:hidden}
+  .takeoff-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hero.takeoff-stage .wrap{will-change:transform,opacity}
+  .hud-frame{position:absolute;inset:18px;pointer-events:none;z-index:3}
+  .hud-c{position:absolute;width:22px;height:22px;border-color:rgba(200,134,43,.75)}
+  .hud-tl{top:0;left:0;border-top:2px solid rgba(200,134,43,.75);border-left:2px solid rgba(200,134,43,.75)}
+  .hud-tr{top:0;right:0;border-top:2px solid rgba(200,134,43,.75);border-right:2px solid rgba(200,134,43,.75)}
+  .hud-bl{bottom:0;left:0;border-bottom:2px solid rgba(200,134,43,.75);border-left:2px solid rgba(200,134,43,.75)}
+  .hud-br{bottom:0;right:0;border-bottom:2px solid rgba(200,134,43,.75);border-right:2px solid rgba(200,134,43,.75)}
+  .hud-readout{position:absolute;top:8px;left:50%;transform:translateX(-50%);
+    font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.2em;color:rgba(200,134,43,.85);white-space:pre}
+  .hud-callout{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+    font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.3em;color:rgba(244,248,252,.5)}
+  .cruise-cta{position:absolute;left:50%;top:50%;transform:translate(-50%,10vh);opacity:0;z-index:2;
+    text-align:center;max-width:640px;padding:0 24px}
+  .cruise-eyebrow{font-family:ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.25em;
+    font-size:12px;color:var(--accent-light);margin-bottom:14px}
+  .cruise-cta h2{color:#fff;font-size:clamp(32px,4vw + 10px,54px);margin-bottom:26px;line-height:1.15}
+  .cruise-note{color:#a9c4dd;font-size:16px;margin-top:16px}
+  @media (prefers-reduced-motion: reduce){
+    .takeoff-wrap{height:auto}
+    .hero.takeoff-stage{position:relative !important;height:auto;min-height:0}
+    .cruise-cta{display:none}
+  }
+
+  /* night-flight motion layer */
+  .shimmer{
+    background:linear-gradient(100deg,#C8862B 10%,#F0C277 32%,#F4F8FC 50%,#F0C277 68%,#C8862B 90%);
+    background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 16px rgba(200,134,43,.35))}
+  @media (prefers-reduced-motion: no-preference){
+    .shimmer{animation:shimmerSlide 5.5s ease-in-out infinite}
+    @keyframes shimmerSlide{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+    html.js .hero h1 .hw{display:inline-block;opacity:0;transform:translateY(30px);filter:blur(6px);
+      animation:heroWord .6s cubic-bezier(0.16,1,0.3,1) forwards}
+    @keyframes heroWord{to{opacity:1;transform:none;filter:blur(0)}}
+    .marquee-track{animation:marqueeSlide 34s linear infinite}
+    @keyframes marqueeSlide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  }
+  .marquee{overflow:hidden;border-top:1px solid rgba(200,134,43,.22);border-bottom:1px solid rgba(200,134,43,.22);
+    background:#0E1F33;padding:18px 0}
+  .marquee-track{display:flex;align-items:center;gap:44px;white-space:nowrap;width:max-content}
+  .marquee-track span{font-family:Georgia,serif;font-weight:700;font-size:22px;color:rgba(244,248,252,.28)}
+  .marquee-track i{width:8px;height:8px;border-radius:50%;background:rgba(200,134,43,.45);flex:0 0 auto}
+
   /* ---------- hero ---------- */
   .hero{background:
       radial-gradient(1100px 500px at 78% 108%, rgba(200,134,43,.18), transparent 60%),
       radial-gradient(900px 480px at 70% 115%, rgba(46,117,182,.22), transparent 62%),
       linear-gradient(168deg,#0B1828 0%, var(--navyd) 42%, var(--navy) 100%);
     color:#fff;position:relative;overflow:hidden}
-  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;
     padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(72px,9vw,110px)}
   .pill{display:inline-block;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);
     color:#e3eef9;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -643,12 +692,27 @@
   <span class="scroll-progress" aria-hidden="true"></span>
 </header>
 
+
+
 <main id="main">
-<header class="hero" id="top">
+<div class="takeoff-wrap">
+<header class="hero takeoff-stage" id="top">
+  <div class="hud-frame" aria-hidden="true">
+    <span class="hud-c hud-tl"></span><span class="hud-c hud-tr"></span>
+    <span class="hud-c hud-bl"></span><span class="hud-c hud-br"></span>
+    <div class="hud-readout"></div>
+    <div class="hud-callout"></div>
+  </div>
+  <div class="cruise-cta" aria-hidden="false">
+    <p class="cruise-eyebrow">Now boarding</p>
+    <h2>Module 1 is free.<br><span class="shimmer">Start flying today.</span></h2>
+    <a href="/course/" class="btn">Start Free Preview &rarr;</a>
+    <p class="cruise-note">No payment. No card. Six lessons of Module 1, on the house.</p>
+  </div>
   <div class="wrap">
     <div>
       <span class="pill">The C4TO Academy</span>
-      <h1>AI for Grown-Ups</h1>
+      <h1><span class="hw" style="animation-delay:.15s">AI</span> <span class="hw" style="animation-delay:.26s">for</span> <span class="hw shimmer" style="animation-delay:.4s">Grown-Ups</span></h1>
       <p class="sub">Six modules. A few hours of video. You go from curious and cautious to using AI confidently, on your own terms, with your own routine, in your own life.</p>
       <p class="sub2">No jargon. No hype. No pretending to be someone you&rsquo;re not. Designed from scratch for anyone who wants to understand AI without the overwhelm.</p>
       <div class="cta-row">
@@ -832,6 +896,14 @@
   </div>
   <div class="hero-foot" aria-hidden="true"></div>
 </header>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Pre-Flight Checks</span><i></i><span>Cleared for Taxi</span><i></i><span>Cleared for Take-Off</span><i></i><span>In the Air</span><i></i><span>Holding Pattern</span><i></i><span>Final Approach</span><i></i>
+    <span>Pre-Flight Checks</span><i></i><span>Cleared for Taxi</span><i></i><span>Cleared for Take-Off</span><i></i><span>In the Air</span><i></i><span>Holding Pattern</span><i></i><span>Final Approach</span><i></i>
+  </div>
+</div>
 
 <section class="modstrip" aria-label="The six modules at a glance" style="padding:20px 0 24px">
   <div class="wrap">
@@ -1582,5 +1654,6 @@
   matchMedia('(min-width:881px)').addEventListener('change', function(m){ if(m.matches) setOpen(false); });
 })();
 </script>
+<script src="/assets/takeoff.js" defer></script>
 </body>
 </html>
