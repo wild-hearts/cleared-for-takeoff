@@ -178,6 +178,30 @@
     .head nav{display:flex;gap:12px;flex-wrap:nowrap;white-space:nowrap;flex:0 0 auto}
     .head nav a{margin-left:0;font-size:13px}
   }
+
+  /* Audience directory. The ten field pages used to be reachable only from a section
+     two thirds down the homepage, so nobody could find them and no ranking signal
+     reached them. This puts them above every footer on the site. */
+  .audindex{background:#12283F;color:#fff;padding:38px 0 34px;
+    border-top:1px solid rgba(255,255,255,.09);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .audindex .ai-wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .audindex h2{font-family:Georgia,serif;font-size:18px;color:#fff;margin:0 0 4px;
+    font-weight:700;letter-spacing:.01em}
+  .audindex .ai-sub{color:#9fb6cc;font-size:14.5px;margin:0 0 18px;line-height:1.5}
+  .audindex ul{list-style:none;margin:0;padding:0;display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:9px 18px}
+  .audindex li{margin:0}
+  .audindex a{display:block;color:#cfe0f0;text-decoration:none;font-size:15px;
+    padding:7px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.09);
+    background:rgba(255,255,255,.04);transition:background .15s ease,border-color .15s ease}
+  .audindex a:hover{background:rgba(255,255,255,.09);border-color:#C8862B;color:#fff}
+  .audindex a:focus-visible{outline:3px solid #F0C277;outline-offset:2px}
+  @media(max-width:520px){
+    .audindex{padding:30px 0 26px}
+    .audindex ul{grid-template-columns:1fr 1fr;gap:8px 10px}
+    .audindex a{font-size:14px;padding:8px 9px}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -440,6 +464,25 @@ pace.</p>
   <p>Cleared For Take-Off is a calm, plain-English AI course for everyday adults. Module 1 is free, with no payment details.</p>
   <a class="btn" href="/#pricing">Start free &rarr;</a>
 </div>
+<section class="audindex" aria-labelledby="audindex-h">
+  <div class="ai-wrap">
+    <h2 id="audindex-h">One course, many doors</h2>
+    <p class="ai-sub">The same six modules, with the examples and prompts rewritten for your field. Pick the one that sounds like you.</p>
+    <ul>
+        <li><a href="/for-trades/">Trades &amp; construction</a></li>
+        <li><a href="/for-small-business/">Small business</a></li>
+        <li><a href="/for-professionals/">Professionals</a></li>
+        <li><a href="/for-later-life/">Later life, over 50</a></li>
+        <li><a href="/for-creators/">Writers &amp; creators</a></li>
+        <li><a href="/for-education/">Educators</a></li>
+        <li><a href="/for-health/">Health &amp; care</a></li>
+        <li><a href="/for-nonprofits/">Non-profits</a></li>
+        <li><a href="/for-hospitality-retail/">Hospitality &amp; retail</a></li>
+        <li><a href="/for-property/">Real estate &amp; property</a></li>
+        <li><a href="/kids-and-teens/">Kids &amp; Teens, ages 8 to 16</a></li>
+    </ul>
+  </div>
+</section>
 <footer class="foot"><div class="wrap">
   <div>&copy; 2026 Wild Hearts Publishing Pty Ltd</div>
   <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
