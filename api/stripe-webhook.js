@@ -84,11 +84,75 @@ module.exports = async function handler(req, res) {
                 console.error('MailerLite error (non-fatal):', err.message);
             }
         }
+
+        // Report the sale to GA4 server-side. Doing it here rather than on the
+        // thank-you page means the amount comes from Stripe rather than a guess,
+        // and the Stripe session id de-duplicates refreshes and back-buttons.
+        try {
+            await sendPurchaseToGA4(session, product);
+        } catch (err) {
+            console.error('GA4 purchase event error (non-fatal):', err.message);
+        }
     }
 
     // Always return 200 so Stripe stops retrying
     return res.status(200).json({ received: true });
 };
+
+// ─── GA4 purchase reporting (Measurement Protocol) ───────────────────────────
+//
+// Optional. Stays a silent no-op until GA4_API_SECRET is set, so deploying this
+// changes nothing until you switch it on.
+//
+// To enable:
+//   GA4 → Admin → Data streams → (your web stream) → Measurement Protocol API secrets
+//   → Create → copy the secret → add it to Vercel as GA4_API_SECRET.
+//
+// GA4_MEASUREMENT_ID defaults to the site's existing tag.
+async function sendPurchaseToGA4(session, product) {
+    const apiSecret     = process.env.GA4_API_SECRET;
+    const measurementId = process.env.GA4_MEASUREMENT_ID || 'G-EFEVT0WDZG';
+    if (!apiSecret) return;               // not configured, nothing to do
+
+    // amount_total is in the smallest currency unit (cents for AUD).
+    const value    = typeof session.amount_total === 'number' ? session.amount_total / 100 : undefined;
+    const currency = (session.currency || 'aud').toUpperCase();
+
+    // No GA client id server-side, so derive a stable pseudo-id from the Stripe
+    // session. This will not stitch to the user's web session, but it does give
+    // accurate, de-duplicated revenue totals.
+    const clientId = 'stripe.' + String(session.id || Date.now()).slice(-16);
+
+    const payload = {
+        client_id: clientId,
+        non_personalized_ads: true,
+        events: [{
+            name: 'purchase',
+            params: {
+                transaction_id: session.id,
+                value: value,
+                currency: currency,
+                items: [{
+                    item_id: product,
+                    item_name: product,
+                    price: value,
+                    quantity: 1,
+                }],
+            },
+        }],
+    };
+
+    const url = `https://www.google-analytics.com/mp/collect?measurement_id=${encodeURIComponent(measurementId)}&api_secret=${encodeURIComponent(apiSecret)}`;
+    const resp = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+    });
+    if (!resp.ok) {
+        throw new Error(`GA4 Measurement Protocol returned ${resp.status}`);
+    }
+    console.log(`GA4 purchase sent: ${product} ${currency} ${value}`);
+}
 
 // ─── Raw body collection ─────────────────────────────────────────────────────
 function getRawBody(req) {

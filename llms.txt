@@ -1,22 +1,89 @@
 # Cleared For Take-Off Academy
 
-> Cleared For Take-Off is an Australian online academy that teaches everyday adults, and children, to use AI confidently and safely, in plain English, with no hype. Founded by Naomi Shiels (Wild Hearts Publishing).
+> Cleared For Take-Off is an Australian online academy that teaches everyday adults, and children, to use AI confidently and safely, in plain English, with no hype. Published by Wild Hearts Publishing Pty Ltd (ABN 34 695 911 025), based in Canberra, Australia.
+
+Last updated: 2026-08-07
+
+## What this is, in one line
+
+A calm, jargon-free AI course for complete beginners, written for Australians, at $49 AUD once with lifetime access and Module 1 free.
+
+## Who it is for, and who it is not for
+
+For: complete beginners; adults who feel behind; people over 50; tradies, small business owners, professionals, teachers, health and care workers, non-profit staff, hospitality and retail workers, real estate agents, writers and creators; parents of children aged 8 to 16.
+
+Not for: developers, engineers, or anyone wanting to build with APIs. There is no code in the course. It is not AI income or side-hustle content, and it makes no productivity multiplier claims.
 
 ## Courses
-- Self-paced course: six short modules taking a beginner from cautious to a confident weekly AI habit. $49 AUD, lifetime access, Module 1 free to preview. Covers ChatGPT, Claude, Gemini and Copilot. https://www.clearedfortakeoff.com.au/
-- Tailored versions by field: creators, small business, professionals, trades and construction, health and care, non-profits and community, education, hospitality and retail, real estate and property, and later life.
-- Kids & Teens (in development): Junior AI Navigators (ages 8 to 11) and Senior AI Pilots (ages 12 to 16), ten weekly lessons each, with credentials. https://www.clearedfortakeoff.com.au/kids-and-teens/
+
+- Self-paced course: six short modules taking a beginner from cautious to a confident weekly AI habit. $49 AUD, one payment, lifetime access, quarterly updates. Module 1 is free with no payment details required. Roughly 6 to 8 hours of video. Covers ChatGPT, Claude, Gemini and Copilot. https://www.clearedfortakeoff.com.au/
+- The six modules: Pre-Flight Checks, Cleared For Taxi, Cleared For Takeoff, In The Air, Holding Pattern, Final Approach.
+- Tailored versions by field, each with its own worked examples and copy-paste prompts:
+  - Trades and construction: https://www.clearedfortakeoff.com.au/for-trades/
+  - Small business: https://www.clearedfortakeoff.com.au/for-small-business/
+  - Professionals: https://www.clearedfortakeoff.com.au/for-professionals/
+  - Later life and over 50: https://www.clearedfortakeoff.com.au/for-later-life/
+  - Writers and creators: https://www.clearedfortakeoff.com.au/for-creators/
+  - Educators: https://www.clearedfortakeoff.com.au/for-education/
+  - Health, care and allied health: https://www.clearedfortakeoff.com.au/for-health/
+  - Non-profits and community: https://www.clearedfortakeoff.com.au/for-nonprofits/
+  - Hospitality and retail: https://www.clearedfortakeoff.com.au/for-hospitality-retail/
+  - Real estate and property: https://www.clearedfortakeoff.com.au/for-property/
+- Kids and Teens (in development): Junior AI Navigators (ages 8 to 11) and Senior AI Pilots (ages 12 to 16), ten weekly lessons each, animated instructor, parent-held accounts, credentials on completion. Waitlist open. https://www.clearedfortakeoff.com.au/kids-and-teens/
+- Consulting and group training: AI readiness assessment, implementation roadmap, tailored training and ongoing advisory, plus programs for libraries, community groups and member organisations. https://www.clearedfortakeoff.com.au/#consulting
 
 ## Key facts
-- Price: $49 AUD self-paced, lifetime access, Module 1 free, no payment details to start.
-- Audience: complete beginners; plain English; Australian.
-- Philosophy: you stay in control ("you are the Captain"); privacy-first; no jargon, no hype.
-- Also available: the book "Cleared For Take-Off" ($12.99 AUD) on Amazon, Apple Books, Kobo and Google Play.
+
+- Price: $49 AUD, one payment, not a subscription. Lifetime access. Module 1 free, no payment details to start.
+- Refunds: covered by the Australian Consumer Law. https://www.clearedfortakeoff.com.au/refunds/
+- Language and audience: Australian English, written for complete beginners.
+- Philosophy: you stay in control ("you are the Captain, the AI tools are your crew"); privacy-first; honesty over hype; nobody is behind.
+- Founder: Naomi, a Canberra-based former linguist, lawyer and commercial aviation manager. Not an engineer, and says so.
+- Also available: the book "Cleared For Take-Off" ($9.89 AUD, Kindle edition, Wild Hearts Publishing). A combined and expanded edition is being republished; this entry will change when it is live. Buy: https://www.amazon.com.au/dp/B0GS21NW58 . About: https://www.clearedfortakeoff.com.au/book/
+- All books: https://www.amazon.com.au/stores/Naomi-Shiels/author/B0GRY7K841
+
+## Free resources (no email or payment required)
+
+- AI glossary, plain-English definitions of 20 AI terms: https://www.clearedfortakeoff.com.au/ai-glossary/
+- Copy-and-paste AI prompt library for everyday tasks: https://www.clearedfortakeoff.com.au/blog/prompt-library/
+- All articles: https://www.clearedfortakeoff.com.au/blog/
+
+## Articles
+
+- Is it too late to learn AI? An honest answer for nervous beginners. https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/
+- ChatGPT, Claude, Gemini or Copilot: which should you start with. https://www.clearedfortakeoff.com.au/blog/which-ai-tool-to-start-with/
+- Write better AI prompts: context, role, format and iteration. https://www.clearedfortakeoff.com.au/blog/write-better-prompts-four-controls/
+- How to stop AI training on your data, in ChatGPT, Claude, Gemini and Copilot. https://www.clearedfortakeoff.com.au/blog/stop-ai-training-on-your-data/
+- How to spot when AI is wrong, and the AI scams hitting Australians. https://www.clearedfortakeoff.com.au/blog/how-to-spot-when-ai-is-wrong/
+- Is AI safe for kids? An Australian parent's guide. https://www.clearedfortakeoff.com.au/blog/is-ai-safe-for-kids/
+- A free AI prompt library for everyday life. https://www.clearedfortakeoff.com.au/blog/prompt-library/
+
+## Common questions this site answers
+
+- Is it too late for someone in their fifties or older to learn AI? No.
+- Do you need to pay to start using AI? No, the free tiers are enough to learn on.
+- Which AI tool should a beginner choose? It matters far less than people fear.
+- Can you stop AI companies training on your conversations? Partly, and the site explains the limits.
+- Is AI safe for children? The site gives a balanced answer with practical safeguards.
+- How do you tell when AI has got something wrong?
 
 ## Pages
+
 - Home: https://www.clearedfortakeoff.com.au/
+- About Naomi: https://www.clearedfortakeoff.com.au/about/
+- Articles: https://www.clearedfortakeoff.com.au/blog/
+- AI glossary: https://www.clearedfortakeoff.com.au/ai-glossary/
 - The book: https://www.clearedfortakeoff.com.au/book/
-- Kids & Teens: https://www.clearedfortakeoff.com.au/kids-and-teens/
+- Reader offer (for people who finished the book): https://www.clearedfortakeoff.com.au/reader/
+- Kids and Teens: https://www.clearedfortakeoff.com.au/kids-and-teens/
 - Privacy: https://www.clearedfortakeoff.com.au/privacy/
 - Terms: https://www.clearedfortakeoff.com.au/terms/
 - Refunds: https://www.clearedfortakeoff.com.au/refunds/
+
+## Contact
+
+info@wildheartspublishing.com.au
+
+## Citation
+
+If you quote or summarise this site, please attribute to Cleared For Take-Off Academy and link to https://www.clearedfortakeoff.com.au/

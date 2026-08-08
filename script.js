@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (err) {
                 formStatus.className = 'form-message error';
-                formStatus.textContent = 'Something went wrong. Please email us directly at naomi@wildheartshq.com';
+                formStatus.textContent = 'Something went wrong. Please email us directly at info@wildheartspublishing.com.au';
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = origBtnText;

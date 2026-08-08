@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFEVT0WDZG"></script>
@@ -36,7 +36,89 @@
   .foot .wrap{max-width:820px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .foot a{color:#cfe0f0;text-decoration:none}
   .foot a:hover{text-decoration:underline}
+
+  /* Keyboard focus. Without this, anyone tabbing through the page has no idea
+     where they are, and the browser default is invisible on the navy sections. */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  textarea:focus-visible, select:focus-visible, summary:focus-visible{
+    outline:3px solid var(--accent, #C8862B);
+    outline-offset:3px;
+    border-radius:3px;
+  }
+
+  /* The article header is sticky, so its height is lost from every screen for the
+     whole read. On a phone the wordmark stacked over "ACADEMY" and the two nav links
+     stacked as well, giving a 108px bar on an 812px screen. This keeps it near 60px. */
+  @media(max-width:560px){
+    .head .wrap{padding:9px 16px;gap:10px}
+    .brand{display:flex;align-items:center;gap:8px;min-width:0}
+    .brand svg{width:28px;height:28px;flex:0 0 auto}
+    .brand b{font-size:14px;white-space:nowrap}
+    .brand small{display:none}
+    .head nav{display:flex;gap:12px;flex-wrap:nowrap;white-space:nowrap;flex:0 0 auto}
+    .head nav a{margin-left:0;font-size:13px}
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.clearedfortakeoff.com.au/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Refunds",
+      "item": "https://www.clearedfortakeoff.com.au/refunds/"
+    }
+  ]
+}
+</script>
+<script src="/assets/analytics.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Refund Policy",
+  "url": "https://www.clearedfortakeoff.com.au/refunds/",
+  "description": "Our refund policy, including your rights under the Australian Consumer Law.",
+  "inLanguage": "en-AU",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Cleared For Take-Off Academy",
+    "url": "https://www.clearedfortakeoff.com.au/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wild Hearts Publishing Pty Ltd",
+    "legalName": "Wild Hearts Publishing Pty Ltd",
+    "taxID": "34 695 911 025"
+  }
+}
+</script>
+<link rel="alternate" type="application/rss+xml" title="Cleared For Take-Off Academy: Articles" href="/feed.xml">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": { "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/api/*" } },
+        { "not": { "href_matches": "/course/*" } }
+      ]},
+      "eagerness": "moderate"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="head"><div class="wrap"><a class="brand" href="/">Cleared For Take-Off</a><a class="back" href="/">&larr; Back to site</a></div></header>
@@ -59,10 +141,10 @@
   <p>Course access is granted to your account as soon as your payment is processed.</p>
 
   <h2>How to request a refund</h2>
-  <p>Email <a href="mailto:hello@clearedfortakeoff.com.au">hello@clearedfortakeoff.com.au</a> with the email address you purchased with and a line about what happened. We aim to reply within a few business days.</p>
+  <p>Email <a href="mailto:info@wildheartspublishing.com.au">info@wildheartspublishing.com.au</a> with the email address you purchased with and a line about what happened. We aim to reply within a few business days.</p>
 </main>
 <footer class="foot"><div class="wrap">
-  <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
+  <div>&copy; 2026 Wild Hearts Publishing Pty Ltd</div>
   <nav><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a> &middot; <a href="/">Home</a></nav>
 </div></footer>
 </body>

@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
-# Private course area (gated, no public content to index)
-Disallow: /course/
+# The gated course area carries <meta name="robots" content="noindex,nofollow"> on every
+# page. It is deliberately NOT disallowed here: Google must be able to crawl a page in
+# order to see the noindex on it. Blocking it here would keep the URLs in the index.
 Disallow: /api/
 Disallow: /blog/_drafts/
 
@@ -9,62 +10,55 @@ Disallow: /blog/_drafts/
 # found and cited in AI answers (GEO). They follow the same rules as above.
 User-agent: GPTBot
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: OAI-SearchBot
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: ChatGPT-User
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: ClaudeBot
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: Claude-SearchBot
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: Claude-User
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: PerplexityBot
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: Perplexity-User
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: Google-Extended
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 User-agent: Applebot-Extended
 Allow: /
-Disallow: /course/
 Disallow: /api/
 Disallow: /blog/_drafts/
 
 Sitemap: https://www.clearedfortakeoff.com.au/sitemap.xml
+
+# Article feed
+Sitemap: https://www.clearedfortakeoff.com.au/feed.xml

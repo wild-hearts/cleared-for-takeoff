@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFEVT0WDZG"></script>
@@ -12,7 +12,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI terms in plain English: a glossary for beginners | Cleared For Take-Off</title>
+<title>AI Terms in Plain English: A Beginner's Glossary</title>
 <meta name="description" content="A plain-English glossary of AI terms, from prompt and hallucination to large language model, explained for everyday adults with no jargon.">
 <meta name="theme-color" content="#12283F">
 <link rel="canonical" href="https://www.clearedfortakeoff.com.au/ai-glossary/">
@@ -20,7 +20,7 @@
 <meta property="og:title" content="AI terms in plain English: a glossary for beginners">
 <meta property="og:description" content="Common AI terms explained in plain English, with no jargon.">
 <meta property="og:url" content="https://www.clearedfortakeoff.com.au/ai-glossary/">
-<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -185,6 +185,28 @@
   .foot{background:#0B1828;color:#9fb6cc;font-size:14px;padding:26px 24px;margin-top:48px}
   .foot .wrap{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .foot a{color:#cfe0f0;text-decoration:none}
+
+  /* Keyboard focus. Without this, anyone tabbing through the page has no idea
+     where they are, and the browser default is invisible on the navy sections. */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  textarea:focus-visible, select:focus-visible, summary:focus-visible{
+    outline:3px solid var(--accent, #C8862B);
+    outline-offset:3px;
+    border-radius:3px;
+  }
+
+  /* The article header is sticky, so its height is lost from every screen for the
+     whole read. On a phone the wordmark stacked over "ACADEMY" and the two nav links
+     stacked as well, giving a 108px bar on an 812px screen. This keeps it near 60px. */
+  @media(max-width:560px){
+    .head .wrap{padding:9px 16px;gap:10px}
+    .brand{display:flex;align-items:center;gap:8px;min-width:0}
+    .brand svg{width:28px;height:28px;flex:0 0 auto}
+    .brand b{font-size:14px;white-space:nowrap}
+    .brand small{display:none}
+    .head nav{display:flex;gap:12px;flex-wrap:nowrap;white-space:nowrap;flex:0 0 auto}
+    .head nav a{margin-left:0;font-size:13px}
+  }
 </style>
 <style>
   .glossary{max-width:760px;margin:0 auto;padding:44px 24px}
@@ -195,6 +217,45 @@
   .term dt{font-family:Georgia,serif;font-weight:700;color:var(--navy);font-size:21px;margin-bottom:6px}
   .term dd{margin:0;color:#2c3a47;font-size:17px;line-height:1.65;max-width:68ch}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.clearedfortakeoff.com.au/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI glossary",
+      "item": "https://www.clearedfortakeoff.com.au/ai-glossary/"
+    }
+  ]
+}
+</script>
+<script src="/assets/analytics.js" defer></script>
+<link rel="alternate" type="application/rss+xml" title="Cleared For Take-Off Academy: Articles" href="/feed.xml">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": { "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/api/*" } },
+        { "not": { "href_matches": "/course/*" } }
+      ]},
+      "eagerness": "moderate"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="head"><div class="wrap">
@@ -294,7 +355,7 @@
   <a class="btn" href="/#pricing" style="display:inline-block;background:var(--accent);color:var(--navyd);font-weight:700;text-decoration:none;padding:12px 24px;border-radius:10px">Start free &rarr;</a>
 </div>
 <footer class="foot"><div class="wrap">
-  <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
+  <div>&copy; 2026 Wild Hearts Publishing Pty Ltd</div>
   <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
 </div></footer>
 </body>

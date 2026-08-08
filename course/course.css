@@ -17,8 +17,11 @@
     --text-grey: #D8E4F0;
     --text-muted: #8DA3B8;
     --border: rgba(255, 255, 255, 0.12);
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* Matches the marketing site exactly. The paid course should not look like a
+       different company from the page that sold it. No webfont download, no
+       third-party request, no render-blocking stylesheet. */
+    --font-heading: Georgia, 'Times New Roman', serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --star: rgba(255, 255, 255, 0.9);
 }
 

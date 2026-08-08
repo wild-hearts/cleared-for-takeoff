@@ -1,0 +1,20 @@
+# Source images only. Every one of these has been replaced on the site by the
+# AVIF/WebP/JPEG renditions in assets/opt/, and none is referenced by any page.
+# They stay in the repo as the masters to regenerate from, but they should not
+# ship: together they were about 4.7MB of dead weight on every deployment.
+assets/book-cover.png
+assets/Cover.jpg
+assets/crew/archer.png
+assets/crew/captain-naomi.png
+assets/crew/forge.png
+assets/crew/henry.png
+assets/crew/red.png
+assets/crew/simon.png
+
+# Working files, not part of the site
+course-content/
+HANDOVER.md
+TESTIMONIALS-FILL-IN.md
+
+# Superseded by assets/og-image.jpg (303KB -> 54KB)
+assets/og-image.png

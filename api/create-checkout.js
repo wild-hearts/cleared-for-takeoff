@@ -32,7 +32,7 @@ module.exports = async function handler(req, res) {
     }
 
     const secretKey = process.env.STRIPE_SECRET_KEY;
-    const domain    = 'https://clearedfortakeoff.com.au';
+    const domain    = 'https://www.clearedfortakeoff.com.au';  // canonical host; apex 308s
 
     // Default to the adult self-paced course so the existing flow is unchanged.
     const product = PRODUCTS[req.query.product] || PRODUCTS['self-paced'];
@@ -54,6 +54,10 @@ module.exports = async function handler(req, res) {
             'customer_creation':             'always',
             'billing_address_collection':    'auto',
             'payment_method_types[0]':       'card',
+            // Lets a buyer enter a promotion code at checkout. This is what makes the
+            // READER code in the back of the book work. Create the coupon and the
+            // promotion code in Stripe (Products -> Coupons) or nothing will apply.
+            'allow_promotion_codes':         'true',
         });
 
         const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {

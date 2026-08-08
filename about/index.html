@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFEVT0WDZG"></script>
@@ -12,15 +12,15 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Cleared For Take-Off | Cleared For Take-Off</title>
-<meta name="description" content="Cleared For Take-Off is a plain-English AI academy founded by Naomi Shiels, a former aviation manager who teaches everyday adults to use AI calmly and safely.">
+<title>About Naomi | Cleared For Take-Off Academy</title>
+<meta name="description" content="Cleared For Take-Off is a plain-English AI academy founded by Naomi, a former linguist, lawyer and commercial aviation manager in Canberra.">
 <meta name="theme-color" content="#12283F">
 <link rel="canonical" href="https://www.clearedfortakeoff.com.au/about/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Cleared For Take-Off">
-<meta property="og:description" content="Cleared For Take-Off is a plain-English AI academy founded by Naomi Shiels, a former aviation manager who teaches everyday adults to use AI calmly and safely.">
+<meta property="og:description" content="Cleared For Take-Off is a plain-English AI academy founded by Naomi, a former aviation manager who teaches everyday adults to use AI calmly and safely.">
 <meta property="og:url" content="https://www.clearedfortakeoff.com.au/about/">
-<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -29,7 +29,7 @@
   "url": "https://www.clearedfortakeoff.com.au/about/",
   "mainEntity": {
     "@type": "Person",
-    "name": "Naomi Shiels",
+    "name": "Naomi",
     "jobTitle": "Founder, Cleared For Take-Off Academy",
     "url": "https://www.clearedfortakeoff.com.au/about/",
     "worksFor": {
@@ -156,7 +156,105 @@
     box-shadow:0 6px 18px rgba(200,134,43,.3);transition:transform .16s ease}
   .nf-btn:active{transform:scale(.97)}
   .foot{margin-top:0}
+
+  /* Keyboard focus. Without this, anyone tabbing through the page has no idea
+     where they are, and the browser default is invisible on the navy sections. */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  textarea:focus-visible, select:focus-visible, summary:focus-visible{
+    outline:3px solid var(--accent, #C8862B);
+    outline-offset:3px;
+    border-radius:3px;
+  }
+
+  /* The article header is sticky, so its height is lost from every screen for the
+     whole read. On a phone the wordmark stacked over "ACADEMY" and the two nav links
+     stacked as well, giving a 108px bar on an 812px screen. This keeps it near 60px. */
+  @media(max-width:560px){
+    .head .wrap{padding:9px 16px;gap:10px}
+    .brand{display:flex;align-items:center;gap:8px;min-width:0}
+    .brand svg{width:28px;height:28px;flex:0 0 auto}
+    .brand b{font-size:14px;white-space:nowrap}
+    .brand small{display:none}
+    .head nav{display:flex;gap:12px;flex-wrap:nowrap;white-space:nowrap;flex:0 0 auto}
+    .head nav a{margin-left:0;font-size:13px}
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.clearedfortakeoff.com.au/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://www.clearedfortakeoff.com.au/about/"
+    }
+  ]
+}
+</script>
+<script src="/assets/analytics.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.clearedfortakeoff.com.au/about/#naomi",
+  "name": "Naomi",
+  "url": "https://www.clearedfortakeoff.com.au/about/",
+  "jobTitle": "Founder and instructor",
+  "description": "Founder of Cleared For Take-Off Academy and Wild Hearts Publishing. A Canberra-based former linguist, lawyer and commercial aviation manager who teaches everyday adults to use AI calmly and safely.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Wild Hearts Publishing Pty Ltd"
+  },
+  "knowsAbout": [
+    "Artificial intelligence for beginners",
+    "Plain-English technology training",
+    "AI safety for families",
+    "Prompt writing"
+  ],
+  "sameAs": [
+    "https://www.amazon.com.au/stores/Naomi-Shiels/author/B0GRY7K841"
+  ],
+  "nationality": {
+    "@type": "Country",
+    "name": "Australia"
+  },
+  "homeLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Canberra",
+      "addressRegion": "ACT",
+      "addressCountry": "AU"
+    }
+  }
+}
+</script>
+<link rel="alternate" type="application/rss+xml" title="Cleared For Take-Off Academy: Articles" href="/feed.xml">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": { "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/api/*" } },
+        { "not": { "href_matches": "/course/*" } }
+      ]},
+      "eagerness": "moderate"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="head"><div class="wrap">
@@ -166,11 +264,15 @@
 
 <header class="nf-hero" data-nightsky data-density="1">
   <div class="inner">
-    <img src="/assets/crew/captain-naomi.png" alt="Captain Naomi in the cockpit" width="132" height="132"
+    <picture>
+      <source type="image/avif" srcset="/assets/opt/captain-naomi-132.avif 1x, /assets/opt/captain-naomi-264.avif 2x">
+      <source type="image/webp" srcset="/assets/opt/captain-naomi-132.webp 1x, /assets/opt/captain-naomi-264.webp 2x">
+      <img decoding="async" src="/assets/opt/captain-naomi-300.jpg" alt="Captain Naomi in the cockpit" width="132" height="132"
       style="width:132px;height:132px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,134,43,.6);
       box-shadow:0 0 26px rgba(200,134,43,.35);margin-bottom:20px">
+    </picture>
     <h1>About <span class="shimmer">Cleared For Take-Off</span></h1>
-    <p class="byline-hero"><b>Naomi Shiels</b> · Founder · Former aviation manager, linguist and lawyer</p>
+    <p class="byline-hero"><b>Naomi</b> · Founder · Former aviation manager, linguist and lawyer</p>
   </div>
 </header>
 
@@ -184,7 +286,7 @@
 
   <section class="nf-section">
     <h2>Who I am</h2>
-    <p>I am Naomi Shiels, a Canberra-based former linguist, lawyer and commercial aviation manager, and the founder of Wild Hearts Publishing. I build with these tools every day.</p>
+    <p>I am Naomi, a Canberra-based former linguist, lawyer and commercial aviation manager, and the founder of Wild Hearts Publishing. I build with these tools every day.</p>
     <p>Here is the part that matters most: <strong>I am not an engineer.</strong> I learned AI the same way you will, by showing up, trying things, failing at some of them, and keeping what worked. This course is what I kept.</p>
     <p>There is no secret technical background you are missing. There is just a tool that is genuinely new, and a calm way to learn it.</p>
   </section>
@@ -208,6 +310,10 @@
   <section class="nf-section">
     <div class="nf-cta" data-nightsky data-density="0.5" data-globe="false">
       <div style="position:relative;z-index:2">
+        <h2>The book</h2>
+        <p>I wrote <a href="https://www.amazon.com.au/dp/B0GS21NW58" rel="noopener" target="_blank"><em>Cleared For Take-Off</em></a>, which is where a lot of this
+        material started. Everything I have written is on <a href="https://www.amazon.com.au/stores/Naomi-Shiels/author/B0GRY7K841" rel="noopener" target="_blank">my Amazon author page</a>.</p>
+
         <h2>How to start</h2>
         <p>The first module of the course is completely free, with no payment details and no commitment. It is the calmest possible way to find out whether this is for you.</p>
         <a class="nf-btn" href="/course/">Start Free Preview &rarr;</a>
@@ -217,7 +323,7 @@
 </main>
 
 <footer class="foot"><div class="wrap">
-  <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
+  <div>&copy; 2026 Wild Hearts Publishing Pty Ltd</div>
   <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
 </div></footer>
 <script src="/assets/nightsky.js" defer></script>

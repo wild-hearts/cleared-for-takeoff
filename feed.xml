@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cleared For Take-Off Academy: Articles</title>
+    <link>https://www.clearedfortakeoff.com.au/blog/</link>
+    <atom:link href="https://www.clearedfortakeoff.com.au/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Plain-English, honest guides to using AI confidently and safely, written for Australian beginners.</description>
+    <language>en-AU</language>
+    <copyright>Copyright 2026 Naomi Shiels / Wild Hearts Publishing Pty Ltd</copyright>
+    <managingEditor>hello@clearedfortakeoff.com.au (Naomi Shiels)</managingEditor>
+    <lastBuildDate>Fri, 07 Aug 2026 09:00:00 +1000</lastBuildDate>
+    <item>
+      <title>How to Spot When AI Is Wrong (and the Scams to Watch)</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/how-to-spot-when-ai-is-wrong/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/how-to-spot-when-ai-is-wrong/</guid>
+      <description>How to catch AI mistakes, called hallucinations, and protect yourself from the new wave of AI-powered scams hitting Australians.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+    <item>
+      <title>Is AI Safe for Kids? An Australian Parent&#x27;s Guide</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/is-ai-safe-for-kids/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/is-ai-safe-for-kids/</guid>
+      <description>A balanced, honest look at whether AI is safe for children, the real risks, and practical safeguards Australian parents can use this week.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+    <item>
+      <title>Is It Too Late to Learn AI? An Honest Answer</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/</guid>
+      <description>It is not too late to learn AI. These tools are only a couple of years old. Here is an honest, calm starting point for nervous beginners.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+    <item>
+      <title>Free AI Prompt Library for Everyday Life (Copy and Paste)</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/prompt-library/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/prompt-library/</guid>
+      <description>Real, copy-and-paste AI prompts for emails, documents, planning, health, money and learning. Plain English, ready to use, completely free.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+    <item>
+      <title>How to Stop AI Training on Your Data (ChatGPT, Claude, Gemini)</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/stop-ai-training-on-your-data/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/stop-ai-training-on-your-data/</guid>
+      <description>A plain, honest guide to turning off model training in ChatGPT, Claude, Gemini and Copilot, plus the limits of what that setting really does.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+    <item>
+      <title>ChatGPT, Claude, Gemini or Copilot: Which to Start With?</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/which-ai-tool-to-start-with/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/which-ai-tool-to-start-with/</guid>
+      <description>A plain, honest guide to picking your first AI tool. The short answer: it matters far less than you fear. Here is how to choose and move on.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+    <item>
+      <title>Write Better AI Prompts: The Four Controls That Matter</title>
+      <link>https://www.clearedfortakeoff.com.au/blog/write-better-prompts-four-controls/</link>
+      <guid isPermaLink="true">https://www.clearedfortakeoff.com.au/blog/write-better-prompts-four-controls/</guid>
+      <description>A plain method for steering AI: context, role, format and iteration, with real before-and-after examples you can copy today.</description>
+      <pubDate>Sat, 13 Jun 2026 09:00:00 +1000</pubDate>
+      <author>hello@clearedfortakeoff.com.au (Naomi Shiels)</author>
+    </item>
+  </channel>
+</rss>

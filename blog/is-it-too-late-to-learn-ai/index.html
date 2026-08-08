@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFEVT0WDZG"></script>
@@ -12,7 +12,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Is it too late to learn AI? An honest answer for nervous beginners | Cleared For Take-Off</title>
+<title>Is It Too Late to Learn AI? An Honest Answer</title>
 <meta name="description" content="It is not too late to learn AI. These tools are only a couple of years old. Here is an honest, calm starting point for nervous beginners.">
 <meta name="theme-color" content="#12283F">
 <link rel="canonical" href="https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/">
@@ -20,9 +20,9 @@
 <meta property="og:title" content="Is it too late to learn AI? An honest answer for nervous beginners">
 <meta property="og:description" content="It is not too late to learn AI. These tools are only a couple of years old. Here is an honest, calm starting point for nervous beginners.">
 <meta property="og:url" content="https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/">
-<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.png">
+<meta property="og:image" content="https://www.clearedfortakeoff.com.au/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="author" content="Naomi Shiels">
+<meta name="author" content="Naomi">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,12 +30,13 @@
   "headline": "Is it too late to learn AI? An honest answer for nervous beginners",
   "description": "It is not too late to learn AI. These tools are only a couple of years old. Here is an honest, calm starting point for nervous beginners.",
   "datePublished": "2026-06-13",
-  "dateModified": "2026-06-13",
-  "image": "https://www.clearedfortakeoff.com.au/assets/og-image.png",
+  "dateModified": "2026-08-07",
+  "image": "https://www.clearedfortakeoff.com.au/assets/og-image.jpg",
   "mainEntityOfPage": "https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/",
   "author": {
+    "@id": "https://www.clearedfortakeoff.com.au/about/#naomi",
     "@type": "Person",
-    "name": "Naomi Shiels",
+    "name": "Naomi",
     "jobTitle": "Founder, Cleared For Take-Off Academy",
     "url": "https://www.clearedfortakeoff.com.au/"
   },
@@ -45,7 +46,7 @@
     "url": "https://www.clearedfortakeoff.com.au/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.clearedfortakeoff.com.au/assets/og-image.png"
+      "url": "https://www.clearedfortakeoff.com.au/assets/og-image.jpg"
     }
   }
 }
@@ -102,7 +103,159 @@
   .foot{background:#0B1828;color:#9fb6cc;font-size:14px;padding:26px 24px;margin-top:48px}
   .foot .wrap{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .foot a{color:#cfe0f0;text-decoration:none}
+
+  /* Read next: internal links so ranking signal flows between articles instead of
+     dead-ending at the blog index. Every article previously had one inbound link. */
+  .readnext{max-width:720px;margin:36px auto 0;padding:24px;background:#fff;
+    border:1px solid #dce6f0;border-radius:16px}
+  .readnext h2{font-size:18px;margin:0 0 14px;color:var(--navy);font-family:Georgia,serif}
+  .readnext ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .readnext li{margin:0}
+  .readnext a{display:block;padding:13px 15px;border:1px solid #e3ebf4;border-radius:11px;
+    text-decoration:none;background:var(--cream);transition:border-color .15s ease,background .15s ease}
+  .readnext a:hover{border-color:var(--accent);background:#fff}
+  .readnext b{display:block;color:var(--navy);font-size:16px;margin-bottom:2px}
+  .readnext span{display:block;color:var(--grey);font-size:14.5px;line-height:1.45}
+  .readnext .more{margin:14px 0 0;font-size:15px}
+  .readnext .more a{display:inline;padding:0;border:0;background:none;color:var(--accent-dark);
+    text-decoration:underline;text-underline-offset:3px}
+
+  /* Sources: AI answer engines weigh citation quality heavily, and a page making
+     claims about privacy settings or scam figures with nothing to check is not one
+     they will quote. Every link here was verified to resolve. */
+  .sources{max-width:720px;margin:32px auto 0;padding:22px 24px;background:#fff;
+    border:1px solid #dce6f0;border-radius:16px}
+  .sources h2{font-size:17px;margin:0 0 6px;color:var(--navy);font-family:Georgia,serif}
+  .sources p.note{color:var(--grey);font-size:14.5px;margin:0 0 14px}
+  .sources ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+  .sources li{font-size:15px;line-height:1.5;padding-left:16px;position:relative}
+  .sources li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;
+    border-radius:50%;background:var(--accent)}
+  .sources a{color:var(--accent-dark);text-decoration:underline;text-underline-offset:3px}
+  .sources .who{color:var(--grey)}
+
+  /* Keyboard focus. Without this, anyone tabbing through the page has no idea
+     where they are, and the browser default is invisible on the navy sections. */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  textarea:focus-visible, select:focus-visible, summary:focus-visible{
+    outline:3px solid var(--accent, #C8862B);
+    outline-offset:3px;
+    border-radius:3px;
+  }
+
+  /* Email capture. Deliberately does NOT gate any content: the prompt library is the
+     most-linked thing on this site and hiding it behind a form would cost more in
+     links and AI citations than it would gain in addresses. */
+  .optin{max-width:720px;margin:28px auto 0;padding:24px;border-radius:16px;
+    background:linear-gradient(160deg,var(--navy),var(--navyd));color:#fff}
+  .optin h2{font-family:Georgia,serif;font-size:19px;margin:0 0 6px;color:#fff}
+  .optin p{color:#cfe0f0;font-size:15.5px;line-height:1.55;margin:0 0 16px}
+  .optin form{display:flex;gap:10px;flex-wrap:wrap}
+  .optin input{flex:1 1 220px;min-width:0;padding:13px 15px;border-radius:10px;
+    border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);
+    color:#fff;font-size:16px;font-family:inherit}
+  .optin input::placeholder{color:#9fb6cc}
+  .optin input:focus-visible{outline:3px solid var(--accent-light);outline-offset:2px}
+  .optin button{flex:0 0 auto;padding:13px 22px;border:0;border-radius:999px;
+    background:var(--accent);color:#12283F;font-weight:700;font-size:16px;
+    font-family:inherit;cursor:pointer}
+  .optin button:hover{background:var(--accent-light)}
+  .optin button[disabled]{opacity:.6;cursor:default}
+  .optin .fine{font-size:13.5px;color:#9fb6cc;margin:12px 0 0}
+  .optin .msg{margin:12px 0 0;font-weight:700;font-size:15.5px;display:none}
+
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* The article header is sticky, so its height is lost from every screen for the
+     whole read. On a phone the wordmark stacked over "ACADEMY" and the two nav links
+     stacked as well, giving a 108px bar on an 812px screen. This keeps it near 60px. */
+  @media(max-width:560px){
+    .head .wrap{padding:9px 16px;gap:10px}
+    .brand{display:flex;align-items:center;gap:8px;min-width:0}
+    .brand svg{width:28px;height:28px;flex:0 0 auto}
+    .brand b{font-size:14px;white-space:nowrap}
+    .brand small{display:none}
+    .head nav{display:flex;gap:12px;flex-wrap:nowrap;white-space:nowrap;flex:0 0 auto}
+    .head nav a{margin-left:0;font-size:13px}
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.clearedfortakeoff.com.au/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://www.clearedfortakeoff.com.au/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Is it too late to learn AI?",
+      "item": "https://www.clearedfortakeoff.com.au/blog/is-it-too-late-to-learn-ai/"
+    }
+  ]
+}
+</script>
+<script src="/assets/analytics.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "I am in my fifties (or older). Is it too late for me specifically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Some of the most capable AI users I know came to it later in life, because they bring something the tools lack: real-world judgement about whether an answer is sensible. The tech is genuinely not the hard part. Patience with a new thing is, and that is a choice, not an age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to pay for it to start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The free versions of ChatGPT, Claude and Gemini are more than enough to learn on. Start free. Only consider paying once you have found a task you do often enough that it would actually be worth it to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I do something wrong or break something?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You will not break anything. These chat tools are just a text box. The worst that happens early on is a clumsy answer, and a clumsy answer teaches you how to ask better next time. The only real mistakes to avoid are sharing private details and trusting its facts without checking. Everything else is just practice."
+      }
+    }
+  ]
+}
+</script>
+<link rel="alternate" type="application/rss+xml" title="Cleared For Take-Off Academy: Articles" href="/feed.xml">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": { "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/api/*" } },
+        { "not": { "href_matches": "/course/*" } }
+      ]},
+      "eagerness": "moderate"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="head"><div class="wrap">
@@ -111,7 +264,7 @@
 </div></header>
 <article>
   <h1>Is it too late to learn AI? An honest answer for nervous beginners</h1>
-  <div class="byline"><b>Naomi Shiels</b><span>&middot;</span><span>13 June 2026</span><span>&middot;</span><span>7 min read</span></div>
+  <div class="byline"><b>Naomi</b><span>&middot;</span><span>13 June 2026</span><span>&middot;</span><span>Updated 7 August 2026</span><span>&middot;</span><span>7 min read</span></div>
   <div class="dash" aria-hidden="true"></div>
   <div class="body">
 <p>You suspect everyone already knows how to use AI, and you have
@@ -249,9 +402,38 @@ pace.</p>
 
   </div>
 </article>
+<section class="sources" aria-labelledby="sources-h">
+  <h2 id="sources-h">Sources and further reading</h2>
+  <p class="note">Primary sources, checked at the time of writing. Settings change, so if a screen looks different from what is described here, trust the provider.</p>
+  <ul>
+      <li><a href="https://www.ai.gov.au/" rel="noopener nofollow" target="_blank">National AI Centre</a> <span class="who">&mdash; Australian Government</span></li>
+      <li><a href="https://www.ai.gov.au/practical-guides-and-learning/training" rel="noopener nofollow" target="_blank">Free AI training and practical guides</a> <span class="who">&mdash; National AI Centre</span></li>
+      <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" rel="noopener nofollow" target="_blank">Prompt engineering overview</a> <span class="who">&mdash; Anthropic documentation</span></li>
+  </ul>
+</section>
+<section class="optin" aria-labelledby="optin-h">
+  <h2 id="optin-h">New prompts, once a month</h2>
+  <p>Everything on this site stays free and open. If you want the new prompts and guides as they go up, leave your email. One message a month, no pitch, unsubscribe in one click.</p>
+  <form class="optin-form" novalidate>
+    <label class="sr-only" for="optin-email">Your email address</label>
+    <input id="optin-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+    <button type="submit">Send them to me</button>
+  </form>
+  <p class="fine">We never share your address. See the <a href="/privacy/" style="color:var(--accent-light)">privacy policy</a>.</p>
+  <p class="msg" role="status"></p>
+</section>
+<section class="readnext" aria-labelledby="readnext-h">
+  <h2 id="readnext-h">Read next</h2>
+  <ul>
+      <li><a href="/blog/which-ai-tool-to-start-with/"><b>ChatGPT, Claude, Gemini or Copilot?</b><span>How to pick your first AI tool, and why it matters less than you fear.</span></a></li>
+      <li><a href="/blog/write-better-prompts-four-controls/"><b>Write Better AI Prompts</b><span>The four controls that change everything, with before-and-after examples.</span></a></li>
+      <li><a href="/blog/prompt-library/"><b>A Free AI Prompt Library</b><span>Copy-and-paste prompts for emails, documents, planning and money.</span></a></li>
+  </ul>
+  <p class="more">Or go to <a href="/for-later-life/">AI for beginners over 50</a>, or browse <a href="/blog/">all articles</a>.</p>
+</section>
 <div class="author">
   <div class="av"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1B3A5B" stroke="#C8862B" stroke-width="2"/><path d="M10 30 L34 14 L26 28 L21 25 Z" fill="#F4F8FC"/><path d="M21 25 L26 28 L24 33 Z" fill="#F0C277"/></svg></div>
-  <div><h3>Written by Naomi Shiels</h3>
+  <div><h3>Written by Naomi</h3>
   <p>Naomi is the founder of Cleared For Take-Off Academy and Wild Hearts Publishing. A Canberra-based former linguist, lawyer and commercial aviation manager, she has written 14 books and made 216 songs with AI, and she uses these tools every day. She is not an engineer. She learned AI the way you will, by showing up and trying things.</p></div>
 </div>
 <div class="cta">
@@ -259,8 +441,37 @@ pace.</p>
   <a class="btn" href="/#pricing">Start free &rarr;</a>
 </div>
 <footer class="foot"><div class="wrap">
-  <div>&copy; 2026 Naomi Shiels / Wild Hearts Publishing</div>
+  <div>&copy; 2026 Wild Hearts Publishing Pty Ltd</div>
   <nav><a href="/blog/">Articles</a> &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
 </div></footer>
+<script>
+(function(){
+  var box=document.querySelector('.optin'); if(!box) return;
+  var f=box.querySelector('.optin-form'), msg=box.querySelector('.msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var input=f.querySelector('input[type=email]'), btn=f.querySelector('button');
+    var email=(input.value||'').trim();
+    if(!email || email.indexOf('@')<1){
+      msg.style.display='block'; msg.style.color='#F0C277';
+      msg.textContent='That does not look like an email address.'; input.focus(); return;
+    }
+    var orig=btn.textContent; btn.disabled=true; btn.textContent='Sending\u2026'; msg.style.display='none';
+    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:email.split('@')[0], email:email,
+                           enquiry_type:'prompt-library', challenge:'Monthly prompts opt-in from '+location.pathname})})
+      .then(function(r){ if(!r.ok) throw 0;
+        msg.style.display='block'; msg.style.color='#8FE3B5';
+        msg.textContent='You are on the list. Check your inbox.'; f.reset();
+        if(window.gtag) gtag('event','newsletter_signup',{page_path:location.pathname});
+      })
+      .catch(function(){
+        msg.style.display='block'; msg.style.color='#F0C277';
+        msg.textContent='That did not go through. Email info@wildheartspublishing.com.au and I will add you.';
+      })
+      .finally(function(){ btn.disabled=false; btn.textContent=orig; });
+  });
+})();
+</script>
 </body>
 </html>
