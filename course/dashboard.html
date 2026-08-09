@@ -61,6 +61,14 @@
         <div style="text-align:center; padding:3rem; color:var(--text-muted);">Loading your course…</div>
     </div>
 
+    <!-- Downloads (rendered by JS) -->
+    <section class="resources" id="resources" hidden>
+        <h2>Your downloads</h2>
+        <p class="res-sub">The one-page cheat sheets, the Cleared To Try workbooks, and the Tool Hangar guides. Yours to keep, print and scribble on.</p>
+        <div class="res-grid" id="res-grid"></div>
+        <p class="res-msg" id="res-msg" role="status"></p>
+    </section>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -206,6 +214,71 @@ async function init() {
     (data || []).forEach(r => { STATE.progress[r.lesson_id] = true; });
 
     render();
+    renderResources();
+}
+
+// ─── Downloads ────────────────────────────────────────────────────────────────
+// The PDFs are served by /api/resource behind the same entitlement gate as the
+// videos, so the link cannot simply be an href: it needs the access token.
+async function renderResources() {
+    const wrap = document.getElementById('resources');
+    const grid = document.getElementById('res-grid');
+    if (!wrap || !grid) return;
+    let list;
+    try {
+        const r = await fetch('/api/resource?list=1');
+        if (!r.ok) return;
+        list = (await r.json()).resources || [];
+    } catch (e) { return; }
+    if (!list.length) return;
+
+    grid.innerHTML = list.map(function (r) {
+        var locked = !r.free && !STATE.fullAccess;
+        return '<button class="res-item' + (locked ? ' locked' : '') + '" data-key="' + r.key + '"' +
+               (locked ? ' disabled' : '') + '>' +
+               '<span class="res-name">' + r.name.replace(/\.pdf$/, '') + '</span>' +
+               '<span class="res-tag">' + (locked ? 'Enrol to unlock' : 'PDF') + '</span>' +
+               '</button>';
+    }).join('');
+
+    grid.querySelectorAll('.res-item:not(.locked)').forEach(function (btn) {
+        btn.addEventListener('click', function () { downloadResource(btn); });
+    });
+    wrap.hidden = false;
+}
+
+async function downloadResource(btn) {
+    var msg = document.getElementById('res-msg');
+    var key = btn.getAttribute('data-key');
+    var original = btn.querySelector('.res-tag').textContent;
+    btn.disabled = true;
+    btn.querySelector('.res-tag').textContent = 'Preparing…';
+    msg.textContent = '';
+    try {
+        var headers = {};
+        var session = await currentSession();
+        if (session) headers['Authorization'] = 'Bearer ' + session.access_token;
+        var res = await fetch('/api/resource?file=' + encodeURIComponent(key), { headers: headers });
+        if (!res.ok) throw new Error(res.status === 403
+            ? 'That one is part of the full course.'
+            : 'Could not fetch that file.');
+        var blob = await res.blob();
+        var name = 'download.pdf';
+        var cd = res.headers.get('Content-Disposition') || '';
+        var m = cd.match(/filename="([^"]+)"/);
+        if (m) name = m[1];
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url; a.download = name;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+        if (window.gtag) gtag('event', 'resource_download', { resource: key });
+    } catch (err) {
+        msg.textContent = err.message + ' Email info@wildheartspublishing.com.au and I will send it over.';
+    } finally {
+        btn.disabled = false;
+        btn.querySelector('.res-tag').textContent = original;
+    }
 }
 
 // ─── Render dashboard ─────────────────────────────────────────────────────────

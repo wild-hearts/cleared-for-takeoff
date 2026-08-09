@@ -811,3 +811,81 @@ input:focus-visible {
     .module-card-header { padding: 1.25rem; }
     .lesson-item { padding: 0.75rem 1.25rem; }
 }
+
+/* ─── Downloads ───────────────────────────────────────────────────────────────
+   The cheat sheets, workbooks and Tool Hangar guides the pricing page promises.
+   Served by /api/resource behind the same entitlement gate as the videos. */
+.resources {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    padding: 2rem 1.5rem 2.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+.resources h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-white);
+    margin-bottom: .4rem;
+}
+.resources .res-sub {
+    color: var(--text-muted);
+    font-size: .95rem;
+    line-height: 1.55;
+    max-width: 60ch;
+    margin-bottom: 1.4rem;
+}
+.res-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem;
+}
+.res-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    text-align: left;
+    padding: .9rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.045);
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
+}
+.res-item:hover:not(:disabled) {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+}
+.res-item:focus-visible {
+    outline: 3px solid var(--accent-amber);
+    outline-offset: 2px;
+}
+.res-item.locked {
+    opacity: .5;
+    cursor: default;
+}
+.res-name { line-height: 1.35; }
+.res-tag {
+    flex: 0 0 auto;
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .2rem .55rem;
+    white-space: nowrap;
+}
+.res-item.locked .res-tag { color: var(--text-muted); }
+.res-msg {
+    margin-top: 1rem;
+    color: var(--accent-amber-light);
+    font-size: .92rem;
+    min-height: 1.2em;
+}
