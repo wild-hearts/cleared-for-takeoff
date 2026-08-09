@@ -67,12 +67,12 @@ const MODULES = [
         pickYourTrack: true,
         trackCount: 1,
         lessons: [
-            { id: 'm04-l01',     title: 'Choosing your project',                       duration: '12:00', playbackId: 'PENDING', required: true },
-            { id: 'm04-track-a', title: 'Track A: Write something',                    duration: '12:00', playbackId: '8Cta2OytiQwevCL6b01duzTIAWqGTK7G02V5dImeth2qI', track: 'A' },
-            { id: 'm04-track-b', title: 'Track B: Start something',                    duration: '12:00', playbackId: 'nWK4j3ZAgOhFngb00j00FLyaaF1YAKLAGMqVZxXqd3CBo', track: 'B' },
-            { id: 'm04-track-c', title: 'Track C: Sort something',                     duration: '12:00', playbackId: 'qjNE01aM00ye9sPtCbgiCN2ZJ4mBA5VYRXg009kg8qxE00Y', track: 'C' },
-            { id: 'm04-track-d', title: 'Track D: Learn something',                    duration: '12:00', playbackId: '9OM01a4RlmLe5fmekL9yKunok00j5rbem572DE4KQZNS4', track: 'D' },
-            { id: 'm04-l06',     title: 'Locking your scope, and your Cleared To Try', duration: '12:00', playbackId: 'hYTS02t801mcJx33v0100fwYD3EWUOT5i00WW22S6IkGJqZI', required: true },
+            { id: 'm04-l01',     title: 'Choosing your project',                       duration: '12:00', playbackId: '8Cta2OytiQwevCL6b01duzTIAWqGTK7G02V5dImeth2qI', required: true },
+            { id: 'm04-track-a', title: 'Track A: Write something',                    duration: '12:00', playbackId: 'nWK4j3ZAgOhFngb00j00FLyaaF1YAKLAGMqVZxXqd3CBo', track: 'A' },
+            { id: 'm04-track-b', title: 'Track B: Start something',                    duration: '12:00', playbackId: 'qjNE01aM00ye9sPtCbgiCN2ZJ4mBA5VYRXg009kg8qxE00Y', track: 'B' },
+            { id: 'm04-track-c', title: 'Track C: Sort something',                     duration: '12:00', playbackId: '9OM01a4RlmLe5fmekL9yKunok00j5rbem572DE4KQZNS4', track: 'C' },
+            { id: 'm04-track-d', title: 'Track D: Learn something',                    duration: '12:00', playbackId: 'hYTS02t801mcJx33v0100fwYD3EWUOT5i00WW22S6IkGJqZI', track: 'D' },
+            { id: 'm04-l06',     title: 'Locking your scope, and your Cleared To Try', duration: '12:00', playbackId: 'hq01kV6HRBUbaj7DEhCZE4BXbbKJIZcmpGZVv02tGzYaE', required: true },
         ]
     },
     {
