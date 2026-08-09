@@ -1,3 +1,14 @@
+> **SUPERSEDED — see `TODO.md`.**
+>
+> This checklist was written before the course turned out to be finished. Block A
+> ("the course has no videos") was wrong: the 36 videos existed on Mux and simply had
+> not been wired into the site. That is fixed, tested and live. Blocks B, and most of
+> C's groundwork, are done.
+>
+> Kept for reference only.
+
+---
+
 # Your action checklist
 
 30 steps, in order. Anything marked **[SEND TO CLAUDE]** is something I need back
