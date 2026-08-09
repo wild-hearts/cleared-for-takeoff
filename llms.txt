@@ -47,6 +47,7 @@ Not for: developers, engineers, or anyone wanting to build with APIs. There is n
 - AI glossary, plain-English definitions of 20 AI terms: https://www.clearedfortakeoff.com.au/ai-glossary/
 - Copy-and-paste AI prompt library for everyday tasks: https://www.clearedfortakeoff.com.au/blog/prompt-library/
 - All articles: https://www.clearedfortakeoff.com.au/blog/
+- Free video lesson with full transcript, "What AI actually is (and isn't)", no sign-up required: https://www.clearedfortakeoff.com.au/free-lesson/
 
 ## Articles
 
