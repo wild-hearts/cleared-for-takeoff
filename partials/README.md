@@ -24,7 +24,7 @@ homepage only, which is why the hamburger did nothing on every other page.
 ## Making a change
 
 ```bash
-npm run chrome
+npm run site
 ```
 
 This rewrites the chrome in place across every page. It is idempotent: run it
@@ -33,7 +33,7 @@ twice and the second run writes nothing.
 To check without writing anything (useful before a deploy):
 
 ```bash
-npm run chrome:check
+npm run check
 ```
 
 Exits non-zero and names the files if any page has drifted from `partials/`.
