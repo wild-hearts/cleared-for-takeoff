@@ -121,6 +121,53 @@ function subnavFor(page, html, warn) {
   return `<nav class="subnav" aria-label="On this page">\n  <div class="wrap">\n${links}\n  </div>\n</nav>`;
 }
 
+/* ---------- social cards (FT-05) ----------
+   Twenty-five pages declared twitter:card=summary_large_image with no
+   twitter:image, so the card could never render one, and /free-lesson/
+   declared card=player with none of the twitter:player properties that card
+   type requires, which makes it invalid rather than merely plain. An invalid
+   player card is worse than a correct summary card, so it is downgraded.
+
+   The Twitter set is derived from the page's own og: tags rather than
+   authored twice, so the two can no longer disagree. */
+
+const SITE_OG_IMAGE = 'https://www.clearedfortakeoff.com.au/assets/og-image.jpg';
+const SITE_NAME = 'Cleared For Take-Off Academy';
+
+function metaContent(html, attr, value) {
+  const m = html.match(new RegExp(`<meta[^>]*${attr}=["']${escapeRe(value)}["'][^>]*>`, 'i'));
+  if (!m) return null;
+  const c = m[0].match(/content=["']([^"']*)["']/i);
+  return c ? c[1] : null;
+}
+
+const decodeEnt = (s) => String(s).replace(/&amp;/g, '&');
+const attrEscape = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+function socialBlock(html) {
+  const title = metaContent(html, 'property', 'og:title')
+    || (html.match(/<title>([^<]*)<\/title>/i)?.[1] ?? SITE_NAME);
+  const desc = metaContent(html, 'property', 'og:description')
+    || metaContent(html, 'name', 'description') || '';
+  const image = metaContent(html, 'property', 'og:image') || SITE_OG_IMAGE;
+  const alt = decodeEnt(title);
+
+  const out = [
+    `<meta property="og:image:alt" content="${attrEscape(alt)}" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:title" content="${attrEscape(decodeEnt(title))}" />`,
+  ];
+  if (desc) out.push(`<meta name="twitter:description" content="${attrEscape(decodeEnt(desc))}" />`);
+  out.push(`<meta name="twitter:image" content="${attrEscape(image)}" />`);
+  out.push(`<meta name="twitter:image:alt" content="${attrEscape(alt)}" />`);
+  return out.join('\n');
+}
+
+/** Strip page-authored twitter:* and og:image:alt so the generated block is the only copy. */
+const stripSocial = (html) => html
+  .replace(/^[ \t]*<meta[^>]*name=["']twitter:[^"']*["'][^>]*>[ \t]*\n?/gim, '')
+  .replace(/^[ \t]*<meta[^>]*property=["']og:image:alt["'][^>]*>[ \t]*\n?/gim, '');
+
 /* ---------- the pass ---------- */
 
 const pages = walk('').sort();
@@ -171,6 +218,15 @@ for (const page of pages) {
     html = html.replace('</head>', `${styleBlock}\n</head>`);
   } else {
     warn(`${page}: no </head>, chrome CSS not injected`);
+  }
+
+  /* 5a. social cards, derived from the page's own og: tags.
+        \n? on both sides of the marker so re-running never accumulates blank lines. */
+  const socialMarked = new RegExp(`\\n?${escapeRe(openTag('social'))}[\\s\\S]*?${escapeRe(closeTag('social'))}\\n?`);
+  html = html.replace(socialMarked, '\n');
+  html = stripSocial(html);
+  if (html.includes('</head>')) {
+    html = html.replace('</head>', `${openTag('social')}\n${socialBlock(html)}\n${closeTag('social')}\n</head>`);
   }
 
   /* 5b. the shared entity graph, site-wide */
