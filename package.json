@@ -9,7 +9,8 @@
     "chrome": "node tools/build-chrome.mjs",
     "chrome:check": "node tools/build-chrome.mjs --check",
     "glossary": "node tools/build-glossary.mjs",
+    "prices": "node tools/check-prices.mjs",
     "build": "node tools/build-glossary.mjs && node tools/build-chrome.mjs",
-    "check": "node tools/build-glossary.mjs --check && node tools/build-chrome.mjs --check"
+    "check": "node tools/build-glossary.mjs --check && node tools/build-chrome.mjs --check && node tools/check-prices.mjs"
   }
 }
