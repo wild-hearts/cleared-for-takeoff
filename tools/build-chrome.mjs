@@ -88,7 +88,7 @@ const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 function currentNavHref(page) {
   if (page === 'index.html') return null; // the brand mark is the home link
   const dir = '/' + page.replace(/index\.html$/, '');
-  const known = ['/who-its-for/', '/kids-and-teens/', '/book/', '/blog/', '/about/', '/contact/'];
+  const known = ['/ai-course-for-beginners/', '/who-its-for/', '/kids-and-teens/', '/book/', '/blog/', '/about/', '/contact/'];
   if (known.includes(dir)) return dir;
   if (page.startsWith('blog/')) return '/blog/';
   return null;
