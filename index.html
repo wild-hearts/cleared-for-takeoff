@@ -33,78 +33,25 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "EducationalOrganization",
-      "@id": "https://www.clearedfortakeoff.com.au/#org",
-      "name": "Cleared For Take-Off Academy",
-      "alternateName": "C4TO Academy",
-      "url": "https://www.clearedfortakeoff.com.au/",
-      "logo": "https://www.clearedfortakeoff.com.au/assets/og-image.jpg",
-      "image": "https://www.clearedfortakeoff.com.au/assets/og-image.jpg",
-      "description": "Calm, jargon-free AI training for everyday adults, taught in plain English for Australian beginners.",
-      "slogan": "AI for Grown-Ups",
-      "email": "info@wildheartspublishing.com.au",
-      "inLanguage": "en-AU",
-      "areaServed": { "@type": "Country", "name": "Australia" },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Canberra",
-        "addressRegion": "ACT",
-        "addressCountry": "AU"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "info@wildheartspublishing.com.au",
-        "areaServed": "AU",
-        "availableLanguage": "English"
-      },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Wild Hearts Publishing Pty Ltd",
-        "legalName": "Wild Hearts Publishing Pty Ltd",
-        "taxID": "34 695 911 025"
-      },
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.clearedfortakeoff.com.au/about/#naomi",
-        "name": "Naomi"
-      },
-      "knowsAbout": [
-        "Artificial intelligence for beginners",
-        "ChatGPT, Claude, Gemini and Copilot for non-technical users",
-        "AI safety for families",
-        "Plain-English technology training"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.clearedfortakeoff.com.au/#website",
-      "name": "Cleared For Take-Off Academy",
-      "url": "https://www.clearedfortakeoff.com.au/",
-      "publisher": { "@id": "https://www.clearedfortakeoff.com.au/#org" }
-    },
-    {
-      "@type": "Course",
-      "name": "Cleared For Take-Off: AI for Grown-Ups",
-      "description": "Six short modules that take everyday adults from curious and cautious to using AI confidently and safely. No jargon, no hype. Module 1 is completely free.",
-      "provider": { "@id": "https://www.clearedfortakeoff.com.au/#org" },
-      "inLanguage": "en-AU",
-      "offers": {
-        "@type": "Offer",
-        "category": "Paid",
-        "price": "49",
-        "priceCurrency": "AUD",
-        "url": "https://www.clearedfortakeoff.com.au/#pricing"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "online",
-        "courseWorkload": "PT6H"
-      }
-    }
-  ]
+  "@type": "Course",
+  "name": "Cleared For Take-Off: AI for Grown-Ups",
+  "description": "Six short modules that take everyday adults from curious and cautious to using AI confidently and safely. No jargon, no hype. Module 1 is completely free.",
+  "provider": {
+    "@id": "https://www.clearedfortakeoff.com.au/#org"
+  },
+  "inLanguage": "en-AU",
+  "offers": {
+    "@type": "Offer",
+    "category": "Paid",
+    "price": "49",
+    "priceCurrency": "AUD",
+    "url": "https://www.clearedfortakeoff.com.au/#pricing"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT6H"
+  }
 }
 </script>
 <meta name="theme-color" content="#12283F">
@@ -827,14 +774,70 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How much does the Cleared For Take-Off course cost?", "acceptedAnswer": { "@type": "Answer", "text": "The self-paced course is $49 AUD with lifetime access. Module 1 is completely free to preview, with no payment details required." } },
-    { "@type": "Question", "name": "Do I need to be good with technology?", "acceptedAnswer": { "@type": "Answer", "text": "No. The course is built for complete beginners, in plain English, at your own pace. There is no jargon and nothing to keep up with." } },
-    { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Module 1 is free, with no payment details, so you can see exactly how it teaches before you decide." } },
-    { "@type": "Question", "name": "Which AI tools does it cover?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT, Claude, Gemini and Copilot. You choose one to start with, and the skills carry straight across to the others." } },
-    { "@type": "Question", "name": "How long does the course take?", "acceptedAnswer": { "@type": "Answer", "text": "Six short modules, a few hours of video in total, done at whatever pace suits you." } },
-    { "@type": "Question", "name": "Is the course right for my line of work?", "acceptedAnswer": { "@type": "Answer", "text": "Most likely. The same course is told for creators, small business, professionals, trades, health and care, non-profits, education, hospitality and retail, real estate, and later life. Pick the door that sounds like you." } },
-    { "@type": "Question", "name": "Is there a version for children?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Junior AI Navigators (ages 8 to 11) and Senior AI Pilots (ages 12 to 16) are on the way. Join the waitlist on the Kids and Teens page." } },
-    { "@type": "Question", "name": "Will the AI tools train on my data?", "acceptedAnswer": { "@type": "Answer", "text": "The course shows you how to set the tools up privately, including turning off the setting that lets them train on you. You stay in control throughout." } }
+    {
+      "@type": "Question",
+      "name": "How much does the Cleared For Take-Off course cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The self-paced course is $49 AUD with lifetime access. Module 1 is completely free to preview, with no payment details required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be good with technology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The course is built for complete beginners, in plain English, at your own pace. There is no jargon and nothing to keep up with."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Module 1 is free, with no payment details, so you can see exactly how it teaches before you decide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI tools does it cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT, Claude, Gemini and Copilot. You choose one to start with, and the skills carry straight across to the others."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the course take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Six short modules, a few hours of video in total, done at whatever pace suits you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the course right for my line of work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most likely. The same course is told for creators, small business, professionals, trades, health and care, non-profits, education, hospitality and retail, real estate, and later life. Pick the door that sounds like you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a version for children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Junior AI Navigators (ages 8 to 11) and Senior AI Pilots (ages 12 to 16) are on the way. Join the waitlist on the Kids and Teens page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the AI tools train on my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The course shows you how to set the tools up privately, including turning off the setting that lets them train on you. You stay in control throughout."
+      }
+    }
   ]
 }
 </script>
@@ -1041,6 +1044,96 @@ footer a:active { color: #fff; }
 @media (prefers-reduced-motion: reduce) { footer a, .audindex a { transition: none; } }
 </style>
 <!-- @endchrome:css -->
+<!-- @chrome:schema — DO NOT EDIT BELOW — generated by tools/build-chrome.mjs from partials/ -->
+<script type="application/ld+json" id="site-graph">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.clearedfortakeoff.com.au/#org",
+      "name": "Cleared For Take-Off Academy",
+      "alternateName": "C4TO Academy",
+      "url": "https://www.clearedfortakeoff.com.au/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.clearedfortakeoff.com.au/#logo",
+        "url": "https://www.clearedfortakeoff.com.au/assets/og-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "caption": "Cleared For Take-Off Academy"
+      },
+      "image": {
+        "@id": "https://www.clearedfortakeoff.com.au/#logo"
+      },
+      "description": "Calm, jargon-free AI training for everyday adults, taught in plain English for Australian beginners.",
+      "slogan": "AI for Grown-Ups",
+      "email": "info@wildheartspublishing.com.au",
+      "inLanguage": "en-AU",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Canberra",
+        "addressRegion": "ACT",
+        "addressCountry": "AU"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@wildheartspublishing.com.au",
+        "areaServed": "AU",
+        "availableLanguage": "English"
+      },
+      "parentOrganization": {
+        "@id": "https://www.clearedfortakeoff.com.au/#publisher"
+      },
+      "founder": {
+        "@id": "https://www.clearedfortakeoff.com.au/about/#naomi"
+      },
+      "knowsAbout": [
+        "Artificial intelligence for beginners",
+        "ChatGPT, Claude, Gemini and Copilot for non-technical users",
+        "AI safety for families",
+        "Plain-English technology training"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.clearedfortakeoff.com.au/#publisher",
+      "name": "Wild Hearts Publishing Pty Ltd",
+      "legalName": "Wild Hearts Publishing Pty Ltd",
+      "taxID": "34 695 911 025",
+      "url": "https://www.clearedfortakeoff.com.au/",
+      "logo": {
+        "@id": "https://www.clearedfortakeoff.com.au/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Canberra",
+        "addressRegion": "ACT",
+        "addressCountry": "AU"
+      },
+      "subOrganization": {
+        "@id": "https://www.clearedfortakeoff.com.au/#org"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.clearedfortakeoff.com.au/#website",
+      "name": "Cleared For Take-Off Academy",
+      "url": "https://www.clearedfortakeoff.com.au/",
+      "inLanguage": "en-AU",
+      "publisher": {
+        "@id": "https://www.clearedfortakeoff.com.au/#org"
+      }
+    }
+  ]
+}
+</script>
+<!-- @endchrome:schema -->
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
