@@ -2166,51 +2166,7 @@ footer a:active { color: #fff; }
   }
 })();
 </script>
-<script>
-(function(){
-  var f=document.querySelector('.cform');
-  if(!f) return;
-  var s=document.createElement('p');
-  s.setAttribute('role','status');
-  s.style.cssText='margin-top:14px;font-size:16px;font-weight:700;display:none';
-  f.appendChild(s);
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var btn=f.querySelector('button[type="submit"]'), orig=btn.innerHTML;
-    btn.disabled=true; btn.innerHTML='Sending\u2026'; s.style.display='none';
-    function val(id){var el=f.querySelector(id); return el?el.value:'';}
-    var payload={name:val('#ct-name'),email:val('#ct-email'),role:val('#ct-role'),organisation:val('#ct-org'),enquiry_type:val('#ct-interest'),challenge:val('#ct-msg')};
-    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-      .then(function(r){ if(!r.ok) throw 0;
-        s.style.display='block'; s.style.color='#1F7A4D';
-        s.textContent='Thank you. We will be in touch within 48 hours.'; f.reset();
-      })
-      .catch(function(){
-        s.style.display='block'; s.style.color='#B23A3A';
-        s.textContent='Something went wrong. Please email info@wildheartspublishing.com.au';
-      })
-      .finally(function(){ btn.disabled=false; btn.innerHTML=orig; });
-  });
-})();
-/* Mobile nav toggle */
-(function(){
-  var head = document.querySelector('.site-head');
-  var btn = head && head.querySelector('.navtoggle');
-  var panel = document.getElementById('site-nav-mobile');
-  if(!btn || !panel) return;
-  function setOpen(open){
-    head.classList.toggle('nav-open', open);
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  }
-  btn.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!head.classList.contains('nav-open')); });
-  panel.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
-  document.addEventListener('click', function(e){ if(head.classList.contains('nav-open') && !head.contains(e.target)) setOpen(false); });
-  // close the menu if resized up to desktop
-  matchMedia('(min-width:881px)').addEventListener('change', function(m){ if(m.matches) setOpen(false); });
-})();
-</script>
+<script src="/assets/enquiry-form.js" defer></script>
 <script src="/assets/takeoff.js" defer></script>
 <script src="/assets/nightsky.js" defer></script>
 <script src="/assets/site-chrome.js" defer></script>
