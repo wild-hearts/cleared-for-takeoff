@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Site chrome — header, footer, audience directory.
+   Site chrome: header, footer, audience directory.
    Injected into every page by tools/build-chrome.mjs. Do not edit inside the
    generated blocks in the page files; edit this file and re-run the build.
 
