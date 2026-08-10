@@ -1,0 +1,24 @@
+{
+  "_comment": "FT-12. Every price the site asserts, in one place. tools/check-prices.mjs verifies that no page states a price this file does not, so a stale figure fails the build instead of becoming a structured-data mismatch and, for a paid course sold in Australia, a consumer-law problem. Change a price here and in the page copy together; the check will tell you if you miss one.",
+  "currency": "AUD",
+  "course": {
+    "self_paced": "49.00",
+    "_note": "The self-paced course. Asserted in JSON-LD on the homepage and all ten audience pages."
+  },
+  "group": {
+    "up_to_2": "199",
+    "up_to_5": "399",
+    "up_to_10": "699",
+    "_note": "Indicative only. The homepage labels these 'Indicative placeholder pricing' and the commercial pages repeat that framing. Do not present them as fixed until they are."
+  },
+  "book": {
+    "amazon": "9.89",
+    "_note": "MANUAL RECONCILIATION REQUIRED. This is an Amazon listing price that Amazon can change without telling us. Nothing here updates it automatically. Check it whenever you touch /book/, and treat a mismatch between this figure and the live Amazon listing as a real problem rather than a rounding error."
+  },
+  "prose_examples": {
+    "_note": "Dollar figures that appear in article or page prose as examples, not as anything we charge. Listed so the price check does not flag them and so a real price can never hide among them.",
+    "quote_example_blog": "140",
+    "donation_example_nonprofits": "250",
+    "reader_example": "10"
+  }
+}

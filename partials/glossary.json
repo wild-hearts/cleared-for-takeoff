@@ -1,0 +1,102 @@
+[
+ {
+  "slug": "artificial-intelligence-ai",
+  "name": "Artificial intelligence (AI)",
+  "definition": "Software that can do tasks we used to think needed a human, like writing, summarising or recognising a picture. It is not alive and not thinking; it is a very capable tool."
+ },
+ {
+  "slug": "generative-ai",
+  "name": "Generative AI",
+  "definition": "AI that makes new content, words, images, audio or code, rather than just sorting or finding things. The chat tools you have heard of are generative AI."
+ },
+ {
+  "slug": "large-language-model-llm",
+  "name": "Large language model (LLM)",
+  "definition": "The engine inside chat tools like ChatGPT and Claude. It is a system that has read an enormous amount of writing and is very good at predicting what words should come next. That prediction is how it talks with you."
+ },
+ {
+  "slug": "prompt",
+  "name": "Prompt",
+  "definition": "What you type to an AI. Your instruction or question. A clear, specific prompt gets a far more useful answer than a vague one."
+ },
+ {
+  "slug": "token",
+  "name": "Token",
+  "definition": "The small chunks of text an LLM reads and writes, roughly a word or part of a word. Tools count usage and length in tokens. You almost never need to think about them."
+ },
+ {
+  "slug": "hallucination",
+  "name": "Hallucination",
+  "definition": "When AI states something false in the same confident, fluent tone it uses when it is right. It is not lying; it predicted what sounded right. This is why you verify any fact before relying on it."
+ },
+ {
+  "slug": "training-data",
+  "name": "Training data",
+  "definition": "The huge collection of text and other content an AI learned from. Most tools learned up to a certain date, which is why they can be wrong about very recent events."
+ },
+ {
+  "slug": "model",
+  "name": "Model",
+  "definition": "A single AI system, like a specific version of ChatGPT or Claude. New models are released regularly, usually a bit more capable than the last."
+ },
+ {
+  "slug": "context-window",
+  "name": "Context window",
+  "definition": "How much an AI can hold in mind at once in a conversation, including what you have said and what it has replied. Very long chats can push earlier details out of view."
+ },
+ {
+  "slug": "machine-learning",
+  "name": "Machine learning",
+  "definition": "The broader field of teaching software to find patterns from examples rather than being given fixed rules. LLMs are one kind of machine learning."
+ },
+ {
+  "slug": "multimodal",
+  "name": "Multimodal",
+  "definition": "An AI that can work with more than just text, for example reading an image you upload, or listening to your voice. Most leading tools are now multimodal."
+ },
+ {
+  "slug": "ai-agent",
+  "name": "AI agent",
+  "definition": "An AI set up to take steps on its own toward a goal, such as booking or filling something in, rather than only answering. Useful, but it deserves closer supervision."
+ },
+ {
+  "slug": "inference",
+  "name": "Inference",
+  "definition": "The moment an AI produces an answer from your prompt. When people say a tool is \"thinking\", this is what is happening."
+ },
+ {
+  "slug": "fine-tuning",
+  "name": "Fine-tuning",
+  "definition": "Taking a general model and training it a little more on specific material so it is better at a particular job or style."
+ },
+ {
+  "slug": "bias",
+  "name": "Bias",
+  "definition": "When an AI reflects unfair patterns from its training data, for example treating some groups or topics differently. A reason to keep a human checking important decisions."
+ },
+ {
+  "slug": "deepfake",
+  "name": "Deepfake",
+  "definition": "A fake image, video or voice made by AI to look or sound like a real person. The reason a family code word and a second check on any money request now matter."
+ },
+ {
+  "slug": "guardrails",
+  "name": "Guardrails",
+  "definition": "The limits a company builds into an AI to stop it doing harmful things. Helpful, but not perfect, so your own judgement still matters."
+ },
+ {
+  "slug": "api",
+  "name": "API",
+  "definition": "A way for one piece of software to talk to another. It is how apps connect to an AI behind the scenes. A term you will see but rarely need."
+ },
+ {
+  "slug": "open-weight-open-source-model",
+  "name": "Open weight (open source) model",
+  "definition": "A model whose inner workings are released publicly so anyone can run or build on it, as opposed to one only used through a company\u2019s app."
+ },
+ {
+  "slug": "prompt-engineering",
+  "name": "Prompt engineering",
+  "definition": "A grand name for the simple skill of writing clear instructions to an AI: giving it context, a role, the format you want, and refining from there."
+ }
+]

@@ -1,0 +1,28 @@
+{
+  "_comment": "Secondary page-anchor navigation, rendered beneath the canonical site header. Keyed by page path relative to the repo root. A page with no entry gets no sub-nav. Anchor targets are verified against the page at build time, so a typo or a removed section fails the build rather than shipping a dead link.",
+
+  "index.html": [
+    { "href": "#flightplan", "label": "Flight plan" },
+    { "href": "#audiences", "label": "Who it&rsquo;s for" },
+    { "href": "#consulting", "label": "Consulting" },
+    { "href": "#pricing", "label": "Pricing" }
+  ],
+
+  "book/index.html": [
+    { "href": "#buy", "label": "Get the book" }
+  ],
+
+  "kids-and-teens/index.html": [
+    { "href": "#tracks", "label": "The two tracks" },
+    { "href": "#safe", "label": "For parents" },
+    { "href": "#curriculum", "label": "What they learn" },
+    { "href": "#waitlist", "label": "Join the waitlist" }
+  ],
+
+  "_audience_default": [
+    { "href": "#flightplan", "label": "Flight plan" },
+    { "href": "#outcomes", "label": "Outcomes" },
+    { "href": "#included", "label": "What&rsquo;s included" },
+    { "href": "#pricing", "label": "Pricing" }
+  ]
+}
