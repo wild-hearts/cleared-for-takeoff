@@ -242,6 +242,21 @@ footer .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 @media (max-width: 560px) { .subnav .wrap { gap: 16px; min-height: 42px; } .subnav a { font-size: 13.5px; } }
 @media (prefers-reduced-motion: reduce) { .subnav a { transition: none; } }
 
+/* ---------- hero quick facts ----------
+   The plain, factual statement of what the product is, sitting under the hero
+   copy on the audience pages. The hero sells; this block is the one an answer
+   engine or a featured snippet can lift, so it names the format, the length,
+   the price and the free module in flat language and does not try to persuade.
+   Deliberately identical across the audience pages, because the product is. */
+.quickfacts {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px; line-height: 1.6; color: #cfe0f0;
+  max-width: 60ch; margin: 0 0 30px;
+  padding: 14px 0 14px 18px; border-left: 3px solid #C8862B;
+}
+.quickfacts b { color: #fff; font-weight: 600; }
+@media (max-width: 560px) { .quickfacts { font-size: 15.5px; padding-left: 14px; } }
+
 /* ---------- audience directory ----------
    The ten field pages used to be reachable only from a section two thirds
    down the homepage, so nobody could find them and no ranking signal reached
@@ -418,7 +433,6 @@ footer a:active { color: #fff; }
   <span class="scroll-progress" aria-hidden="true"></span>
 </header>
 <!-- @endchrome:header -->
-<!-- @endchrome:header -->
 
 <main>
   <div class="eyebrow">For libraries, councils and community groups</div>
@@ -522,7 +536,6 @@ footer a:active { color: #fff; }
     <nav aria-label="Footer"><a href="/ai-course-for-beginners/">The course</a> &middot; <a href="/who-its-for/">Who it&rsquo;s for</a> &middot; <a href="/kids-and-teens/">Kids &amp; Teens</a> &middot; <a href="/book/">The book</a> &middot; <a href="/blog/">Articles</a> &middot; <a href="/ai-glossary/">AI glossary</a> &middot; <a href="/about/">About</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="/course/">Student login</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/refunds/">Refunds</a></nav>
   </div>
 </footer>
-<!-- @endchrome:footer -->
 <!-- @endchrome:footer -->
 <script src="/assets/site-chrome.js" defer></script>
 </body>

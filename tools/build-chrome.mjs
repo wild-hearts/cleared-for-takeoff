@@ -194,10 +194,23 @@ function normaliseMarkers(html) {
   for (const name of REGION_NAMES) {
     const one = new RegExp(`${escapeRe(openTag(name))}[\\s\\S]*?${escapeRe(closeTag(name))}`, 'g');
     const found = html.match(one);
-    if (!found || found.length < 2) continue;
-    // Keep the first occurrence, drop the rest.
-    let seen = 0;
-    html = html.replace(one, (m) => (seen++ === 0 ? m : ''));
+    if (found && found.length > 1) {
+      // Keep the first occurrence, drop the rest.
+      let seen = 0;
+      html = html.replace(one, (m) => (seen++ === 0 ? m : ''));
+    }
+
+    /* Collapsing a duplicated region can strand its closing marker, because
+       the non-greedy match above ends at the *first* close it finds. The
+       build stays correct either way, but the orphans are dead markup that
+       reads like a nesting bug. Drop every close after the one that actually
+       terminates the region. */
+    const region = new RegExp(`${escapeRe(openTag(name))}[\\s\\S]*?${escapeRe(closeTag(name))}`);
+    const m = html.match(region);
+    if (!m) continue;
+    const end = m.index + m[0].length;
+    const tail = html.slice(end).split(closeTag(name) + '\n').join('').split(closeTag(name)).join('');
+    html = html.slice(0, end) + tail;
   }
   return html;
 }
