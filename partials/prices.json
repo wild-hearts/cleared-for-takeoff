@@ -6,10 +6,12 @@
     "_note": "The self-paced course. Asserted in JSON-LD on the homepage and all ten audience pages."
   },
   "group": {
-    "up_to_2": "199",
-    "up_to_5": "399",
-    "up_to_10": "699",
-    "_note": "Indicative only. The homepage labels these 'Indicative placeholder pricing' and the commercial pages repeat that framing. Do not present them as fixed until they are."
+    "_note": "REMOVED FROM THE SITE 11 Aug 2026. These were placeholder figures invented by an AI session on 13 June 2026 (commit 1fae66a) with no costing behind them, and they sat live on the homepage for two months. Nothing ever charged them: the group tiers have always gone to the contact form and Stripe has no group price ID. Kept here as a record of what was shown, NOT as prices. The site now says every group is quoted. Put real numbers back only once they are costed, and add them to the 'group' block below so the price check starts guarding them again.",
+    "_shown_until_2026_08_11": {
+      "up_to_2": "199",
+      "up_to_5": "399",
+      "up_to_10": "699"
+    }
   },
   "book": {
     "amazon": "9.89",
