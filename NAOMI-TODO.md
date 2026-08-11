@@ -77,6 +77,24 @@ Then tell me which of these it is:
   marketing pages.
 - **It is broken or empty.** Also worth knowing, and quick to fix.
 
+**Why this matters more than it looks.** Google treats a subdomain as a
+separate site. A subdomain for the gated learning platform is completely
+normal and not a problem. Public marketing content living on both is, because
+it splits authority, analytics, sitemaps, Search Console properties and
+internal linking across two sites that then compete with each other.
+
+The architecture to aim for:
+
+- `www.clearedfortakeoff.com.au` is the public acquisition site: audience
+  pages, the course sales page, consulting, the book, articles, contact.
+- `academy.` is authenticated student and course delivery, and nothing else
+  that needs to rank.
+- If there is a public blog on `academy.`, either move it to
+  `www.clearedfortakeoff.com.au/blog/` or link it hard back to the matching
+  pages on the main domain with descriptive anchor text.
+- If `academy.` stays public in any form it needs **its own sitemap and its own
+  Search Console property**. A sitemap on the main domain cannot cover it.
+
 ---
 
 ## 4. Confirm three claims before the new pages go live
