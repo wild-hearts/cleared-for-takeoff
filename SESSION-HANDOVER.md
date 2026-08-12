@@ -197,3 +197,55 @@ npm run check    # verify chrome, glossary and prices are in sync; fails loudly
 
 Edit `partials/site-head.html` to change a nav link. Everything else follows.
 `partials/README.md` explains the mechanism and the one specificity trap in it.
+
+---
+
+# Part 4 · Added after the first handover
+
+## Claims and pricing
+
+- **The $199 / $399 / $699 group tiers are off the site.** Invented by an AI
+  session on 13 June with no costing behind them, live for two months. All three
+  tiers now read "Quoted per group"; the 2 / 5 / 10 structure stays because
+  describing scale does not assert a price. The "Most popular" ribbon went too,
+  since nothing has ever sold at those prices. Figures kept in
+  `partials/prices.json` as a dated record, clearly marked as not prices.
+- **`/for-health/` no longer claims the tools "never see patient data".** That
+  was an absolute claim about third-party vendor behaviour, unverifiable, and
+  contradicted by the page's own framing. Now the safety comes from the practice
+  not entering the data, which is the thing the course actually teaches.
+- **A claims audit across the commercial brands** is at
+  `~/Documents/portfolio-claims-audit-2026-08-11.md`. It found the same failure
+  mode had already happened on CVelo and been caught there.
+
+## The second storefront
+
+`academy.clearedfortakeoff.com.au` runs its own Stripe checkout and sells the
+same course. It promised a **30-day** refund while `www` promised **14**. You
+confirmed 14 is real, so the academy copy is aligned in nine places including
+the post-purchase screen.
+
+**Still open there:** the refund contact differs (`naomi@wildheartshq.com` vs
+`info@wildheartspublishing.com.au`; both work, neither is broken), and it still
+takes payment rather than sending buyers to `www`. Anyone who bought while the
+30-day promise showed should be honoured at 30 days.
+
+## Content clusters
+
+The clusters were one-directional: audience pages linked down to articles,
+articles did not link back. All 24 pairings are now reciprocal, generated from
+`partials/clusters.json` so they cannot drift.
+
+Two new articles, both ~1,650 words with visible FAQs matching their schema:
+
+- `/blog/will-ai-take-my-job/` — the brief names this as one of the highest-intent
+  searches the business will ever get, and it had no page.
+- `/blog/when-not-to-use-ai/` — Module 6 content, never published, and the most
+  on-brand piece the site could carry.
+
+Neither contains a statistic, deliberately.
+
+**Cluster depth: 7 of 11 audience pages now at the four-article target**, from zero.
+Still short by one each: for-education, for-health, for-later-life, for-nonprofits. One more article
+serving those four closes it. Add it to `partials/clusters.json` and both link
+directions follow.
