@@ -146,3 +146,56 @@ Worth its own pass when you have an hour.
 - **`aggregateRating` or `review` markup.** Not until real, collected, displayed
   reviews exist on the page. Fabricated ratings are a direct Google penalty and,
   for a paid course sold in Australia, a consumer-law exposure.
+
+
+---
+
+## 6. Connect c4to-academy to GitHub (10 minutes, and it fixes a recurring risk)
+
+The refund fix for `academy.clearedfortakeoff.com.au` is written and pushed but
+**not live**. The site still promises 30 days.
+
+The reason is worth knowing: that Vercel project has **never been connected to
+GitHub**. Every deploy in its history was a manual upload from the laptop, and
+the last successful one was 42 days ago. `vercel --prod` now fails on it with
+`Not authorized` and `UNKNOWN`.
+
+1. Open **https://vercel.com** and sign in.
+2. Check the team selector at the top left says **info-33179269s-projects**, not
+   your personal account.
+3. Click the project **c4to-academy**.
+4. Click **Settings** along the top, then **Git** in the left menu.
+5. Click **Connect Git Repository**, choose **GitHub**, pick
+   **wild-hearts/c4to-academy**.
+6. Approve the GitHub authorisation if it asks.
+7. Set the production branch to **main** and save.
+
+**Success looks like:** the Deployments tab shows a new build within a minute or
+two, labelled `main` with the message *"Add a fail-closed env guard"*. When it
+goes green, **https://academy.clearedfortakeoff.com.au/refund** reads
+**14-day money-back guarantee**.
+
+**If it fails with `UNKNOWN` too**, stop and tell me. That confirms the build
+problem is team-wide rather than project-specific, and it is worth raising with
+Vercel support. It has blocked this project for six weeks.
+
+**Why this matters beyond one deploy.** Connecting Git means Vercel builds
+server-side with its own environment variables, so nothing from your laptop is
+baked in. Without it, deploying means a local build that bakes `.env.local`,
+which on this project holds live Stripe keys and three price IDs, into a site
+that takes real payments.
+
+### The backstop, if Git connection is not possible
+
+`npm run deploy:prod` in `c4to-academy` now runs a guard first. It refuses to
+build if any variable is empty, if the Stripe secret and publishable keys are in
+different modes, if test keys would reach the live storefront, or if the app URL
+points at localhost. It prints fingerprints rather than values. Use it only if
+the Git route is genuinely unavailable.
+
+### Meanwhile
+
+Anyone buying through the academy site today still sees the 30-day promise, and
+you have agreed they get 30 days. That window runs from **2 July 2026** and stays
+open until the fix is live. The rule and how to identify the cohort are recorded
+in the ops spine at `~/Documents/crewible-ops`.
