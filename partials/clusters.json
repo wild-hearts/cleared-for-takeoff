@@ -1,0 +1,55 @@
+{
+  "_comment": "Reciprocal cluster links. The audience pages already link DOWN to the articles that serve them; that mapping was a curated human judgement and is the source of truth here. tools/build-clusters.mjs reads it and injects the matching link UP from each article, so every cluster is bidirectional. Add a pairing here and both directions follow. Labels are the audience pages' own pill text.",
+  "audience_labels": {
+    "/for-creators/": "For authors, musicians &amp; content makers",
+    "/for-education/": "For teachers, tutors &amp; trainers",
+    "/for-health/": "For clinics, practices &amp; care teams",
+    "/for-hospitality-retail/": "For cafes, venues, shops &amp; salons",
+    "/for-later-life/": "AI for grown-ups, from scratch",
+    "/for-nonprofits/": "For charities, clubs &amp; community groups",
+    "/for-professionals/": "For knowledge workers &amp; managers",
+    "/for-property/": "For agents, property &amp; strata managers",
+    "/for-small-business/": "For solopreneurs &amp; small teams",
+    "/for-trades/": "For tradies &amp; contractors on the tools",
+    "/kids-and-teens/": "AI courses for kids and teenagers"
+  },
+  "article_serves": {
+    "/blog/how-to-spot-when-ai-is-wrong/": [
+      "/for-creators/",
+      "/for-education/",
+      "/for-health/",
+      "/for-property/",
+      "/for-trades/",
+      "/kids-and-teens/"
+    ],
+    "/blog/is-ai-safe-for-kids/": [
+      "/for-education/",
+      "/kids-and-teens/"
+    ],
+    "/blog/is-it-too-late-to-learn-ai/": [
+      "/for-later-life/"
+    ],
+    "/blog/prompt-library/": [
+      "/for-hospitality-retail/",
+      "/for-nonprofits/",
+      "/for-small-business/",
+      "/for-trades/"
+    ],
+    "/blog/stop-ai-training-on-your-data/": [
+      "/for-health/",
+      "/for-professionals/",
+      "/for-property/",
+      "/for-small-business/",
+      "/kids-and-teens/"
+    ],
+    "/blog/which-ai-tool-to-start-with/": [
+      "/for-hospitality-retail/",
+      "/for-later-life/"
+    ],
+    "/blog/write-better-prompts-four-controls/": [
+      "/for-creators/",
+      "/for-nonprofits/",
+      "/for-professionals/"
+    ]
+  }
+}

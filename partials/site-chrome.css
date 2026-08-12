@@ -155,6 +155,31 @@ footer .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 .quickfacts b { color: #fff; font-weight: 600; }
 @media (max-width: 560px) { .quickfacts { font-size: 15.5px; padding-left: 14px; } }
 
+/* ---------- article cluster links ----------
+   The audience pages already linked down to their articles. This is the link
+   back up, so a reader who arrived on an article from search has a route to
+   the page that actually sells to them. Injected by tools/build-clusters.mjs. */
+.serves {
+  max-width: 70ch; margin: 44px auto 0; padding: 26px 28px;
+  background: #f4f8fc; border: 1px solid #d7e3ee; border-radius: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.serves h2 { font-family: Georgia, serif; color: #1B3A5B; font-size: 20px; margin: 0 0 8px; }
+.serves p { color: #5A6B7B; font-size: 15.5px; line-height: 1.6; margin: 0 0 16px; max-width: 62ch; }
+.serves ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.serves li { margin: 0; }
+.serves ul a {
+  display: inline-block; font-size: 15px; line-height: 1.3; padding: 8px 14px;
+  border-radius: 999px; border: 1px solid #d7e3ee; background: #fff;
+  color: #1B3A5B; text-decoration: none; transition: border-color .15s ease, background .15s ease;
+}
+.serves ul a:focus-visible { outline: 3px solid #C8862B; outline-offset: 2px; }
+.serves .more { margin: 16px 0 0; font-size: 15px; }
+.serves .more a { color: #8F5E17; }
+@media (hover: hover) and (pointer: fine) { .serves ul a:hover { border-color: #C8862B; background: #fffaf2; } }
+@media (prefers-reduced-motion: reduce) { .serves ul a { transition: none; } }
+@media (max-width: 560px) { .serves { padding: 22px 20px; } .serves ul a { font-size: 14.5px; padding: 7px 12px; } }
+
 /* ---------- audience directory ----------
    The ten field pages used to be reachable only from a section two thirds
    down the homepage, so nobody could find them and no ranking signal reached
