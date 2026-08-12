@@ -42,9 +42,30 @@
       "/for-small-business/",
       "/kids-and-teens/"
     ],
+    "/blog/when-not-to-use-ai/": [
+      "/for-creators/",
+      "/for-education/",
+      "/for-health/",
+      "/for-hospitality-retail/",
+      "/for-later-life/",
+      "/for-nonprofits/",
+      "/for-professionals/",
+      "/for-property/",
+      "/for-small-business/",
+      "/for-trades/",
+      "/kids-and-teens/"
+    ],
     "/blog/which-ai-tool-to-start-with/": [
       "/for-hospitality-retail/",
       "/for-later-life/"
+    ],
+    "/blog/will-ai-take-my-job/": [
+      "/for-creators/",
+      "/for-hospitality-retail/",
+      "/for-professionals/",
+      "/for-property/",
+      "/for-small-business/",
+      "/for-trades/"
     ],
     "/blog/write-better-prompts-four-controls/": [
       "/for-creators/",
