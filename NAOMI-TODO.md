@@ -1,201 +1,205 @@
-# Things only you can do
+# Your checklist
 
-Everything buildable in this repo is done. These five need your login, your
-judgement, or a fact I do not have. Ordered by what unblocks the most.
+**Updated 13 August 2026.** This replaces the earlier version. Anything not on
+this list is either done or is mine to do.
 
----
-
-## 1. Connect Google Search Console (30 minutes, unblocks everything else)
-
-Both briefs call this the one true blocker, and they are right. Until it is
-connected, nobody, me included, can tell you whether the site is indexed, what
-it ranks for, or whether any of this month's work moved anything.
-
-1. Open a browser and go to **https://search.google.com/search-console**
-2. Sign in with the Google account that owns the site's analytics.
-3. On the left, click the property dropdown at the very top, then **Add property**.
-4. Choose the **Domain** box on the left, not the URL prefix box on the right.
-   Type `clearedfortakeoff.com.au` with no `https://` and no `www`. Click **Continue**.
-5. Google shows a **TXT record**. Copy it.
-6. In a new tab go to wherever the domain's DNS lives, add a TXT record on the
-   root (`@`), paste the value, save.
-7. Back in Search Console, click **Verify**. If it fails, wait an hour and click
-   Verify again; DNS is slow and this is normal.
-8. Once verified, click **Sitemaps** in the left menu, type `sitemap.xml` in the
-   box, click **Submit**.
-9. Click **URL Inspection** at the top and paste each of these in turn, pressing
-   Enter and then **Test live URL**:
-   - `https://www.clearedfortakeoff.com.au/`
-   - `https://www.clearedfortakeoff.com.au/for-later-life/`
-   - `https://www.clearedfortakeoff.com.au/ai-workshops-for-libraries-and-community-groups/`
-   - `https://www.clearedfortakeoff.com.au/blog/`
-   - `https://www.clearedfortakeoff.com.au/free-lesson/`
-
-**Success looks like:** each URL says "URL is on Google" or "URL is available to
-Google". The Coverage report a few days later tells you how many of the 33
-sitemap URLs are actually indexed.
-
-**What it answers:** whether the thin-index worry is real or whether the site is
-simply young. Do not let anyone rebuild anything on a guess before this exists.
+Ordered by urgency. Times are honest estimates.
 
 ---
 
-## 2. Turn on Vercel Web Analytics (FT-13, two minutes)
+# 🔴 Today
 
-GA4 is installed and working, so this is not urgent. It gives you per-route
-numbers with no cookie-banner implications, which is how you find out which of
-the eleven audience doors actually earns its keep.
+## 1. Replace the Claude token · 5 minutes
 
-1. Go to **https://vercel.com** and sign in.
-2. Open the project called **cleared-for-takeoff**.
-3. Click the **Analytics** tab along the top.
-4. Click **Enable**.
+**Why:** it was visible on screen in a screenshot, so treat it as burned. It is
+the token the automation engine uses to run every night.
 
-**Success looks like:** the tab stops offering an Enable button and starts
-showing a (empty at first) chart. Data appears within a day.
+1. On your **Mac**, open **Terminal**. Press **⌘ + Space**, type `Terminal`, press **Enter**.
+2. Type this and press **Enter**:
+   ```
+   claude setup-token
+   ```
+3. Your browser opens. Approve it. Terminal then **prints** a token starting `sk-ant-`.
+   It does not save it anywhere. Leave the window open.
+4. Select that token with your mouse and copy it (**⌘ + C**).
+5. Paste this whole line into Terminal and press **Enter**:
+   ```
+   bash -c 'read -rp "Paste the token then press Enter: " T; printf "%s" "$T" | ssh -i ~/.ssh/wildhearts_server root@168.144.175.96 /root/save-token.sh'
+   ```
+6. It asks you to paste. Press **⌘ + V**, then **Enter**.
 
-Tell me once it is on and I will add the script tag.
+**Success:** it confirms the token was saved. If you paste the wrong thing it
+refuses and tells you what it got.
 
----
+> `/root/` is on the **DigitalOcean server**, not your Mac. That command reaches
+> across for you, so you never have to find it yourself.
 
-## 3. Check what the second domain is serving (FT-14, ten minutes)
+## 2. Watch the 1pm engine run · 2 minutes, at about 1:05pm
 
-`c4toacademy.com`, `www.c4toacademy.com` and `academy.clearedfortakeoff.com.au`
-all point at a **different** Vercel project called `c4to-academy`, last deployed
-April 2026. I have not touched it.
+**Why:** the automation engine is now scheduled. Today is the first time it runs
+by itself on the server. MMP only. It runs at **6am, 1pm and 7pm** Sydney time.
 
-1. Open **https://c4toacademy.com** in a browser.
-2. Look at what loads.
-
-Then tell me which of these it is:
-
-- **It is the gated learning platform, nothing marketed.** Fine. I will confirm
-  it is `noindex` and close the ticket.
-- **It shows course marketing copy that also exists on clearedfortakeoff.com.au.**
-  That is genuine cross-domain duplication and the two sites are competing with
-  each other. I will add canonicals pointing at the main domain, or strip the
-  marketing pages.
-- **It is broken or empty.** Also worth knowing, and quick to fix.
-
-**Why this matters more than it looks.** Google treats a subdomain as a
-separate site. A subdomain for the gated learning platform is completely
-normal and not a problem. Public marketing content living on both is, because
-it splits authority, analytics, sitemaps, Search Console properties and
-internal linking across two sites that then compete with each other.
-
-The architecture to aim for:
-
-- `www.clearedfortakeoff.com.au` is the public acquisition site: audience
-  pages, the course sales page, consulting, the book, articles, contact.
-- `academy.` is authenticated student and course delivery, and nothing else
-  that needs to rank.
-- If there is a public blog on `academy.`, either move it to
-  `www.clearedfortakeoff.com.au/blog/` or link it hard back to the matching
-  pages on the main domain with descriptive anchor text.
-- If `academy.` stays public in any form it needs **its own sitemap and its own
-  Search Console property**. A sitemap on the main domain cannot cover it.
-
----
-
-## 4. Confirm three claims before the new pages go live
-
-The three new commercial pages carry three sentences I could not verify from
-anything already on the site. They render with an **amber outline** so you
-cannot miss them, and they are marked `data-confirm` in the HTML.
-
-| Page | Claim | I need |
-|---|---|---|
-| `/ai-workshops-for-libraries-and-community-groups/` | "The session is live and facilitated either way", i.e. online as well as in person | Do you run these online? |
-| `/ai-consulting/` | "We do not resell tools and we take no commission from any vendor" | True? It is a strong trust claim and worth being certain about |
-| `/ai-readiness-assessment/` | "Most of what matters comes from short conversations" | Roughly how much of a client's time does an assessment take? |
-
-Find them all with:
-
-```bash
-grep -rn "data-confirm" ai-consulting ai-readiness-assessment ai-workshops-for-libraries-and-community-groups
+Open **Terminal** and paste:
+```
+ssh -i ~/.ssh/wildhearts_server root@168.144.175.96 'ls -t /opt/crewible-engine/brands/mmp/.crewible/runs/*.log | head -1 | xargs tail -30'
 ```
 
-Once you tell me the answers I will write them in properly and remove the
-outline. **Do not deploy these three pages until then.**
+**Success:** you see a report about Murder Mystery Party. It may say it is
+waiting on something, which is fine and honest.
+
+**If it says it cannot find a state file and has stopped:** that is correct
+behaviour, not a fault. It refuses to invent a starting point. Tell me and I
+will confirm whether it is a genuine first run.
 
 ---
 
-## 5. Two accuracy items both briefs flagged, neither of them SEO
+# 🟠 This week
 
-Raised in the SEO brief and again in the Forge brief, still unresolved, and on a
-site whose whole pitch is honesty about AI they matter more than any ticket I
-have closed today.
+## 3. Google Search Console · 30 minutes · unblocks everything else
 
-- **The Sydney / Canberra inconsistency.** Something in the copy says Sydney
-  somewhere. The schema and `/contact/` both say Canberra. One of them is wrong.
-- **The unverified statistics.** Earlier audits flagged numbers in the copy with
-  no source. I have not gone looking for them, because deciding what is true is
-  your call, not mine.
+**Why:** without it, nobody, me included, can tell you what the site ranks for or
+whether any of this month's work moved anything. Every audit you have paid for
+has said this. It is the single highest-value thing on this list.
 
-Worth its own pass when you have an hour.
+1. Go to **https://search.google.com/search-console**
+2. Sign in with the Google account that owns the site's analytics.
+3. Top left, click the property dropdown, then **Add property**.
+4. Choose the **Domain** box on the **left**, not URL prefix on the right.
+5. Type `clearedfortakeoff.com.au` — no `https://`, no `www`. Click **Continue**.
+6. It shows a **TXT record**. Copy it.
+7. In a new tab, go to wherever the domain's DNS is managed. Add a TXT record on
+   the root (`@`), paste the value, save.
+8. Back in Search Console, click **Verify**. If it fails, wait an hour and try
+   again. DNS is slow; this is normal, not a mistake.
+9. Once verified: left menu → **Sitemaps** → type `sitemap.xml` → **Submit**.
 
----
+**Success:** the Coverage report appears within a few days and tells you how many
+of the 36 sitemap URLs Google has actually indexed.
 
-## Not doing, deliberately
+## 4. Ask Google to look at the eight new pages · 10 minutes
 
-- **FT-09, the anchor-text refinement.** The brief marks it P3 and optional, and
-  says explicitly not to spend a session on it. The homepage links already read
-  "For creators & writers", "For small business", "For later life". The only gain
-  available is adding a category noun, and it is not worth the edit.
-- **Any URL migration.** Both briefs are emphatic. The existing slugs stay.
-- **`aggregateRating` or `review` markup.** Not until real, collected, displayed
-  reviews exist on the page. Fabricated ratings are a direct Google penalty and,
-  for a paid course sold in Australia, a consumer-law exposure.
+Only after step 3. In Search Console, click **URL Inspection** at the top, paste
+each of these, press **Enter**, then click **Test live URL**:
 
+```
+https://www.clearedfortakeoff.com.au/ai-course-for-beginners/
+https://www.clearedfortakeoff.com.au/who-its-for/
+https://www.clearedfortakeoff.com.au/contact/
+https://www.clearedfortakeoff.com.au/ai-workshops-for-libraries-and-community-groups/
+https://www.clearedfortakeoff.com.au/ai-consulting/
+https://www.clearedfortakeoff.com.au/ai-readiness-assessment/
+https://www.clearedfortakeoff.com.au/blog/will-ai-take-my-job/
+https://www.clearedfortakeoff.com.au/blog/when-not-to-use-ai/
+```
 
----
+**Success:** each says "URL is available to Google". Then click **Request indexing**.
 
-## 6. Connect c4to-academy to GitHub (10 minutes, and it fixes a recurring risk)
+## 5. Connect c4to-academy to GitHub · 10 minutes
 
-The refund fix for `academy.clearedfortakeoff.com.au` is written and pushed but
-**not live**. The site still promises 30 days.
+**Why:** that Vercel project has never been connected, so every deploy is a manual
+upload from your laptop that bakes your live Stripe keys into the build. Connecting
+it means Vercel builds on its own servers and none of that happens.
 
-The reason is worth knowing: that Vercel project has **never been connected to
-GitHub**. Every deploy in its history was a manual upload from the laptop, and
-the last successful one was 42 days ago. `vercel --prod` now fails on it with
-`Not authorized` and `UNKNOWN`.
-
-1. Open **https://vercel.com** and sign in.
-2. Check the team selector at the top left says **info-33179269s-projects**, not
-   your personal account.
+1. Go to **https://vercel.com** and sign in.
+2. Top left, check the team says **info-33179269s-projects**, not your personal account.
 3. Click the project **c4to-academy**.
 4. Click **Settings** along the top, then **Git** in the left menu.
-5. Click **Connect Git Repository**, choose **GitHub**, pick
-   **wild-hearts/c4to-academy**.
-6. Approve the GitHub authorisation if it asks.
-7. Set the production branch to **main** and save.
+5. Click **Connect Git Repository** → **GitHub** → **wild-hearts/c4to-academy**.
+6. Approve the GitHub authorisation if asked.
+7. Set the production branch to **main**, save.
 
-**Success looks like:** the Deployments tab shows a new build within a minute or
-two, labelled `main` with the message *"Add a fail-closed env guard"*. When it
-goes green, **https://academy.clearedfortakeoff.com.au/refund** reads
-**14-day money-back guarantee**.
+**Success:** the Deployments tab shows a new build within a couple of minutes.
 
-**If it fails with `UNKNOWN` too**, stop and tell me. That confirms the build
-problem is team-wide rather than project-specific, and it is worth raising with
-Vercel support. It has blocked this project for six weeks.
+**If it fails with `UNKNOWN`:** stop and tell me. That means the build problem is
+across your whole Vercel team, and it is worth raising with Vercel support.
 
-**Why this matters beyond one deploy.** Connecting Git means Vercel builds
-server-side with its own environment variables, so nothing from your laptop is
-baked in. Without it, deploying means a local build that bakes `.env.local`,
-which on this project holds live Stripe keys and three price IDs, into a site
-that takes real payments.
+## 6. Two Vercel toggles · 5 minutes total
 
-### The backstop, if Git connection is not possible
+**Web Analytics:** vercel.com → project **cleared-for-takeoff** → **Analytics**
+tab → **Enable**. Tell me when it is on and I will add the tracking snippet.
 
-`npm run deploy:prod` in `c4to-academy` now runs a guard first. It refuses to
-build if any variable is empty, if the Stripe secret and publishable keys are in
-different modes, if test keys would reach the live storefront, or if the app URL
-points at localhost. It prints fingerprints rather than values. Use it only if
-the Git route is genuinely unavailable.
+**GA4_API_SECRET:** it is still not set, which means you cannot see checkouts
+actually complete. In the same project: **Settings** → **Environment Variables** →
+add `GA4_API_SECRET` with the value from your GA4 admin (Admin → Data Streams →
+your stream → Measurement Protocol API secrets → Create).
 
-### Meanwhile
+---
 
-Anyone buying through the academy site today still sees the 30-day promise, and
-you have agreed they get 30 days. That window runs from **2 July 2026** and stays
-open until the fix is live. The rule and how to identify the cohort are recorded
-in the ops spine at `~/Documents/crewible-ops`.
+# 🟡 Decisions only you can make
+
+## 7. Cost the group training packages
+
+The $199 / $399 / $699 tiers were invented by an AI session in June and are now
+**off the site** — all three read "Quoted per group". That is honest but it is a
+holding position.
+
+What I need: what a facilitated session actually costs you to prepare and deliver,
+and what you charged the last group you taught. Then the numbers go back with the
+price guard watching them.
+
+## 8. Honour 30 days for one group of buyers
+
+Already agreed, recorded here so it is not lost. Anyone who bought through
+**academy.clearedfortakeoff.com.au** between **2 July and 13 August 2026** saw a
+30-day refund promise. They get 30 days. Everyone else gets 14.
+
+It is written into the automation config, so the crew will apply it too.
+
+## 9. Does academy.clearedfortakeoff.com.au keep selling?
+
+It runs its own Stripe checkout and sells the same $49 course as the main site,
+and both are indexed by Google as separate sites competing with each other.
+
+Either it keeps selling and the two must be kept in step forever, or it becomes
+students-only and all buying happens on the main site. Today's refund mismatch
+was the first symptom of having two shops.
+
+## 10. Say publicly that operations are AI-assisted?
+
+Open since the operating plan was written. This is the brand whose promise is
+*"No jargon. No hype. No pretending to be someone you're not."*, sold to people
+anxious about AI. Deciding deliberately beats it surfacing in a student's question.
+
+---
+
+# 🟢 The biggest gap: proof
+
+There is still not one testimonial, star rating or customer photo anywhere on the
+site. Page quality is no longer the bottleneck; this is.
+
+## 11. Six testimonials
+
+`TESTIMONIALS-FILL-IN.md` has the fields and the reasons. The CSS and schema are
+built and waiting. About twenty minutes of my work once you paste in real quotes.
+
+I will not write placeholder ones. Invented testimonials breach Australian
+Consumer Law s18 and s29, the ACCC has acted on exactly this, and it would risk
+the one thing you are actually selling.
+
+## 12. Book three talks
+
+A library, a U3A branch and a Probus club. You now have a page built specifically
+to sell that, and the talks are what generate the testimonials the page needs.
+
+---
+
+# ⚪ Still open from earlier sessions
+
+Not superseded by anything recent. Full detail in `TODO.md`.
+
+- [ ] Create the Stripe `READER` coupon — `/reader/` promises $10 off and the code does not exist
+- [ ] Buy the course yourself with a real card, end to end, and watch a paid video
+- [ ] The book: republish the combined edition, send me the new ASIN, unpublish the old ones
+- [ ] Gumroad: create the account, list the free prompt library first, send me the product URLs
+
+---
+
+# ✅ Done, so ignore these if you see them elsewhere
+
+- The invented group prices are off the site
+- Both storefronts now say 14 days
+- `c4toacademy.com` has been checked: it is a second public marketing site with its own checkout
+- The three flagged claims on the new pages are confirmed and live
+- "Sydney" appears in no live page; the Canberra inconsistency is resolved
+- The engine token is installed and the schedule is running
+- CVelo was moved back to `setup` because none of its connectors exist
