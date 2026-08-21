@@ -7,7 +7,7 @@
   },
   "scripts": {
     "site": "node tools/build-glossary.mjs && node tools/build-clusters.mjs && node tools/build-chrome.mjs",
-    "check": "node tools/build-glossary.mjs --check && node tools/build-clusters.mjs --check && node tools/build-chrome.mjs --check && node tools/check-prices.mjs",
+    "check": "node tools/build-glossary.mjs --check && node tools/build-clusters.mjs --check && node tools/build-chrome.mjs --check && node tools/check-prices.mjs && node tools/check-book.mjs",
     "chrome": "node tools/build-chrome.mjs",
     "glossary": "node tools/build-glossary.mjs",
     "clusters": "node tools/build-clusters.mjs",

@@ -1,0 +1,8 @@
+{
+  "_comment": "The book's identity on Amazon, in one place. The ASIN is currently hard-coded into fourteen files, so republishing the combined edition would otherwise mean fourteen hand-edits and one silent miss pointing readers at a delisted book. tools/check-book.mjs proves every link agrees with this file; tools/set-asin.mjs rewrites them all when the ASIN changes.",
+  "title": "Cleared For Take-Off",
+  "asin": "B0GS21NW58",
+  "product_url": "https://www.amazon.com.au/dp/B0GS21NW58",
+  "author_page_url": "https://www.amazon.com.au/stores/Naomi-Shiels/author/B0GRY7K841",
+  "_republish_note": "When the combined single edition goes live it gets a NEW ASIN and the old listings are unpublished. Run `node tools/set-asin.mjs <NEW_ASIN>` from this folder: it updates this file and every link across the site in one pass, then `npm run check` proves nothing was missed. Do not hand-edit the pages."
+}

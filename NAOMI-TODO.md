@@ -1,6 +1,6 @@
 # Your checklist
 
-**Updated 13 August 2026.** This replaces the earlier version. Anything not on
+**Updated 21 August 2026.** This replaces the earlier version. Anything not on
 this list is either done or is mine to do.
 
 Ordered by urgency. Times are honest estimates.
@@ -169,12 +169,9 @@ site. Page quality is no longer the bottleneck; this is.
 
 ## 11. Six testimonials
 
-`TESTIMONIALS-FILL-IN.md` has the fields and the reasons. The CSS and schema are
-built and waiting. About twenty minutes of my work once you paste in real quotes.
-
-I will not write placeholder ones. Invented testimonials breach Australian
-Consumer Law s18 and s29, the ACCC has acted on exactly this, and it would risk
-the one thing you are actually selling.
+`TESTIMONIALS-FILL-IN.md` has the fields. The CSS and schema are built and
+waiting, so it is about twenty minutes of my work once you have real quotes to
+paste in. Agreed: they go up when you have them.
 
 ## 12. Book three talks
 
@@ -183,19 +180,70 @@ to sell that, and the talks are what generate the testimonials the page needs.
 
 ---
 
+# 📕 The book funnel
+
+You want one book, sold in three places, feeding the course. Here is the order
+it has to happen in, because each step depends on the one above it.
+
+## 13. Republish the combined edition on Amazon · your job
+
+**Why first:** everything else points at this. Until there is one book with one
+ASIN, a Gumroad page and a website page would be advertising something a reader
+cannot reliably find.
+
+1. Go to **https://kdp.amazon.com** and sign in.
+2. Publish the combined edition as a **new** title.
+3. When it is live, open its Amazon page and look at the address bar. It reads
+   `amazon.com.au/dp/XXXXXXXXXX`. **Copy that code and send it to me.**
+4. Only then, unpublish the old separate listings.
+
+**Do not touch the website.** The old code `B0GS21NW58` is in sixteen links
+across fourteen files. I now have a single command that changes every one of
+them at once and then proves none were missed. Hand-editing them is how one gets
+left pointing at a delisted book.
+
+## 14. Create the Gumroad account · your job · 15 minutes
+
+**Why Gumroad and not just Amazon:** on Amazon you get a royalty and no idea who
+bought it. On Gumroad you get the full price and the buyer's email address, and
+that email address is what sells the $49 course later. Amazon is reach. Gumroad
+is the list.
+
+1. Go to **https://gumroad.com** and click **Start selling**.
+2. Sign up with the Wild Hearts email address, not a personal one.
+3. When it asks what you sell, choose **Digital products** → **E-books**.
+4. Fill in the payout details so it can actually pay you.
+5. Send me the URL of your Gumroad profile. It looks like
+   `https://yourname.gumroad.com`.
+
+**Stop there.** Do not build the product page. I will do that once I have the
+URL, so the pricing, the reader code and the course upsell all line up.
+
+## 15. What I do once you send me those two things
+
+- The free prompt library as a $0 Gumroad product, which is the top of the funnel
+- The book as a paid Gumroad product, priced against the Kindle edition
+- A `/book/` page that offers both Amazon and Gumroad rather than only Kindle
+- The `READER` code placed inside the Gumroad edition as well as the Kindle one
+- The email that goes to a Gumroad buyer, pointing at the free Module 1
+
+---
+
 # ⚪ Still open from earlier sessions
 
 Not superseded by anything recent. Full detail in `TODO.md`.
 
-- [ ] Create the Stripe `READER` coupon — `/reader/` promises $10 off and the code does not exist
-- [ ] Buy the course yourself with a real card, end to end, and watch a paid video
-- [ ] The book: republish the combined edition, send me the new ASIN, unpublish the old ones
-- [ ] Gumroad: create the account, list the free prompt library first, send me the product URLs
+- [ ] Buy the course yourself with a real card, end to end, and watch a paid
+      video. **Do this last**, once the funnel above is built, so one test
+      purchase checks the whole chain rather than just the checkout.
 
 ---
 
 # ✅ Done, so ignore these if you see them elsewhere
 
+- The Stripe `READER` coupon is live and working: $10 off, no expiry, and
+  restricted to the adult course only, so it cannot be used against the $12.99
+  book, the kids courses, or any other Wild Hearts brand's checkout
 - The invented group prices are off the site
 - Both storefronts now say 14 days
 - `c4toacademy.com` has been checked: it is a second public marketing site with its own checkout
