@@ -9,6 +9,31 @@ Ordered by urgency. Times are honest estimates.
 
 # 🔴 Today
 
+## 0. Decide whether to harden the server · 10 minutes · read this first
+
+**What happened:** this very file was being served on the public internet at
+`https://www.clearedfortakeoff.com.au/NAOMI-TODO.md`. Anyone could read it. That
+is fixed as of today, and I checked your other six live sites, which were all
+clean. But while it was public it showed the automation server's address,
+`168.144.175.96`, and the `ssh ... root@` command used to reach it.
+
+**How worried to be:** an IP address on its own is not a key, and machines on the
+internet get scanned constantly whether or not anyone publishes the address. The
+question that decides it is whether that server accepts **passwords** for the
+`root` login, or **only your key file**. Key-only means this is a non-event.
+Passwords allowed means it is worth acting on today.
+
+**I did not check, because logging into your live server to poke at its security
+settings is not something I should do off my own bat.** Say the word and I will,
+or run this yourself in **Terminal**:
+
+```
+ssh -i ~/.ssh/wildhearts_server root@168.144.175.96 "sshd -T | grep -E 'passwordauthentication|permitrootlogin'"
+```
+
+**Success looks like:** `passwordauthentication no`. If it says `yes`, tell me and
+I will turn it off and set up a firewall, which is about fifteen minutes.
+
 ## 1. Replace the Claude token · 5 minutes
 
 **Why:** it was visible on screen in a screenshot, so treat it as burned. It is
