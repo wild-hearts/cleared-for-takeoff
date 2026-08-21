@@ -37,7 +37,7 @@ const OURS_ORG = new Set(['cleared for take-off academy', 'c4to academy', 'clear
 const OURS_PUBLISHER = new Set(['wild hearts publishing', 'wild hearts publishing pty ltd']);
 const OURS_PERSON = new Set(['naomi', 'naomi shiels']);
 
-const SKIP_DIRS = new Set(['.git', '.vercel', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
+const SKIP_DIRS = new Set(['.git', '.vercel', '.claude', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
 
 const norm = (s) => String(s || '').trim().toLowerCase();
 const typeOf = (n) => (Array.isArray(n['@type']) ? n['@type'] : [n['@type']]).filter(Boolean);

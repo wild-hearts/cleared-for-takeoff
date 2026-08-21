@@ -29,9 +29,10 @@ const CHECK = process.argv.includes('--check');
 /* Pages the chrome must never touch:
    - course/     the gated member area, noindex, its own shell
    - .vercel/    build output
+   - .claude/    git worktrees belonging to other sessions
    - partials/   the sources themselves
    - the Google Search Console verification file, which must stay byte-exact */
-const SKIP_DIRS = new Set(['.git', '.vercel', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
+const SKIP_DIRS = new Set(['.git', '.vercel', '.claude', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
 const SKIP_FILES = new Set(['google039507930feb61d1.html']);
 
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');

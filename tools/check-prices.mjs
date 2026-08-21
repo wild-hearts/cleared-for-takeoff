@@ -24,7 +24,7 @@ import { join, dirname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SKIP = new Set(['.git', '.vercel', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
+const SKIP = new Set(['.git', '.vercel', '.claude', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
 
 const cfg = JSON.parse(readFileSync(join(ROOT, 'partials/prices.json'), 'utf8'));
 

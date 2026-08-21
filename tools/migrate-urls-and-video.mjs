@@ -31,7 +31,7 @@ const BASE = 'https://www.clearedfortakeoff.com.au';
 
 const WHO = `${BASE}/who-its-for/`;
 const COURSE = `${BASE}/#course`;
-const SKIP_DIRS = new Set(['.git', '.vercel', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
+const SKIP_DIRS = new Set(['.git', '.vercel', '.claude', 'node_modules', 'partials', 'tools', 'course', 'course-content', 'assets', 'api']);
 
 const stats = { breadcrumb: 0, offer: 0, courseId: 0, embedUrl: 0, isPartOf: 0 };
 const typeOf = (n) => (Array.isArray(n['@type']) ? n['@type'] : [n['@type']]).filter(Boolean);
