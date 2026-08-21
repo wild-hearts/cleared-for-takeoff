@@ -11,11 +11,25 @@ assets/crew/henry.png
 assets/crew/red.png
 assets/crew/simon.png
 
-# Working files, not part of the site
+# Working files, not part of the site.
+#
+# The repo root IS the deploy root on this project, so anything sitting here is
+# served on the public internet unless it is listed below. It was: NAOMI-TODO.md,
+# SESSION-HANDOVER.md and TODO.md were all readable at
+# https://www.clearedfortakeoff.com.au/NAOMI-TODO.md, and between them they
+# published the automation server's IP address and the ssh command to reach it,
+# plus internal notes on pricing and refunds. Only two of the six docs had ever
+# been listed here. No page links to a .md file, so every one of them is excluded
+# by pattern rather than by name, which is the part that stays correct when
+# someone adds the seventh document.
+*.md
 course-content/
 marketing/
-HANDOVER.md
-TESTIMONIALS-FILL-IN.md
+
+# Build inputs, not outputs. tools/ and partials/ generate the pages; shipping
+# them exposed the site's own config (prices.json, book.json) and scripts.
+tools/
+partials/
 
 # Superseded by assets/og-image.jpg (303KB -> 54KB)
 assets/og-image.png
