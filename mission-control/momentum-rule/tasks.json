@@ -459,7 +459,7 @@
     {
       "task": "MKTG: Build MailerLite welcome + launch email sequence",
       "relates_to": "W0-9",
-      "linked_in_notion": false
+      "linked_in_notion": true
     }
   ]
 }
