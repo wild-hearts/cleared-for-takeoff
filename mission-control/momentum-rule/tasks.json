@@ -17,66 +17,449 @@
     "policy": "Mission Control is source of truth. Notion holds a mirror. Reconcile on phase close."
   },
   "phases": [
-    { "id": "W0",   "title": "Week zero",   "window": "2026-08-20/2026-08-27", "goal": "Nothing gets posted. Accounts warmed, /start shipped, first ten filmed." },
-    { "id": "AMZN", "title": "Amazon track", "window": "2026-08-25/2026-09-20", "goal": "Once, then it compounds. The half the source method skips." },
-    { "id": "P1",   "title": "Days 1-30",   "window": "2026-08-28/2026-09-26", "goal": "Not sales. Find which three hooks and which pillar the algorithm rewards." },
-    { "id": "P2",   "title": "Days 31-60",  "window": "2026-09-27/2026-10-26", "goal": "Kill the losers, re-shoot the winners, concentrate a month of demand into five days." },
-    { "id": "P3",   "title": "Days 61-90",  "window": "2026-10-27/2026-11-25", "goal": "Turn one book into three. Read-through is where the money is." }
+    {
+      "id": "W0",
+      "title": "Week zero",
+      "window": "2026-08-20/2026-08-27",
+      "goal": "Nothing gets posted. Accounts warmed, /start shipped, first ten filmed."
+    },
+    {
+      "id": "AMZN",
+      "title": "Amazon track",
+      "window": "2026-08-25/2026-09-20",
+      "goal": "Once, then it compounds. The half the source method skips."
+    },
+    {
+      "id": "P1",
+      "title": "Days 1-30",
+      "window": "2026-08-28/2026-09-26",
+      "goal": "Not sales. Find which three hooks and which pillar the algorithm rewards."
+    },
+    {
+      "id": "P2",
+      "title": "Days 31-60",
+      "window": "2026-09-27/2026-10-26",
+      "goal": "Kill the losers, re-shoot the winners, concentrate a month of demand into five days."
+    },
+    {
+      "id": "P3",
+      "title": "Days 61-90",
+      "window": "2026-10-27/2026-11-25",
+      "goal": "Turn one book into three. Read-through is where the money is."
+    }
   ],
   "tasks": [
-    { "id": "W0-1",  "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-21", "status": "not_started", "task": "Decide the link policy (site by default, Amazon during rank pushes)", "notes": "Five minutes. Everything downstream hangs off it." },
-    { "id": "W0-2",  "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-21", "status": "not_started", "task": "Create or clean up the 4 platform accounts", "notes": "TikTok, Instagram, YouTube, Facebook. One line of bio, one link." },
-    { "id": "W0-3",  "phase": "W0", "owner": "claude",  "priority": "high",   "due": "2026-08-21", "status": "done",        "task": "Supply the keyword list for feed priming and Amazon backend", "notes": "18 phrases. See campaign-90-day.md." },
-    { "id": "W0-4",  "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-24", "status": "not_started", "task": "Warm all 4 accounts, 15 to 20 min a day for 3 days", "notes": "Human on a phone, no VPN. Cannot be delegated to any agent." },
-    { "id": "W0-5",  "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-24", "status": "not_started", "task": "Prime the feeds and save 5 viral videos per platform", "notes": "Doubles as the warming activity. Over 100k views, ideally over 1M." },
-    { "id": "W0-6",  "phase": "W0", "owner": "claude",  "priority": "medium", "due": "2026-08-22", "status": "not_started", "task": "Build the hook harvest sheet", "notes": "Platform, views, hook verbatim, its structure, the Momentum adaptation." },
-    { "id": "W0-7",  "phase": "W0", "owner": "claude",  "priority": "high",   "due": "2026-08-22", "status": "not_started", "task": "Write the themomentumrule.com/start page copy", "notes": "Five blocks. Trenches, free Day 1 + song, email capture, two buy buttons, series strip." },
-    { "id": "W0-8",  "phase": "W0", "owner": "claude",  "priority": "high",   "due": "2026-08-23", "status": "not_started", "task": "Build and ship the /start page", "notes": "Needs the Spotify link for Day 1's song from Knomes." },
-    { "id": "W0-9",  "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-24", "status": "not_started", "task": "Wire the /start email capture into MailerLite", "notes": "Needs her credentials. Claude supplies the form code." },
-    { "id": "W0-10", "phase": "W0", "owner": "claude",  "priority": "high",   "due": "2026-08-24", "status": "not_started", "task": "Build 4 tracked short links (/tt /ig /yt /fb) and test on a phone", "notes": "Without this, 90 days pass with no answer on where buyers came from." },
-    { "id": "W0-11", "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-25", "status": "not_started", "task": "Set up Amazon Attribution", "notes": "Check it is offered in her marketplace." },
-    { "id": "W0-12", "phase": "W0", "owner": "claude",  "priority": "medium", "due": "2026-08-25", "status": "not_started", "task": "Build the weekly tracking sheet", "notes": "Headline metric for month one is saves per 1,000 views." },
-    { "id": "W0-13", "phase": "W0", "owner": "knomes",  "priority": "high",   "due": "2026-08-27", "status": "not_started", "task": "Batch film the first 10 videos", "notes": "One hour. Hooks already written. Vertical, phone, natural light." },
-    { "id": "W0-14", "phase": "W0", "owner": "openclaw","priority": "medium", "due": "2026-08-27", "status": "not_started", "task": "Burn captions and export the 4 platform variants", "notes": "Reverts to knomes or designer if OpenClaw cannot edit video." },
-
-    { "id": "AMZN-1", "phase": "AMZN", "owner": "claude",   "priority": "high",   "due": "2026-08-25", "status": "not_started", "task": "Write the 7 backend keyword phrases for all 3 books", "notes": "Whole phrases, never single words, never repeating the title." },
-    { "id": "AMZN-2", "phase": "AMZN", "owner": "knomes",   "priority": "high",   "due": "2026-08-28", "status": "not_started", "task": "Verify the Trenches opening falls inside the Look Inside 10%", "notes": "If it does not, restructure the front matter until it does." },
-    { "id": "AMZN-3", "phase": "AMZN", "owner": "claude",   "priority": "medium", "due": "2026-09-05", "status": "not_started", "task": "Draft the A+ Content copy (3 modules)", "notes": "Trenches paragraph, series strip, the songs." },
-    { "id": "AMZN-4", "phase": "AMZN", "owner": "designer", "priority": "medium", "due": "2026-09-15", "status": "not_started", "task": "Build the A+ Content modules in Canva", "notes": "To Amazon's A+ module dimensions." },
-    { "id": "AMZN-5", "phase": "AMZN", "owner": "knomes",   "priority": "medium", "due": "2026-09-20", "status": "not_started", "task": "Publish the A+ Content in KDP", "notes": "Needs KDP login. Allow days for Amazon review." },
-
-    { "id": "P1-1", "phase": "P1", "owner": "openclaw","priority": "high",   "due": "2026-09-26", "status": "not_started", "task": "Post 1 video a day, 5 days a week, to all 4 platforms", "notes": "Mon Enemy, Tue Trenches, Wed Evidence, Thu Songs, Fri best-of re-cut. Falls back to 10 min/day manual." },
-    { "id": "P1-2", "phase": "P1", "owner": "knomes",  "priority": "high",   "due": "2026-09-26", "status": "not_started", "task": "Reply to every comment in the first hour", "notes": "Human-only. A bot reply in this niche does more harm than none." },
-    { "id": "P1-3", "phase": "P1", "owner": "knomes",  "priority": "medium", "due": "2026-09-26", "status": "not_started", "task": "Upload Winks tracks as original audio, one per Thursday", "notes": "Even Like That, Running On Fumes, The Waiting Room, But I Will, Wet Cement." },
-    { "id": "P1-4", "phase": "P1", "owner": "openclaw","priority": "high",   "due": "2026-09-26", "status": "not_started", "task": "Weekly metrics pull across 4 platforms plus short links", "notes": "Every Sunday. Views, watch %, saves, follows, clicks by tag." },
-    { "id": "P1-5", "phase": "P1", "owner": "claude",  "priority": "high",   "due": "2026-09-26", "status": "not_started", "task": "Weekly analysis: saves per 1,000 views by hook shape and pillar", "notes": "A like is a reflex. A save is intent." },
-    { "id": "P1-6", "phase": "P1", "owner": "knomes",  "priority": "high",   "due": "2026-09-12", "status": "not_started", "task": "Batch film videos 11 to 20", "notes": "Rotate: 3 talking head, 1 b-roll with text, 1 multimodal demo per week." },
-    { "id": "P1-7", "phase": "P1", "owner": "knomes",  "priority": "medium", "due": "2026-09-26", "status": "not_started", "task": "Hold the line, judge nothing before it has been live 7 days", "notes": "Expect bad numbers. Week three has no champagne in it." },
-
-    { "id": "P2-1", "phase": "P2", "owner": "knomes", "priority": "high", "due": "2026-09-30", "status": "not_started", "task": "Kill the losing pillar, keep the top 3 hooks", "notes": "Claude supplies analysis, the call is hers." },
-    { "id": "P2-2", "phase": "P2", "owner": "knomes", "priority": "high", "due": "2026-10-10", "status": "not_started", "task": "Re-shoot the top 3 hooks, 4 variants each", "notes": "12 videos. Vary opening frame, pillar, song, length." },
-    { "id": "P2-3", "phase": "P2", "owner": "claude", "priority": "high", "due": "2026-10-01", "status": "not_started", "task": "Plan the 5-day rank push", "notes": "Week 7 or 8. Dates, price, email timing, link switch." },
-    { "id": "P2-4", "phase": "P2", "owner": "knomes", "priority": "high", "due": "2026-10-17", "status": "not_started", "task": "Execute the 5-day rank push", "notes": "All links to Amazon, lowest price, email list on day 1. 50 sales in 5 days moves rank; 50 over a month moves nothing." },
-
-    { "id": "P3-1", "phase": "P3", "owner": "knomes",  "priority": "high",   "due": "2026-11-25", "status": "not_started", "task": "Seed Books 2 and 3 in the content, not just the back matter", "notes": "Claude writes the hooks, she films them." },
-    { "id": "P3-2", "phase": "P3", "owner": "knomes",  "priority": "medium", "due": "2026-11-10", "status": "not_started", "task": "Push Momentum 60 to every buyer", "notes": "60 more days of contact with someone who already paid once." },
-    { "id": "P3-3", "phase": "P3", "owner": "openclaw","priority": "medium", "due": "2026-11-20", "status": "not_started", "task": "Harvest a fresh hook set for the next quarter", "notes": "The niche moves every quarter." },
-    { "id": "P3-4", "phase": "P3", "owner": "knomes",  "priority": "high",   "due": "2026-11-25", "status": "not_started", "task": "90-day review and next-quarter decision", "notes": "Did short-form send buyers or only viewers? The short-link data answers it." },
-
-    { "id": "OPS-1", "phase": "P3", "owner": "claude", "priority": "low", "due": "2026-11-25", "status": "in_progress", "task": "Keep the plan, this vault and the Notion mirror current", "notes": "Plan at research/momentum-rule-90-day-plan.md in wild-hearts/cleared-for-takeoff." }
+    {
+      "id": "W0-1",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-21",
+      "status": "not_started",
+      "task": "Decide the link policy (site by default, Amazon during rank pushes)",
+      "notes": "Five minutes. Everything downstream hangs off it."
+    },
+    {
+      "id": "W0-2",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-21",
+      "status": "not_started",
+      "task": "Create or clean up the 4 platform accounts",
+      "notes": "TikTok, Instagram, YouTube, Facebook. One line of bio, one link."
+    },
+    {
+      "id": "W0-3",
+      "phase": "W0",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-08-21",
+      "status": "done",
+      "task": "Supply the keyword list for feed priming and Amazon backend",
+      "notes": "18 phrases. See campaign-90-day.md."
+    },
+    {
+      "id": "W0-4",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-24",
+      "status": "not_started",
+      "task": "Warm all 4 accounts, 15 to 20 min a day for 3 days",
+      "notes": "Human on a phone, no VPN. Cannot be delegated to any agent."
+    },
+    {
+      "id": "W0-5",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-24",
+      "status": "not_started",
+      "task": "Prime the feeds and save 5 viral videos per platform",
+      "notes": "Doubles as the warming activity. Over 100k views, ideally over 1M."
+    },
+    {
+      "id": "W0-6",
+      "phase": "W0",
+      "owner": "claude",
+      "priority": "medium",
+      "due": "2026-08-22",
+      "status": "not_started",
+      "task": "Build the hook harvest sheet",
+      "notes": "Platform, views, hook verbatim, its structure, the Momentum adaptation."
+    },
+    {
+      "id": "W0-7",
+      "phase": "W0",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-08-22",
+      "status": "not_started",
+      "task": "Write the themomentumrule.com/start page copy",
+      "notes": "Five blocks. Trenches, free Day 1 + song, email capture, two buy buttons, series strip."
+    },
+    {
+      "id": "W0-8",
+      "phase": "W0",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-08-23",
+      "status": "not_started",
+      "task": "Build and ship the /start page",
+      "notes": "Needs the Spotify link for Day 1's song from Knomes."
+    },
+    {
+      "id": "W0-9",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-24",
+      "status": "not_started",
+      "task": "Wire the /start email capture into MailerLite",
+      "notes": "Needs her credentials. Claude supplies the form code."
+    },
+    {
+      "id": "W0-10",
+      "phase": "W0",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-08-24",
+      "status": "not_started",
+      "task": "Build 4 tracked short links (/tt /ig /yt /fb) and test on a phone",
+      "notes": "Without this, 90 days pass with no answer on where buyers came from."
+    },
+    {
+      "id": "W0-11",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-25",
+      "status": "not_started",
+      "task": "Set up Amazon Attribution",
+      "notes": "Check it is offered in her marketplace."
+    },
+    {
+      "id": "W0-12",
+      "phase": "W0",
+      "owner": "claude",
+      "priority": "medium",
+      "due": "2026-08-25",
+      "status": "not_started",
+      "task": "Build the weekly tracking sheet",
+      "notes": "Headline metric for month one is saves per 1,000 views."
+    },
+    {
+      "id": "W0-13",
+      "phase": "W0",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-27",
+      "status": "not_started",
+      "task": "Batch film the first 10 videos",
+      "notes": "One hour. Hooks already written. Vertical, phone, natural light."
+    },
+    {
+      "id": "W0-14",
+      "phase": "W0",
+      "owner": "openclaw",
+      "priority": "medium",
+      "due": "2026-08-27",
+      "status": "not_started",
+      "task": "Burn captions and export the 4 platform variants",
+      "notes": "Reverts to knomes or designer if OpenClaw cannot edit video."
+    },
+    {
+      "id": "AMZN-1",
+      "phase": "AMZN",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-08-25",
+      "status": "not_started",
+      "task": "Write the 7 backend keyword phrases for all 3 books",
+      "notes": "Whole phrases, never single words, never repeating the title."
+    },
+    {
+      "id": "AMZN-2",
+      "phase": "AMZN",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-08-28",
+      "status": "not_started",
+      "task": "Verify the Trenches opening falls inside the Look Inside 10%",
+      "notes": "If it does not, restructure the front matter until it does."
+    },
+    {
+      "id": "AMZN-3",
+      "phase": "AMZN",
+      "owner": "claude",
+      "priority": "medium",
+      "due": "2026-09-05",
+      "status": "not_started",
+      "task": "Draft the A+ Content copy (3 modules)",
+      "notes": "Trenches paragraph, series strip, the songs."
+    },
+    {
+      "id": "AMZN-4",
+      "phase": "AMZN",
+      "owner": "designer",
+      "priority": "medium",
+      "due": "2026-09-15",
+      "status": "not_started",
+      "task": "Build the A+ Content modules in Canva",
+      "notes": "To Amazon's A+ module dimensions."
+    },
+    {
+      "id": "AMZN-5",
+      "phase": "AMZN",
+      "owner": "knomes",
+      "priority": "medium",
+      "due": "2026-09-20",
+      "status": "not_started",
+      "task": "Publish the A+ Content in KDP",
+      "notes": "Needs KDP login. Allow days for Amazon review."
+    },
+    {
+      "id": "P1-1",
+      "phase": "P1",
+      "owner": "openclaw",
+      "priority": "high",
+      "due": "2026-09-26",
+      "status": "not_started",
+      "task": "Post 1 video a day, 5 days a week, to all 4 platforms",
+      "notes": "Mon Enemy, Tue Trenches, Wed Evidence, Thu Songs, Fri best-of re-cut. Falls back to 10 min/day manual."
+    },
+    {
+      "id": "P1-2",
+      "phase": "P1",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-09-26",
+      "status": "not_started",
+      "task": "Reply to every comment in the first hour",
+      "notes": "Human-only. A bot reply in this niche does more harm than none."
+    },
+    {
+      "id": "P1-3",
+      "phase": "P1",
+      "owner": "knomes",
+      "priority": "medium",
+      "due": "2026-09-26",
+      "status": "not_started",
+      "task": "Upload Winks tracks as original audio, one per Thursday",
+      "notes": "Even Like That, Running On Fumes, The Waiting Room, But I Will, Wet Cement."
+    },
+    {
+      "id": "P1-4",
+      "phase": "P1",
+      "owner": "openclaw",
+      "priority": "high",
+      "due": "2026-09-26",
+      "status": "not_started",
+      "task": "Weekly metrics pull across 4 platforms plus short links",
+      "notes": "Every Sunday. Views, watch %, saves, follows, clicks by tag."
+    },
+    {
+      "id": "P1-5",
+      "phase": "P1",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-09-26",
+      "status": "not_started",
+      "task": "Weekly analysis: saves per 1,000 views by hook shape and pillar",
+      "notes": "A like is a reflex. A save is intent."
+    },
+    {
+      "id": "P1-6",
+      "phase": "P1",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-09-12",
+      "status": "not_started",
+      "task": "Batch film videos 11 to 20",
+      "notes": "Rotate: 3 talking head, 1 b-roll with text, 1 multimodal demo per week."
+    },
+    {
+      "id": "P1-7",
+      "phase": "P1",
+      "owner": "knomes",
+      "priority": "medium",
+      "due": "2026-09-26",
+      "status": "not_started",
+      "task": "Hold the line, judge nothing before it has been live 7 days",
+      "notes": "Expect bad numbers. Week three has no champagne in it."
+    },
+    {
+      "id": "P2-1",
+      "phase": "P2",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-09-30",
+      "status": "not_started",
+      "task": "Kill the losing pillar, keep the top 3 hooks",
+      "notes": "Claude supplies analysis, the call is hers."
+    },
+    {
+      "id": "P2-2",
+      "phase": "P2",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-10-10",
+      "status": "not_started",
+      "task": "Re-shoot the top 3 hooks, 4 variants each",
+      "notes": "12 videos. Vary opening frame, pillar, song, length."
+    },
+    {
+      "id": "P2-3",
+      "phase": "P2",
+      "owner": "claude",
+      "priority": "high",
+      "due": "2026-10-01",
+      "status": "not_started",
+      "task": "Plan the 5-day rank push",
+      "notes": "Week 7 or 8. Dates, price, email timing, link switch."
+    },
+    {
+      "id": "P2-4",
+      "phase": "P2",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-10-17",
+      "status": "not_started",
+      "task": "Execute the 5-day rank push",
+      "notes": "All links to Amazon, lowest price, email list on day 1. 50 sales in 5 days moves rank; 50 over a month moves nothing."
+    },
+    {
+      "id": "P3-1",
+      "phase": "P3",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-11-25",
+      "status": "not_started",
+      "task": "Seed Books 2 and 3 in the content, not just the back matter",
+      "notes": "Claude writes the hooks, she films them."
+    },
+    {
+      "id": "P3-2",
+      "phase": "P3",
+      "owner": "knomes",
+      "priority": "medium",
+      "due": "2026-11-10",
+      "status": "not_started",
+      "task": "Push Momentum 60 to every buyer",
+      "notes": "60 more days of contact with someone who already paid once."
+    },
+    {
+      "id": "P3-3",
+      "phase": "P3",
+      "owner": "openclaw",
+      "priority": "medium",
+      "due": "2026-11-20",
+      "status": "not_started",
+      "task": "Harvest a fresh hook set for the next quarter",
+      "notes": "The niche moves every quarter."
+    },
+    {
+      "id": "P3-4",
+      "phase": "P3",
+      "owner": "knomes",
+      "priority": "high",
+      "due": "2026-11-25",
+      "status": "not_started",
+      "task": "90-day review and next-quarter decision",
+      "notes": "Did short-form send buyers or only viewers? The short-link data answers it."
+    },
+    {
+      "id": "OPS-1",
+      "phase": "P3",
+      "owner": "claude",
+      "priority": "low",
+      "due": "2026-11-25",
+      "status": "in_progress",
+      "task": "Keep the plan, this vault and the Notion mirror current",
+      "notes": "Plan at research/momentum-rule-90-day-plan.md in wild-hearts/cleared-for-takeoff."
+    }
   ],
   "pre_existing_tasks_to_reconcile": [
-    { "task": "MKTG: Wire the ecosystem funnel (the 8 connections)", "relates_to": "W0-7, W0-8, W0-10", "linked_in_notion": true },
-    { "task": "MKTG: Optimise the 3 Amazon product pages", "relates_to": "AMZN-1", "linked_in_notion": true },
-    { "task": "MKTG: Set up the Amazon series page", "relates_to": "P3-1", "linked_in_notion": true },
-    { "task": "MKTG: Create a lead magnet", "relates_to": "W0-7", "linked_in_notion": true },
-    { "task": "MKTG: Set up email capture everywhere", "relates_to": "W0-9", "linked_in_notion": true },
-    { "task": "MKTG: Weekly marketing scorecard", "relates_to": "P1-4, W0-12", "linked_in_notion": false },
-    { "task": "TRACTION: Free Book 1 promo / 99c Countdown", "relates_to": "P2-4", "linked_in_notion": false },
-    { "task": "TRACTION: Build 'book + song' read-aloud Reel template", "relates_to": "P1-3", "linked_in_notion": false },
-    { "task": "MKTG: Repurpose Chapter Chats + songs into short-form video", "relates_to": "P1-1", "linked_in_notion": false },
-    { "task": "MKTG: Weekly Amazon Ads review", "relates_to": "P1-4", "linked_in_notion": false },
-    { "task": "MKTG: Set Book 1 funnel price + Kindle Unlimited", "relates_to": "P2-4", "linked_in_notion": false },
-    { "task": "MKTG: Build MailerLite welcome + launch email sequence", "relates_to": "W0-9", "linked_in_notion": false }
+    {
+      "task": "MKTG: Wire the ecosystem funnel (the 8 connections)",
+      "relates_to": "W0-7, W0-8, W0-10",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Optimise the 3 Amazon product pages",
+      "relates_to": "AMZN-1",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Set up the Amazon series page",
+      "relates_to": "P3-1",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Create a lead magnet",
+      "relates_to": "W0-7",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Set up email capture everywhere",
+      "relates_to": "W0-9",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Weekly marketing scorecard",
+      "relates_to": "P1-4, W0-12",
+      "linked_in_notion": true
+    },
+    {
+      "task": "TRACTION: Free Book 1 promo / 99c Countdown",
+      "relates_to": "P2-4",
+      "linked_in_notion": true
+    },
+    {
+      "task": "TRACTION: Build 'book + song' read-aloud Reel template",
+      "relates_to": "P1-3",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Repurpose Chapter Chats + songs into short-form video",
+      "relates_to": "P1-1",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Weekly Amazon Ads review",
+      "relates_to": "P1-4",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Set Book 1 funnel price + Kindle Unlimited",
+      "relates_to": "P2-4",
+      "linked_in_notion": true
+    },
+    {
+      "task": "MKTG: Build MailerLite welcome + launch email sequence",
+      "relates_to": "W0-9",
+      "linked_in_notion": false
+    }
   ]
 }
