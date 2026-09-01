@@ -21,18 +21,36 @@ web search for a live Etsy shop.
 | 8 Aug 2026 | "Password reset time!" | Second reset |
 | 14 Aug 2026 | Reset, "password was updated", "did you recently sign into Etsy?" (Safari 26, Mac OS X, **Canberra**) | Third reset, then a successful sign-in |
 
-**There is no Little Poppin Etsy account in the records.** Zero Etsy mail to any
-`littlepoppin.com` address, and nothing that ties Little Poppin to Etsy at all.
-The only Little Poppin traffic in the mailbox is Google Search Console for
-`https://www.littlepoppin.com/` (verified 2 Jul 2026, merchant listings and
-product structured-data warnings on 5 and 19 Jul) - so Little Poppin is a
-separate ecommerce site, not an Etsy shop.
+**CORRECTED 1 Sep 2026.** The first version of this document said there was no Little
+Poppin Etsy account. That was wrong, and the error came from searching only one mailbox.
 
-The Etsy account's first-name field is literally "Medaria". Etsy addresses every
-one of those emails to "Medaria".
+There is a live Little Poppin Etsy shop. Per `docs/TOMORROW.md` in the
+`wild-hearts/littlepoppin` repo (dated 10 Aug 2026): the shop opened **2 July 2026 with 97
+listings**, and Shop Manager shows the account name **"Naomi"**, not Medaria. A further **22
+listings are staged and validated** but not yet created.
 
-**No live shop exists.** Public search finds `medariaaid.com` but no Etsy shop
-for Medaria Aid. Consistent with the "grand opening" nudge never being acted on.
+So there are almost certainly **two Etsy accounts**:
+
+| | Account A | Account B |
+|---|---|---|
+| Email | `medariaaid@gmail.com` | unknown, not this mailbox |
+| Name on account | Medaria | Naomi |
+| Created | 25 Apr 2026 | on or before 2 Jul 2026 |
+| Shop | none ever opened | Little Poppin, 97 live listings |
+
+That same 10 Aug document already flagged this and had not resolved it: *"I could not confirm
+this and may have told you wrong... Likely two accounts."* It is still open.
+
+The giveaway is in the mailbox itself: **no Etsy email has reached `medariaaid@gmail.com`
+since 25 June**, despite 97 listings going live on 2 July. Either seller notifications are
+off, or, far more likely, the shop is not on that account at all.
+
+**Do not act on the email swap until you have opened Etsy > Account settings on both accounts
+and written down which email each one uses.** Everything below depends on it.
+
+Separately: Google Search Console for `https://www.littlepoppin.com/` is verified on
+`medariaaid@gmail.com`, and so is the Printify account that fulfils Little Poppin's physical
+prints. Commercial Little Poppin infrastructure is sitting under the charity's inbox. See 3.1.
 
 ### So the plan needs reversing
 
@@ -58,9 +76,6 @@ I cannot create the accounts or build the shop. There is no path:
 
 - No browser session holding your Etsy login, and no Etsy password (three resets
   in four months suggests you may not have it either).
-- No Etsy API application. Etsy's Open API needs a registered app and an approved
-  OAuth grant, and it has no endpoint for changing an account email or creating an
-  account regardless.
 - Zapier has no Etsy connector on your account. I checked. Nothing.
 - Every step you asked for is gated on things a person has to do: password
   re-entry, a verification link clicked from the inbox, CAPTCHA, and possibly a
@@ -68,6 +83,23 @@ I cannot create the accounts or build the shop. There is no path:
 
 Etsy's Terms also prohibit automated account creation, so even with a browser
 this would be the wrong move.
+
+**CORRECTED 1 Sep 2026.** The first version said there was no Etsy API application. There is
+a complete Etsy API pipeline already built, in `wild-hearts/littlepoppin`:
+`scripts/etsy-auth.mjs` (OAuth 2.0 with PKCE), `scripts/etsy-content.mjs`,
+`scripts/stage-etsy.mjs` and `scripts/etsy-publish.mjs`, the last of which creates listings as
+drafts by default and is resumable, so an interruption cannot double-list or double-charge.
+
+What that changes: **publishing listings is automatable, and the tooling exists.** What it
+does not change: the pipeline requests scopes `listings_r listings_w shops_r shops_w`. None of
+those touch account management, so **changing an account email and creating an account remain
+impossible via the API** regardless of who runs it. That part stands.
+
+It also still needs two things I cannot supply from here: an `ETSY_KEYSTRING` from an app
+registered at https://www.etsy.com/developers/create, and the OAuth consent step, which opens
+a browser and catches the redirect on `http://localhost:3003/callback` on your machine. The
+tokens land in `dist/.etsy-tokens.json`, which is gitignored, so they exist on your Mac and
+nowhere else. As of 10 Aug that keystring was the only thing blocking the 22 staged listings.
 
 **The clicking is about 20 minutes of your time.** The part that takes hours is
 the listing copy, tags, policies and Printify mapping, and that is section 5
@@ -153,20 +185,51 @@ plus processing that varies by country. Check the live schedule before you price
 On a £20 tee with a Printify base cost around £10 to £12 plus shipping, you may
 net two or three pounds. That is the argument for section 3.7.
 
-### 3.7 Etsy is probably the wrong primary channel for this
+### 3.7 Etsy is the wrong primary channel, and you already own the right one
 
-You already have `medariaaid.com`. Printify connects natively to Shopify,
-WooCommerce, Wix, Squarespace and Etsy. Selling from your own site keeps the
-Etsy cut, keeps the donor relationship, keeps the email address, and lets you put
-merch and donations on one page without tripping Etsy's donation rules.
+**REWRITTEN 1 Sep 2026, now that I have read the Little Poppin codebase.**
 
-**Unverified:** I could not reach `medariaaid.com` from this environment (egress
-blocked) so I do not know what it is built on. If it is Wix or Shopify, the
-Printify integration is a ten-minute job and it should be your main shop.
+You do not need to build a Printify store. You have already built one, it works, and it is
+better than what Etsy would give you.
 
-Etsy still earns its place as a **discovery channel** - people search Etsy for
-"ukraine charity shirt" and will never search your site for it. Just run it as
-the second channel, not the first.
+`wild-hearts/littlepoppin` is a static site on Vercel with serverless functions, and it
+contains a complete, working Printify integration:
+
+| Piece | File |
+|---|---|
+| Printify API client and order submission | `lib/printify.js` |
+| Generated catalogue config (shop id, blueprints, variants, prices) | `lib/printify-config.generated.js` |
+| Catalogue setup, cost modelling, webhook registration | `scripts/printify-*.mjs` |
+| Stripe Checkout session creation | `api/checkout.js` |
+| Payment webhook that submits the Printify order | `api/stripe-webhook.js` |
+| Printify shipment webhook and tracking email | `api/printify-webhook.js` |
+| Order and failure visibility | `api/ops.js`, `lib/events.js` |
+
+Printify shop id **28504147**. Three formats, three sizes each, priced in AUD cents with
+postage already built into the retail price:
+
+| Format | 11x14 | 12x16 | 16x20 |
+|---|---|---|---|
+| Poster (matte) | $19 | $29 | $32 |
+| Stretched canvas | $55 | $65 | $75 |
+| Framed (black) | $99 | $109 | $135 |
+
+Blueprint 282 (poster) and 937 (canvas), print provider 99. 93 designs are print-enabled.
+Gallery sets can be ordered as a single Printify order at 10% off, capped at 5 prints in both
+the page and the server so a hand-crafted request cannot order 93 framed prints. Per your own
+9 Aug notes: 279 Printify products on Printify Choice, printed near the buyer in 53 countries,
+postage bands US/AU/NZ $15, CA $25, rest of world $32.
+
+**So the Medaria recommendation changes.** Instead of hand-building an Etsy shop, fork this
+pattern for Medaria: a Medaria storefront that takes Stripe payments and submits Printify
+orders, with the Etsy pipeline as the second channel for discovery. The `medaria-aid` Vercel
+project already exists. You would be reusing a stack that has had its silent failures found
+and fixed, rather than discovering the same four bugs again.
+
+Two caveats. The Little Poppin stack has still never completed a real end-to-end paid order,
+per the open item at the top of `docs/TOMORROW.md` (dated 10 Aug, unticked). And every charity
+claim was deliberately stripped out of it in August, which is exactly the compliance work
+sections 3.2 to 3.4 say you would have to redo, properly, for Medaria.
 
 ### 3.8 Two products in your line may not be Printify products
 
@@ -472,28 +535,35 @@ up with the charity's privacy notice.
 
 Flagged rather than assumed silently:
 
-1. **`info@littlepoppin.com` exists and receives mail.** It appears nowhere in the
-   records, and `littlepoppin.com` did not resolve from this environment. Could be
-   sandbox DNS, could be the domain being parked. Check before you rely on it.
+1. **`info@littlepoppin.com` exists and receives mail.** It appears nowhere in the records.
+   The site's own published contact address is `info@wildheartspublishing.com.au`, not an
+   `@littlepoppin.com` one, so this mailbox may not exist at all. You will need to click a
+   verification link at it, so a dead mailbox stops you at step one. Check first.
+   (Also see the separate `www.littlepoppin.com` DNS problem, section 10.)
 2. **You can get into the Etsy account.** Last confirmed sign-in 14 Aug 2026.
 3. **Medaria Aid is a registered UK charity.** From a web summary of medariaaid.com.
    I have no charity number and could not reach the site to confirm.
-4. **The merch line is current.** The source doc is `Medaria Aid - Merchandise.docx`
+4. **The Little Poppin Etsy shop state** (97 live listings, 22 staged, account named "Naomi")
+   comes from `docs/TOMORROW.md` dated 10 Aug 2026. I could not sign in to Etsy to confirm it
+   is still true three weeks later, and public search does not surface the shop.
+5. **The merch line is current.** The source doc is `Medaria Aid - Merchandise.docx`
    in Drive, created 10 May 2026, last modified 16 Jun 2025 (that date ordering is
    odd, from the Drive metadata). A second Word file,
    `Medaria_Aid_Merch_Brainstorm.docx`, was emailed 28 May 2026 to
    `medariaaidcontact@gmail.com` and is only an email attachment, so I could not
    open it. If it supersedes the Drive doc, put it in Drive and the product
    section here needs redoing.
-5. **Etsy's fee schedule and UK charity trading thresholds** are from memory and
+6. **Etsy's fee schedule and UK charity trading thresholds** are from memory and
    both change. Verify against current published rates and guidance before pricing.
-6. **Printify's current catalogue** for embroidered patches and enamel pins. Check it
+7. **Printify's current catalogue** for embroidered patches and enamel pins. Check it
    in your account rather than trusting my recollection.
 
 ---
 
 ## 9. Order of operations
 
+0. Open Etsy > Account settings on both accounts and write down which email each uses (see
+   section 1). Every other Etsy decision here is guessing until that is known.
 1. Answer 3.1: which entity is the seller. Everything else waits on this.
 2. Deal with the overdue Printify Australia shipping setting (3.9).
 3. Recover the Etsy account, add 2FA.
@@ -503,3 +573,59 @@ Flagged rather than assumed silently:
 6. Publish the tee only. One product, sampled, correct.
 7. Confirm patch and pin manufacturing before promising either.
 8. Clear the album's rights before it goes anywhere near a listing.
+
+---
+
+## 10. Separate finding: `www.littlepoppin.com` does not resolve
+
+Not Medaria, but found while checking how Little Poppin is set up and worth more than
+anything else in this document.
+
+**The apex works. The `www` hostname has no DNS record.** From this environment:
+
+```
+littlepoppin.com          -> 76.76.21.21          (Vercel apex, fine)
+www.littlepoppin.com      -> NXDOMAIN
+www.medariaaid.com        -> 66.33.60.193, 76.76.21.241   (control, fine)
+www.clearedfortakeoff.com.au -> 66.33.60.194, 76.76.21.93 (control, fine)
+cname.vercel-dns.com      -> 66.33.60.35, 76.76.21.123
+```
+
+The two control hostnames resolve on the same resolver, so this is not a sandbox artefact.
+Vercel also lists `www.littlepoppin.com` among the project's domains, so Vercel thinks it
+should be serving there.
+
+**Why it matters.** The entire site is built on `www` as its canonical origin:
+
+- `scripts/site-config.mjs`: `SITE_URL = 'https://www.littlepoppin.com'`
+- 1,552 references to `www.littlepoppin.com` across the HTML, sitemap, JS and text files,
+  against 1 to the apex
+- Every `<link rel="canonical">`, every `og:url`, the `schema.org` Organization and WebSite
+  nodes, all point at `www`
+- `sitemap.xml` lists ~132 URLs, all on `www`
+- `robots.txt` points at `https://www.littlepoppin.com/sitemap.xml`
+- Google Search Console is verified on the `https://www.littlepoppin.com/` property
+- `docs/TOMORROW.md` uses `https://www.littlepoppin.com/api/ops` for order visibility
+
+So the site is telling Google, Pinterest and every social scraper that the real page lives at
+a hostname that returns a DNS error, while quietly serving from the apex. That is the most
+likely explanation for the July Search Console warnings in the mailbox: "Alternative page with
+proper canonical tag", the merchant listings and product snippets issues, and the products
+missing from the Shopping tab.
+
+It also means every `www` link anyone has ever shared, printed, pinned or put in an Etsy
+listing is currently dead. Not slow. Dead, with a browser DNS error and no redirect.
+
+Search Console started collecting traffic for `www` on 5 July, so it resolved then. Something
+changed between then and now. The last deployment was 18 Aug.
+
+**Check it in ten seconds:** type `https://www.littlepoppin.com` into a browser. Then open
+Vercel > littlepoppin > Settings > Domains, which will show the exact record it expects for
+`www` (a `CNAME` to `cname.vercel-dns.com`), and add it at the registrar. Both hostnames
+should resolve, with one redirecting to the other, and the one the code calls canonical should
+be the one that serves.
+
+I could not fetch the domain from here to confirm the HTTP behaviour: the egress proxy blocks
+`littlepoppin.com`, and DNS-over-HTTPS is blocked too. Production itself is healthy, verified
+through Vercel: `littlepoppin.vercel.app` returns 200 with the real homepage, last modified
+26 Aug. GA4 is live on the site as `G-TD4975MVCS`, so that open item from 10 Aug is done.
