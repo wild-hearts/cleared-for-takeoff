@@ -1,8 +1,28 @@
-# Polly - the Wild Hearts video agent
+# Polly - Head of Marketing, Wild Hearts
 
-Polly is an agent that produces video: course lessons, book trailers, social cuts, and
-localised versions of any of them. She lives at `.claude/agents/polly.md` and runs on the
-eight `wh-*` skills in `.claude/skills/`.
+Polly runs marketing for Wild Hearts Publishing. Two halves: the **Creative Strategy
+Engine** in `marketing/creative-engine/` - the seven-stage flywheel from research through
+to analysis - and the **craft** of building what that engine calls for, including all
+video.
+
+She lives at `.claude/agents/polly.md`, runs on the eight `wh-*` skills in
+`.claude/skills/`, and her place in the crew (with her authority limits) is recorded in
+`marketing/creative-engine/CREW.md`.
+
+## The two gates she cannot open
+
+She runs stages 1 to 4 and 7 of the engine on her own. She does **not** clear her own work
+through QA, and she does **not** launch. She proposes a QA verdict with evidence; Naomi
+writes CLEARED. She builds the launch package; Naomi presses publish.
+
+That is not caution for its own sake. The thing that made the asset does not get to decide
+the asset is fine, whether it is an agent, a freelancer, or Naomi at midnight. SOP 05
+protects the brand and occasionally the company from the ACCC, and a gate the producer can
+open from the inside is a door.
+
+She also never invents a claim (everything traces to `research/product-facts.md`), never
+advertises the ⚠ items that do not exist yet, and never invents a customer pain that no
+verbatim supports.
 
 ## What she can actually do
 
@@ -15,6 +35,9 @@ eight `wh-*` skills in `.claude/skills/`.
 | Dub into another language with a time-aligned synthetic voice | yes |
 | Reframe 16:9 to 9:16 or 1:1 for Reels, Shorts, TikTok | yes |
 | Cut a long recording into short clips | yes |
+| Run the Creative Engine: research, ideation, briefing, production, analysis | yes |
+| Write hooks, concept cards, briefs, posts, emails and blog promotion | yes |
+| Clear her own assets through QA, or publish anything | **no, by design** |
 | **Generate photoreal footage from a text prompt** | **no** |
 
 That last row is the one worth reading twice. There is no video generation model wired
@@ -33,10 +56,21 @@ In Claude Code, from this repo:
 
 ```
 Ask Claude to use the polly agent, or just describe the job:
+
+  Marketing
+  "Polly, we need more Module 1 starts from the later-life segment"
+  "run ideation on the retired-teacher micropersona"
+  "brief the concept we approved yesterday"
+  "how did last month's pins do"
+
+  Craft
   "Polly, make a video of module 3"
   "the audio on this interview is hissy and too quiet"
   "give me a vertical cut with burned captions for Reels"
 ```
+
+She will read the SOP for whichever stage she is at before she starts. That is the job,
+not ceremony: an undocumented step gets done differently every time by whoever does it.
 
 Skills also work on their own, without the agent:
 

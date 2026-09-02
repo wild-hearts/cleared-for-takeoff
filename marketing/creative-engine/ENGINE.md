@@ -34,6 +34,16 @@ flowchart LR
 | 6. Launch | Assets renamed per the naming convention SOP, then launched per the launch SOP. | [sops/06-naming-convention.md](sops/06-naming-convention.md) and [sops/07-launch.md](sops/07-launch.md) |
 | 7. Analysis | Validate hypotheses (true or false) and memorialise findings. Findings feed back into Research. | [sops/08-analysis.md](sops/08-analysis.md) |
 
+## Who runs it
+
+One person and an AI crew. **Polly**, Head of Marketing, runs the flywheel end to end and
+builds what it calls for, including all video. Naomi approves concepts, writes QA
+verdicts, and publishes. The full roster and, more importantly, where each role's
+authority stops, is in [CREW.md](CREW.md).
+
+The two gates that never delegate are QA (stage 5) and Launch (stage 6): the thing that
+made the asset does not get to decide the asset is fine.
+
 ## The rules that hold it together
 
 1. **Every stage has an SOP.** If a step is not written down, it does not exist,
@@ -57,6 +67,7 @@ flowchart LR
 ```
 marketing/creative-engine/
 ├── ENGINE.md                      ← you are here
+├── CREW.md                        ← who runs which stage, and their authority limits
 ├── sops/
 │   ├── 01-research.md
 │   ├── 02-ideation.md
