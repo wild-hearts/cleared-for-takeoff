@@ -33,3 +33,8 @@ partials/
 
 # Superseded by assets/og-image.jpg (303KB -> 54KB)
 assets/og-image.png
+
+# Medaria Aid merch shop. Source for a DIFFERENT site (medariaaid.com), kept here
+# only because this is the branch the work was done on. It must never be served from
+# clearedfortakeoff.com.au.
+medaria-shop/

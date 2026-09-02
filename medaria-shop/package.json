@@ -1,0 +1,20 @@
+{
+  "name": "medariaaid-shop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Medaria Aid merchandise: static storefront + Vercel serverless Stripe Checkout, fulfilled by Printify.",
+  "dependencies": {
+    "@vercel/blob": "^2.5.0",
+    "stripe": "^22.2.3"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "printify:shops": "node scripts/printify-setup.mjs shops",
+    "printify:blueprints": "node scripts/printify-setup.mjs blueprints",
+    "printify:providers": "node scripts/printify-setup.mjs providers",
+    "printify:variants": "node scripts/printify-setup.mjs variants",
+    "printify:build": "node scripts/printify-setup.mjs build",
+    "printify:webhooks": "node scripts/printify-setup.mjs webhooks"
+  }
+}

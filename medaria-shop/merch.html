@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y22T89V5RZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y22T89V5RZ');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medaria Aid merchandise. Every item funds medical supplies, medevac vehicles and humanitarian aid for Ukraine's frontlines. Registered UK Charity No. 1204225.">
+  <meta property="og:title" content="Wear the Mission | Medaria Aid">
+  <meta property="og:description" content="Merchandise that funds medevac vehicles and trauma gear for Ukraine's frontlines.">
+  <meta property="og:image" content="https://www.medariaaid.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Wear the Mission | Medaria Aid Merchandise</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://www.medariaaid.com/merch.html">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <style>
+    /* Page-specific only. Everything else comes from style.css so this page cannot
+       drift away from the rest of the site when the palette changes. */
+    .merch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 48px; }
+    .merch-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+                  border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+    .merch-card__img { aspect-ratio: 1/1; background: rgba(255,255,255,0.03); display: block;
+                       width: 100%; object-fit: cover; }
+    .merch-card__body { padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1; }
+    .merch-card__body h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    .merch-card__blurb { color: var(--muted); font-size: 0.92rem; line-height: 1.7; margin: 0 0 16px; flex: 1; }
+    .merch-card__price { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold); margin-bottom: 16px; }
+    .merch-card__opts { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .merch-card__opts select { background: var(--navy); color: var(--off-white);
+                               border: 1px solid rgba(255,255,255,0.18); border-radius: 8px;
+                               padding: 9px 12px; font: inherit; font-size: 0.9rem; flex: 1; min-width: 110px; }
+    .merch-card__err { color: #ff9b9b; font-size: 0.85rem; margin: 10px 0 0; min-height: 1.2em; }
+    .merch-notice { margin-top: 56px; background: rgba(245,197,24,0.06);
+                    border: 1px solid rgba(245,197,24,0.25); border-radius: 14px; padding: 28px 32px; }
+    .merch-notice h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .merch-notice p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; margin: 0 0 10px; }
+    .merch-empty { margin-top: 48px; text-align: center; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Medaria Aid Home">
+      <img src="logo.png" alt="Medaria Aid logo">
+      <div class="nav-logo-text">
+        <span class="name">Medaria Aid</span>
+        <span class="tagline">UK Charity No. 1204225</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html">Sponsor an Item</a></li>
+      <li><a href="merch.html" class="active">Merch</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate">Donate Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="shop.html">Sponsor an Item</a>
+  <a href="merch.html">Merch</a>
+  <a href="projects.html">Projects</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="donate.html" class="mobile-donate">🇺🇦 Donate Now</a>
+</div>
+
+<section style="background: var(--navy); padding-top: 140px;">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label">The Shop</div>
+      <h1 style="margin: 16px 0 0;">Wear the Mission. Fund the Evac.</h1>
+      <div class="divider" style="margin: 20px auto 0;"></div>
+      <p style="color: var(--muted); max-width: 640px; margin: 24px auto 0; line-height: 1.8;">
+        Profits from everything here fund vehicle conversions, trauma gear and medevac
+        delivery to frontline units in Ukraine. Printed to order and posted worldwide.
+      </p>
+    </div>
+
+    <div class="merch-grid" id="merch-grid" aria-live="polite"></div>
+    <p class="merch-empty" id="merch-empty" hidden></p>
+
+    <!-- This block is compliance, not decoration. It states what a buyer is getting, what
+         "profits" means, and that this is not a Gift Aid donation. Do not delete it to make
+         the page tidier: a claim about where charitable money goes has to be substantiated,
+         and a purchase must not be mistakable for a donation. -->
+    <div class="merch-notice fade-up">
+      <h3>Where your money goes, precisely</h3>
+      <p id="merch-notice-text">Loading…</p>
+      <p>
+        Medaria Aid is a registered charity in England &amp; Wales, No. 1204225. Postage is
+        charged separately at checkout by destination. Items are printed to order by our
+        production partner, so please allow production time on top of postage.
+      </p>
+      <p>
+        Would rather give directly? <a href="donate.html" style="color: var(--gold);">Donate here</a>,
+        and if you are a UK taxpayer your donation can be Gift Aided.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Medaria Aid · Registered Charity No. 1204225 (England &amp; Wales)</span>
+      <span class="slava">Slava Ukraini 🇺🇦</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var grid = document.getElementById('merch-grid');
+  var empty = document.getElementById('merch-empty');
+  var money = function (pence, currency) {
+    try {
+      return new Intl.NumberFormat('en-GB', { style: 'currency', currency: (currency || 'gbp').toUpperCase() })
+        .format(pence / 100);
+    } catch (e) { return '£' + (pence / 100).toFixed(2); }
+  };
+
+  fetch('/api/merch-catalogue')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('catalogue')); })
+    .then(function (data) {
+      document.getElementById('merch-notice-text').textContent = data.notice || '';
+
+      if (!data.open) {
+        empty.hidden = false;
+        empty.textContent = 'The shop is not open yet. We are finishing the last of the setup.';
+        return;
+      }
+
+      data.products.forEach(function (p) {
+        var card = document.createElement('div');
+        card.className = 'merch-card fade-up';
+
+        var img = document.createElement('img');
+        img.className = 'merch-card__img';
+        img.loading = 'lazy';
+        img.src = p.image;
+        img.alt = p.name;
+        // A missing product photo should not render a broken-image icon on a charity's
+        // shop. Hide it and let the card stand on its text.
+        img.onerror = function () { img.remove(); };
+        card.appendChild(img);
+
+        var body = document.createElement('div');
+        body.className = 'merch-card__body';
+
+        var h = document.createElement('h3');
+        h.textContent = p.name;
+        body.appendChild(h);
+
+        var blurb = document.createElement('p');
+        blurb.className = 'merch-card__blurb';
+        blurb.textContent = p.blurb;
+        body.appendChild(blurb);
+
+        var price = document.createElement('div');
+        price.className = 'merch-card__price';
+        price.textContent = money(p.price, data.currency);
+        body.appendChild(price);
+
+        var opts = document.createElement('div');
+        opts.className = 'merch-card__opts';
+        var selects = {};
+        ['colour', 'size'].forEach(function (key) {
+          var values = p.options && p.options[key];
+          if (!values || !values.length) return;
+          // A single fixed option is not a choice. Send it, do not ask about it.
+          if (values.length === 1) { selects[key] = { value: values[0] }; return; }
+          var sel = document.createElement('select');
+          sel.setAttribute('aria-label', p.name + ' ' + key);
+          values.forEach(function (v) {
+            var o = document.createElement('option');
+            o.value = v; o.textContent = v;
+            sel.appendChild(o);
+          });
+          selects[key] = sel;
+          opts.appendChild(sel);
+        });
+        if (opts.children.length) body.appendChild(opts);
+
+        var btn = document.createElement('button');
+        btn.className = 'btn btn-primary';
+        btn.type = 'button';
+        btn.textContent = 'Buy, and fund the evac';
+        var err = document.createElement('p');
+        err.className = 'merch-card__err';
+
+        btn.addEventListener('click', function () {
+          btn.disabled = true;
+          err.textContent = '';
+          var payload = { sku: p.sku, quantity: 1 };
+          if (selects.colour) payload.colour = selects.colour.value;
+          if (selects.size) payload.size = selects.size.value;
+          if (window.gtag) gtag('event', 'begin_checkout', { items: [{ item_id: p.sku, item_name: p.name }] });
+
+          fetch('/api/merch-checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          })
+            .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+            .then(function (out) {
+              if (!out.ok || !out.j.url) throw new Error(out.j.error || 'Could not start checkout');
+              window.location.href = out.j.url;
+            })
+            .catch(function (e) {
+              err.textContent = e.message || 'Something went wrong. Please try again.';
+              btn.disabled = false;
+            });
+        });
+
+        body.appendChild(btn);
+        body.appendChild(err);
+        card.appendChild(body);
+        grid.appendChild(card);
+      });
+    })
+    .catch(function () {
+      empty.hidden = false;
+      empty.textContent = 'The shop is temporarily unavailable. Please try again shortly.';
+    });
+})();
+</script>
+<script src="script.js" defer></script>
+</body>
+</html>
