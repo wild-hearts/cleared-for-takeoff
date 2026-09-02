@@ -64,9 +64,13 @@ export const SHIP_COUNTRIES = ['GB','IE','FR','DE','ES','IT','NL','BE','PL','SE'
 
 // ── The catalogue ────────────────────────────────────────────────────────────────────
 //
-// One artwork, three products. That is on purpose: the "Help Is On The Way" design is the
-// only Medaria merchandise artwork that exists, and putting it on a tee, a tote and a mug
+// One design, three products. That is on purpose: the "Help Is On The Way" lockup is the
+// only Medaria merchandise artwork there is, and putting it on a tee, a tote and a mug
 // gives a shop with something to browse without inventing designs nobody has drawn.
+//
+// Each product points at the ink version that suits its garment: cream (--light) for dark
+// grounds, navy (--dark) for light ones. Three concepts are in art/, with a contact sheet
+// at art/PREVIEW-concepts.png. Swap the filenames below to change which one ships.
 //
 // The patch, the enamel pin and the Songs for Survival album from the original merch
 // document are NOT here. Printify does not make enamel pins, its embroidered patch range
@@ -85,12 +89,18 @@ export const CATALOGUE = [
     blurb: 'What a medic says on the radio when a vehicle is already moving. Unisex fit, soft cotton.',
     story: 'Every tee funds vehicle conversions, trauma gear and medevac delivery to frontline units in Ukraine.',
     image: '/img/merch/tee-help-is-on-the-way.jpg',
-    artwork: 'art/help-is-on-the-way.png',
+    // ONE INK PER PRODUCT, so the garment colours must all suit that ink.
+    // The original merch document paired Military Green with Sky Blue. That cannot work
+    // from a single file: the cream that carries a dark garment vanishes on Sky Blue, and
+    // the navy that reads on Sky Blue turns to mud on Military Green. Dark garments only,
+    // cream ink. To sell a light tee, add it as a SECOND product pointing at the --dark
+    // artwork, rather than adding a colour here.
+    artwork: 'art/a-field-stencil--light.png',
     blueprintQuery: 'unisex softstyle t-shirt',
     providerPreference: ['printify choice', 'europe', 'united kingdom'],
     price: 2400,
     options: {
-      colour: ['Military Green', 'Sky Blue'],
+      colour: ['Military Green', 'Black'],
       size: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
     },
   },
@@ -100,7 +110,8 @@ export const CATALOGUE = [
     blurb: 'Cotton shopper, printed with the same design. Useful, and quietly loud.',
     story: 'Every tote funds vehicle conversions, trauma gear and medevac delivery to frontline units in Ukraine.',
     image: '/img/merch/tote-help-is-on-the-way.jpg',
-    artwork: 'art/help-is-on-the-way.png',
+    // Natural cotton canvas is a light ground, so this one takes the navy ink.
+    artwork: 'art/a-field-stencil--dark.png',
     blueprintQuery: 'tote bag',
     providerPreference: ['printify choice', 'europe', 'united kingdom'],
     price: 1800,
@@ -112,7 +123,8 @@ export const CATALOGUE = [
     blurb: '11oz ceramic. For the desk of someone who cannot go, but can pay for the ones who did.',
     story: 'Every mug funds vehicle conversions, trauma gear and medevac delivery to frontline units in Ukraine.',
     image: '/img/merch/mug-help-is-on-the-way.jpg',
-    artwork: 'art/help-is-on-the-way.png',
+    // White ceramic, so navy ink.
+    artwork: 'art/a-field-stencil--dark.png',
     blueprintQuery: 'mug 11oz',
     providerPreference: ['printify choice', 'europe', 'united kingdom'],
     price: 1500,
