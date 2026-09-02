@@ -70,9 +70,19 @@ rather than overwriting.
 
 ## Setting it up
 
-**1. A separate Printify store.** Medaria needs its own, not Little Poppin's (shop
-`28504147`). Charity trading and commercial trading should not share a store, a product
-list or a reporting view. Printify, Add new store, choose the API / manual option.
+**1. A separate Printify ACCOUNT, not just a separate store.** The existing Printify
+account is registered to `medariaaid@gmail.com` and it holds Little Poppin's shop
+`28504147`, which is a Wild Hearts Publishing commercial brand.
+
+Adding a second store inside that account is the quick option and the wrong one. Printify
+bills per account against the card on file, so one card would be paying for both a charity's
+production and a commercial company's. Whichever card it is, the wrong entity is paying, and
+unpicking that at year end is worse than the ten minutes it takes to avoid.
+
+Sign up separately with `info@medariaaid.com`, add a store, and when it asks which platform,
+choose the option that is not a platform connection (Printify's manual / API ordering route).
+Put the charity's own card on that account. Then `node scripts/printify-setup.mjs shops`
+confirms the id rather than you having to find it.
 
 **2. Environment variables.** Copy `.env.example` into Vercel, medaria-aid, Settings,
 Environment Variables. Two things matter:
@@ -103,6 +113,11 @@ node scripts/printify-setup.mjs webhooks --shop <shopId> --confirm
 Nothing is hardcoded. Blueprint, provider and variant ids are read from the live Printify
 catalogue and printed for you to check before they are written. Guessing them from memory is
 how you end up selling a variant that does not exist.
+
+The API token comes from Printify, My Profile, Connections. It is shown once, and it expires
+after a year: when it lapses, order submission fails server-side and the shop still looks
+perfectly healthy from the outside. Diary it for eleven months, and watch
+`/api/merch-ops` for `merch-printify-failed`.
 
 **5. Fix the postage numbers.** `SHIPPING` in `lib/products.js` is a placeholder. Replace it
 with real figures from the `costs` command before launch.
