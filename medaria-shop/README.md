@@ -82,23 +82,43 @@ The account on `medariaaid@gmail.com` is a different account, and it already has
 store, "Medaria Aid", with no orders and no products. So the separation this file warned
 about creating already exists. Nothing to create, nothing to move, no billing collision.
 
-**Check one thing before building: the store type.** The store answers at
-`medaria-aid.printify.me`, which is the address format Printify uses for its own hosted
-Pop-Up Stores. A Pop-Up Store is a storefront Printify runs, where Printify takes the payment
-and pays profit out to you. That is a different model from this code, which takes the payment
-through the charity's own Stripe and then submits the order to Printify over the API.
+**The store is a Pop-Up Store, and that is a fork in the road.**
 
-`node scripts/printify-setup.mjs shops` prints each store's id **and its sales channel**, so
-one command settles it:
+Confirmed 2 Sep 2026, without needing to run anything: `medaria-aid.printify.me` is the URL
+format Printify gives its hosted Pop-Up Stores, per Printify's own product page ("You'll get
+a unique URL, like yourstorename.printify.me"). So the existing Medaria store is a storefront
+Printify runs, where Printify takes the payment, handles shipping and support, and pays the
+profit out.
 
-- **An API or manual store** — this code works as written. Note the shop id and carry on.
-- **A Pop-Up Store** — add a second store of the API type for this integration, and keep or
-  delete the pop-up as you prefer.
+That is a different model from this code, which takes payment through the charity's own
+Stripe and then submits the order to Printify over the API. Both are legitimate. Pick one on
+purpose.
 
-Worth knowing either way: a Pop-Up Store is a real option on its own, live today with no code.
-The trade is that the money runs through Printify rather than the charity's Stripe account,
-and none of the compliance wording in `PURCHASE_NOTICE` appears at that checkout, because
-that checkout is not ours.
+| | Pop-Up Store | This code |
+|---|---|---|
+| Time to live | An evening, from a phone | A day, needs a computer |
+| Cost | Free | Free, but Stripe fees |
+| Money | Printify collects, pays profit out | Straight into the charity's Stripe |
+| Lives at | `medaria-aid.printify.me`, or a custom domain | `medariaaid.com/merch.html` |
+| `PURCHASE_NOTICE` at checkout | No. Not our checkout | Yes |
+| Customer support | Printify | Medaria |
+
+**The recommendation is to start with the Pop-Up Store**, and keep this code for when there
+is evidence anyone wants the merchandise. Little Poppin has 97 Etsy listings and no buyers;
+building a bespoke checkout for demand nobody has demonstrated is the wrong order of work.
+This code is written and tested and will still be here.
+
+Two things to carry over if you do that:
+
+- **Put the substance of `PURCHASE_NOTICE` into every Pop-Up product description.** It cannot
+  go on the checkout, because that checkout is Printify's. A registered charity making claims
+  about where money goes still has to define "profit" and still has to say this is a purchase
+  rather than a Gift Aid donation, wherever it can say it.
+- **Tell the accountant the income arrives via Printify**, not as direct sales. The paper
+  trail reads "Printify paid us X", which is fine, but it should not be a surprise at year end.
+
+To switch to this code later, add a second store of the API type and run the setup below
+against that shop id.
 
 **2. Environment variables.** Copy `.env.example` into Vercel, medaria-aid, Settings,
 Environment Variables. Two things matter:
