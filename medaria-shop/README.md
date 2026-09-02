@@ -70,19 +70,35 @@ rather than overwriting.
 
 ## Setting it up
 
-**1. A separate Printify ACCOUNT, not just a separate store.** The existing Printify
-account is registered to `medariaaid@gmail.com` and it holds Little Poppin's shop
-`28504147`, which is a Wild Hearts Publishing commercial brand.
+**1. The Printify account. Already done, and already separate.**
 
-Adding a second store inside that account is the quick option and the wrong one. Printify
-bills per account against the card on file, so one card would be paying for both a charity's
-production and a commercial company's. Whichever card it is, the wrong entity is paying, and
-unpicking that at year end is worse than the ten minutes it takes to avoid.
+CORRECTED 2 Sep 2026. An earlier version of this file said the existing Printify account
+held Little Poppin's shop `28504147` and that Medaria therefore needed a brand new account.
+That was wrong. `scripts/printify-setup.mjs` in `wild-hearts/littlepoppin` says, in a comment:
+*"Naomi's Printify account (info@wildheartspublishing.com.au), shop 'My new store'"*. Little
+Poppin's Printify has always been on the Wild Hearts address.
 
-Sign up separately with `info@medariaaid.com`, add a store, and when it asks which platform,
-choose the option that is not a platform connection (Printify's manual / API ordering route).
-Put the charity's own card on that account. Then `node scripts/printify-setup.mjs shops`
-confirms the id rather than you having to find it.
+The account on `medariaaid@gmail.com` is a different account, and it already has exactly one
+store, "Medaria Aid", with no orders and no products. So the separation this file warned
+about creating already exists. Nothing to create, nothing to move, no billing collision.
+
+**Check one thing before building: the store type.** The store answers at
+`medaria-aid.printify.me`, which is the address format Printify uses for its own hosted
+Pop-Up Stores. A Pop-Up Store is a storefront Printify runs, where Printify takes the payment
+and pays profit out to you. That is a different model from this code, which takes the payment
+through the charity's own Stripe and then submits the order to Printify over the API.
+
+`node scripts/printify-setup.mjs shops` prints each store's id **and its sales channel**, so
+one command settles it:
+
+- **An API or manual store** — this code works as written. Note the shop id and carry on.
+- **A Pop-Up Store** — add a second store of the API type for this integration, and keep or
+  delete the pop-up as you prefer.
+
+Worth knowing either way: a Pop-Up Store is a real option on its own, live today with no code.
+The trade is that the money runs through Printify rather than the charity's Stripe account,
+and none of the compliance wording in `PURCHASE_NOTICE` appears at that checkout, because
+that checkout is not ours.
 
 **2. Environment variables.** Copy `.env.example` into Vercel, medaria-aid, Settings,
 Environment Variables. Two things matter:
