@@ -60,6 +60,15 @@ is a door.
 Everything upstream of QA is delegable, and Polly should be trusted with it - research,
 ideation, briefing, production, and the whole of video craft. The two gates are not.
 
+## Not yet on the crew
+
+Naomi has supplied faces for two further crew members, **Petal** and **Marlow**
+(`crew/portraits/`). Neither has a role, an agent definition, or a row in the roster
+above, so neither is on the crew yet. Faces are not remits.
+
+See [crew/README.md](crew/README.md) for what is outstanding, including a naming check
+worth doing before anyone relies on the filenames.
+
 ## Adding to the crew
 
 A new role gets: a row in the roster, a column in the stage table, and its authority
