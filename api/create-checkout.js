@@ -43,6 +43,23 @@ module.exports = async function handler(req, res) {
         return res.status(500).json({ error: 'Payment not configured' });
     }
 
+    // A Stripe secret key starts sk_live_ / sk_test_, or rk_ for a restricted key.
+    // On 3 Sep 2026 this variable was found holding a value beginning "mk_", which
+    // is the ID Stripe lists beside an API key rather than the key itself. Every
+    // click on Enrol Now had been returning 502 and not one checkout session had
+    // ever been created for this brand. The shape is checkable in one line, and a
+    // wrong shape is an operator mistake, so name it in words an operator can act
+    // on instead of letting it read as a generic Stripe outage.
+    if (!/^(sk|rk)_(live|test)_/.test(secretKey)) {
+        console.error(
+            `STRIPE_SECRET_KEY is not a Stripe secret key: it begins "${secretKey.slice(0, 3)}" ` +
+            `and is ${secretKey.length} characters. Expected sk_live_, sk_test_ or a restricted rk_. ` +
+            'The value shown next to a key on the Stripe API keys page is that key\'s ID, not the ' +
+            'key: reveal the key and copy the secret value itself.'
+        );
+        return res.status(500).json({ error: 'Payment not configured' });
+    }
+
     try {
         const params = new URLSearchParams({
             'mode':                          'payment',

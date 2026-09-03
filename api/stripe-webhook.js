@@ -59,7 +59,34 @@ module.exports = async function handler(req, res) {
         const name    = session.customer_details?.name || '';
         // Which product was bought (set by create-checkout). Default keeps the
         // original self-paced behaviour for any session without metadata.
-        const product = session.metadata?.entitlement_product || 'self_paced';
+        // OWNERSHIP CHECK, added 3 Sep 2026. Every brand under Wild Hearts
+        // Publishing shares one Stripe account, so this endpoint receives
+        // checkout.session.completed for every brand, not only this one.
+        //
+        // Defaulting a session with no metadata to 'self_paced' meant any other
+        // brand's sale would be treated here as a course purchase: it would
+        // create a Supabase account, grant course access, and add that buyer to
+        // the "C4TO Course Students" MailerLite group. The last of those is a
+        // consent problem, not merely a data one, because the buyer never asked
+        // to hear from this brand.
+        //
+        // Requiring the metadata is safe: api/create-checkout.js sets
+        // metadata[entitlement_product] on every session it creates, so a
+        // session arriving without it did not originate from this site. The
+        // trade is deliberate and worth stating: any hand-made Stripe Payment
+        // Link for this brand MUST set entitlement_product or it will be
+        // ignored here, which is the correct failure direction. Ignoring a real
+        // sale is visible and fixable. Granting a stranger access and mailing
+        // them is neither.
+        //
+        // NOTE, unresolved at the time of writing: nobody has yet confirmed
+        // whether this endpoint is actually registered on the shared account.
+        // This guard is correct either way.
+        const product = session.metadata?.entitlement_product;
+        if (!product) {
+            console.log(`Ignored session ${session.id}: no entitlement_product metadata, so it did not come from this site.`);
+            return res.status(200).json({ received: true, ignored: 'not_this_brand' });
+        }
 
         // Only course products auto-grant a Supabase login + entitlement. Other
         // purchases (e.g. group-training Payment Links, which should set their
