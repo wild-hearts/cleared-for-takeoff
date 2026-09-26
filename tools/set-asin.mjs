@@ -37,6 +37,19 @@ const cfgPath = join(ROOT, 'partials/book.json');
 const cfg = JSON.parse(readFileSync(cfgPath, 'utf8'));
 const current = cfg.asin;
 
+if (!current) {
+  /* Coming-soon state: there are no product links left to rewrite, so this only
+     records the ASIN and flips the status. The buy links go back in by hand,
+     because what they say is a copy decision, not a find-and-replace. */
+  cfg.asin = next;
+  cfg.product_url = `https://www.amazon.com.au/dp/${next}`;
+  cfg.status = 'live';
+  if (!DRY) writeFileSync(cfgPath, JSON.stringify(cfg, null, 2) + '\n');
+  console.log(`  ${DRY ? 'would set' : 'set'}  partials/book.json asin=${next}, status=live`);
+  console.log('  Now add the buy links back by hand (see _status_note in partials/book.json), then run: npm run check');
+  process.exit(0);
+}
+
 if (current === next) {
   console.log(`Nothing to do: partials/book.json already says ${next}.`);
   process.exit(0);

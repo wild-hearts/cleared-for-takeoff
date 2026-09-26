@@ -14,13 +14,13 @@
     }
   },
   "book": {
-    "amazon": "9.89",
-    "_note": "MANUAL RECONCILIATION REQUIRED. This is an Amazon listing price that Amazon can change without telling us. Nothing here updates it automatically. Check it whenever you touch /book/, and treat a mismatch between this figure and the live Amazon listing as a real problem rather than a rounding error."
+    "_note": "REMOVED FROM THE SITE 27 Sep 2026. Naomi took both earlier Kindle books down; the Complete Edition has no price yet, so the site states none. The old Kindle listing was A$9.89. When the new edition has a price, add it back here as \"amazon\" and on /book/ together, and reconcile by hand against the live listing."
   },
   "prose_examples": {
     "_note": "Dollar figures that appear in article or page prose as examples, not as anything we charge. Listed so the price check does not flag them and so a real price can never hide among them.",
     "quote_example_blog": "140",
     "donation_example_nonprofits": "250",
-    "reader_example": "10"
+    "reader_example": "10",
+    "field_notes_pentagon_contract": "200"
   }
 }

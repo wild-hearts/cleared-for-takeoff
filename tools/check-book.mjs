@@ -23,8 +23,18 @@ const SKIP = new Set(['.git', '.vercel', '.claude', 'node_modules', 'partials', 
 
 const cfg = JSON.parse(readFileSync(join(ROOT, 'partials/book.json'), 'utf8'));
 const { asin, author_page_url: authorUrl } = cfg;
+/* coming-soon: the old editions are taken down and the new one has no ASIN yet.
+   The site must then carry NO product link at all, because every one would
+   point at a dead listing. Retired ASINs are named so a revert that brings one
+   back is caught by name. */
+const comingSoon = cfg.status === 'coming-soon';
+const retired = Object.keys(cfg.retired_asins || {});
 
-if (!/^B0[A-Z0-9]{8}$/.test(asin)) {
+if (comingSoon && asin) {
+  console.error(`✗ partials/book.json: status is coming-soon but asin is "${asin}". Pick one.`);
+  process.exit(1);
+}
+if (!comingSoon && !/^B0[A-Z0-9]{8}$/.test(asin)) {
   console.error(`✗ partials/book.json: "${asin}" is not a plausible ASIN (expected B0 followed by eight characters)`);
   process.exit(1);
 }
@@ -54,7 +64,11 @@ for (const file of files) {
 
   for (const m of text.matchAll(/amazon\.com\.au\/dp\/([A-Z0-9]+)/g)) {
     productLinks++;
-    if (m[1] !== asin) problems.push(`${file}: links to ASIN ${m[1]}, but partials/book.json says ${asin}`);
+    if (comingSoon) problems.push(`${file}: links to ASIN ${m[1]}${retired.includes(m[1]) ? ' (a retired, taken-down edition)' : ''}, but partials/book.json says the book is coming soon with no live listing`);
+    else if (m[1] !== asin) problems.push(`${file}: links to ASIN ${m[1]}, but partials/book.json says ${asin}`);
+  }
+  for (const r of retired) {
+    if (text.includes(r) && !text.includes(`/dp/${r}`)) problems.push(`${file}: mentions retired ASIN ${r}`);
   }
 
   for (const m of text.matchAll(/amazon\.com\.au\/stores\/[^"'\s)]+/g)) {
@@ -64,7 +78,7 @@ for (const file of files) {
   }
 }
 
-if (productLinks === 0) {
+if (productLinks === 0 && !comingSoon) {
   problems.push('no page links to the book on Amazon at all, which means either every link was lost or the ASIN in partials/book.json is stale');
 }
 
@@ -75,4 +89,6 @@ if (problems.length) {
   process.exit(1);
 }
 
-console.log(`✓ book links consistent (${productLinks} links to ${asin}, ${authorLinks} to the author page)`);
+console.log(comingSoon
+  ? `✓ book is coming soon: no product links on the site, retired ASINs absent (${authorLinks} links to the author page)`
+  : `✓ book links consistent (${productLinks} links to ${asin}, ${authorLinks} to the author page)`);

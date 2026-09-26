@@ -25,10 +25,11 @@ date. Anything marked ⚠ needs verifying before it appears in an ad.
 
 ## The book
 
-- "Cleared For Take-Off", Wild Hearts Publishing, Kindle edition $9.89 AUD.
-- ⚠ A combined and expanded edition is being republished; the live ASIN is
-  the old one (`B0GS21NW58`) until told otherwise. Ads link only to a listing
-  that is currently live.
+- "Cleared For Takeoff: The Complete Edition", Wild Hearts Publishing. **Coming soon.**
+  No release date, price or ASIN yet. Do not state any.
+- ⚠ 27 Sep 2026: Naomi has taken BOTH earlier Kindle books down: "Cleared For Take-Off"
+  (`B0GS21NW58`) and "How to Win Every Argument By Outlasting Your Opponent's Memory"
+  (`B0GWXL6SLD`). **No ad links to Amazon for the book** until the new ASIN is live.
 
 ## Kids and Teens
 
