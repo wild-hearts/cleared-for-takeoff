@@ -4,23 +4,5 @@
 .DS_Store
 
 .vercel
-
-# Claude config: ignore local/session state, but keep shared skills and agents
-# (Polly and the wh-* video toolkit live here and must travel with the repo).
-.claude/*
-!.claude/agents/
-!.claude/skills/
-.claude/settings.local.json
-
-# Video toolkit: never commit media binaries or packaged zips.
-# Storyboards, scripts and SRTs are the things worth versioning.
-dist/
-*.mp4
-*.mov
-*.mkv
-*.webm
-*.m4a
-*.mp3
-*.wav
-*.aac
-final/
+.claude
+.DS_Store
