@@ -1,0 +1,505 @@
+{
+ "course": "adult",
+ "module": 6,
+ "title": "AI for Real Life, Module 6: Final Approach",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "AI for Real Life, Module 6: Final Approach",
+   "narration": "Welcome to Module 6 of AI for Real Life: Final Approach. In aviation, final approach is the last stretch before landing: lined up with the runway, steady and in control. It's where the training comes together. I'm Naomi, and this is the last module.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 2,
+   "heading": "Welcome to Module 6",
+   "narration": "There's a worry that surfaces at this stage, and it's a reasonable one. AI keeps changing, and fast. How do you keep what you've learned from going stale? [pause] This module is about choosing what you want to keep using. Look back first: keep your Flight Log and your useful prompts beside you, because you'll be reading what you've written and adding to it. Then look ahead, and build a routine that fits your life and your budget. And keep your judgement. Tools change. The platforms will update, add features, change their prices and sometimes their names. Clear requests and appropriate checks remain useful, whatever the screen looks like.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 3,
+   "heading": "Your Module 6 route",
+   "narration": "There are six lessons. Lesson 6.1, your routine: one main tool, one recurring task and a short library. Lesson 6.2, choosing the method, for the times another approach serves you better. Lesson 6.3, staying current, by following the changes that are relevant to your actual tasks. Lesson 6.4, subscription value: comparing your needs, the costs and the access you already have. Lesson 6.5, helping someone, with a patient first session and their permission. And Lesson 6.6, your final reflection, where you review your progress and choose your next action.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 4,
+   "heading": "A useful measure of progress",
+   "narration": "Before we start, here's a useful way to measure progress, and it uses evidence from your own tasks rather than anyone else's. First, what changed? Perhaps a clearer draft, an explanation you checked, or a better-organised plan. Second, what did it cost? Be honest and include the time you spent prompting, checking and correcting. Third, what will you keep? Choose the tasks where the benefit is worth the effort.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 5,
+   "heading": "Lesson 6.1: Building Your Routine",
+   "narration": "Lesson 6.1: Building Your Routine. By the end of this lesson, you'll be able to do three things. One: choose one main tool and one recurring task. Two: attach your practice to a suitable routine you already have. Three: keep your useful prompts easy to find.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 6,
+   "heading": "One tool, one habit, one page",
+   "narration": "Think about the first time you used a smartphone. There was probably a stretch where you had to think about every tap. Now you pick it up without thinking. That didn't happen because you studied smartphones. It happened because you used one, for the same few things, until it became habit. So here's the shape of this lesson. One tool: use a main tool long enough to learn its controls and its limits. One habit: choose a recurring task where AI has already helped you. And one page: keep a short, accessible list of reusable prompts.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 7,
+   "heading": "Your main tool",
+   "narration": "First, your main tool. You may have tried more than one in this course, and that isn't a problem. Familiarity can reduce the setup you repeat every time. Use the same tool regularly and you learn what it does well, where it wobbles and how it likes to be asked. Choose by fit: the tasks you need it for, any access needs you have, and the privacy controls you require. Then give it a starting period. Use it consistently, and review after a few weeks. And stay flexible. If the fit, the terms or the results are poor, change tools or change methods.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 8,
+   "heading": "Preferences and projects",
+   "narration": "Two features can help, as long as your expectations are realistic. Preferences, sometimes called custom instructions, let you set the basics once: plain English, Australian spelling and your preferred length. Projects, if your tool supports them, let you keep suitable related material together in one place. But keep checking. Neither feature guarantees perfect recall, and neither guarantees the tool will follow your instructions every time.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 9,
+   "heading": "A reusable preference",
+   "narration": "Here's a preference you could reuse. \"Use Australian spelling and plain English. Keep answers concise unless I ask for more detail. Distinguish assumptions from facts and flag claims needing verification.\" Save only preferences you're comfortable sharing with the provider. And review the actual output, rather than trusting that the instruction worked.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 10,
+   "heading": "One recurring task",
+   "narration": "Second: one habit. Not a list of tasks. Just one. Choose a recurring task with a clear benefit. A community update, a weekly checklist, or a draft follow-up are good examples. Set a boundary: use suitable information, and read the result before you act on it. Then review how it's going, and keep the task in your routine only if it actually helps.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 11,
+   "heading": "A practical routine cue",
+   "narration": "There's a proven trick for making a habit stick: attach it to something you already do. The existing habit becomes the cue for the new one. Here's the pattern on screen. \"After I\" do an existing activity, \"I will spend\" a short period \"using AI for\" a recurring task. \"Before using the result, I will check\" an important detail. For example: after reviewing my weekly notes, I draft a community update, and I check the names, dates and commitments.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 12,
+   "heading": "Your short prompt library",
+   "narration": "Third: one page, your prompt library. You started it in Module 2, and good prompts really are recipes. Each entry needs a few parts. A title and purpose: a label you recognise, and when to use it. The template itself, with Context, Task, Format and Tone, and placeholders for the details. A steering phrase, a correction you find useful, such as \"Make this shorter\". A checking step, whether that's facts, calculations, commitments or source details. And a last reviewed date, so you know when you last tested or updated it. Keep it somewhere you'll actually look: a note on your phone, a pinned document, or a printed page on the fridge.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 13,
+   "heading": "A fictional week of useful tasks",
+   "narration": "Here's an example of what a week can look like. It's an illustration, not a prescription. Imagine Margaret, a retired nurse. Monday: she needs to follow up with her insurer. Instead of staring at a blank email, she starts from her template, then checks the facts before she sends it. Wednesday: part of a council letter uses language she isn't sure about. She asks for an explanation of a suitable excerpt, then verifies what she actually needs to do. Friday: there's a family discussion coming up. She uses AI to prepare her questions, and she chooses her own words. None of that is AI doing anything extraordinary. It's a series of small frictions removed.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 14,
+   "heading": "Try It Now: Write your routine and save three prompts",
+   "narration": "Try It Now. Write your routine and save three prompts. Choose one main tool and one task you repeat. Write your cue, the task and your checking step, using the pattern from a moment ago. Then save three relevant prompts where you can find them quickly. Pause the video now and come back when you're done. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 15,
+   "heading": "Common Turbulence: Organising the system takes over",
+   "narration": "Common Turbulence: when organising the system takes over. Some people spend weeks designing a beautifully organised library, with colour-coding and categories, and never use it. Keep it small. A rough, useful list is enough to begin. And use it before you expand it: improve the library after a real task, not before. Memory Hook: one main tool, one recurring task, one accessible page.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 16,
+   "heading": "Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: why start with one main tool? [pause] Two: what does a routine cue do? [pause] Three, from Module 2: what do C, T, F, T stand for? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 17,
+   "heading": "Check: answers",
+   "narration": "Here are the answers. One: starting with one main tool reduces repeated setup and helps you learn its controls and limits. Review whether it still fits. Two: a routine cue connects a chosen task to something you already do. Three: Context, Task, Format and Tone. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 18,
+   "heading": "Lesson 6.2: When Another Method Fits Better",
+   "narration": "Lesson 6.2: When Another Method Fits Better. A hammer is a fine tool. Reaching for a hammer when you need a screwdriver isn't. Knowing the difference isn't a criticism of hammers. It's competence. By the end of this lesson, you'll be able to recognise five situations where it's worth pausing, use support while keeping your own voice and decisions, and choose direct sources or qualified help where you need them.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 19,
+   "heading": "Five situations to consider",
+   "narration": "Here are five situations to consider, each with a useful alternative. When connection is the purpose, use words you understand and intend. When you need personal, high-stakes advice, use the appropriate professional or authority. When information is live or urgent, check the responsible live source directly. When the decision expresses your values, use questions to clarify your thinking, then decide yourself. And when practice is the learning goal, try first, then ask for hints and feedback.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 20,
+   "heading": "Personal messages",
+   "narration": "First, personal messages. A friend has just lost their husband. You want to reach out, and writing feels impossible. Asking AI for help is completely understandable. A useful starting point is to ask for possible openings if you feel stuck. Then review the draft, and choose words you understand and mean. Your friend won't remember whether the sentences were elegant. They'll remember that you wrote. And accessibility matters. Use the amount of assistance you need. A message is still yours even if you didn't type it unaided.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 21,
+   "heading": "Support for your own wording",
+   "narration": "Here's a prompt that supports your own wording. \"I want to express\" your main point \"to\" the relationship, for example a close friend. \"Suggest three simple ways to begin. Avoid inventing feelings, apologies, promises or details. I will choose and adapt the wording.\" Decide what you share about the other person, and review the final message before you send it.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 22,
+   "heading": "Personal advice",
+   "narration": "Second, personal advice. AI can explain how super works. A financial adviser can tell you what to do with yours. AI can explain what a medication does. Your GP and pharmacist can say whether it's right for you. General information can't assess every circumstance. So use AI for useful preparation: organising your questions and understanding the terms. For personal decisions, use suitable clinicians, advisers or legal services. And for formal determinations, confirm your eligibility or obligations with the responsible authority.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 23,
+   "heading": "Live and urgent information",
+   "narration": "Third, live and urgent information. Some information changes by the hour, and an AI summary can be out of date or simply wrong. Go directly to the responsible source. In an emergency, use official emergency warnings and follow local instructions. For changing services, check the operator for flight status, closures or opening hours. And if there's immediate danger, call triple zero in Australia for emergency help.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 24,
+   "heading": "Prepare before an emergency",
+   "narration": "Prepare before an emergency, and know where your local warnings come from. Do it today, before you need it. Find your state or territory's official emergency app or website. Add another route: keep your local ABC Radio frequency handy, and a suitable radio available. And plan ahead by following the official preparation guidance for the hazards relevant to you.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 25,
+   "heading": "A decision-reflection prompt",
+   "narration": "Fourth, decisions that express your values. Should I move closer to the grandchildren, or stay where I've built my life? AI can help you think that through, but the decision belongs to you. Here's a prompt. \"Help me think through\" your decision. \"Ask about my priorities and constraints, outline the questions I should resolve, and distinguish assumptions from facts. Do not decide for me or predict how another person will react.\" Use suitable professional input for consequential issues, and keep the final decision with the people entitled to make it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 26,
+   "heading": "When practice is the point",
+   "narration": "Fifth, when practice is the point. If you're learning a language and you ask AI to translate every sentence, you'll get the translation right, but you won't learn. The effort, the small mistake and the correction are where the learning happens. So try this. \"Let me try first. Give one hint if I get stuck, then explain the correction after my attempt. Use this checked material:\" and then name a suitable source or exercise. Review the correction against the source. A fast, completed answer doesn't necessarily build the skill you want.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 27,
+   "heading": "Try It Now: Compare two recent tasks",
+   "narration": "Try It Now. Compare two recent tasks. First, a good fit: where did AI help you reach a useful result? Then a different method: where would your own attempt, a live source or a professional have helped more? In your Flight Log, write the reason for each choice. Pause the video now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 28,
+   "heading": "Common Turbulence: Treating every task the same",
+   "narration": "Common Turbulence: treating every task the same. Assess the purpose first. Are you drafting, learning, connecting or deciding? Then assess the consequences, using the Cost-of-Wrong Test. Memory Hook: choose the method that serves the task and the people involved.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 29,
+   "heading": "Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what helps keep a personal message yours? [pause] Two: where should you check warnings during a bushfire? [pause] Three: how can AI support learning without doing every step? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 30,
+   "heading": "Check: answers",
+   "narration": "Here are the answers. One: choose wording you understand and mean, and remove any invented feelings or commitments. Two: the responsible state or territory emergency authority, with ABC Emergency and local radio as additional sources. Three: let you attempt it first, offer hints, and explain corrections using checked material. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 31,
+   "heading": "Lesson 6.3: Staying Current Without Overload",
+   "narration": "Lesson 6.3: Staying Current Without Overload. Think about the weather. You don't need to track every pressure system across the Pacific to decide whether to take an umbrella. You check the forecast for your area, for today. AI news is the same. By the end of this lesson, you'll be able to filter changes by how relevant they are to your tasks, find official sources for features and safety, and choose a review rhythm you can manage.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 32,
+   "heading": "Four kinds of AI news",
+   "narration": "Most AI news falls into one of four kinds. One: your tool. Changes to features, controls, terms and prices that affect how you use it. Pay attention to these. Two: new options. Most new tool announcements are variations on things that already exist. Consider them when they solve a problem you have now. Three: safety and privacy. Read the relevant official alerts and guidance. Four: speculation. Separate forecasts and marketing from established facts, and don't let them drive how you feel about AI.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 33,
+   "heading": "Your relevance filter",
+   "narration": "Your relevance filter is one question. \"Does this change help with a task I need to do, affect my information or change what I pay?\" If none of those apply, you don't need to investigate every announcement. The exception is a relevant security or account notice. Act on those promptly.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 34,
+   "heading": "Useful source starting points",
+   "narration": "A few good sources beat many average ones. Here are some starting points. For changes to your own tool: the provider's official help centre and release notes. Release notes are simply a list of what's new. For scam patterns and alerts: scamwatch dot gov dot au. For online safety and learning: esafety dot gov dot au, and beconnected dot esafety dot gov dot au. For Australian privacy guidance: O.A.I.C. dot gov dot au. And for a new claim, go to the original evidence and the responsible authority.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 35,
+   "heading": "Help for everyday digital skills",
+   "narration": "For everyday digital skills, Be Connected provides learning and support. You'll find step-by-step online learning resources. If you're helping someone else, there's help-others guidance and available local support. Visit beconnected dot esafety dot gov dot au to check the options available now.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 36,
+   "heading": "A tool-update request",
+   "narration": "Your AI can help you here too. Here's a request. \"Find official updates to\" your tool \"since\" a date you choose. \"Separate released features from planned ones. Link to the original announcements and explain which changes affect\" my tasks. \"Note any account, region or plan restrictions.\" Search availability varies. Open the official pages yourself, and check whether a feature is available in your own account.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 37,
+   "heading": "An example review rhythm",
+   "narration": "Here's an example review rhythm. Weekly, for about five minutes: relevant changes to your main tool. Monthly, for about twenty minutes: official scam alerts and one relevant update. Every six months: your privacy controls, your sharing, and your prompt library. And yearly, or whenever your needs change: whether the tool still fits, your subscriptions, and one useful skill to develop.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 38,
+   "heading": "Your privacy review",
+   "narration": "Your privacy review means checking the controls and the current explanation of them. Review training, memory, history, retention and sharing. Inspect the settings directly, because a chatbot's summary of its own memory may be incomplete. And minimise what you share. Temporary chat and deletion don't guarantee confidentiality, or immediate removal.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 39,
+   "heading": "Your library review",
+   "narration": "Your library review is about keeping the prompts that still help. Test each template on a suitable current task. Revise the instructions and the verification step where you need to. And remove, or archive, duplicates and requests you no longer use.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 40,
+   "heading": "Try It Now: Choose a review date and checklist",
+   "narration": "Try It Now. Choose a review date and a checklist. Select a review rhythm that suits how you use AI. Write down the settings and prompts you want to inspect. And if you like, add your own calendar reminder, or update one you've already set. Pause the video now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 41,
+   "heading": "Common Turbulence: Trying to test every new feature",
+   "narration": "Common Turbulence: trying to test every new feature. Every week brings headlines about something new, and it's easy to feel you're falling behind. You're not. Use your filter, and start with your own tasks and responsibilities. Keep one focus, and try a feature only when there's a useful reason. Memory Hook: follow relevant changes, and verify claims before adopting them.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 42,
+   "heading": "Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what question helps filter a new tool or feature? [pause] Two: where should you confirm a provider's new feature? [pause] Three: what belongs in a privacy review? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 43,
+   "heading": "Check: answers",
+   "narration": "Here are the answers. One: does it help with my task, affect my information or change my costs? Two: the provider's official announcement, and the feature's availability in your own account. Three: training, memory, history, retention, sharing and connected tools. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 44,
+   "heading": "Lesson 6.4: Paid Tools and Value",
+   "narration": "Lesson 6.4: Paid Tools and Value. Think about your phone plan. Some people need unlimited data. Others use a fraction of their allowance and pay for capacity they never touch. AI subscriptions are the same. By the end of this lesson, you'll be able to identify the limit or feature you actually need, compare the full current cost with the access you already have, and plan a bounded trial and review it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 45,
+   "heading": "Start with your actual use",
+   "narration": "A paid plan needs a specific reason, so start with your actual use. Look back: did limits, or features you didn't have, stop you doing useful work? Check quality: can the result meet your standard after you've reviewed it? And keep the baseline. If your current access meets your needs, there's no hurry to change.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 46,
+   "heading": "What a paid plan might add",
+   "narration": "Here's what a paid plan might add. Access: different models or capabilities. Allowances: higher limits for particular features, so you hit \"limit reached\" less often. Workflow: integration with applications you already use. And a bundle: storage or other services, which only matter if you actually need them.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 47,
+   "heading": "Paid does not remove checking",
+   "narration": "Paying doesn't remove checking. Read the current inclusions and conditions. Limits remain, because allowances, file support and availability vary. On accuracy, paying doesn't guarantee a correct answer, or a complete review of your document. And on privacy, check the terms for that account type, rather than assuming an upgrade changes them.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 48,
+   "heading": "Compare live prices on official pages",
+   "narration": "Prices change, so compare live prices on the official pages. For ChatGPT, start at chatgpt dot com slash pricing. For Claude, claude dot com slash pricing. For Google's AI plans, one dot google dot com slash about slash google dash A.I. dash plans. And for Microsoft 365 and Copilot, go to microsoft dot com, choose your region and compare the plans.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 49,
+   "heading": "Your price comparison worksheet",
+   "narration": "Before you subscribe, record a few things. Region and currency: is it in Australian or US dollars, and is tax included? Billing period: a monthly payment, or an annual commitment? Total due: the upfront cost, when any offer expires, and the renewal amount. The feature you need: its actual allowance, eligibility and availability. And cancellation: where you cancel, and what happens to your access or stored work.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 50,
+   "heading": "Existing access comes first",
+   "narration": "Existing access comes first, so check the subscriptions you already hold. For work or study, use only approved accounts and permitted material. For personal bundles, read which account holder and which features are eligible. And avoid duplicates. Compare the extra benefit before adding another subscription, because forgotten subscriptions add up.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 51,
+   "heading": "A fictional value calculation",
+   "narration": "Here's a fictional value calculation. The monthly cost is thirty dollars. Four tasks each save twenty minutes after checking, so the net time saved is eighty minutes. Include the prompting, checking and repairs, then decide whether that benefit is worth thirty dollars to you. These amounts are illustrative only. This isn't a provider price, or a promised saving.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 52,
+   "heading": "A bounded one-month trial",
+   "narration": "If you do try a paid plan, make it a bounded one-month trial, and set your criteria before you pay. Choose one need: a specific limit or feature affecting your work. Check the terms: confirm the billing period, the renewal and the cancellation process before you need them. Then review before renewal. Put a reminder in your calendar, and compare your actual use, the quality and the net benefit.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 53,
+   "heading": "A trial decision note",
+   "narration": "Here's a trial decision note. \"I am testing\" a feature \"for\" a task. \"My maximum total cost is\" an amount you set. \"I will review it on\" a date \"using\" your criteria. \"I will keep, change or cancel based on actual use and benefit.\" A month of paid access isn't necessarily a free trial. Read the terms before you subscribe.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 54,
+   "heading": "Try It Now: Choose free access or a defined comparison",
+   "narration": "Try It Now. Choose free access or a defined comparison. Review the past fortnight. Did you hit a limit, or have a genuine need that wasn't met? Then compare: check your existing access and one official current offer. In your Flight Log, record your choice and the reason for it. No purchase is required. Pause the video now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 55,
+   "heading": "Common Turbulence: Paying for possible future use",
+   "narration": "Common Turbulence: paying for possible future use. Enthusiasm after a course can lead to several subscriptions at once. Avoid the guess, and use evidence from actual tasks. Keep it manageable by testing one change at a time. Memory Hook: pay for a benefit you use, and review the full cost.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 56,
+   "heading": "Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: name something a paid plan might add. [pause] Two: what should you record before a trial? [pause] Three: where should you subscribe or download? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 57,
+   "heading": "Check: answers",
+   "narration": "Here are the answers. One: different capabilities, higher allowances or useful application integration. Check the exact plan. Two: the need, the full cost, the billing terms, the cancellation route and your review criteria. Three: the provider's official website, or a verified official app listing. Never through a link in an ad or an email. Check the publisher. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 58,
+   "heading": "Lesson 6.5: Bringing Someone Along",
+   "narration": "Lesson 6.5: Bringing Someone Along. Most of us have a memory of someone teaching us technology badly. They grabbed the mouse, clicked too fast, or sighed when you asked the same thing twice. It wasn't the technology that made it hard, and it wasn't you. By the end of this lesson, you'll be able to ask what the person wants and needs, offer a patient first session based on their consent, and let them practise without exposing their passwords or codes.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 59,
+   "heading": "Different starting points",
+   "narration": "People start from different places. The curious are interested but haven't felt confident enough to start. Ask which everyday task they want help with. The sceptical may have decided it isn't for them. Listen to their objections, and offer evidence if they ask for it. The worried have seen frightening coverage. Start with their safety concern, and respect their choice.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 60,
+   "heading": "Ask before demonstrating",
+   "narration": "A useful session starts with their permission. Ask: \"Would you like to try a small example?\" Choose a task together that's relevant to them, using fictional or non-sensitive details. And respect a no. They don't need to use AI to benefit from safety information.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 61,
+   "heading": "For someone who is curious",
+   "narration": "For someone who is curious, show one useful example, not an impressive one. A poem in the style of Shakespeare is fun, but people don't know what to do with it. Keep it small: a draft message, or an explanation of material they already know. Think aloud as you go. Explain your request, and what you check. Then hand over. Let them choose the input method and the pace. The person who does the typing, or the talking, is the one who learns.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 62,
+   "heading": "For someone who is sceptical",
+   "narration": "For someone who is sceptical, listen without trying to win the argument. Acknowledge their concerns. Costs, privacy, reliability or simply not needing it may all be valid. Be specific: describe one benefit, and its limits. Answer honestly, without selling. And leave the choice with them. Offer help later, without expecting them to change their mind.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 63,
+   "heading": "For someone who is worried",
+   "narration": "For someone who is worried, address the concern they name. The goal isn't to persuade them to use AI. It's to help them feel less frightened by it. Safety comes first. Explain trusted callbacks, where you hang up and ring back on a number you already know, and independent verification. If it's useful, discuss a family phrase privately, as an extra safeguard. But there are no guarantees. The phrase, a video call or an AI opinion can't certify who someone is.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 64,
+   "heading": "A first-session kit",
+   "narration": "When someone's ready, here's a first-session kit. One: agree the task. Ask permission, and choose one small, useful example. Two: check the setup. Use the official service, and explain the privacy choices. Three: protect access. They enter their passwords and codes privately. Four: practise Ask, Read, Steer, with a safe prompt. Five: follow up. Offer a check-in at a time they choose. That follow-up says it matters.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 65,
+   "heading": "Setup without taking control",
+   "narration": "Setup works best when you explain the choice and let them make it. Use the official service, and verify the publisher and the source together. For security, help them find the available sign-in protection, without seeing their secrets. And for data choices, explain training, memory and sharing in plain language. For a beginner, these screens can feel like traps. For you, they take a few minutes.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 66,
+   "heading": "A safe first prompt",
+   "narration": "Here's a safe first prompt. \"Draft a short, friendly invitation to a fictional community morning tea. Use\" date, place \"and\" contact \"as placeholders. Keep it under one hundred words and do not invent refreshments or activities.\" Then practise steering: \"Make it shorter.\" Read for any invented details, and leave every sending decision with the learner.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 67,
+   "heading": "Ask, Read, Steer",
+   "narration": "Practise the whole exchange: Ask, Read, Steer. Ask: give enough context for the chosen task. Read: spot anything wrong, missing or unsuitable. Steer: make one specific correction, then review the result again. That's enough for a first week.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 68,
+   "heading": "Try It Now: Plan one optional first session",
+   "narration": "Try It Now. Plan one optional first session. Choose someone who wants help, or a fictional learner. Prepare one safe prompt and a relevant checking habit. Then write down how you'll let them control the device, and stop if they wish. Pause the video now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 69,
+   "heading": "Common Turbulence: Taking over to make it faster",
+   "narration": "Common Turbulence: taking over to make it faster. When someone's struggling, the urge to grab the phone and just do it is strong. Resist it. Every time you take over, you teach them they can't. Pause, and ask whether they want a hint or a demonstration. Then describe one step at a time, using the controls they can see: \"Tap the little microphone, now say what you want.\" Memory Hook: show with permission. Let them try. Offer support.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 70,
+   "heading": "Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: how should you begin with someone worried about AI? [pause] Two: why let the learner control the device? [pause] Three: what should stay private during setup? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 71,
+   "heading": "Check: answers",
+   "narration": "Here are the answers. One: ask about their concern, offer relevant safety information, and respect their choice. Two: so they can practise at their own pace and make their own choices. Three: passwords, one-time codes, recovery details and unnecessary personal information. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 72,
+   "heading": "Lesson 6.6: Final Reflection and Graduation",
+   "narration": "Lesson 6.6: Final Reflection and Graduation. You started this course at the beginning of something. Not the beginning of AI, but your beginning with it. That isn't a small thing. [pause] In this lesson, you'll review the work you chose to practise, identify your useful skills and any unfinished steps, and choose one appropriate next action.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 73,
+   "heading": "Your progress is personal",
+   "narration": "Your progress is personal, and your Flight Log is the evidence. Return to the start, and read why you began the course. Then look at your work. Choose a draft, a question list, a plan or a learning exercise. And be specific. What's easier now, what's clearer, and what's still unresolved?",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 74,
+   "heading": "Your first two modules",
+   "narration": "Let me be specific about what that work was. In Module 1, Pre-Flight Checks, you learned what the tool can do and where its limits are. You reviewed your setup, and learned to protect your information. In Module 2, Cleared For Taxi, you learned how to talk to it: Context, Task, Format and Tone. You asked clarifying questions, and you saved useful prompts. The first answer is a draft, not a verdict.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 75,
+   "heading": "Your practical modules",
+   "narration": "In Module 3, Cleared For Takeoff, you applied your chosen paths to everyday tasks, with suitable privacy and verification. The tasks that matter to you and the problems you actually have. In Module 4, In The Air, you worked on a project: something to write, start, sort or learn. You recorded what you completed and what comes next. That progress doesn't disappear when the course ends.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 76,
+   "heading": "Your judgement and routine",
+   "narration": "In Module 5, Holding Pattern, you learned to question unsupported claims, verify suspicious requests and protect your information. And in Module 6, Final Approach, you've chosen useful routines, reviewed costs and changes, and learned to support others with their permission.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 77,
+   "heading": "Your practical reminders",
+   "narration": "Before we close, here are the reminders you'll carry with you. For clear requests: Context, Task, Format and Tone. To review and revise: Ask, Read, Steer. And to protect information: the Postcard Rule, and placeholders. If you wouldn't write it on a postcard, don't type it in the box.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 78,
+   "heading": "Your checking reminders",
+   "narration": "And your checking reminders. For a source check: who, when, where, and the exact supporting passage. For a suspicious request: pause, check independently, then decide. And to choose the mode: trust provisionally, verify, or walk away when you need to. If you remember nothing else, remember those. [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 79,
+   "heading": "Your final Flight Log entry",
+   "narration": "One final Flight Log entry. Write the words \"Now I can\", and complete the sentence with one skill you have demonstrated. Add the example you checked, and what you want to practise next. Be accurate about your progress, and return to any unfinished activities at your own pace. Keep that page. On a day when something new feels overwhelming, read it again. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 80,
+   "heading": "Reflection pause",
+   "narration": "A short reflection pause, to choose what you want to carry forward. One benefit: where did the result justify the effort? One limit: where did another method work better? And one next step: what small task will you practise this week? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 81,
+   "heading": "Cleared To Try: your next real task",
+   "narration": "And one practical step, the last Cleared To Try of the course. Don't wait for the right task. Choose one that's useful to you, using suitable information. Ask and review: use a saved prompt, then read and steer the answer. Check and decide: verify the important claims, and use appropriate human help. Then save the lesson: record the result, your total effort, and one change for next time. It's your task and your choice. No sending, booking, purchase or other external action happens automatically.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 82,
+   "heading": "A simple next-month plan",
+   "narration": "Keep the next month proportionate. Practise one recurring task where the benefit is clear. Review your prompts, your settings and any paid trial when it's due. And adapt: change the method if your needs, risks or results change. What you practised here is much older than AI. Being a beginner without embarrassment, asking questions without knowing the answer first, getting things wrong and adjusting. Those are the skills. AI is just where you practised them.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 83,
+   "heading": "Course complete: AI for Real Life",
+   "narration": "Course complete. In aviation, \"cleared for takeoff\" is permission to proceed. The conditions have been assessed, the runway is clear and the systems are ready. You're cleared for takeoff. Not because everything is certain, but because you've done the preparation. [pause] [warmly] Thank you for learning with me. Keep asking clear questions. Review what you receive. Choose what deserves your trust. Your prompts, your checks and your next useful task are ready to keep developing. Go. It's been a real pleasure.",
+   "script_reuse": "high"
+  }
+ ]
+}

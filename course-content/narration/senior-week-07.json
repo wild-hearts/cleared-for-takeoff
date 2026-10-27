@@ -1,0 +1,252 @@
+{
+ "course": "senior",
+ "week": 7,
+ "title": "Week 7: Human-Centred Design",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "Week 7: Human-Centred Design",
+   "narration": "[warmly] Welcome back to Ground School. I'm Captain Naomi, and this is Senior AI Pilots, Week 7: Human-Centred Design. This week we start with people, not technology, and you'll find out why that order matters."
+  },
+  {
+   "slide": 2,
+   "heading": "Mission Brief",
+   "narration": "Here's your mission brief. The big idea: understand the need before you choose a solution. First, you'll interview someone, asking open questions to find an everyday difficulty. Then you'll decide, comparing AI and non-AI options side by side. Finally, you'll design: plan your safeguards, a prototype and a one-page pitch."
+  },
+  {
+   "slide": 3,
+   "heading": "The Hook: the school-map app",
+   "narration": "Let's start with a story. A fictional team builds a chatbot to help new students find their rooms. Clever idea, lots of features. But it misses the immediate need, because the team assumed every student has a phone ready to use. [curious] So here's the question they never asked: what if a clear sign, or a buddy, would solve the problem?"
+  },
+  {
+   "slide": 4,
+   "heading": "Ask before you conclude",
+   "narration": "This is why you ask before you conclude. An interview tests your assumptions. Don't assume a new student's main difficulty is the map. Investigate instead: the last time they got lost, what actually happened? You might find it was room names, or timing, or unfamiliar routes, or instructions that didn't make sense. Any of those might matter more than the map."
+  },
+  {
+   "slide": 5,
+   "heading": "Human-centred design: understand and define",
+   "narration": "That way of working has a name: human-centred design. It runs in five stages, and here are the first three. Empathise: listen to people and observe the task, with their permission. Define: state the need, who the audience is, and the outcome you're aiming for. Ideate: generate possible solutions and compare them."
+  },
+  {
+   "slide": 6,
+   "heading": "Human-centred design: make and learn",
+   "narration": "And the last two stages, where you make things and learn from them. Prototype: build a small, inexpensive version to test an assumption. Test: observe people using it, learn what fails, and revise."
+  },
+  {
+   "slide": 7,
+   "heading": "The stages are not a rigid checklist",
+   "narration": "One important point. These stages are not a rigid checklist, and new evidence can send you back. During testing, you might discover your problem statement was too narrow. During prototyping, you might find a simpler approach. That's normal. In your record, explain what changed and which observation prompted it."
+  },
+  {
+   "slide": 8,
+   "heading": "An empathy interview",
+   "narration": "So, the empathy interview. It's a conversation about someone's experience. Choose a safe topic, an everyday task at home, at school or in the community. Choose an appropriate person: a family member, or someone your parent or guardian approves. And ask permission. Explain the activity, and make it clear they can decline, or skip any question."
+  },
+  {
+   "slide": 9,
+   "heading": "Interview privacy",
+   "narration": "Interviews come with privacy rules. Collect only the information you need. In your notes, use a role or a pseudonym, which is a made-up name, rather than their full name. Take written notes, and don't record without permission. And don't ask for sensitive information: nothing about health, money, passwords or private relationships."
+  },
+  {
+   "slide": 10,
+   "heading": "Leading versus open questions",
+   "narration": "Now, how you ask matters. Compare these two. A leading question: \"Wouldn't an app make finding rooms easier?\" That suggests the answer you'd prefer to hear. An open question: \"Tell me about the last time you had trouble finding a room.\" That invites a real experience, and real experiences are what you're after."
+  },
+  {
+   "slide": 11,
+   "heading": "Ask about a real episode",
+   "narration": "Ask about a real episode, because specific events reveal useful detail. Start with \"Tell me about the last time...\". Follow up with \"What happened next?\" or \"What did you try?\". Then explore gently: \"What made that difficult?\" Whatever they say, accept their answer without pushing."
+  },
+  {
+   "slide": 12,
+   "heading": "A short interview guide",
+   "narration": "Here's a short interview guide you can use. One: tell me about the last time this task was difficult. Two: what were you trying to do? Three: what did you do next? Four: what was the hardest part? Five: what helped, even a little? Listen before you offer any solution, and at the end, ask whether you understood them correctly."
+  },
+  {
+   "slide": 13,
+   "heading": "Avoid designing the answer into the question",
+   "narration": "Avoid designing the answer into the question. Keep listening separate from pitching. During the interview, don't sell your chatbot, and don't argue with what they tell you. If they suggest an app themselves, ask which part of the task it would need to improve. And remember, one person's experience is useful evidence, but it's not proof about everyone."
+  },
+  {
+   "slide": 14,
+   "heading": "Keep evidence separate from interpretation",
+   "narration": "After the interview, keep evidence separate from interpretation. Here's a fictional example. Observation: the participant checks a printed room list twice. You saw that happen. Reported experience: \"Two rooms have similar names.\" That's their statement. Interpretation: room naming may cause confusion. That's a hypothesis to test. Solution idea: use clearer signs. That's not yet validated. Four different things, four different levels of certainty."
+  },
+  {
+   "slide": 15,
+   "heading": "Define the need",
+   "narration": "Next stage: define the need. Describe the task, not your preferred technology. You need three parts. Who: the person or group you're designing for. Need: what they're trying to accomplish. And outcome: what would improve in their experience?"
+  },
+  {
+   "slide": 16,
+   "heading": "The problem-statement template",
+   "narration": "Those three parts slot into one template. How might we help, who, to, need, so that, outcome? Fill in each gap with what your interview actually supports. And if any part is still an assumption you need to check, mark it as one."
+  },
+  {
+   "slide": 17,
+   "heading": "Worked problem statement",
+   "narration": "Here's a worked example. \"How might we help students new to the school find unfamiliar classrooms in their first week, so they arrive with less confusion?\" It's fictional, but notice what it does. It leaves room for signs, maps, a buddy system or a digital tool. It doesn't pick the answer for you."
+  },
+  {
+   "slide": 18,
+   "heading": "Check the statement",
+   "narration": "Check your statement. Make it specific, and open to alternatives. \"How might we fix school?\" is far too broad. \"How might we make an AI chatbot for new students?\" has the solution embedded in it. The better test is simple: does your statement describe a need without deciding the answer?"
+  },
+  {
+   "slide": 19,
+   "heading": "Ideate before selecting",
+   "narration": "Now ideate before you select. List eight possible solutions, and at least three of them must work without AI. Vary your approach: information, the environment, a process, or support from a person. And delay your selection. Collect all your options before you start arguing for your favourite."
+  },
+  {
+   "slide": 20,
+   "heading": "Example options for the same need",
+   "narration": "Here are example options for the same need, each with a question to test. Environment: clearer signs. Are the labels visible and understood? Paper: a simple printed route map. Can a new reader follow it? Human support: a first-week buddy. Is help available when it's needed? Digital or AI: a checked route-query prototype. Does it add value beyond a map?"
+  },
+  {
+   "slide": 21,
+   "heading": "Does this need AI?",
+   "narration": "Which brings us to the big question: does this need AI? Compare the benefit with the added burden. Task fit: does prediction, classification or language processing actually help here? Simpler alternative: could a sign, a map, a rule or a person meet the need? Added cost: what data, checking, access and error handling would AI introduce?"
+  },
+  {
+   "slide": 22,
+   "heading": "A decision you can defend",
+   "narration": "You want a decision you can defend. There are three honest outcomes. Choose AI, but only with a clear role, suitable evidence and workable safeguards. Choose no AI, when a simpler option meets the need well. Or keep investigating, when the evidence doesn't yet support a choice. All three are respectable answers."
+  },
+  {
+   "slide": 23,
+   "heading": "Compare on the same task",
+   "narration": "To decide fairly, compare your options on the same task, and don't let a shiny demo decide for you. Choose a task, for example identifying the correct room from a fictional timetable. Compare a paper sign, a map and a digital concept. For each one, record completion, errors, confusion and how much help was needed."
+  },
+  {
+   "slide": 24,
+   "heading": "Prototype",
+   "narration": "Time to prototype. Make the smallest version that answers a question. That could be a paper screen, a cardboard sign or a clickable mock-up. Your test question might be as simple as \"Does the reader understand this label?\" And be honest: a mock-up is not a working AI system."
+  },
+  {
+   "slide": 25,
+   "heading": "Explain simulated behaviour",
+   "narration": "Sometimes you'll fake the system's answers yourself, and that's fine, as long as you tell testers what's real. If you provide answers manually, explain that the system is being simulated. Don't claim that a person-generated response proves a model works. What you can learn is whether the flow, the wording and the information are useful."
+  },
+  {
+   "slide": 26,
+   "heading": "Safeguards: privacy, failure and fairness",
+   "narration": "Every design needs safeguards. Here are the first three. Privacy: minimise data, and avoid personal information in your prototype. Failure: define the harm an error could cause, and a safe response when one happens. Fairness: ask who might struggle, who might be excluded, and who might need an alternative."
+  },
+  {
+   "slide": 27,
+   "heading": "Safeguards: override and transparency",
+   "narration": "Two more safeguards. Human override: a person can review, correct, reject or stop the process. Transparency: users understand what role AI plays, what its limitations are, and whether anything is being simulated."
+  },
+  {
+   "slide": 28,
+   "heading": "Make safeguards operational",
+   "narration": "A safeguard on a checklist means nothing without a specific action behind it. Vague: \"The system will be private and accurate.\" Specific: \"The prototype accepts fictional room names only and uses a checked map.\" And a fallback: \"If the destination is unclear, it gives no invented route and asks for human help.\" See the difference? You could actually check those last two."
+  },
+  {
+   "slide": 29,
+   "heading": "Test with permission",
+   "narration": "Now test, with permission, and give a task without teaching the answer. Before the test, explain the prototype, and let the person know they can stop. During the test, observe where they pause, misread or ask for help. After the test, ask what they expected and what confused them."
+  },
+  {
+   "slide": 30,
+   "heading": "An editable test plan",
+   "narration": "Here's a test plan you can fill in. User and task: who will try which safe task? Success criteria: what observable result would count as useful? What to record: errors, questions, completion and help needed. And revision decision: what finding would make you change the idea, or reject it altogether?"
+  },
+  {
+   "slide": 31,
+   "heading": "Pilot's Tip: stress-test, then verify",
+   "narration": "Pilot's Tip: stress-test, then verify. AI can suggest possible issues. A useful request is to ask it for critiques of your proposed flow. But know the limitation. A generated persona is not a real user, and it's not a representative sample either. So your next step is to check any important suggestions with actual participants and real evidence."
+  },
+  {
+   "slide": 32,
+   "heading": "A careful stress-test prompt",
+   "narration": "Here's what a careful stress-test prompt looks like. It asks the AI to review the prototype for possible barriers, such as small text or limited device access, and to list questions you should test with users. It also tells the AI not to invent findings or claim to represent a group. Use fictional or anonymised design details, and treat the output as a set of hypotheses to check."
+  },
+  {
+   "slide": 33,
+   "heading": "Avoid stereotypes in role-play",
+   "narration": "If you do role-play users, avoid stereotypes. Ask about barriers rather than assumed personalities. A weak assumption sounds like \"Everyone aged seventy-five distrusts technology.\" A better question is \"What might someone need if small text is difficult to read?\" For real evidence, ask participants about their own needs, instead of assigning them a trait."
+  },
+  {
+   "slide": 34,
+   "heading": "The one-page pitch",
+   "narration": "All this comes together in the one-page pitch: seven boxes that connect your evidence to a proposal. The core is the problem, who it's for, and your interview insight. The proposal is your solution, and why AI, or why not. The responsibility is your safeguards, and how you would test it."
+  },
+  {
+   "slide": 35,
+   "heading": "Your editable pitch canvas",
+   "narration": "Here's the pitch canvas, box by box. One, problem: the task and the difficulty. Two, who: the intended user or group. Three, interview insight: your evidence, kept separate from assumptions. Four, solution: what you propose to try. Five, why AI or why not: compare it with a simpler alternative. Six, safeguards: privacy, failure, fairness, override and transparency. Seven, test plan: task, criteria, observations and your revision decision."
+  },
+  {
+   "slide": 36,
+   "heading": "Try It Now",
+   "narration": "Try it now. Write your own How might we statement. Choose a low-risk everyday difficulty you've noticed. Write it out with the who, the need and the intended outcome. Then question it: which part is supported by evidence, and does the solution actually need AI? Pause the video and give it a go. [pause]"
+  },
+  {
+   "slide": 37,
+   "heading": "Common Turbulence: solution first",
+   "narration": "Common turbulence: starting with the solution. \"I want a chatbot\" is not a problem statement. If you catch yourself there, start again: who needs help, with what task? Check the evidence: what did you learn from the interview? And compare: keep a non-AI option in the decision."
+  },
+  {
+   "slide": 38,
+   "heading": "Memory Hook",
+   "narration": "Here's your memory hook. People first. Problem second. Then AI last, if at all. And keep the record: what you observed, what you assumed, what you tested and what you changed."
+  },
+  {
+   "slide": 39,
+   "heading": "Pre-Landing Check 1",
+   "narration": "Pre-Landing Check, number one. Can you name the five design stages? And your turn: explain why you might revisit an earlier stage. Pause the video and answer before you move on. [pause]"
+  },
+  {
+   "slide": 40,
+   "heading": "Check 1: answer",
+   "narration": "Here's the answer. Empathise, define, ideate, prototype, test. The process uses new evidence to revise your understanding, which is why you might loop back. The result is either a tested improvement, or a good reason to choose a different approach."
+  },
+  {
+   "slide": 41,
+   "heading": "Pre-Landing Check 2",
+   "narration": "Pre-Landing Check, number two. What is wrong with the question \"Wouldn't an app help?\" Your turn: how would you ask it openly instead? Pause the video and work it out. [pause]"
+  },
+  {
+   "slide": 42,
+   "heading": "Check 2: answer",
+   "narration": "Answer: it suggests the preferred answer. Try instead, \"Tell me about the last time this was difficult.\" Then ask what they did, what happened and what helped."
+  },
+  {
+   "slide": 43,
+   "heading": "Pre-Landing Check 3",
+   "narration": "Pre-Landing Check, number three, from Week 4. What is a false positive? Here's an example to work with. Spam is the positive class, and a legitimate email is flagged as spam. Pause the video and explain what's going on. [pause]"
+  },
+  {
+   "slide": 44,
+   "heading": "Check 3: answer",
+   "narration": "Answer: a false positive is when a negative case is labelled positive. In the example, a legitimate email is incorrectly flagged as spam. And here's the design lesson: define the consequences of this kind of error before you choose a decision rule."
+  },
+  {
+   "slide": 45,
+   "heading": "Home Lab: Interview, Define, Pitch",
+   "narration": "Your Home Lab: Interview, Define, Pitch. Step one, interview: ten to fifteen minutes, with permission, open questions and minimal notes. Step two, define and ideate: write your How might we statement, then eight options, at least three without AI. Step three, propose: choose an option, and build a rough prototype and safeguards. Step four, test and pitch: observe a safe trial, revise, and complete the seven-box canvas. Allow sixty to seventy-five minutes, or split it into sessions. Keep it safe, private and low-risk."
+  },
+  {
+   "slide": 46,
+   "heading": "Project Log: Entry 7",
+   "narration": "Project Log, entry seven. Show the reasoning behind your design. For the interview, record the permission, your anonymised notes and your main insight. For the decision, include your problem statement, your options and the reasons for your choice. For evidence, add your pitch canvas, prototype, test notes and at least one revision."
+  },
+  {
+   "slide": 47,
+   "heading": "No-chatbot option",
+   "narration": "Prefer not to use a chatbot at all? There's a no-chatbot option: a human reviewer and a paper prototype. Ask a family member to critique your proposal. Let them try the task without coaching. Then record the same observations, safeguards and revision decisions as everyone else."
+  },
+  {
+   "slide": 48,
+   "heading": "Parent & Guardian Brief",
+   "narration": "This one's for your parent or guardian: help find an appropriate participant. Permission: support a family interview, or another approved person. Privacy: no identifying details or sensitive recordings go into chatbot prompts. Feedback: answer honestly, and let the student notice and fix the problems themselves."
+  },
+  {
+   "slide": 49,
+   "heading": "Ready for Week 8",
+   "narration": "That's Week 7 done. This week you investigated a need and compared possible solutions. Next week is Ethics, Privacy and Copyright, where you'll examine privacy, attribution, consent and responsible media use. Until then, keep the habit. People first. Problem second. AI last, if at all. [warmly] See you in Ground School."
+  }
+ ]
+}

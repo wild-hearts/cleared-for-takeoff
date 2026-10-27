@@ -1,0 +1,595 @@
+{
+ "course": "adult",
+ "module": 3,
+ "title": "AI for Real Life, Module 3: Cleared For Takeoff",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "AI for Real Life, Module 3: Cleared For Takeoff",
+   "narration": "Welcome to Module 3 of AI for Real Life: Cleared For Takeoff. There's a worry I hear a lot from people at this stage of the course. \"What if I start using AI for everything and my brain goes soft? What if I forget how to write, or plan, or think things through myself?\" [pause] It's a fair question, so let's deal with it as we go.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 2,
+   "heading": "Welcome to Module 3",
+   "narration": "This module is about real tasks, using the skills you've already practised. And it works differently. Instead of working through lessons together, you choose your paths. Pick the three most useful to you right now. Work at your own pace: each path stands on its own, so you can take them in any order, and each one includes practice. And keep your judgement. AI doesn't think for you. It responds to you. You decide what matters, and whether the result is fit to use.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 3,
+   "heading": "Your six practical paths",
+   "narration": "There are six paths. Path A is writing: emails, letters and replies. Path B is documents: summaries, clauses and actions. Path C is planning: trips, events, projects and family logistics. Path D is research: explanations, comparisons and checking sources. Path E is health: information and appointment preparation. And Path F is money and admin: statements, agencies and budgeting. You can come back to the others whenever life calls for them.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 4,
+   "heading": "Your own skills still matter",
+   "narration": "If that worry about your brain going soft stays with you, here's the answer. When learning matters, try your own draft first. Write or think first: put down your rough ideas before asking for help. Then ask for feedback, something like, \"What is unclear, and why would you change it?\" Then compare. Keep the useful changes, and explain the reasoning to yourself in your own words. You do the thinking. Your skills grow rather than fade.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 5,
+   "heading": "How to use each path",
+   "narration": "Here's how to get the most out of each path. Pause the video and apply one template. Choose a task: a low-risk real one, or a fictional sample. Protect your information: use placeholders and share only what's necessary. And save what helped. Keep the prompt, and a checking step, in your prompt library. A template you've used once is worth ten you've only watched. Let's take off.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 6,
+   "heading": "Path A: Writing Emails and Letters",
+   "narration": "Path A: writing emails and letters. Picture the letter you've been meaning to write for three weeks. You know what you want to say. What's stopping you is the blank page, and the worry about getting the tone wrong. By the end of this path you'll be able to draft a complaint with a clear requested outcome, adjust follow-ups and personal messages, and review a reply before sending.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 7,
+   "heading": "A.2 Complaint template",
+   "narration": "Complaints first. What you want is calm authority: firm, clear and professional, neither pleading nor threatening. Here's the template. \"Draft a complaint to the organisation about the problem. What happened: your verified facts. What I have tried: the steps. What I want: the outcome. Use a firm, professional tone, under three hundred words. Use placeholders and do not invent facts.\" Keep your evidence and verify the dates. Add reference numbers yourself, after the draft. And confirm escalation bodies and deadlines on the official sites, not from the AI.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 8,
+   "heading": "A.3 The missing outcome",
+   "narration": "Many complaints never say what would actually fix the problem, so the recipient doesn't know what to do. Compare these two. Unclear: \"The repair has taken far too long. This is frustrating.\" Clearer: \"Please confirm the repair date and explain how you will keep me updated.\" The second one gives them something to do. Always include the outcome you want.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 9,
+   "heading": "A.5 Follow-up template",
+   "narration": "Follow-ups are different. You're not complaining. You're chasing something that hasn't happened, like a tradie's quote from three weeks ago, or an application that's gone quiet. \"Draft a follow-up email about the situation. I contacted the role on the date and have not received a response. Ask for an update or next step. Keep it polite and clear, a hundred to a hundred and fifty words. Do not add promises or deadlines I have not supplied.\" Before you send, review every date, commitment and request.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 10,
+   "heading": "A.6 Personal message template",
+   "narration": "This is the category that surprises people most: a message to a family member about something hard, an old friend, a neighbour. You're not handing over the message. You're getting help with the words. \"Help me draft a message to the relationship, say, my sister. Situation: brief context. I want to say the main point. I am concerned about the tone or misunderstanding. Use warm, honest language, about a hundred and fifty words. I will adapt it to sound like me.\" The line about what you're concerned about tells the AI where the danger lies. Protect the other person's privacy: \"my sister\" works just as well as her name. Then read the draft aloud, and change any wording that doesn't sound like you.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 11,
+   "heading": "A.8 Reply template",
+   "narration": "Sometimes the problem is receiving something and not knowing how to reply. This template separates understanding from responding. \"Explain what this de-identified message is asking me to do. Outline possible responses, then draft a short reply asking for clarification and more time. Flag anything requiring qualified advice.\" Then add a suitable excerpt of the message. Understand the request before you choose a response, and check any important deadlines in the original, not just in the AI's version.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 12,
+   "heading": "A.9 Legal correspondence",
+   "narration": "One firm caution. Treat a legal deadline as a priority. AI is useful for preparation: clarifying unfamiliar terms and organising your questions. But before you respond to a formal claim, a court notice or a solicitor's letter, seek suitable legal advice. And don't make assumptions. A polished AI reply does not establish your rights or protect your position. On the Cost-of-Wrong Test, this is high-cost.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 13,
+   "heading": "A.10 Try It Now",
+   "narration": "Try It Now. Draft one message and steer the wording. Choose your type: a complaint, a follow-up, a personal message or a reply. Fill in the matching template using placeholders, and review the draft. Then follow up. Ask for a shorter, warmer or clearer version, and check the facts again. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 14,
+   "heading": "A.11 Common Turbulence",
+   "narration": "Common Turbulence: sending a draft after a quick glance. AI drafts can include things you never gave them, so look for additions: invented dates, claims, apologies or commitments. Correct the draft and keep only what you intend, and can support. If you didn't say it, it shouldn't be in there. Your Memory Hook: you decide what to say. Review every line before sending.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 15,
+   "heading": "Path A: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what outcome should a complaint include? [pause] Two: which line helps with a difficult message's tone? [pause] Three, from Module 2: what do C, T, F and T stand for? [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 16,
+   "heading": "Path A: Check answers",
+   "narration": "Here are the answers. One: what you want to happen, such as a repair update or a decision review. Two: the \"what I am worried about\" line, such as sounding blaming or cold. Three: Context, Task, Format and Tone. Compare your answer with the explanation, and return to an example if you need to.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 17,
+   "heading": "Cleared To Try: Path A",
+   "narration": "Cleared To Try for this path: finish one piece of writing you've been putting off. Draft it with a suitable template, and check every fact and commitment. Then decide. Send it yourself, only when you're satisfied. In your Flight Log, record the time it took, including the checking, and save the prompt that helped. You may be surprised how quickly a task you've been dreading disappears once there's a draft in front of you.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 18,
+   "heading": "Path B: Making Sense of Documents",
+   "narration": "Path B: making sense of documents. You know the feeling. A document arrives that you know matters, like a lease renewal or a twenty-page insurance policy. You read it twice and still aren't sure you've understood it, so it goes on the kitchen bench, where it sits for two weeks. This path is about getting it off the bench. You'll create a plain-English summary and action list, find a clause and check its location, and compare suitable documents without exposing unnecessary details.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 19,
+   "heading": "B.1 Three input options",
+   "narration": "There are three ways to get a document to the AI. Attach it: a supported P.D.F. or document file. Photograph it: a clear image of a suitable excerpt. Or paste it: only the text that's relevant to your question.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 20,
+   "heading": "B.2 The privacy check",
+   "narration": "But before any of these, do the privacy check. Inspect the whole file or image first. Remove what's unnecessary: names, addresses, birth dates, account numbers and identity numbers. Usually the AI only needs the content, not your identity. Prefer an excerpt: a short, non-sensitive section is often enough. And check permissions. Use only documents you're entitled to share with this service.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 21,
+   "heading": "B.3 Redaction needs checking",
+   "narration": "Here's a trap. A visible mark may still leave hidden information underneath. For photos, crop, or use a solid opaque cover, then export a new flattened copy and inspect it before you send it. For P.D.F.s, use genuine redaction, which includes hidden text and metadata, or just paste a safe excerpt instead. And if you're unsure, use a fictional sample rather than uploading the original.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 22,
+   "heading": "B.4 Summary template",
+   "narration": "Situation one: you need to understand a document and don't know where to start. \"Explain this suitable document in plain English. Identify what it is, the main points, and any actions, deadlines, costs or decisions. Flag unclear or significant conditions. Keep it under two hundred and fifty words and point to relevant sections.\" This separates what the document is from what it's asking of you. Then check the summary against the original. A summary might leave out a qualification or an important detail.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 23,
+   "heading": "B.5 Find-one-thing template",
+   "narration": "Situation two: you need one thing in it. Is there an early exit fee? What notice do I have to give under this lease? \"In this document, find the specific clause or figure. Quote the relevant wording, give the page or section, and explain it in plain English. If you cannot find it, say so.\" Asking for the quote and the location lets you check the AI's work. Verify them yourself, because page labels and extracted text sometimes differ.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 24,
+   "heading": "B.6 Quote, location, explanation",
+   "narration": "So for anything that matters, check three things. The quote: does the original actually contain these words? The location: is this the correct page or section? And the meaning: does the explanation keep the conditions and exceptions? If the AI can't point to where the document says something, treat the claim with suspicion.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 25,
+   "heading": "B.7 Comparison template",
+   "narration": "Situation three: comparing documents, like two insurance quotes or two lease options. \"Compare these two suitable documents in a table. Show differences relevant to my criteria, important conditions and questions to ask. Give a page or section reference for each material point. Flag anything missing or unclear.\" Be specific about what matters to you, because \"Which is better?\" gets a generic answer. Use the table to guide your reading, and confirm the key terms yourself before choosing or signing.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 26,
+   "heading": "B.8 A comparison structure",
+   "narration": "Here's what a useful comparison table looks like. Document A in one column, Document B in the other. For cancellation, you want the clause and page for each. For included services, the scope and the exclusions. For costs and timing, the amounts, which you then verify yourself. A table puts everything side by side, which is much easier to read than paragraphs.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 27,
+   "heading": "B.9 Action-list template",
+   "narration": "Situation four: documents that want action from you. \"From this document, list what it asks me to do, the steps in order, each stated deadline and any stated consequence of not responding. Quote the relevant sections. Separate what the document says from your interpretation.\" That question about consequences often tells you how urgent it really is. Check important dates directly, and don't assume an AI action list establishes a legal obligation.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 28,
+   "heading": "B.10 Long documents",
+   "narration": "A note on long documents. When detail matters, narrow the question. Focus on one named section or issue, like \"Focus only on the section about cancellations.\" Confirm coverage: check whether the relevant pages, tables and attachments were actually readable. And keep the source. Don't rely on a summary before signing or making a consequential choice.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 29,
+   "heading": "B.11 Try It Now",
+   "narration": "Try It Now. Make and verify an action list. Choose a non-sensitive document or a fictional sample. Ask, using the summary or action-list template. Then verify: find one important point in the original and check the wording matches. Pause the video and try it now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 30,
+   "heading": "B.12 Common Turbulence",
+   "narration": "Common Turbulence: a small word changes the meaning. Summaries smooth things over by their nature. Watch for words like \"not\", \"unless\" and \"excluding\", and other conditions. Review the surrounding paragraph, not only a quoted line. Your Memory Hook: privacy first. Then ask, what is it asking, and by when?",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 31,
+   "heading": "Path B: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before you move on. One: what should you inspect before uploading a photo of a letter? [pause] Two: what three things help you check a clause? [pause] Three, from Module 1: what is the Placeholder Trick? [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 32,
+   "heading": "Path B: Check answers",
+   "narration": "The answers. One: the entire image, and any unnecessary personal or identifying information in it. Two: the exact wording, the page or section, and a plain-English explanation. Three: replacing identifying details with labels such as organisation, or \"my landlord\". Compare your answer with the explanation, and return to an example if you need to.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 33,
+   "heading": "Cleared To Try: Path B",
+   "narration": "Cleared To Try for this path: understand one document. Prepare by using a suitable excerpt and protecting private information. Then check: verify the most important action and deadline in the original. In your Flight Log, record a useful detail you found, and any question still unresolved.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 34,
+   "heading": "Path C: Planning Trips, Events and Projects",
+   "narration": "Path C: planning trips, events and projects. Planning seems easy until you're in the middle of it. You know the picture you want, the trip, the eightieth birthday, the new bathroom, but turning a picture into a plan involves dozens of small decisions. In this path you'll use constraints, draft, gaps and refinement, identify dependencies and things to verify, and adapt the method to family logistics.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 35,
+   "heading": "C.1 A repeatable planning method",
+   "narration": "There's one method for all of it. Constraints: your fixed points and limits. Draft: a first plan to examine. Gaps: questions and possible omissions. And refine: adjust one section at a time. AI is good at planning, not because it knows your life, but because it's good at structure.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 36,
+   "heading": "C.2 Travel template",
+   "narration": "Travel first. The common mistake is asking for too much at once. \"Plan a two-week trip to Japan\" gets you the same itinerary every travel website has. Try this. \"Draft a trip of this length to the destination for this group. Constraints: budget range, mobility or access needs, dates and fixed bookings. Give a day-by-day starting plan. Flag details to verify and what needs advance booking.\" Use placeholders, and keep medical and identity details to the minimum needed.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 37,
+   "heading": "C.3 Travel details to verify",
+   "narration": "Check live information before you book. Opening hours, transport schedules and cancellation terms come from the operators. Entry requirements: check the destination's official requirements. And for overseas advice and safety information, use the Australian government's travel advice site, smartraveller dot gov dot au. These things change, and they're medium or high on the Cost-of-Wrong scale.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 38,
+   "heading": "C.4 Event template",
+   "narration": "Events have two challenges: how much there is to do, and what has to happen first. \"I am organising the event for about this many people in this place on this date, with a planning budget of this amount. Draft an organising checklist, a timeline working backwards and questions about things easy to overlook.\" That last part brings out what first-timers learn too late, like accessible parking and a wet-weather plan. And remember, a draft budget is not a supplier quote. Confirm availability and responsibilities yourself.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 39,
+   "heading": "C.5 Dependencies in an event plan",
+   "narration": "Here's what sequencing looks like. Before you send invitations, confirm the venue and date, and verify capacity and access. Before you request a catering quote, estimate dietary needs, and verify allergies and final numbers. Before you prepare equipment, choose the activity format, and verify who supplies each item. You can't confirm catering before you know your numbers.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 40,
+   "heading": "C.6 Home project template",
+   "narration": "Home projects are where missing something costs real money. \"I am planning the home project in my state or territory, in this property type. Help me define the scope, list decisions before requesting quotes, identify approvals to check, and prepare the same questions for each tradesperson.\" Confirm approval requirements with your council or strata manager directly. And use qualified tradespeople for technical and safety decisions.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 41,
+   "heading": "C.7 Comparing quotes",
+   "narration": "Ask each supplier about the same scope. Without a clear brief, three tradies will quote three different jobs, and you'll be comparing apples with oranges. Include the work, materials, exclusions and timing. Check licences, insurance and requirements through appropriate sources. And treat AI costs cautiously. Use actual written quotes and a verified scope for your decisions.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 42,
+   "heading": "C.8 Family logistics template",
+   "narration": "Family and life logistics is the category people least often think of. You know the situation better than anyone. What's usually missing is a clear sequence. \"Help me organise the situation over this timeframe. Use broad, non-identifying context. Draft a checklist for this week, the next month and ongoing. Flag matters to confirm with a qualified professional. Include an owner and status column.\" That owner column helps when you're splitting jobs with family. Respect everyone's privacy and their authority to make decisions, and review the list before sharing it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 43,
+   "heading": "C.9 The gap question",
+   "narration": "And the most valuable question in any planning. \"What am I forgetting? Identify possible dependencies, access needs, transport, permissions and backup arrangements. Separate confirmed facts from questions to resolve.\" Treat the answer as possible omissions to investigate. The tool might still miss something important.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 44,
+   "heading": "C.10 Try It Now",
+   "narration": "Try It Now. Build one first plan. Set your constraints, giving only the relevant fixed points. Ask about gaps, word for word: \"What am I forgetting?\" Then refine: correct any assumptions and improve one section. Pause the video and try it now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 45,
+   "heading": "Path C: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before moving on. One: what are the four planning steps? [pause] Two: why ask suppliers the same questions? [pause] Three, from Module 2: what helps a confused chat start afresh? [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 46,
+   "heading": "Path C: Check answers",
+   "narration": "The answers. One: constraints, draft, gaps and refine. Two: to compare quotes for a consistent scope, and identify exclusions. Three: create a handover, verify it, and use it in a new chat. Account memory may still apply. Compare your answer with the explanation, and return to an example if you need to.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 47,
+   "heading": "Cleared To Try: Path C",
+   "narration": "Cleared To Try for this path: spend thirty minutes on one draft plan. Choose a trip, an event, a home project or a family task. Don't aim for a finished plan, just a starting point. Then resolve one thing: verify one dependency or live detail. In your Flight Log, record one gap you identified and what still needs checking.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 48,
+   "heading": "Path D: Research and Fact-Finding",
+   "narration": "Path D: research and fact-finding. Imagine a very well-read friend who's happy to explain anything, any time. Now imagine that friend occasionally mixes up last year's rules with this year's, and sounds equally sure either way. You'd still ask them. You'd just double-check the important bits. In this path you'll use explanations to prepare better questions, check who, when and where, and cross-check important claims in suitable original sources.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 49,
+   "heading": "D.1 Search and research modes",
+   "narration": "First, what the tools can do, and this depends on the tool and your account. With web search, some tools retrieve current pages and show you links. Some research modes review multiple sources and produce a report with references. But here's the limit. A citation, or a longer report, does not establish accuracy. Searching isn't the same as checking.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 50,
+   "heading": "D.2 Explanation template",
+   "narration": "Understanding how something works is where AI is strongest. \"Explain the topic in Australia in plain English for a beginner. Define unfamiliar terms, distinguish general principles from changing rules, and suggest questions I should ask a qualified person. Point to official sources for current details.\" You're not asking it to replace your accountant. You're getting ready for a useful conversation with one. Use the explanation to prepare, and verify consequential facts independently.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 51,
+   "heading": "D.3 Teach-back practice",
+   "narration": "Once you've read the explanation, teach it back. \"Here is my explanation in my own words,\" then your summary. \"What have I misunderstood? Point to sources for important corrections and flag uncertain points.\" It's one of the best ways to learn anything. But check the corrections too, because an AI review is just another generated response.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 52,
+   "heading": "D.4 Comparison template",
+   "narration": "Comparing options. \"Compare option A and option B in a table. Explain what each is, key differences, constraints and questions to ask before choosing. Use my criteria,\" and then your criteria. \"Distinguish evidence from assumptions.\" AI output might contain bias or missing context, so review the sources and the comparison criteria yourself.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 53,
+   "heading": "D.5 Appointment preparation",
+   "narration": "Working out what to ask is one of the most underused things AI can do. Before an appointment, you often don't know enough to know what to ask. \"I have an appointment with the professional role about the topic. With this brief context, a non-sensitive summary, suggest questions to ask, information to bring and terms to request in plain English.\" Keep identifying details out of the request. The professional is the one who should assess your circumstances.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 54,
+   "heading": "D.6 Who, when and where",
+   "narration": "Now the most important skill in this path: assessing a source. Ask three questions. Who created it, and what expertise or interest do they have? When: is the information current for this claim? And where: does it apply to your location and situation? A lot of online information is American, and the AI may not notice the difference.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 55,
+   "heading": "D.7 The source must support the claim",
+   "narration": "Open the reference and find the relevant passage. Match the wording: does the page actually support this statement? Read the conditions: check the dates, exceptions and the scope of the claim. And if it fails, mark the point unverified and look for a better source.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 56,
+   "heading": "D.8 The two-source rule",
+   "narration": "For an important claim, use the two-source rule and cross-check it. Start with the original: the responsible authority, or the original evidence. Then seek independence, because a second page copying the first adds very little confirmation. And for higher stakes, two sources alone may not be enough. Resolve any conflict, and seek qualified advice.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 57,
+   "heading": "D.9 Useful Australian source starting points",
+   "narration": "Some useful Australian starting points. For tax, A.T.O. dot gov dot au. For payments and Medicare, servicesaustralia dot gov dot au. For consumer money guidance, moneysmart dot gov dot au. And for tenancy and consumer rules, your state or territory's responsible authority. When you find the official page, you can bring it back to the AI and ask what it means. The official source gives you the facts, and the AI helps you understand them.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 58,
+   "heading": "D.11 Try It Now",
+   "narration": "Try It Now. Check one current factual claim. Ask the AI about a low-risk rule, service detail or opening time. Open the source and find the exact claim. Then review it: who wrote it, when does it apply, and where? Pause the video and try it now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 59,
+   "heading": "D.12 Common Turbulence",
+   "narration": "Common Turbulence: a plausible reference can still be wrong. Possible problems include a fabricated title, a broken link, or a passage that's unrelated to the claim. Your correction is to find the source yourself and check what it actually says. Your Memory Hook: who, when, where. Then verify what the source says.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 60,
+   "heading": "Path D: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before moving on. One: what three questions help assess a source? [pause] Two: what makes a second source useful? [pause] Three, from Module 2: what does a source check involve? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 61,
+   "heading": "Path D: Check answers",
+   "narration": "The answers. One: who created it, when it applies and where it applies. Two: independent evidence supporting the particular claim, with an official original where appropriate. Three: open the source and confirm it supports the claim. One click alone is not a complete check. Compare your answer with the explanation, and return to an example if you need to.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 62,
+   "heading": "Cleared To Try: Path D",
+   "narration": "Cleared To Try for this path: investigate one topic for thirty minutes. Learn: ask for an explanation and some useful questions. Verify: confirm one current fact, and cross-check it if the consequences warrant it. In your Flight Log, record the claim, the source, the date you checked, and any discrepancy.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 63,
+   "heading": "Path E: Health Information",
+   "narration": "Path E: health information. Think about the drive home from a specialist appointment. In the room it all made sense. Two hours later you're trying to remember what that long word was. AI can help you become a better-informed patient, not by replacing your doctor, but by helping you ask clear questions. In this path you'll understand terms and prepare questions, organise an appointment agenda, and protect sensitive information while using qualified care.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 64,
+   "heading": "E.1 Health help in Australia",
+   "narration": "Before anything else, AI is not a doctor. In an emergency, call triple zero. For health advice when you're unsure what to do, call healthdirect on one eight hundred, oh two two, two two two. You'll speak with registered nurses, twenty-four hours a day, seven days a week. Use your GP, pharmacist or treating team for care decisions. And don't delay urgent help while chatting with AI.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 65,
+   "heading": "E.2 Health privacy",
+   "narration": "Health information is especially sensitive, so share the minimum needed. Prefer general questions: start with a term or topic, without a personal record. If you're using an excerpt, remove unnecessary identifiers, and details about other people. And keep the limits in view. De-identification reduces risk, but it doesn't guarantee anonymity.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 66,
+   "heading": "E.3 Temporary chat is not confidentiality",
+   "narration": "A temporary chat is not the same as confidentiality. Review the service's current data controls. Check first, because history, retention, personalisation and sharing rules differ between services. Minimise information: a temporary label does not make sensitive information safe to upload. And if you're uncertain, ask a general question, or discuss the document with your clinician.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 67,
+   "heading": "E.4 General information template",
+   "narration": "Using AI to understand what you've been told. \"Explain the condition or medical term in plain English. Give general background, define unfamiliar words and suggest questions for a clinician. Use reputable health sources. Do not diagnose me or recommend a personal treatment plan.\" That last sentence keeps the AI, and you, in the right frame of mind. You're looking for understanding, not a diagnosis. Then confirm the explanation with your treating professional and current, reliable health information.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 68,
+   "heading": "E.5 Letters and test results",
+   "narration": "For letters and test results, use explanations to prepare questions. Ask about terms: \"Which words should I ask my clinician to explain?\" Keep uncertainty visible, because a range or an isolated figure does not establish a diagnosis. Only your doctor knows what's normal for you. And confirm next steps: if instructions are unclear, ask the clinic directly.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 69,
+   "heading": "E.6 Appointment template",
+   "narration": "Preparing for appointments is one of the most valuable uses of all. Most of us forget the thing that mattered most. \"Organise these concerns for a discussion with my GP or specialist,\" then a brief, non-identifying list. \"Prioritise my stated concerns and suggest questions to ask. Keep the list short. Flag anything needing direct clarification with the clinic.\" And if a concern is urgent, seek appropriate care rather than waiting for an appointment or an AI response.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 70,
+   "heading": "E.8 After the appointment",
+   "narration": "After the appointment, keep a checked record of the instructions. Record your understanding in a private note soon afterwards, while it's fresh. Protect the information: avoid recording others, or disclosing unnecessary clinical details. And if you're unsure, contact the clinic or pharmacist to confirm, especially medication instructions.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 71,
+   "heading": "E.9 Medication questions",
+   "narration": "Your pharmacist is one of the most knowledgeable and underused people in the health system. \"Help me prepare questions for my pharmacist about the medicine name. I want to understand its purpose, the patient leaflet, possible side effects and questions about interactions. Link to reliable current information. Avoid personal dose instructions.\" Ask your pharmacist or prescriber directly. And never start, stop or change a dose based on AI output. Medication is as high-cost as the Cost-of-Wrong Test gets.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 72,
+   "heading": "E.10 Supporting someone else",
+   "narration": "Many people doing this course are caring for someone. Remember, their privacy and choices matter too. Ask permission where appropriate, and use only information you're entitled to share. AI can give practical support: organising questions and non-sensitive appointment logistics. For carers, find current support information at carergateway dot gov dot au.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 73,
+   "heading": "E.11 Australian health source starting points",
+   "narration": "The rules and amounts change, so start with the official sites. For health information and advice, healthdirect dot gov dot au. For Medicare, servicesaustralia dot gov dot au. For aged care, myagedcare dot gov dot au. For disability supports, N.D.I.S. dot gov dot au. And for health insurance information, privatehealth dot gov dot au.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 74,
+   "heading": "E.12 Try It Now",
+   "narration": "Try It Now. Prepare a short appointment agenda, for you or someone else. Use placeholders, and list only the concerns you choose to include. Ask the AI to organise them into a short list of discussion questions. Then review it: remove irrelevant suggestions, and take your checked list to the appointment. Pause the video and try it now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 75,
+   "heading": "E.13 Common Turbulence",
+   "narration": "Common Turbulence: repeated symptom questions increase worry. It's late, you can't sleep, and each answer gets scarier. If you notice that happening, pause the chat. More generated possibilities might not clarify your situation. Seek health advice instead: contact your GP, or healthdirect on one eight hundred, oh two two, two two two. And for urgent emergency help, call triple zero.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 76,
+   "heading": "Path E: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before moving on. One: what should you remove before sharing a health excerpt? [pause] Two: who provides twenty-four-hour nurse advice in Australia? [pause] Three, from Module 1: what does the Postcard Rule help you assess? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 77,
+   "heading": "Path E: Check answers",
+   "narration": "The answers. One: unnecessary identifying information. And consider whether the excerpt should be shared at all. Two: healthdirect, on one eight hundred, oh two two, two two two. For emergencies, call triple zero. Three: whether information is suitable to share with the service. Temporary chat does not guarantee confidentiality. Compare your answer with the explanation, and return to an example if you need to.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 78,
+   "heading": "Cleared To Try: Path E",
+   "narration": "Cleared To Try for this path: prepare for a health appointment. Before it, write and review a short question list. During it, confirm the instructions directly with the clinician. In your Flight Log, record whether the preparation helped, without storing unnecessary clinical details. Understanding your own health isn't hypochondria. It's taking yourself seriously.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 79,
+   "heading": "Path F: Money and Admin",
+   "narration": "Path F: money and admin. There's a pile that never quite goes away: the A.T.O. letter from two weeks ago, the super statement you haven't opened, the insurance renewal that's gone up again. Most of it isn't truly complicated. It feels complicated because of the unfamiliar language. In this path you'll understand a statement and prepare questions, draft an agency letter using placeholders, and organise budget information and verify the calculations.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 80,
+   "heading": "F.1 The money privacy rule",
+   "narration": "First, the rule for this whole path: leave account and identity details out. Exclude account, card, tax file and super member numbers. Never disclose credentials: passwords, PINs and one-time codes. Ever. And minimise financial detail. For practice, use fictional amounts or suitable ranges. AI doesn't need to know who you are to explain a statement.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 81,
+   "heading": "F.2 Statement template",
+   "narration": "Statements: bank, credit card, super. Most of us read them just enough to check nothing's gone badly wrong. \"Explain this suitable statement excerpt in plain English. Identify key figures, fees, unclear items and questions for the provider. Point to the relevant lines.\" Then paste the excerpt, with identifying details removed. Fees often hide in fine print. Check each item in the original, because a summary is not a fraud check or a complete financial review.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 82,
+   "heading": "F.4 Government letter template",
+   "narration": "Government agencies respond better to letters that are clear, factual and well organised. \"Draft a factual letter to the agency asking for a review, clarification or update. Situation: your verified summary. Evidence available: describe the documents without identifiers. Keep it professional, about three hundred words, and use placeholders.\" Confirm the formal process and deadlines directly. And keep copies of your evidence and correspondence. AI helps you write well, but the record-keeping is yours.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 83,
+   "heading": "F.6 Suspicious messages",
+   "narration": "Scammers love pretending to be government agencies and banks, and AI has made their messages more convincing. So verify through a channel you find yourself. Avoid the link in the message: open the official app, or type the known address yourself. Contact the organisation directly, using details you found independently on its official website. And keep control. Don't disclose passwords or one-time codes to an unexpected contact.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 84,
+   "heading": "F.7 AI cannot certify a message as safe",
+   "narration": "AI can't certify a message as safe. A convincing message still needs verification. A useful question to ask is, \"What warning signs should I check?\" But here's the important limit: an AI assessment cannot prove who sent it. And if money was transferred, contact your bank immediately, through a verified channel.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 85,
+   "heading": "F.8 Insurance template",
+   "narration": "Insurance. People pay a lot for cover they don't fully understand, and find out what's excluded at the worst possible moment. \"Explain this suitable policy excerpt. Identify cover, exclusions, conditions and questions for the insurer, with section references. List information I should check before relying on the cover.\" Then check the policy, the schedule and the insurer's current explanation. Don't treat an AI summary as a coverage decision.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 86,
+   "heading": "F.9 Superannuation template",
+   "narration": "Super is where many Australians feel least informed, and AI explains the concepts well. \"Explain the super concept in plain English. Outline general considerations and questions for my fund or a licensed financial adviser. Identify current official sources for rules or figures. Avoid recommending a product for me.\" AI gives general information. For decisions about your own circumstances, use suitable professional advice.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 87,
+   "heading": "F.10 Comparing super products",
+   "narration": "If you're comparing super products, use current product information. A useful starting point is the A.T.O.'s YourSuper tool, which compares MySuper products. For broader checks, read the product disclosures, fees, insurance and services. And for personal decisions, check an adviser's credentials and relevant experience before engaging their advice.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 88,
+   "heading": "F.11 Budget template",
+   "narration": "Budgeting works best when you're specific. \"Help me budget\" is too broad. \"Organise this fictional or minimised budget information: income, the amount and period, fixed costs, your list, variable costs, your list, and goal, your goal. Use a table. Flag missing items or mixed time periods and ask up to three questions, one at a time.\" Being asked good questions often clarifies things on its own. Use one consistent time period, keep identifiers out, and verify the arithmetic with a calculator or spreadsheet.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 89,
+   "heading": "F.12 A fictional weekly budget",
+   "narration": "Here's a fictional weekly budget. Income: twelve hundred dollars. Fixed costs: seven hundred dollars. Variable costs: three hundred and fifty dollars. That leaves a remainder of a hundred and fifty dollars. Notice everything is in the same weekly period, so the sums actually make sense. Use AI to understand the sums, and the calculator to confirm them.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 90,
+   "heading": "F.14 Official source starting points",
+   "narration": "Here are the official sources for current figures. For tax and YourSuper, A.T.O. dot gov dot au. For payments and Medicare, servicesaustralia dot gov dot au. For money education and checking advisers, moneysmart dot gov dot au. And for scam guidance and reporting, scamwatch dot gov dot au.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 91,
+   "heading": "F.15 Try It Now",
+   "narration": "Try It Now. Work through one admin item. Choose a safe sample statement, letter or renewal. Prepare it: remove unnecessary private details, and choose a template. Then verify one key figure, condition or deadline in the original. Pause the video and try it now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 92,
+   "heading": "F.16 Common Turbulence",
+   "narration": "Common Turbulence: uploading everything because you're tired. The form is confusing and you think, \"I'll just paste the whole thing in.\" Pause. Check what the tool actually needs. Reduce it to a short, safe excerpt, or a fictional version. It takes thirty seconds and you get just as good an answer. Your Memory Hook: protect account details. Verify claims through official channels.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 93,
+   "heading": "Path F: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before moving on. One: name three details to keep out of a money prompt. [pause] Two: a myGov text asks you to log in through a link. What next? [pause] Three, from Module 1: which test sets the checking standard? [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 94,
+   "heading": "Path F: Check answers",
+   "narration": "The answers. One: any three of account or card numbers, tax file numbers, member I.D.s, passwords or one-time codes. Two: avoid the link. Open the official app or verified website yourself. Three: the Cost-of-Wrong Test. What would it cost if this were wrong? Compare your answer with the explanation, and return to an example if you need to.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 95,
+   "heading": "Cleared To Try: Path F",
+   "narration": "Cleared To Try for this path: resolve one money or admin question. Choose: understand an excerpt, draft a letter or clarify a concept. Then verify the figures and any consequential information before you act. In your Flight Log, record what you resolved, the time spent, and any next step that needs help.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 96,
+   "heading": "Your Module 3 toolkit",
+   "narration": "You've now worked through real tasks. Here's a quick recap of your toolkit, depending on your paths. Path A: state the outcome, and review every line. Path B: protect information, and verify the original. Path C: constraints, draft, gaps, refine. Path D: check who, when and where, and the claim itself. Path E: prepare questions, and confirm care instructions. Path F: protect account details, and verify official processes.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 97,
+   "heading": "Cleared To Try: Module 3",
+   "narration": "Here's your Cleared To Try for the whole module. Choose a real task, not a test task, using one of your chosen paths and a suitable template. Complete it and check it: review the result, verify the important details, and take any appropriate action yourself. Compare the time, including prompting, checking and repairs. And save the lesson: record one prompt change for next time, and save the useful template. You choose whether and when to send, submit, book or make a decision.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 98,
+   "heading": "Module 3 complete",
+   "narration": "That's Module 3 complete. Bring one useful task to the next module. Your next step is to finish the practical exercise for your chosen paths. Later, return to another path when it becomes relevant. Life changes, and the path that seems irrelevant today might be exactly what you need next month. In Module 4, you'll choose a project: write something, start something, sort something or learn something. You're in the air now. See you there.",
+   "script_reuse": "high"
+  }
+ ]
+}

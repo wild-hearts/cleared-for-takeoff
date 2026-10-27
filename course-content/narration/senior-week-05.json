@@ -1,0 +1,232 @@
+{
+ "course": "senior",
+ "week": 5,
+ "title": "Week 5: Bias, Fairness and Failure",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "Senior AI Pilots, Week 5: Bias, Fairness and Failure",
+   "narration": "[warmly] Welcome back to Ground School. I'm Captain Naomi, and this is Senior AI Pilots, Week 5: Bias, Fairness and Failure. Until now we've mostly asked whether a model works. This week we ask where it works, where it doesn't, and how to say so honestly. Strap in."
+  },
+  {
+   "slide": 2,
+   "heading": "Mission Brief",
+   "narration": "Here's your mission brief: investigate uneven results, and document the limits. First, you'll explain three routes for bias: data, labels and deployment. Then you'll audit your own model, comparing how it performs across relevant conditions. Finally, you'll report what you found by writing a model card, with your evidence and your model's limits laid out where people can see them."
+  },
+  {
+   "slide": 3,
+   "heading": "The Hook: Gender Shades, 2018",
+   "narration": "Let's start with a real study. In twenty eighteen, a published study called Gender Shades tested three commercial systems. Their task was to classify perceived binary gender from facial images. When the researchers compared results, the errors differed across the study's skin-tone and gender groups. The lesson for us: one overall score would have hidden important performance differences. Keep that idea handy. It comes back all lesson."
+  },
+  {
+   "slide": 4,
+   "heading": "What the historical study reported",
+   "narration": "Here's what that historical study reported across the three tested systems. For darker-skinned females, using the study's categories, error rates went up to thirty four point seven per cent. For lighter-skinned males, the maximum was zero point eight per cent. Be careful with these numbers. They're reported maximum error rates from that test, not a claim about any product today, and not an explanation of what caused the gap. The source is Buolamwini and Gebru, published in PMLR volume eighty one, twenty eighteen."
+  },
+  {
+   "slide": 5,
+   "heading": "Scope matters",
+   "narration": "That care with wording is a skill in itself. When you describe a study, say exactly what it established: which systems, which task, which test set and what date. Avoid treating a historical result as a score for every system today. And for this course, one firm boundary. You'll audit objects. Do not collect or classify your classmates' faces."
+  },
+  {
+   "slide": 6,
+   "heading": "Three routes for bias",
+   "narration": "So how does bias get in? Here are three routes. Data: the collection doesn't cover the relevant people or conditions well. Labels: the target categories, or the judgements people made, embed questionable assumptions. Deployment: a system gets used outside the context or purpose it was tested for. We'll take them one at a time."
+  },
+  {
+   "slide": 7,
+   "heading": "1. Data bias",
+   "narration": "Route one, data bias. Missing coverage can produce uneven results. Picture an object classifier where most of the training pictures show bright, plain backgrounds. Dim light and clutter are poorly represented. The check is straightforward: evaluate those conditions separately, instead of relying on the average to tell you everything is fine."
+  },
+  {
+   "slide": 8,
+   "heading": "2. Label bias",
+   "narration": "Route two, label bias. Human decisions shape the target the model learns. A small object example: a vague labelling rule means two labellers treat the same item differently. The wider concern is bigger. Labels based on past decisions can preserve unfair patterns from the past. Your check: review the definitions, look at where people disagreed, and ask what the labels are actually for."
+  },
+  {
+   "slide": 9,
+   "heading": "3. Deployment bias",
+   "narration": "Route three, deployment bias. Here the use changes while the evidence stays limited. Say a model was demonstrated in daytime, and then someone uses it in a dim room. Or a classroom prototype gets treated as a dependable general tool. Same model, very different job. The check: compare the intended use with the conditions you actually tested."
+  },
+  {
+   "slide": 10,
+   "heading": "Bias has more than one cause",
+   "narration": "Bias has more than one cause, so look at the whole system. Ask who chose the data, the categories and the objective. Then ask how errors are handled, and who bears the consequences when they happen. One honest caveat: these three routes are a useful starting point, not an exhaustive theory of bias. Think of them as a pre-flight checklist, not the whole flight manual."
+  },
+  {
+   "slide": 11,
+   "heading": "How 95% overall can hide a gap",
+   "narration": "Now some arithmetic, with fictional groups. The larger group has ninety cases, and the model gets eighty eight right. That's ninety seven point eight per cent. The smaller group has ten cases, and the model gets seven right. Seventy per cent. Add them together and you get ninety five out of a hundred, so ninety five per cent overall. Sounds great. Unless you're in the smaller group."
+  },
+  {
+   "slide": 12,
+   "heading": "Pilot's Tip: break results down",
+   "narration": "Pilot's tip: break your results down, because the average doesn't describe every group. The arithmetic explains why. A larger group contributes more cases to the overall score, so it pulls that score towards its own result. In your audit, inspect relevant groups or conditions separately. One caution, though. A gap is a signal to investigate, not a complete fairness verdict."
+  },
+  {
+   "slide": 13,
+   "heading": "Robustness and fairness are connected",
+   "narration": "Robustness and fairness are connected, but an object test does not certify fairness for people. This classroom audit measures performance across conditions such as light and background. Fairness for humans also involves harms, access, rights, and whether the task itself is suitable. So when you write your conclusion, report the limited question your evidence answers, and no more."
+  },
+  {
+   "slide": 14,
+   "heading": "Generative systems need review too",
+   "narration": "Generative systems need review too. With these, look for assumptions in the output. In descriptions, who gets represented as an engineer, a nurse or a pilot? [laughs softly] You can guess which one I watch most closely. Does the output narrow roles, families or abilities without a reason? And for your evidence, record the actual wording, rather than assuming every tool responds the same way."
+  },
+  {
+   "slide": 15,
+   "heading": "Optional generative-bias check",
+   "narration": "Here's an optional generative-bias check. The prompt is: describe a typical engineer, nurse and pilot in one sentence each. Ground rules first. Use an eligible account under the Week 1 rules. For age twelve, an adult conducts the interaction. And do not request images of real people. If you're trying this one, pause the video now and run it. [pause]"
+  },
+  {
+   "slide": 16,
+   "heading": "Evaluate without overclaiming",
+   "narration": "When you look at what came back, evaluate without overclaiming. One output is an example, not a prevalence study, so it can't tell you how often something happens. Record the prompt, the tool, the date and the exact relevant wording. Inspect which assumptions were introduced without being requested. And do not assume the chatbot's explanation of its own choices proves what caused them."
+  },
+  {
+   "slide": 17,
+   "heading": "No-chatbot alternative",
+   "narration": "No chatbot? No problem. You can review an existing description or advert instead. Choose a suitable job description, school resource or advert with your parent or carer. Then analyse it. Who appears, who is missing, and what assumptions are present? When you write it up, label it honestly: a representation review, not an AI-model experiment."
+  },
+  {
+   "slide": 18,
+   "heading": "Your audit workflow",
+   "narration": "Now to your own audit. The workflow has three stages. Define: choose relevant conditions and a repeatable test plan. Measure: record correct and incorrect predictions, condition by condition. Decide: investigate the gap, test one change, and document the limits that remain. Let's walk through it step by step."
+  },
+  {
+   "slide": 19,
+   "heading": "Step 1: choose your conditions",
+   "narration": "Step one: choose your conditions, and make the comparison meaningful. Possible conditions include bright versus dim light, or a plain versus a busy background. Other options are the object's state, the viewpoint, or different instances of the same class. For the Home Lab, choose three. Keep the task and your class definitions consistent across all of them, so you're comparing like with like."
+  },
+  {
+   "slide": 20,
+   "heading": "Step 2: plan the examples",
+   "narration": "Step two: plan your examples, so the class mix doesn't explain the whole gap. Use similar class mixes, and include each target class in every condition where practical. Separate your factors: change one condition when you're isolating its effect. And record overlap. A dim, busy image may belong to two groups. That's fine, but don't count it twice in an overall total."
+  },
+  {
+   "slide": 21,
+   "heading": "Step 3: test and record",
+   "narration": "Step three: test and record. Start with ten examples per condition. For each case, write down the actual label, the predicted label, the condition and the model version. Keep every result visible, including failures, exclusions and uncertain cases. No quietly losing the embarrassing ones. And be honest about your claim: this is a small exploratory audit, not a deployment approval."
+  },
+  {
+   "slide": 22,
+   "heading": "Illustrative audit, not learner results",
+   "narration": "Here's an illustrative audit. These aren't learner results, just an example of the shape yours might take. Bright and plain: nine out of ten correct, ninety per cent. Dim and plain: five out of ten, fifty per cent. Bright and busy: eight out of ten, eighty per cent. One of those rows should already be bothering you."
+  },
+  {
+   "slide": 23,
+   "heading": "Calculate the observed gap",
+   "narration": "Let's calculate the observed gap in this fictional, small-sample example. Ninety per cent minus fifty per cent is forty percentage points. That's bright and plain compared with dim and plain. But watch the sample size. With ten examples per condition, one changed result shifts a rate by ten percentage points. So you need more evidence before generalising."
+  },
+  {
+   "slide": 24,
+   "heading": "Step 4: investigate the weakest condition",
+   "narration": "Step four: investigate the weakest condition. Inspect the actual cases, not only the score. One possible explanation is that the training set lacked useful dim-light variety. But there are others: different objects, framing, labels or camera quality. So write down your hypothesis: what you think happened, and what evidence would test it."
+  },
+  {
+   "slide": 25,
+   "heading": "Step 5: test one improvement",
+   "narration": "Step five: test one improvement, and keep a record of before and after. Make one change, such as adding relevant, varied training examples for the weak condition. Compare fairly, using fixed development cases and the same scoring rules both times. Then check the version you select with fresh, held-out examples."
+  },
+  {
+   "slide": 26,
+   "heading": "A fix may not solve the whole problem",
+   "narration": "A fix may not solve the whole problem, so report what changed and what didn't. If results improve, state the model version, the cases and the condition. If they don't, keep the negative result and investigate further. And if a limit remains, restrict the intended use, or recommend against using the model there. Knowing where not to fly is part of flying."
+  },
+  {
+   "slide": 27,
+   "heading": "The model card",
+   "narration": "All of this goes into a model card: a concise report for someone who will use your model. It does three jobs. Purpose: explain the model's intended use and audience. Evidence: report how it was trained and evaluated. Limits: make known failures and inappropriate uses easy to find, not buried at the bottom."
+  },
+  {
+   "slide": 28,
+   "heading": "Model card: sections 1 to 3",
+   "narration": "Your model card has six sections. Here are the first three. One, intended use: the task, the users, the setting and the model version. Two, not for: the uses and conditions your evidence does not support. Three, training: your data, your method, and a reference to your datasheet."
+  },
+  {
+   "slide": 29,
+   "heading": "Model card: sections 4 to 6",
+   "narration": "And sections four to six. Four, performance: overall and subgroup counts, your metrics, and your evaluation method. Five, limitations: known failure cases, missing tests, and uncertainty. Six, ethics: privacy, permissions, potential harms and human review."
+  },
+  {
+   "slide": 30,
+   "heading": "Your one-page model card",
+   "narration": "Here's how it all fits on one page. Model and intended use: name, version, date, purpose and audience. Not for: unsupported uses or conditions. Training and datasheet: collection, labels, method and your datasheet reference. Performance: correct out of tested, overall and by condition. Limitations: observed failures, unknowns and missing coverage. Ethical considerations: privacy, permissions, consequences and review."
+  },
+  {
+   "slide": 31,
+   "heading": "Write a precise limitation",
+   "narration": "When you write a limitation, be precise. Saying poor in dim light needs evidence behind it. A better statement is: Version 1 got five of ten dim, plain development cases correct. Then add: this small test does not support use in dim conditions. And label the example. These are fictional wording examples, not your measured results."
+  },
+  {
+   "slide": 32,
+   "heading": "Try It Now",
+   "narration": "Try it now. Compare two conditions you haven't tested before, for example dim light and a busy background. Collect ten examples of each, with comparable class coverage. Then record the accuracy, the failures, and the limits of the comparison. Pause the video and give it a go. [pause]"
+  },
+  {
+   "slide": 33,
+   "heading": "Common Turbulence: The algorithm is neutral",
+   "narration": "Common turbulence: the claim that the algorithm is neutral. Mathematics does not settle the design choices. People choose the data, the categories, the objectives and the operating conditions. People experience the consequences of errors and decisions. So your responsibility is to examine those choices, and document what your evidence supports. The maths is the engine. Somebody still picks the destination."
+  },
+  {
+   "slide": 34,
+   "heading": "Memory Hook",
+   "narration": "Memory hook. Data. Labels. Deployment. Your next step is to break results down by group or condition. And in your report, document the limits and keep the evidence visible."
+  },
+  {
+   "slide": 35,
+   "heading": "Pre-Landing Check 1",
+   "narration": "Pre-landing check one. Name three routes through which bias enters. Here's a nudge: think collection, decisions and use. Pause the video and answer before you go on. [pause]"
+  },
+  {
+   "slide": 36,
+   "heading": "Check 1: answer",
+   "narration": "Here's the answer: data, labels and deployment. Data means missing or uneven coverage. Labels means human assumptions in the target judgements. And deployment means use beyond the intended and tested context. If you named all three, nicely flown."
+  },
+  {
+   "slide": 37,
+   "heading": "Pre-Landing Check 2",
+   "narration": "Pre-landing check two. Why can overall accuracy mislead? Use the example from earlier: ninety five per cent overall, but seventy per cent for the smaller group. Pause the video and work out your explanation. [pause]"
+  },
+  {
+   "slide": 38,
+   "heading": "Check 2: answer",
+   "narration": "Answer: a larger group can conceal a smaller group's errors. The average weights groups according to their case counts, so the bigger group dominates. Your audit fixes that by showing each relevant group's counts and performance. But stay cautious. Small samples and task context still matter."
+  },
+  {
+   "slide": 39,
+   "heading": "Pre-Landing Check 3",
+   "narration": "Pre-landing check three, and this one reaches back to Week 4. What is a threshold? Explain what a score-based decision rule changes. Pause the video and answer in your own words. [pause]"
+  },
+  {
+   "slide": 40,
+   "heading": "Check 3: answer",
+   "narration": "A threshold is a score boundary used in a decision rule. A binary example: flag something as spam when its score reaches a chosen boundary. A review example: send lower-confidence outputs for human checking. Keep the distinction clear, though. A threshold does not guarantee a correct or fair decision."
+  },
+  {
+   "slide": 41,
+   "heading": "Home Lab: Audit and Model Card",
+   "narration": "Your Home Lab this week: an audit and a model card. One, plan: three relevant conditions, and ten examples for each. Two, measure: counts, accuracy, and the largest observed gap. Three, improve: one hypothesis and one change, compared fairly. Four, report: a one-page model card with six sections and honest limits. Allow about sixty minutes, or split it across sessions. Optional extra: review the assumptions in generated job descriptions."
+  },
+  {
+   "slide": 42,
+   "heading": "Project Log: Entry 5",
+   "narration": "Project Log, entry five. Make the audit reviewable, so someone else could follow your work. Your evidence: condition definitions, examples, results and model versions. Your reasoning: your hypothesis, your one change, and what happened. Your report: the model card, its limitations, and a final recommendation on use."
+  },
+  {
+   "slide": 43,
+   "heading": "Offline audit option",
+   "narration": "Working offline? There's an option for that too. Analyse the fictional table from this lesson. Calculate the rates and the gap between conditions. Investigate by proposing the data you would need to test an explanation. Then draft a model card, clearly labelled fictional classroom example."
+  },
+  {
+   "slide": 44,
+   "heading": "Parent & Guardian Brief",
+   "narration": "This one is the brief for your parent or carer: support critical questions and safe testing. Privacy: use objects, with no faces and no classmates' photos. Access: keep the Week 1 age, consent and account rules for any optional chatbot use. And something to discuss together: who bears the cost when a system performs unevenly?"
+  },
+  {
+   "slide": 45,
+   "heading": "Ready for Week 6",
+   "narration": "Ready for Week 6: AI-Assisted Storytelling and Media. This week, you audited uneven performance and documented limitations. Next week, you'll build a branching story while keeping your creative decisions visible. Keep the habit: evidence first, clear limits, human responsibility. [warmly] See you on the flight deck."
+  }
+ ]
+}

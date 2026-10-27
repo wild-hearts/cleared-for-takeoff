@@ -1,0 +1,181 @@
+{
+  "week": 2,
+  "title": "Junior AI Navigators Week 2: Talking to AI Safely",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Junior AI Navigators",
+      "narration": "Hello, Navigators, and welcome back to Ground School. I'm Captain Naomi, and this is Week Two: Talking to AI Safely. Today you'll learn how to give AI clear instructions, and how to keep your private information private. Grab your grown-up and buckle up."
+    },
+    {
+      "slide": 2,
+      "heading": "Pre-Flight",
+      "narration": "Time for our Pre-Flight check. Today is all about clear instructions and private information. Your first goal is to tell AI what you want, who the answer is for, and how you want it. Your second goal is to make your very own Never-Share List and use it with your grown-up. And your role? You choose the question. Your grown-up runs the chatbot."
+    },
+    {
+      "slide": 3,
+      "heading": "Take-Off Question",
+      "narration": "Here's our Take-Off Question. Imagine you tell a machine, \"Make me a jam sandwich.\" Sounds easy, right? [curious] But what information is missing from that instruction? And what might a machine do if the steps aren't clear? Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 4,
+      "heading": "The sandwich mix-up",
+      "narration": "So, what happened? [laughs softly] The machine put the whole jar on the bag of bread. A closed jar on unopened bread. Not much of a lunch. What was missing? The instruction didn't explain how to make the sandwich. So words that seem obvious to you might still leave important details out."
+    },
+    {
+      "slide": 5,
+      "heading": "Clearer instructions",
+      "narration": "Let's try again, with the missing steps put back in. Prepare: take two slices of bread out of the bag and put them on a plate. Spread: open the jam and use a blunt butter knife to spread a little on one slice. Finish: place the second slice on top. And ask your grown-up to help you. Much better, robot."
+    },
+    {
+      "slide": 6,
+      "heading": "A prompt is an instruction",
+      "narration": "When you ask AI something, that's called a prompt, and a prompt is an instruction. So tell the tool what you need. \"Tell me something\" is a vague prompt. The tool has very little to go on. \"Tell me about koalas in five short sentences for a nine-year-old\" is much clearer. Clear instructions help, but they don't promise a correct answer, so we still check."
+    },
+    {
+      "slide": 7,
+      "heading": "Three parts of a clear prompt",
+      "narration": "A clear prompt has three parts. First, what: the topic or task you want help with. Second, who: the audience, the person the explanation is for. Third, how: the length or format you want. What, who and how. You can spot all three on the banners around our koala friend."
+    },
+    {
+      "slide": 8,
+      "heading": "1. What you want",
+      "narration": "Let's start with what. \"Tell me about koalas.\" First, name the topic, so the tool has a clear subject. Then name the task. Do you want facts, ideas, a list or an explanation? Now you try. Which animal would you like to learn about? Have a think, and hold on to it for later."
+    },
+    {
+      "slide": 9,
+      "heading": "2. Who the answer is for",
+      "narration": "Next comes who. \"Explain it for a nine-year-old.\" Describing your audience helps the tool choose the right words and the right amount of detail. And notice what isn't there: no name, no school. A general description like that doesn't need them, so your identity stays private. Another option is, \"Use words a beginner understands.\""
+    },
+    {
+      "slide": 10,
+      "heading": "3. How you want the answer",
+      "narration": "And then how. \"Use five short sentences.\" Choose a length. Ask for a short answer when you want a quick explanation. Choose a format, like a list, a few sentences or a simple set of steps. And if the answer comes back too tricky, your grown-up can ask for a simpler explanation."
+    },
+    {
+      "slide": 11,
+      "heading": "The complete koala prompt",
+      "narration": "Now let's put all three together. What: tell me about koalas. Who: for a nine-year-old. How: in five short sentences. Altogether, that's \"Tell me about koalas, for a nine-year-old, in five short sentences.\" One clear prompt, three parts, and one very happy koala."
+    },
+    {
+      "slide": 12,
+      "heading": "Instrument Check",
+      "narration": "Instrument Check, Navigators. What are the three parts of a clear prompt? Try to name all three before we move on to the answer. If you get stuck, think back to our koala example. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 13,
+      "heading": "Instrument Check: answer",
+      "narration": "How did you go? The three parts are what, who and how. What is the topic or task. Who is the audience for the answer. And how is the length or format. If you named all three, give yourself a big tick."
+    },
+    {
+      "slide": 14,
+      "heading": "The co-pilot seat",
+      "narration": "So who does what when we use a chatbot? Think of it as the co-pilot seat, and your grown-up does the typing. You choose, by telling your grown-up the question you want to ask. Your grown-up uses a suitable tool and follows its rules. Then you decide together. Read the answer and talk about whether it's helpful."
+    },
+    {
+      "slide": 15,
+      "heading": "Private information",
+      "narration": "Now, a prompt can leave your device. An online AI service can work on your message using computers far away. And depending on its settings and rules, the service might keep what you send. So here's a good habit to build: leave private information out before your grown-up sends the prompt."
+    },
+    {
+      "slide": 16,
+      "heading": "Your Never-Share List",
+      "narration": "This is your Never-Share List, six things that stay locked away. Your full name: ask about a topic, not about who you are. Your home address: keep where you live private. Your school name: leave it out. Your phone number: don't share contact details. Private photos: keep photos of people out. And passwords: never put a password in a prompt."
+    },
+    {
+      "slide": 17,
+      "heading": "Names, places and numbers",
+      "narration": "Let's look closer at names, places and numbers. These are identifying details, the ones that point to you, so leave them out. Your full name isn't needed for a koala question. Your home address and your school name stay private. And a chatbot doesn't need your phone number for this activity."
+    },
+    {
+      "slide": 18,
+      "heading": "Photos and passwords",
+      "narration": "Photos and passwords stay out of your prompts too. Don't upload pictures of you, your family or your friends. Never share a password, even if something asks very politely. And if you're ever unsure, stop. Show your grown-up before anything gets sent."
+    },
+    {
+      "slide": 19,
+      "heading": "Captain's Tip: the Playground Test",
+      "narration": "Captain's Tip: the Playground Test. Ask yourself, would I shout this across the playground? Your favourite animal, like koalas, is a general topic, and fine for this activity. Your home address? Keep it out of the question. One extra check, though. Even something people say out loud in public might still be private, or not right to share with AI."
+    },
+    {
+      "slide": 20,
+      "heading": "A safer version of a question",
+      "narration": "So what does a safer question look like? Keep it about the topic. \"Give me three facts about koalas.\" No name, address, school, phone number or photo is needed. Then ask your grown-up to check the question before they type it."
+    },
+    {
+      "slide": 21,
+      "heading": "Mission: your Never-Share List",
+      "narration": "Mission time! First, make your privacy reminder. Get ready with your Flight Log, a pencil and your grown-up. Draw a lock. Inside it, write or draw the six things that stay private. Then keep your list nearby, and use it before a chatbot activity."
+    },
+    {
+      "slide": 22,
+      "heading": "Mission: one clear question",
+      "narration": "Your next mission is one clear question. Choose an animal you like. Build your prompt with what you want, who it's for and how you want the answer. Check your privacy: leave out personal details, and show your grown-up the question. Then use the co-pilot seat. Your grown-up types, and reads the answer with you."
+    },
+    {
+      "slide": 23,
+      "heading": "Mission pause",
+      "narration": "Now it's your turn to fly. Pause the video here and try your mission. Take about ten minutes, and work at your own pace. Your two tasks are to make your Never-Share List, then ask one clear question with your grown-up. When you're ready, come back and we'll talk about the answer. [pause]"
+    },
+    {
+      "slide": 24,
+      "heading": "Welcome back, Navigators",
+      "narration": "[warmly] Welcome back, Navigators. Did the answer meet your request? Let's check. The topic: did it talk about the animal you chose? The format: did it use the number of sentences or list items you asked for? And the information: ask your grown-up to help you check the important facts."
+    },
+    {
+      "slide": 25,
+      "heading": "A follow-up instruction",
+      "narration": "If the answer wasn't quite right, you can ask for a change. That's a follow-up instruction. Too complicated? \"Make it simpler.\" Too long? \"Use three short sentences.\" Want another example? \"Give me one more example about the same topic.\" Tell your grown-up, and they can type it in."
+    },
+    {
+      "slide": 26,
+      "heading": "Oops! Moment",
+      "narration": "Oops! Moment. Sometimes a chatbot might ask a friendly question, like \"What is your name?\" or \"Where do you live?\" You do not need to answer. Private details stay private, even when the question sounds friendly. Show your grown-up, and they'll decide whether to keep going or stop."
+    },
+    {
+      "slide": 27,
+      "heading": "A reply that protects privacy",
+      "narration": "Here's a reply that protects your privacy: \"I would rather not say.\" Keep that boundary. You do not need to give a private detail. Then steer back to the topic: \"Please answer the question about koalas.\" And you don't have to manage it alone. Your grown-up handles the conversation with you."
+    },
+    {
+      "slide": 28,
+      "heading": "Remember Rhyme",
+      "narration": "Time for our Remember Rhyme. Clear words in, good answers out. Now say this part together with your grown-up: Private stuff? Leave it out! And remember the checking habit. A clear question helps the tool, but we still check the answer."
+    },
+    {
+      "slide": 29,
+      "heading": "Quick Check 1",
+      "narration": "Quick Check number one. What is the Playground Test? Try to explain it in your own words. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 30,
+      "heading": "Quick Check 1: answer",
+      "narration": "Here's the memory aid. If you wouldn't shout it across the playground, don't put it into AI. Private details stay out. And remember the limit: just because something is public doesn't automatically make it right for a prompt."
+    },
+    {
+      "slide": 31,
+      "heading": "Quick Check 2",
+      "narration": "Quick Check number two. Who types during chatbot activities? Who sits in the co-pilot seat? Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 32,
+      "heading": "Quick Check 2: answer",
+      "narration": "It's your grown-up. Your job is to choose what to ask and explain the result you want. Their job is to run the chatbot and help you check the answer. That's teamwork, Navigators."
+    },
+    {
+      "slide": 33,
+      "heading": "Quick Check 3",
+      "narration": "Quick Check number three, and this one goes back to last week. What kind of machine is AI? Think about examples and patterns. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 34,
+      "heading": "Quick Check 3: answer",
+      "narration": "AI is a pattern-guessing machine. The tools we study learn patterns from examples, like all those cat and dog pictures. So the decision is yours: check the answer before you rely on it."
+    },
+    {
+      "slide": 35,
+      "heading": "Clear and Safe",
+      "narration": "Clear and safe! You've earned your Week Two Flight Log stamp. You practised what you want, who the answer is for and how you want it. You protected your name, address, school, phone number, photos and passwords. Next week it's Machines That See: how computers learn from pictures. [warmly] Great flying today, Navigators."
+    }
+  ]
+}

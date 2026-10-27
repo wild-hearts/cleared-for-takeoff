@@ -1,0 +1,511 @@
+{
+ "course": "adult",
+ "module": 1,
+ "title": "AI for Real Life Module 1: Pre-Flight Checks",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "AI for Real Life",
+   "narration": "Welcome to AI for Real Life, Module 1: Pre-Flight Checks. I'm Naomi, and this is Practical AI with Naomi. A pilot doesn't skip the walk-around before takeoff. It isn't the exciting part, but it's the part that means everything after it goes smoothly.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 2,
+   "heading": "Welcome to AI for Real Life",
+   "narration": "[warmly] Before we start, I want to say something. If you've clicked on a course about AI and you feel a bit embarrassed that you don't already know how to use it, you're in very good company. No previous experience is needed here. We work through one practical step at a time. Go at your own pace: pause, repeat, or split this module across several sessions. Nobody is timing you. By the end of this module you'll have chosen a tool, reviewed its settings and completed one useful conversation.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 3,
+   "heading": "Your Module 1 route",
+   "narration": "Here's the flight path. In lesson one point one, you'll understand what AI chat tools actually do. In one point two, you'll judge their strengths and limitations, and learn the Cost-of-Wrong Test. In one point three, you'll choose a suitable first tool. In one point four, you'll sign up using official services and protect your information. In one point five, you'll set up your account: training, memory and security. And in one point six, you'll start: ask, read and steer your first conversation.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 4,
+   "heading": "How to use these lessons",
+   "narration": "Here's how to get the most out of these lessons. Every lesson has a Try It Now moment. Pause the video and practise. Doing the thing, even badly, teaches you more than watching me do it, and the early exercises work perfectly well on paper. Near the end of each lesson there's a Pre-Landing Check. Answer the questions before you look at the explanation. Pulling an idea back out of your memory is what makes it stick. And keep a simple notebook, paper or digital. I'll call it your Flight Log. Record what you tried, what happened, and what you'd change.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 5,
+   "heading": "Lesson 1.1: What AI Is and Is Not",
+   "narration": "Lesson one point one: what AI is, and what it is not. By the end of this lesson, you'll be able to do three things. One: explain what an AI chat tool does, in a way that would make sense to a friend. Two: recognise reasoning, memory and search features. Three: explain why confident wording still needs checking.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 6,
+   "heading": "1.1 A useful short explanation",
+   "narration": "Imagine someone at a dinner party, we'll call her Margaret, telling the table that AI is just a fancy search engine. Someone else says it's basically alive. Neither is quite right. Here's a useful short explanation: a model generates responses from patterns it has learned. You give it your input, which might be a question, an instruction, or some material you supply. Its response is generated language, based on that context and on how the model behaves. And your role is to decide whether the answer is useful and supported.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 7,
+   "heading": "1.1 Predictive text is a starting comparison",
+   "narration": "You know when you're texting and your phone suggests the next word? You type \"I'll be home\" and it offers \"soon\" or \"by six\". That's a starting comparison, because language models do use predictions while they generate text. But a chatbot is more complex than a phone suggestion. Chat systems can combine instructions, tools and several processing steps. Here's the limit to remember, though. Neither a fluent answer nor a complex process guarantees that a claim is true.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 8,
+   "heading": "1.1 Helpful context changes the request",
+   "narration": "Because AI works from what you give it, helpful context changes the request. Ask \"Write a letter\" and you get a generic letter. Now compare a more useful version: \"Draft a short, polite message about a gutter reported twice. Ask for a repair date. Do not invent dates.\" Same tool, very different result. The difference is entirely in what you gave it. We'll build that skill properly in Module 2. For now, just notice it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 9,
+   "heading": "1.1 Reasoning features",
+   "narration": "Some tools spend extra processing time on a request. You might see a thinking or reasoning indicator on the screen, sometimes for a few seconds and sometimes for longer. It can make answers better, especially for anything with several parts. What to avoid is assuming that the visible label proves the result is correct. It's still a generated answer. What helps is checking the output itself: its evidence, its calculations, and whether it actually suits what you need.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 10,
+   "heading": "1.1 Memory features",
+   "narration": "Some services can use information across chats. The potential benefit is that you don't have to keep explaining your preferences every time. Tell it once that you like short answers, and it may remember. But you should be in charge of it. Your controls are the memory and personalisation settings, and it's worth reviewing what's available. One important qualification: whether memory is available, and whether it's switched on by default, differs by service, by plan and by region. We'll look at those settings together in lesson one point five.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 11,
+   "heading": "1.1 Web search features",
+   "narration": "Many tools can now retrieve current information from the web. That's useful for finding sources beyond what the tool learned during training, like a business's opening hours or this week's news. But searching isn't the same as checking. It's still possible to get a weak source, a misreading of a good one, or a summary the source doesn't support. So here's the habit we'll build from today. When an answer matters, open the source and check that it actually says the particular thing the AI says it does.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 12,
+   "heading": "1.1 What AI is not",
+   "narration": "Now, what AI is not. Don't infer human care from friendly language. A conversational style doesn't make the tool a person. It has no experience of a leaking gutter or a hard conversation with a sister. And a confident answer doesn't establish expertise or accountability. Nobody is standing behind it the way a professional stands behind their advice. For important support, use people and services qualified for the situation.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 13,
+   "heading": "1.1 Common Turbulence",
+   "narration": "Here's the most common mistake at this stage. I call it the friendly-voice trap. AI writes in a calm, confident, well-organised way, and we tend to assume that someone who sounds sure knows what they're talking about. The mistake is trusting the answer because the tone sounds certain. The correction is to separate presentation from evidence. A wrong answer can sound exactly as confident as a right one. Now, Try It Now. Write one sentence explaining an AI chat tool to a friend. Pause the video and write it down. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 14,
+   "heading": "1.1 Memory Hook",
+   "narration": "Here's your Memory Hook for this lesson. Words: use help. Facts: check. Because it learned from human writing, AI is useful support for words: drafting, explaining and organising ideas. Before you rely on it, verify the important factual details. In your Flight Log, write the explanation you just wrote, and one limit you want to remember.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 15,
+   "heading": "1.1 Pre-Landing Check",
+   "narration": "Now your Pre-Landing Check. Three questions. Answer each one before you move on. Out loud is best. Question one: what does an AI chat tool generate from? [pause] Question two: name one feature beyond basic text generation. [pause] Question three: why might a confident answer still be wrong? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 16,
+   "heading": "1.1 Check: answers",
+   "narration": "Here are the answers. One: an AI chat tool generates from learned patterns, the conversation, and any tool information it has available. Two: reasoning-style processing, memory, or web search, depending on the service. Three: because fluent, plausible language is not proof that a claim is supported. Recall first, then compare. If you'd like another example, revisit the lesson.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 17,
+   "heading": "Lesson 1.2: Strengths, Limits and Judgement",
+   "narration": "Lesson one point two: strengths, limits and judgement. The fastest way to get frustrated with AI is to expect the wrong things from it. By the end of this lesson, you'll be able to name useful everyday tasks, recognise the claims and numbers that need checking, and apply the Cost-of-Wrong Test.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 18,
+   "heading": "1.2 Three useful starting tasks",
+   "narration": "Plenty of people ask AI for something it isn't suited to, get a poor answer, and decide it's useless. That's like trying to open a tin with a very good kitchen knife and deciding knives don't work. So here are three useful starting tasks. Draft and edit: prepare a message or improve your wording. Summarise: pull the main points out of suitable source material. And explain: ask for a plain-English explanation, with examples.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 19,
+   "heading": "1.2 Drafting and editing",
+   "narration": "Start with drafting, using a message you can review. You know the email you've been putting off for three weeks? Give the AI the situation: who is it for, and what should it achieve? Then ask for options, say a warm version, a firm version and a very short one. Reading them side by side makes it obvious which one sounds like you. Before you send anything, check the facts, any commitments it makes on your behalf, the tone, and whether it really sounds like you.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 20,
+   "heading": "1.2 A practical drafting request",
+   "narration": "Here's a practical drafting request you could use: \"Draft three short replies about rescheduling a community meeting: one warm, one firm and one very brief. Use placeholders for dates. Do not invent a reason.\" This is a teaching example. You choose the final wording, and you fill in the real details yourself, outside the prompt.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 21,
+   "heading": "1.2 Summarising documents",
+   "narration": "Summarising is where many people find real relief. A council notice, an insurance renewal, a long policy update. Before uploading anything, though, use a non-sensitive document or a fictional sample while you practise. Then ask for the main points, the actions you're required to take, and any details that are easy to miss, especially deadlines and costs. And verify. Compare any important figures and deadlines with the original document.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 22,
+   "heading": "1.2 A useful follow-up",
+   "narration": "After the summary, ask one more question. Summaries tend to smooth over the awkward bits, and a follow-up helps bring them out. Try this: \"What might this summary have left out? Point me to the relevant section for deadline, cost or obligation.\" This improves the checking task. It doesn't guarantee the tool will find every important detail, so you still look at the original.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 23,
+   "heading": "1.2 Explaining unfamiliar topics",
+   "narration": "Explaining is the third task. How a power of attorney works. The difference between a fixed and variable rate. Start with: \"Explain this in plain English.\" Then keep going: \"Give an everyday example.\" AI is a good way to prepare for a conversation with a professional, so you walk in knowing the right questions. For high-stakes matters, prepare questions for a qualified professional rather than treating the explanation as a final decision.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 24,
+   "heading": "1.2 Three areas needing extra care",
+   "narration": "Now three areas that need extra care. Exact facts: dates, prices, deadlines and eligibility rules. Important numbers: calculations, percentages and totals. And your circumstances: AI only knows what's in front of it, so it can miss context, local rules, or make assumptions. Ask \"What's the best health insurance for me?\" with no context and you'll get a confident, generic answer that could suit anyone, which means it doesn't really suit you. The problem isn't that it's often wrong. It's that when it's wrong, it can sound exactly as sure as when it's right.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 25,
+   "heading": "1.2 When a number matters",
+   "narration": "When a number matters, request a method, then verify it. Ask for the assumptions, the formula, the units, and a concise calculation. That way you can follow the logic and spot where it might have gone wrong. Then check it independently, using a calculator, a spreadsheet, or an authoritative figure. Use AI to understand the sum and the calculator to confirm it. And don't assume that a long, step-by-step explanation proves the arithmetic is right.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 26,
+   "heading": "1.2 The Cost-of-Wrong Test",
+   "narration": "Now the tool I promised you, the Cost-of-Wrong Test. Before you rely on any answer, ask yourself what it would cost if it were wrong. Low cost is something like a draft greeting or a non-critical idea. Review it for suitability. Medium cost is something like an itinerary or an important message. Check the key details before you use it. High cost means health, money, legal deadlines, or anything you can't undo. Verify it with the original source or a professional.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 27,
+   "heading": "1.2 Rate the actual consequence",
+   "narration": "Rate the actual consequence, because the same topic can carry different risks. Dinner ideas sound low cost, but allergies can turn an apparently harmless suggestion into a high-risk task. A travel plan is similar. Getting opening hours wrong is an inconvenience. Getting visa or entry requirements wrong is a different matter entirely. So whatever the topic, ask yourself: \"What would it cost if this were wrong?\"",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 28,
+   "heading": "1.2 Try It Now",
+   "narration": "Try It Now. If you haven't signed up yet, that's fine, because this one works on paper. Think of three tasks you might ask AI to help with this week. Rate each one as low, medium or high cost of being wrong. Then name the check: what source, tool or person would verify it? And watch for the common turbulence here, the all-or-nothing reaction. Avoid both automatic trust and rejecting every use after one mistake. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 29,
+   "heading": "1.2 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: name two useful AI tasks. [pause] Two: what should you do when a number matters? [pause] Three: what question defines the Cost-of-Wrong Test? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 30,
+   "heading": "1.2 Check: answers",
+   "narration": "Here are the answers. One: any two of drafting and editing, summarising, or explaining. Two: ask for the method, then independently verify the calculation and its inputs. Three: what would it cost if this were wrong? Recall first, then compare. Revisit the lesson if you want another example. And write that question in your Flight Log. You'll use it for the rest of the course.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 31,
+   "heading": "Lesson 1.3: Choosing Your First Tool",
+   "narration": "Lesson one point three: choosing your first tool. The question I get asked most isn't \"How do I use AI?\" It's \"Which one should I use?\" By the end of this lesson, you'll recognise four common providers, compare a tool with the task you have in mind, and start without committing to a subscription you don't need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 32,
+   "heading": "1.3 Four services to recognise",
+   "narration": "To someone new, these names can sound like a menu in a language you don't read. So here are four services to recognise, who makes them, and their official starting address. ChatGPT, made by OpenAI, at chatgpt dot com. Claude, made by Anthropic, at claude dot ai. Gemini, made by Google, at gemini dot google dot com. And Copilot, made by Microsoft, at copilot dot microsoft dot com.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 33,
+   "heading": "1.3 ChatGPT",
+   "narration": "First, ChatGPT. It's one option for everyday conversation and tasks, and if someone tells you they've tried AI, it was probably ChatGPT. Try it with a safe task: drafting, explaining or organising information. The capabilities available to you depend on your account, your plan and your region. And when you compare, judge the result against your task, not against how popular the tool is.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 34,
+   "heading": "1.3 Claude",
+   "narration": "Second, Claude. It's another option for text and document work. Try the same task you gave the first tool, and compare the two using your own criteria. Don't assume that a careful tone means the answer is more reliable. The friendly-voice trap applies to every tool. And check access: review the current plan and feature information before you rely on any particular feature.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 35,
+   "heading": "1.3 Gemini",
+   "narration": "Third, Gemini, which is Google's AI service. If your life already runs on Google, consider whether its Google integrations suit your needs. Review permissions carefully, though. Connecting your information to it is a separate decision, and you don't have to make it straight away. And check access, because features and limits depend on your account and plan.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 36,
+   "heading": "1.3 Copilot",
+   "narration": "Fourth, Copilot, which is Microsoft's AI service. Consider whether Microsoft services form part of your daily work, because that's where it tends to fit. Check the product, too. Consumer chat and the features built into apps can have different requirements. And before paying for anything, read the exact subscription inclusions for your account. AI companies change their plans and plan names fairly often.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 37,
+   "heading": "1.3 Compare with one safe task",
+   "narration": "If you'd like to compare, use one safe task, and choose what's useful to you. Use the same request each time, keeping the task, the context and your criteria steady. Then judge the results on clarity, relevance, correctness and how easy they are to review. And start simply. Choose one service and learn the basic conversation skills. This course teaches a way of working with AI that carries over if you switch.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 38,
+   "heading": "1.3 Free and paid access",
+   "narration": "Do you need to pay? Try suitable free access before subscribing. For these introductory tasks, an available free option, or the paper exercises, is enough. If a limit blocks you, wait, simplify the task, or review the plan, rather than paying automatically. And before buying, check the currency, tax, billing period, renewal and cancellation terms. The checkout page shows the real price for your account.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 39,
+   "heading": "1.3 Pilot's Tip: official services",
+   "narration": "Pilot's Tip, and this one is about safety. Use official services, and check the website and the app publisher. On the web, type the provider's official address yourself. In an app store, check the developer name, and use the listing you reached from the provider. App stores can contain lookalike apps with similar names and logos, so watch for lookalike names and unexpected subscriptions.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 40,
+   "heading": "1.3 Subscription decision",
+   "narration": "When it comes to subscribing, pay for a need you've actually observed. Here's a useful heuristic from this course: notice if limits repeatedly interrupt work that's valuable to you. That's a sign it may have become worth paying for. Then compare the cost with the benefit, and with your budget. If you do subscribe, choose your own review date, and check whether you're still using it. Subscriptions are easy to forget.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 41,
+   "heading": "1.3 Common Turbulence",
+   "narration": "Common Turbulence: researching forever without trying. Some people spend three weeks reading comparison articles and never type a single message. The comparisons change every few months anyway. Your next step is to choose one service for a safe first task. You're not marrying a tool, and you can compare another later. In your Flight Log, record the tool you chose and why it suits this starting task.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 42,
+   "heading": "1.3 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: which provider makes Gemini? [pause] Two: what should you check before installing? [pause] Three: must you subscribe before trying these basic skills? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 43,
+   "heading": "1.3 Check: answers",
+   "narration": "Here are the answers. One: Google. Two: the official service, the app publisher, and any payment terms. Three: no. Use available free access or the paper exercises, subject to the service's current limits. Recall first, then compare. Revisit the lesson if you want another example.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 44,
+   "heading": "Lesson 1.4: Signing Up Safely",
+   "narration": "Lesson one point four: signing up safely. Before you create an account, let's talk about what you're actually handing over. That's not a paranoid question. It's a sensible one, and it has a sensible answer. By the end of this lesson, you'll recognise what sign-up asks for, apply the Postcard Rule, and use placeholders and review uploads.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 45,
+   "heading": "1.4 Use the official sign-up route",
+   "narration": "Use the official sign-up route, and read each request before you submit it. Common options are an email address and password, or signing in with an account you already have. Some services ask you to verify your email or phone number. Follow the genuine service's own process for that. And stop if you're unsure. Don't give passwords or codes to anyone who contacts you, however helpful they sound.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 46,
+   "heading": "1.4 Choose a sign-in method",
+   "narration": "Next, choose a sign-in method, and protect the account behind the login. Signing in with an existing account means you don't have to create and remember another password. But that account's security matters, so secure your Google, Apple or Microsoft account as well. If you use a password instead, choose a unique one, and keep it in a trusted password manager.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 47,
+   "heading": "1.4 Read data-use choices",
+   "narration": "During sign-up, some tools ask you a question straight away about how your conversations may be used. Don't confuse signing up with consenting to every optional use. Look for model-improvement and personalisation choices. If you're uncertain, read the provider's explanation before agreeing. And avoid assumptions, because retention and deletion rules differ across services and features. We'll look at these settings together in lesson one point five.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 48,
+   "heading": "1.4 The Postcard Rule",
+   "narration": "Now the part that matters most. It isn't what sign-up asks for. It's what people type in afterwards. Here's the Postcard Rule: if you would not put it on a postcard, do not type it into a general chat box. A postcard passes through several hands before it arrives, and anyone along the way could read it. This is a cautionary memory aid. It isn't a claim that every conversation is publicly visible. It's just a good reason to write as if your message were a postcard.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 49,
+   "heading": "1.4 Three never-share categories",
+   "narration": "There are three never-share categories. One: access details. Passwords, codes, PINs and financial account identifiers, including the codes your bank texts you. Two: identity details. Identity documents, and unnecessary identifying combinations. Your full name, date of birth and home address are each fairly harmless alone, but together they're what someone needs to impersonate you. Three: other people's data. Private messages, records, images and sensitive personal details. That's their information, not yours to share.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 50,
+   "heading": "1.4 The Placeholder Trick",
+   "narration": "So how do you get help with a real, private situation? You use the Placeholder Trick. Replace identifying details with a role. Instead of a full identity, use \"a neighbour\", \"a family member\" or \"a company\". Keep only what matters, and describe the task without unnecessary private facts. There's an important limit, though. An unusual situation can still identify a person, even with no names in it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 51,
+   "heading": "1.4 A safer fictional request",
+   "narration": "Here's a safer fictional request: \"A neighbour repeatedly blocks a shared driveway. Draft a brief, respectful request to keep it clear. Use no names or addresses. Do not make legal claims.\" The AI only needs the situation, not the names. Use a fictional or carefully minimised situation, and remember that removing a name alone does not guarantee anonymity.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 52,
+   "heading": "1.4 The photo trap",
+   "narration": "Common turbulence here is the photo trap. Phones make it easy to snap a picture of a letter and send it. But inspect the whole file before uploading. Look beyond the main text, for names, account numbers, signatures, QR codes and background details. For practice, a blank template or fictional document is best. If you do redact something, use proper removal, check the exported copy, and avoid relying on transparent marks that can be seen through or lifted off.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 53,
+   "heading": "1.4 Try It Now",
+   "narration": "Try It Now. Rewrite a situation without identifiers. Paper first: write a fictional request using generic labels, like \"a family member\", \"my neighbour\" or \"a company I deal with\". Then inspect it. Could the details identify someone anyway? And watch for the common turbulence: sending a document before checking its corners and extra pages. Pause the video and write your request now. [long pause] That's the skill. It gets quick once it becomes a habit.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 54,
+   "heading": "1.4 Create an account when ready",
+   "narration": "When you're ready, create an account with the service you selected. Check that it's the official website, the service you intended, and that you understand any payment choices. Complete only the information that process genuinely requires. In your Flight Log, record that you've completed it, but not your password or any verification codes. In the next lesson, we'll set it up properly.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 55,
+   "heading": "1.4 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what are the three never-share categories? [pause] Two: what does the Placeholder Trick do? [pause] Three: what should happen before a document upload? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 56,
+   "heading": "1.4 Check: answers",
+   "narration": "Here are the answers. One: access details, identity details, and other people's private data. Two: the Placeholder Trick replaces unnecessary identifiers with generic roles, while keeping the context to a minimum. Three: inspect every page and verify any redaction, or use a fictional sample instead. Recall first, then compare. Revisit the lesson if you want another example.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 57,
+   "heading": "Lesson 1.5: Setting Up Your Account",
+   "narration": "Lesson one point five: setting up your account. Before your first real conversation, let's spend some time in the settings. Think of it as adjusting the seat and mirrors before driving a new car. By the end of this lesson, you'll have reviewed your training and memory choices, understood the limits of temporary chats, and strengthened your account security.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 58,
+   "heading": "1.5 Four settings to understand",
+   "narration": "There are four settings to understand. Training: whether eligible chats help improve future models. Memory: what context is retained, or referenced, to personalise your answers. Security: how you sign in and protect access. And preferences: the response style you ask for. The click-by-click steps vary between tools, so what I want you to understand here is the choice itself.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 59,
+   "heading": "1.5 Model-improvement controls",
+   "narration": "First, model-improvement controls. Choose deliberately. In ChatGPT, review the setting called Improve the model for everyone, in Data controls. Currently, turning it off means new conversations are not used for model training. The tool still works for you the same way. That's a separate issue from history, though. Saved chats can still remain in your history. Either choice is reasonable. Just make sure it's a decision you've made, not a default you never noticed.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 60,
+   "heading": "1.5 Memory controls",
+   "narration": "Next, memory controls. Find out what's available on your account. Review saved memories, summaries, or options to reference your chat history, where they're available. If you see something you'd rather it didn't keep, correct or remove it using the relevant controls, and the source information too. And don't assume that asking \"What do you remember?\" gives you a complete inventory of your data. The settings and the provider's guidance tell you more than the chatbot's reply.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 61,
+   "heading": "1.5 Deletion has more than one layer",
+   "narration": "Deletion has more than one layer, because a chat and a saved memory can be separate things. Deleting a chat does not necessarily delete a memory saved from it. And turning memory off does not necessarily delete the source conversation. So use current guidance, and check what needs removing in your chosen service.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 62,
+   "heading": "1.5 Temporary does not mean no retention",
+   "narration": "Temporary does not mean no retention, so read the current feature description. In ChatGPT, a temporary chat stays out of your history unless you save it, and it's not used for model improvement. But the personalisation options available can still let it use existing memories and other context. And for safety, a copy may be retained for up to thirty days.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 63,
+   "heading": "1.5 A temporary chat is not permission to overshare",
+   "narration": "A temporary chat is not permission to overshare. The Postcard Rule still matters. There's no blanket guarantee, and a label doesn't make highly sensitive information appropriate to submit. Check the feature's personalisation, retention and saving behaviour. And prefer minimisation: for sensitive tasks, use placeholders, or an offline alternative.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 64,
+   "heading": "1.5 Account security",
+   "narration": "Account security protects the route into your information, and this one's quick. Use a unique password. If one website leaks your password and you've used it everywhere, all your accounts are exposed. For extra protection, enable multi-factor authentication or passkeys if they're available. That might be a code sent to your phone, or signing in with your fingerprint or face, the same way you unlock your phone. Keep your recovery information secure, and never share sign-in codes.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 65,
+   "heading": "1.5 Personal preferences",
+   "narration": "Personal preferences let you tell the tool how you like your answers. For example: Australian spelling, short paragraphs and plain language. But it's not an accuracy setting. Preferences shape presentation, not factual reliability. In Module 2, you'll develop reusable instructions further. For now, just know where they are.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 66,
+   "heading": "1.5 Try It Now",
+   "narration": "Try It Now. Find the controls, then choose. Open your tool's settings and look first. Locate the training, memory and security settings. Then decide, changing only what you understand and intend. If you get stuck, that's normal, because every app puts things somewhere different. Use the current official help page for the service. Pause the video and go looking now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 67,
+   "heading": "1.5 Common Turbulence",
+   "narration": "Common Turbulence: assuming a setting stays the same forever. Companies update their policies, and occasionally a setting moves or a new one appears. A useful habit is to review after a major feature or policy change. This course suggests a memory review monthly, and a privacy review twice a year. Put a reminder in your calendar. In your Flight Log, record the choices you made and your next review date, without any private contents.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 68,
+   "heading": "1.5 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: where should you verify memory choices? [pause] Two: does temporary mean nothing is retained? [pause] Three: name two account-security measures. [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 69,
+   "heading": "1.5 Check: answers",
+   "narration": "Here are the answers. One: in the available settings and the provider's current guidance. A chatbot reply on its own is incomplete. Two: no. Read the feature's retention, personalisation and saving rules. Three: a unique password, multi-factor authentication, or a passkey. Recall first, then compare. Revisit the lesson if you want another example.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 70,
+   "heading": "Lesson 1.6: Your Dashboard and First Hello",
+   "narration": "Lesson one point six: your dashboard and your first hello. Here's some good news. The screen of an AI tool is one of the least intimidating things about it. By the end of this lesson, you'll recognise the common areas of the screen, use a follow-up to improve an answer, and complete and review one low-risk real task.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 71,
+   "heading": "1.6 The screen: three common areas",
+   "narration": "At heart, it's a message window. If you've ever sent a text message, you already know how this works. There are three common areas. The message box is where you write your request, or use whatever input tools are available. The conversation shows your messages and the generated replies, in order. And the history, or new chat button, lets you return to saved work or begin a separate topic.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 72,
+   "heading": "1.6 Other controls you may see",
+   "narration": "There are other controls you may see, and the features vary by account and interface. Attach is usually a plus or paperclip, for supported files. Speak might be dictation or a voice mode, where available. For many people, speaking is the easiest way in. And mode selection offers different processing options. For a simple task, the default is a reasonable starting point.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 73,
+   "heading": "1.6 Before sending a file or recording",
+   "narration": "Before you send a file or a recording, review the information you're sharing. With a document, check for private identifiers and additional pages. Remember the photo trap from lesson one point four. With voice, be aware of other people or private details in the background. And with permissions, grant access only when it serves the task you intend.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 74,
+   "heading": "1.6 Your first hello",
+   "narration": "Now let's do it. Here's your first hello: \"Hello. I'm new to AI. Briefly explain three things in plain English: what you can help with, where you make mistakes, and what information I should avoid sharing.\" Type it, or say it, and send it when you're ready. It asks the AI to tell you its own limits before you rely on it. Then compare the answer with this course and the official guidance, rather than treating it as a complete privacy statement. [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 75,
+   "heading": "1.6 Read before you rely",
+   "narration": "If you got a readable answer back, well done. That's your first conversation. But read before you rely, because the first answer is a starting point. Check the request: did the reply answer what you asked? Check the content: what facts or assumptions need verifying? And keep control. You can correct it, simplify it, stop it, or reject the output altogether. It's a conversation, not a vending machine.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 76,
+   "heading": "1.6 Three steering phrases",
+   "narration": "Here are three steering phrases that improve many answers. For style: \"Make that simpler.\" You're adjusting how it reads. For an example: \"Give me an everyday example.\" Ideas are hard to hold on to, and examples make them concrete. And for a next step: \"What useful question should I ask next?\" That one turns the AI into a guide, suggesting the questions you didn't know to ask.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 77,
+   "heading": "1.6 Correct the task when needed",
+   "narration": "You can also correct the task when needed. Someone asks one question, gets an answer that's a bit off, and closes the app. Instead, try something like: \"That is not quite what I meant. I need a short explanation for someone new to this topic. Use one everyday example and avoid jargon.\" A follow-up can clarify the request. But you don't need to keep trying when the task is inappropriate, or the output stays unreliable.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 78,
+   "heading": "1.6 Try It Now",
+   "narration": "Try It Now. Send one follow-up as a reply to the answer you just got. Choose simpler wording, an example, or a next question. Then compare. What changed, and what stayed wrong or unclear? Notice that the AI builds on what it already said, rather than starting over. And keep your standard. A more readable answer still needs the appropriate checks. Pause the video and send your follow-up now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 79,
+   "heading": "1.6 Use a new chat for a separate topic",
+   "narration": "Use a new chat for a separate topic. It keeps your work easier to find and review. If you've been planning a trip and now want help with a letter to the council, a dedicated conversation for each task can make the context clearer. Start a new chat when that helps you stay organised. One privacy reminder, though. Account memory can still apply across chats.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 80,
+   "heading": "1.6 Common Turbulence",
+   "narration": "Common Turbulence: accepting or rejecting an answer after one glance. Instead, read the answer and identify the specific problem. Then choose what to do: clarify, verify, use another method, or stop. Here's your Memory Hook for this lesson: ask, read, steer.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 81,
+   "heading": "1.6 Pre-Landing Check",
+   "narration": "Your Pre-Landing Check for this lesson, plus one question from earlier in the module, because returning to older ideas is how they stick. Answer each one before you move on. One: name one steering phrase. [pause] Two: when might you start a new chat? [pause] Three: recall the Cost-of-Wrong question. [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 82,
+   "heading": "1.6 Check: answers",
+   "narration": "Here are the answers. One: \"Make that simpler\", \"Give me an example\", or \"What should I ask next?\" Two: for a separate topic, or to organise a different task. Remember that memory may still apply. Three: what would it cost if this were wrong? If you remembered that, the course is working. Recall first, then compare. Revisit the lesson if you want another example.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 83,
+   "heading": "Cleared To Try: one real task",
+   "narration": "Here's your Cleared To Try exercise for Module 1: one real task. First, choose a low-risk task, such as drafting a community message. Second, ask and steer. Give useful context, read the reply, and send one follow-up. Third, check. Apply the Cost-of-Wrong Test before you use the result. Fourth, record three short lines in your Flight Log: what I asked, what surprised me, and what I would change next time. Use fictional or minimised information. Nothing is sent or published by this exercise. Pause the video and do it now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 84,
+   "heading": "Module 1 complete",
+   "narration": "[warmly] Module 1 is done, and your foundation is in place. You've practised judging tasks, choosing a service and protecting your information. If you started this module new to all of that, it's a lot to have done. Your next action is to finish any account or settings step, at your own pace. In the next module, Cleared For Taxi, we get into prompting in plain English, and requests you can reuse. See you there.",
+   "script_reuse": "high"
+  }
+ ]
+}

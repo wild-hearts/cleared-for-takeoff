@@ -1,0 +1,216 @@
+{
+  "week": 4,
+  "title": "Week 4: Train Your First Classifier",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Junior AI Navigators: Week 4: Train Your First Classifier",
+      "narration": "[warmly] Welcome back to Ground School, navigators. I'm Captain Naomi, and this is Week 4: Train Your First Classifier. Today you stop just learning about AI and start teaching one. Grab your grown-up, and let's get ready."
+    },
+    {
+      "slide": 2,
+      "heading": "Pre-Flight",
+      "narration": "Time for our Pre-Flight. Today, you become the AI trainer. First, you'll train a model, using pictures of two different toys to teach it two groups. Then you'll test the model with new views, and with an object it has never seen. Last, you'll improve one thing: use what you notice to change your examples, then test again."
+    },
+    {
+      "slide": 3,
+      "heading": "Take-Off Question",
+      "narration": "Our Take-Off Question today: what makes good training examples? Last week you learned three rules. Can you name all three before we move on? Think about how many examples you need, how different they should be, and the mix between your two groups. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 4,
+      "heading": "Take-Off Question: answer",
+      "narration": "Did you get them? Lots, different and fair. Lots means starting with enough examples that fit the job. Different means showing varied views and backgrounds, like the teddy from the front, the side and the back. Fair means giving both toy groups a useful mix that's roughly balanced, so neither group misses out."
+    },
+    {
+      "slide": 5,
+      "heading": "What is a classifier?",
+      "narration": "So what is a classifier? A classifier is a sorter. Today your two groups are Teddy and Car. A picture goes in, and the trained model looks for patterns in what it can see. Then a label comes out. The model predicts which group fits the picture. Teddy, or Car?"
+    },
+    {
+      "slide": 6,
+      "heading": "Your training kit",
+      "narration": "Every trainer needs a kit, and yours is two toys and a grown-up. Choose two toys that are quite different. A teddy and a toy car make a useful pair. Ask your grown-up to check the computer, the browser and the camera. And have your Flight Log and a pencil ready, so you can keep a record."
+    },
+    {
+      "slide": 7,
+      "heading": "Our picture rule",
+      "narration": "Before any camera goes on, here's our picture rule: toys and objects only. Keep faces out by aiming the camera at the toy and a clear table. Move private photographs, papers and anything that could show who you are out of view. Your grown-up checks it all, handles the camera permission and helps you set up."
+    },
+    {
+      "slide": 8,
+      "heading": "The four stages",
+      "narration": "Training a model happens in four stages. One, name: choose labels for your toy groups. Two, collect: gather lots of different pictures of each toy. Three, train: let the tool learn from your examples. Four, test: check its predictions with new views. Name, collect, train, test. Let's go through them together."
+    },
+    {
+      "slide": 9,
+      "heading": "Open Teachable Machine",
+      "narration": "The tool we're using is called Teachable Machine. Ask your grown-up to open it. The website is teachable machine dot with google dot com. Choose Get Started, and the New Project screen opens. Then choose Image Project, because we're teaching with pictures."
+    },
+    {
+      "slide": 10,
+      "heading": "Choose the image model",
+      "narration": "On the next screen, you get a choice of models. Choose Standard image model. Our task is to teach the computer to tell pictures of two toys apart. Keep the project open, and stay in the same browser tab from here on."
+    },
+    {
+      "slide": 11,
+      "heading": "Step 1: name the groups",
+      "narration": "Step one: name the groups. The tool starts with Class 1 and Class 2, which doesn't tell anyone much. Use the edit control to rename Class 1 to Teddy. Then rename Class 2 to Car. If you chose different toys, that's fine. Just use short labels that describe them."
+    },
+    {
+      "slide": 12,
+      "heading": "Camera permission",
+      "narration": "Now the camera, and this step belongs to your grown-up. In the Teddy group, choose Webcam. When the browser asks about using the camera, your grown-up decides whether to allow it for this activity. Before you record anything, check the screen. Only the toy and a background with nothing private in it should be showing."
+    },
+    {
+      "slide": 13,
+      "heading": "Step 2: collect Teddy examples",
+      "narration": "Step two: collect your Teddy examples. When the toy is in view, press and hold the Hold to Record button. While it records, move the teddy gently. Turn it, tilt it, and bring it closer to the camera and further away. Aim for thirty pictures or more to start. How different they are matters too, not just how many."
+    },
+    {
+      "slide": 14,
+      "heading": "Captain's Tip: wiggle it",
+      "narration": "[laughs softly] Captain's Tip: wiggle it! Help the model see useful variety. Change the view, so it sees the front, the side and a gentle tilt. Change the distance, moving closer and further away, while keeping the toy on screen. And change the background, using more than one safe spot or position."
+    },
+    {
+      "slide": 15,
+      "heading": "Collect the Car examples",
+      "narration": "Now do it all again for your second toy. Choose the Car group and use its Webcam control to record car pictures. Show it different views: the front, the side, the back, close up and further away. Then compare your two groups. Aim for a similar amount of useful variety in both, so it's fair to Teddy and fair to Car."
+    },
+    {
+      "slide": 16,
+      "heading": "An example check",
+      "narration": "Pilots check before take-off, and trainers look before they train. Is every picture in the correct group? Teddy pictures belong under Teddy, and Car pictures belong under Car. Is there useful variety, or a long run of pictures that look nearly the same? And is anything private showing? Remove any example with a face or a private detail."
+    },
+    {
+      "slide": 17,
+      "heading": "Step 3: train the model",
+      "narration": "Step three: train the model. Choose Train Model. The tool now uses the examples in both of your groups. Wait for it to finish, and keep the tab open while it works. And remember the task. Your model is learning patterns for these two groups. It hasn't learned every object there is."
+    },
+    {
+      "slide": 18,
+      "heading": "Where the training happens",
+      "narration": "Where does the training happen? Right in the browser. Teachable Machine says your samples stay on the device while it trains. Saving is a separate choice. If you save the project to Google Drive, your samples get sent there. So for this lesson, stay in the activity, and ask your grown-up before you save, export or upload anything."
+    },
+    {
+      "slide": 19,
+      "heading": "Step 4: test the model",
+      "narration": "Step four: test the model, using the Preview area. Try Teddy first. Show it a fresh view and read which group it predicts. Then try Car, using a view that's different from your training pictures. Whatever happens, write the actual result in your Flight Log. What really happened, even if it's not what you hoped."
+    },
+    {
+      "slide": 20,
+      "heading": "Reading the prediction",
+      "narration": "When the model makes a prediction, it shows you bars. A big bar doesn't prove the answer is right. The bars only show how strongly the model leans towards each label it has for that picture. Your job is to check. Does that label match the object you actually showed? Keep testing, because a confident mistake is still a mistake."
+    },
+    {
+      "slide": 21,
+      "heading": "Instrument Check",
+      "narration": "[curious] Instrument Check! What does a classifier do? It's your turn. Try to explain its job in one short sentence. Pause the video and say your sentence to your grown-up. [pause]"
+    },
+    {
+      "slide": 22,
+      "heading": "Instrument Check: answer",
+      "narration": "Welcome back. A classifier sorts inputs into groups. In our example, the groups are Teddy and Car. Its answer is a predicted label, based on the patterns it learned. And your job is to check that prediction against what you actually showed it. Did your sentence say something like that?"
+    },
+    {
+      "slide": 23,
+      "heading": "Mission: train it, then trick it",
+      "narration": "Now for your mission: train it, then trick it. You'll train your model, then test its limits. Start with your two toys. Collect examples and train the model. Next, try new conditions. Change the view, the light, or how much of the toy can be seen. Then try an unfamiliar object. Show it a spoon and note what the model predicts."
+    },
+    {
+      "slide": 24,
+      "heading": "Four useful test conditions",
+      "narration": "Here are four useful ways to test. Normal view: a new view in ordinary light. Upside down: turn the toy the other way up. Different light: ask your grown-up to change the light. Partly hidden: cover part of the toy and check again. You can see all four with the teddy in the picture."
+    },
+    {
+      "slide": 25,
+      "heading": "The unfamiliar-object test",
+      "narration": "Now the spoon test. What will the model do with a spoon? Look at the object first. A spoon is neither your teddy nor your car. Now look at the labels your model has: just Teddy and Car. Have a quick guess with your grown-up. [short pause] In your experiment, show the spoon and write down what actually happens before you try to explain it."
+    },
+    {
+      "slide": 26,
+      "heading": "The two-group limit",
+      "narration": "Here's the tricky part. There is no Neither group yet. A two-group model can only choose between Teddy and Car. So an unfamiliar object, like that spoon, can still be given one of those labels. That's the lesson: a model's answer is limited by the job it was given and the training it had."
+    },
+    {
+      "slide": 27,
+      "heading": "Your test log",
+      "narration": "Good navigators record the evidence. For each test, write down three things. What did you show? Name the object and the condition, like teddy, upside down. What did it predict? Write the label you actually saw. And what might help? Choose one change you could make to your examples or your setup."
+    },
+    {
+      "slide": 28,
+      "heading": "A simple testing record",
+      "narration": "Here's a simple way to set out your results in your Flight Log, with three columns: Test, Model's guess, and Correct? Test the teddy from a new view, the car from a new view, the spoon, and a changed light or angle. Check the object each time, and for the spoon, ask which labels were available. Then change one thing, retrain if needed, and test again."
+    },
+    {
+      "slide": 29,
+      "heading": "Mission pause",
+      "narration": "Mission time! Pause the video here for your training mission. Give yourself about fifteen minutes, or longer if you need it. Your grown-up will help with setup, permissions and checking the instructions. Press play when you're ready, and bring back one success and one surprising result. [pause]"
+    },
+    {
+      "slide": 30,
+      "heading": "Welcome back, AI trainers",
+      "narration": "[warmly] Welcome back, AI trainers! What surprised you? Think of a success: which test worked the way you expected? Think of a mistake: which object or condition confused your model? And think of a next step: what's one useful change you could try? Share your answers with your grown-up. [pause]"
+    },
+    {
+      "slide": 31,
+      "heading": "Oops! Moment",
+      "narration": "Time for an Oops! Moment. Imagine every example looks almost the same, like the teddy from one fixed view, over and over. The model can learn a very narrow pattern, and it may struggle with another angle or a different background. A useful fix is to add more varied examples that fit the job, retrain, and test with fresh views."
+    },
+    {
+      "slide": 32,
+      "heading": "Optional extension: Background",
+      "narration": "Want an extra challenge? Here's an optional extension: teach the model your empty table. Choose Add a class and name it Background. Record varied views of the empty table, with no toy in view. Then train again, and test it with a new view of the empty table."
+    },
+    {
+      "slide": 33,
+      "heading": "What Background does not solve",
+      "narration": "A Background group helps, but it can't fix everything. An empty table is not every unknown object. What you taught was one particular background with no toys in it. Try the spoon again. It may still get a wrong label: Teddy, Car or Background. Keep the limit clear. One extra group doesn't teach the model every possible object."
+    },
+    {
+      "slide": 34,
+      "heading": "Remember Rhyme",
+      "narration": "Here's our Remember Rhyme. Say it together with your grown-up. Show it lots, it learns a lot. Show it one, it learns a dot. [laughs softly] And here's what it means when you're training: use examples that fit the job and look different from each other, then always check the predictions."
+    },
+    {
+      "slide": 35,
+      "heading": "Quick Check 1",
+      "narration": "Quick Check number one. Why should you change the toy's view while you're recording? Think about the examples the model gets to see. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 36,
+      "heading": "Quick Check 1: answer",
+      "narration": "To give the model different examples. Changing the angle, the distance and the background helps show it more than one view of your toy. Then check. Test whether the change actually helped, using new examples."
+    },
+    {
+      "slide": 37,
+      "heading": "Quick Check 2",
+      "narration": "Quick Check number two. Why might the model call a spoon Teddy? Think about the groups you trained. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 38,
+      "heading": "Quick Check 2: answer",
+      "narration": "Because the model only had two toy labels. Its only choices were Teddy and Car, even when the object was neither. So here's your lesson: check whether your question fits what the model was trained to do. A teddy and car sorter was never trained to spot spoons."
+    },
+    {
+      "slide": 39,
+      "heading": "Quick Check 3",
+      "narration": "Quick Check number three takes us all the way back to Week 1. Is AI always right? Give your answer, and explain why. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 40,
+      "heading": "Quick Check 3: answer",
+      "narration": "No. A prediction can be wrong. Even when the model looks very sure, a strong-looking answer doesn't make it true. So here's what you do. Test it, compare it with the real object, and record any mistakes. You've been doing exactly that all lesson."
+    },
+    {
+      "slide": 41,
+      "heading": "Our course rules",
+      "narration": "Before we land, our course rules. You decide: you choose the groups and you check the predictions. Your grown-up helps: they handle permissions and any chatbot use. Private stays private: keep faces, private photos and anything that shows who you are out of the picture. And AI is a tool. Friendship and support come from people you trust."
+    },
+    {
+      "slide": 42,
+      "heading": "My First Model",
+      "narration": "[warmly] Well done, navigator. You've earned your Week 4 Flight Log stamp: My First Model. You trained an image classifier for two toy groups, and you tested it with new views, changed conditions and an unfamiliar object. Next week: When AI Gets It Wrong. We'll look at mistakes, unfair examples and checking. See you then."
+    }
+  ]
+}

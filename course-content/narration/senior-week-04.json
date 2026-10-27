@@ -1,0 +1,242 @@
+{
+ "course": "senior",
+ "week": 4,
+ "title": "Week 4: Building an Image Model",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "Senior AI Pilots, Week 4: Building an Image Model",
+   "narration": "[warmly] Welcome back to Ground School. I'm Captain Naomi, and this is Week 4: Building an Image Model. This week you build a model, then put it through a proper test."
+  },
+  {
+   "slide": 2,
+   "heading": "Mission Brief",
+   "narration": "Your mission brief has two halves: build a model, then test the evidence. First you train, using your Week 3 dataset and class guide. Then you evaluate, by testing unseen examples and building a confusion table. Finally you decide, which means explaining confidence, thresholds and what your errors actually cost."
+  },
+  {
+   "slide": 3,
+   "heading": "The Hook",
+   "narration": "[curious] Picture this. The preview bar shows ninety-nine per cent, and someone says, 'It showed ninety-nine per cent, so it works.' A ninety-nine per cent preview bar is not ninety-nine per cent test accuracy. One output score on one example is not performance across a test set. The real question is what happens on new examples, under different conditions."
+  },
+  {
+   "slide": 4,
+   "heading": "Bring your Week 3 plan",
+   "narration": "Before you record anything, bring your Week 3 plan and define the task. Your guide holds the class names, rules, exclusions and edge cases. Your collection plan calls for variety: different objects, backgrounds, light and locations. And your datasheet is where you record the actual numbers, and any known gaps, as you work."
+  },
+  {
+   "slide": 5,
+   "heading": "Separate the data before training",
+   "narration": "Next, separate your data before you train anything. You need three piles. Training is the set of examples the model learns from. Development checks are a fixed, unseen set you use while comparing improvements. And the final check is fresh examples you keep reserved until your design decisions are finished."
+  },
+  {
+   "slide": 6,
+   "heading": "Why keep examples out of training?",
+   "narration": "Why keep examples out of training at all? Because you want to measure performance beyond the inputs the model already knows. Training results only tell you about examples that were available during learning. Held-out results estimate how the model behaves on examples it never trained on. One limitation, though: a small or narrow test set still gives you limited evidence."
+  },
+  {
+   "slide": 7,
+   "heading": "Avoid near-duplicate leakage",
+   "narration": "Watch out for near-duplicate leakage. Neighbouring webcam frames look almost identical, so splitting them across different sets is a weak split. Your test ends up as a near copy of your training data. A stronger split separates different objects, capture sessions, times or locations. Whichever way you do it, keep a record of how you separated the sets."
+  },
+  {
+   "slide": 8,
+   "heading": "Open Teachable Machine",
+   "narration": "Time to open Teachable Machine. Go to teachable machine dot with google dot com and choose Get Started. For the project type, pick Image Project, then Standard image model. And a privacy check before the camera goes on: use objects, not faces, and inspect what's in the camera background first."
+  },
+  {
+   "slide": 9,
+   "heading": "Name your classes",
+   "narration": "Now name your classes to match your Week 3 labelling guide. The example here is Car and Mug, but use your own approved object categories. Keep the definitions consistent, so a mug means exactly the same thing during collection and during evaluation. Before you record, remove faces, names, addresses and any identifying objects from view."
+  },
+  {
+   "slide": 10,
+   "heading": "Gather training examples",
+   "narration": "Gather your training examples with Webcam or Upload, one class at a time. Aim for coverage: different instances, angles, distances and conditions. For this classroom exercise, aim for fifty or more relevant examples per class. Then do a quality check, and remove anything mislabelled, unclear or privacy-sensitive."
+  },
+  {
+   "slide": 11,
+   "heading": "Add a None class",
+   "narration": "Add a None class as well. It gives the model examples from outside your target objects, like empty backgrounds and a few selected unrelated objects. Define in your guide exactly what counts as None. But don't assume a trained None class will reliably detect every unknown object it meets."
+  },
+  {
+   "slide": 12,
+   "heading": "Train the model",
+   "narration": "Ready to train? Before you click Train Model, review your samples. Check the counts, check the labels, and check your training data is kept separate from your test data. While training runs, let the process finish. Then use Preview for an initial functional check, which is a long way from your final evaluation."
+  },
+  {
+   "slide": 13,
+   "heading": "Preview is a first check",
+   "narration": "Preview has a job, and it's a small one. It's useful for checking that the model runs and the labels appear. It is not sufficient for estimating accuracy from a few familiar webcam views. So keep your formal evaluation separate. The next step is a planned test, where you record every single result."
+  },
+  {
+   "slide": 14,
+   "heading": "Set up your held-out test",
+   "narration": "Set up your held-out test with ten to twenty new examples per class. Before testing, fix the class rules, and decide what counts as one test case. For each case, record the actual label, the predicted label and, if you like, the score. And keep the evidence: count the failures as well as the successes."
+  },
+  {
+   "slide": 15,
+   "heading": "Your prediction log",
+   "narration": "Your prediction log is a simple table, one row per case: case one, case two, case three and onwards. In the actual label column, record the truth. In the predicted label column, record what the model output. The last column is optional: the top score the screen displayed."
+  },
+  {
+   "slide": 16,
+   "heading": "Build a confusion table",
+   "narration": "Next, build a confusion table. Rows are what each item actually was. Columns are what the model predicted. Every test case adds one count to a single cell. The diagonal is where actual and predicted labels match, so those are your correct answers. Every other cell shows which classes are being confused with each other."
+  },
+  {
+   "slide": 17,
+   "heading": "Worked confusion table: fictional results",
+   "narration": "Here's a worked confusion table, with fictional results, for three classes: Recyclable, Landfill and None. Across the Recyclable row: seventeen predicted Recyclable, three predicted Landfill, zero predicted None. The Landfill row: five Recyclable, fourteen Landfill, one None. And the None row: zero Recyclable, one Landfill, nineteen None."
+  },
+  {
+   "slide": 18,
+   "heading": "Read the diagonal",
+   "narration": "Now read the diagonal to count the correct predictions. Recyclable got seventeen correct out of twenty. Landfill got fourteen out of twenty. And None got nineteen out of twenty."
+  },
+  {
+   "slide": 19,
+   "heading": "Calculate overall accuracy",
+   "narration": "Let's calculate overall accuracy, still with our fictional example. Correct answers: seventeen plus fourteen plus nineteen makes fifty. Total cases: twenty plus twenty plus twenty makes sixty. Fifty divided by sixty, times one hundred, is about eighty-three point three per cent. That figure summarises this test set. It is not a guarantee for the next item."
+  },
+  {
+   "slide": 20,
+   "heading": "Read the error pattern",
+   "narration": "Now read the error pattern. Which confusion deserves your attention? Five Landfill items were assigned the wrong category, Recyclable. Three Recyclable items went the other way, into Landfill. Before you decide what to change, investigate: go back and inspect the cases that failed."
+  },
+  {
+   "slide": 21,
+   "heading": "Accuracy is not the whole story",
+   "narration": "Accuracy is not the whole story, so connect the errors to the use case. Look at per-class performance: which labels get missed most often? Look at data coverage: does your test represent the conditions the model is likely to meet? And weigh the consequences: what happens if someone relies on the wrong prediction?"
+  },
+  {
+   "slide": 22,
+   "heading": "Confidence is an output score",
+   "narration": "A word on confidence. Confidence is an output score, and it does not certify correctness. A displayed seventy-two per cent shows a score associated with a class. It is not automatically a calibrated seventy-two per cent chance of being correct. Calibrated would mean the score matches how often the model is actually right. For your evidence, use held-out outcomes to evaluate the system."
+  },
+  {
+   "slide": 23,
+   "heading": "A manual review threshold",
+   "narration": "So what do you do with a score? One option is a manual review threshold. This one is an illustrative decision rule. If the top score is below eighty-five per cent, ask for human review. If it's at least eighty-five per cent, still follow the task's checks. At seventy-two per cent, the first rule sends the example for review. This is a classroom decision rule, not a built-in setting we've configured."
+  },
+  {
+   "slide": 24,
+   "heading": "Define the positive class first",
+   "narration": "Let's switch examples to talk about errors. The terms false positive and false negative need a reference point, so define the positive class first. Take an example task: flagging spam emails. The positive class is spam. The negative class is legitimate email."
+  },
+  {
+   "slide": 25,
+   "heading": "Two kinds of error: spam is positive",
+   "narration": "With spam as the positive class, there are four possible outcomes. A legitimate email flagged as spam is a false positive. A spam email allowed through is a false negative. Spam that gets flagged is a true positive. And a legitimate email allowed through is a true negative. The two false ones are your two kinds of error."
+  },
+  {
+   "slide": 26,
+   "heading": "False positive",
+   "narration": "First, the false positive: a legitimate email gets flagged. The actual answer is not spam. The prediction is spam. The consequence is that a useful message might be missed, or need someone to review it."
+  },
+  {
+   "slide": 27,
+   "heading": "False negative",
+   "narration": "Now the false negative: a spam message gets through. The actual answer is spam. The prediction is not spam. The consequence is that the unwanted message reaches the inbox."
+  },
+  {
+   "slide": 28,
+   "heading": "Changing a binary decision threshold",
+   "narration": "What happens when you change a binary decision threshold? Binary means two options, here spam or not spam. With a higher threshold, you get fewer or equal spam flags, so on the same fixed scores, false positives cannot increase. With a lower threshold, you get more or equal spam flags, so false negatives cannot increase."
+  },
+  {
+   "slide": 29,
+   "heading": "The trade-off needs a defined setting",
+   "narration": "That trade-off needs a defined setting, so hold the model and the evaluation cases fixed. Raise the spam threshold, and false positives decrease or stay the same, while false negatives increase or stay the same. Lower the spam threshold, and the direction reverses. Keep this separate in your head from sending uncertain multiclass outputs to review, where the model is choosing between several classes."
+  },
+  {
+   "slide": 30,
+   "heading": "Pilot's Tip: ask which error costs more",
+   "narration": "Pilot's tip: ask which error costs more, and explain the decision, not only the number. For your object demo, what happens after a wrong label? For human review, how much work does an uncertain prediction create? And treat your threshold as a proposal that needs testing. It is not proof of safety."
+  },
+  {
+   "slide": 31,
+   "heading": "Iterate with a hypothesis",
+   "narration": "When it's time to improve, iterate with a hypothesis, and inspect your errors before adding data. Start with an observation: write down the recurring error you saw. Next, a hypothesis: an explanation you can actually investigate. Then make one change to one relevant feature, retrain, and record the version."
+  },
+  {
+   "slide": 32,
+   "heading": "Compare on a fixed development set",
+   "narration": "Compare versions on a fixed development set, to keep the comparison fair. Before and after, use the same development cases and the same rules. Avoid cherry-picking: don't replace difficult examples to improve the score. And recognise tuning when you see it. Repeatedly using a set to guide your changes makes it development evidence."
+  },
+  {
+   "slide": 33,
+   "heading": "Save fresh examples for the final check",
+   "narration": "That's why you save fresh examples for the final check. Don't tune against every test you own. Development results guide your choices while you're building. Final held-out results check the version you selected, once your decisions are settled. Report both, and explain which examples influenced your changes."
+  },
+  {
+   "slide": 34,
+   "heading": "Try It Now",
+   "narration": "Try it now, with a small first evaluation. Train using your training examples only. Then test five unseen examples per class as an initial check. Record the actual label, the prediction, and the errors you want to inspect. Pause the video and give it a go. [pause]"
+  },
+  {
+   "slide": 35,
+   "heading": "Common Turbulence: an easier test",
+   "narration": "Common turbulence: the easier test. Don't change the evidence to flatter the model. The mistake looks like removing failures, or switching test conditions between versions. The repair is to keep version comparisons on fixed development cases. And for the final check, use a genuinely held-out collection, and report its limits."
+  },
+  {
+   "slide": 36,
+   "heading": "Memory Hook",
+   "narration": "Your memory hook. Test on unseen data. Read the confusion. Then choose a decision rule, and justify it. And always record what was tested, and what remains unknown."
+  },
+  {
+   "slide": 37,
+   "heading": "Pre-Landing Check 1",
+   "narration": "Pre-landing check one. Why is training data a weak final test? Your turn: explain the difference between familiar and unseen examples. Pause the video and work out your answer. [pause]"
+  },
+  {
+   "slide": 38,
+   "heading": "Check 1: answer",
+   "narration": "Check one answer. Training data does not independently test generalisation, which is how well the model copes with examples beyond the ones it learned from. The model had access to those examples during learning. A real evaluation needs new examples that represent the intended task."
+  },
+  {
+   "slide": 39,
+   "heading": "Pre-Landing Check 2",
+   "narration": "Pre-landing check two. A spam filter lets spam through. Which error is that? Remember, spam is the positive class. Pause the video and decide. [pause]"
+  },
+  {
+   "slide": 40,
+   "heading": "Check 2: answer",
+   "narration": "Check two answer: a false negative. The actual email was spam, the positive class. The prediction said not spam. So the failure is that a positive case was missed."
+  },
+  {
+   "slide": 41,
+   "heading": "Pre-Landing Check 3",
+   "narration": "Pre-landing check three. Why include a None class? Think back to your dataset planning. What examples would you put in it? Pause the video and jot down your answer. [pause]"
+  },
+  {
+   "slide": 42,
+   "heading": "Check 3: answer",
+   "narration": "Check three answer. A None class represents selected inputs that aren't your targets, such as empty scenes and unrelated objects from the setting you planned for. The limit is that it is not a universal unknown-object detector. You still need to test unfamiliar inputs and plan for human review."
+  },
+  {
+   "slide": 43,
+   "heading": "Home Lab: Build, Test, Iterate",
+   "narration": "Your home lab: build, test, iterate. Step one, prepare and train: training data, plus separate development and final cases. Step two, evaluate: a confusion table, accuracy, and errors by class. Step three, improve: one hypothesis, one change, a fixed development comparison. Step four, report: final check, decision rule, before and after results, and limitations. Allow sixty to seventy-five minutes, or split it into sessions, and update your datasheet with real counts. Pause here and start whenever you're ready. [pause]"
+  },
+  {
+   "slide": 44,
+   "heading": "Project Log: Entry 4",
+   "narration": "Project log, entry four. Make the evidence reviewable, so someone else could check your work. Under results: the version, the datasets, your confusion table and accuracy. Under reasoning: your error hypothesis, the one change, and the comparison. Under decision: your threshold proposal, human review, and the limits that remain."
+  },
+  {
+   "slide": 45,
+   "heading": "Offline evaluation option",
+   "narration": "No model to work with? There's an offline evaluation option. Work through the supplied fictional table. Calculate the overall and per-class results. Interpret them by identifying the most common wrong label. Then propose a collection improvement and a review rule, without claiming you trained a model."
+  },
+  {
+   "slide": 46,
+   "heading": "Parent & Guardian Brief",
+   "narration": "This brief is for your parent or guardian, so it's worth showing them. It's about supporting collection, privacy and careful claims. Use objects, and keep people and personal details out of camera frames. Before saving or exporting, review where the project information will go. And discuss it together: which error matters for this task, and what evidence is missing?"
+  },
+  {
+   "slide": 47,
+   "heading": "Ready for Week 5",
+   "narration": "Ready for Week 5: Bias, Fairness and Failure. This week you built an evaluation plan and interpreted errors. Next week you'll audit where a model works unevenly, and document its limits. Until then, keep the habit: a score needs context and evidence. [warmly] See you in Ground School."
+  }
+ ]
+}
