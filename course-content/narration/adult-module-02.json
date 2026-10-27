@@ -1,0 +1,517 @@
+{
+ "course": "adult",
+ "module": 2,
+ "title": "AI for Real Life Module 2: Cleared For Taxi",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "AI for Real Life Module 2: Cleared For Taxi",
+   "narration": "Welcome to AI for Real Life, Module 2: Cleared For Taxi. [pause] Let's deal with the thing that stops most people before they've properly started. \"I'm going to ask it the wrong thing and look silly.\" I understand that feeling. We've spent our whole lives being judged on how we ask questions, at school, in job interviews and at work. The AI isn't marking your question or noticing that you asked something obvious. You can ask it ten clumsy questions in a row and nobody is keeping score.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 2,
+   "heading": "Welcome to Module 2",
+   "narration": "In aviation, taxiing is the part between the gate and the runway. The plane is moving under its own power, the pilot is steering, and nothing is at stake yet. That's this module. [pause] Your starting point: you can already ask, read and steer a conversation. Your next step is to explain the job clearly and improve the answer as needed. And your goal is to save the requests that help with tasks you repeat. The big idea is simple: useful prompts use ordinary language.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 3,
+   "heading": "Your Module 2 route",
+   "narration": "There are six lessons. Lesson 2.1, plain English: give the situation, the task and a useful result. Lesson 2.2, four lines: Context, Task, Format and Tone. Lesson 2.3, interview me: let questions uncover the details you've missed. Lesson 2.4, choose a mode: be specific, explore, or start fresh. Lesson 2.5, common mistakes: seven habits worth recognising and improving. And Lesson 2.6, your prompt library, so useful requests are ready to reuse.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 4,
+   "heading": "Your existing flight tools",
+   "narration": "Bring your Module 1 toolkit with you, because good prompting works alongside your judgement, not instead of it. The Cost-of-Wrong Test: what would it cost if this answer were wrong? The Postcard Rule: share only information suitable for this service. And the Placeholder Trick: while you're drafting, use stand-ins like name, date or organisation instead of the real details. Keep your AI tool open alongside this video. Every lesson has a Try It Now moment. Let's taxi.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 5,
+   "heading": "Lesson 2.1: Prompting in Plain English",
+   "narration": "Lesson 2.1: Prompting in Plain English. Here's your flight plan. One: explain your situation and your task. Two: describe the result you want. Three: improve a first request with a follow-up.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 6,
+   "heading": "2.1 Keywords and a clear request",
+   "narration": "Imagine walking into a hardware store, finding a helpful staff member and saying one word: \"Paint.\" They'll do their best, but they don't know if you're painting a bathroom ceiling or a garden fence. [pause] Most of us type at AI the way we learned to type at Google, in fragments. Take \"Body corporate noise letter.\" The tool has to guess the purpose, the audience and the style. Now the clear request: \"Draft a polite 150-word email to my body corporate about repeated late-night noise. Ask about the complaints process. Use placeholders for dates.\" That takes about thirty extra seconds to write. This is a fictional teaching example, so check the facts and the local process before you use any draft.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 7,
+   "heading": "2.1 Three questions before you ask",
+   "narration": "Here's a simple starting formula. Before you send a request, ask yourself three questions. My situation: what background changes the answer? The task: what do I want the tool to do? And a useful result: what should the answer contain, and what should it look like? Answer those in plain English, in whatever order feels natural. You don't need to be formal, and you don't need technical words or perfect spelling.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 8,
+   "heading": "2.1 Useful context",
+   "narration": "Context means the details that affect the job. Helpful context is the audience, the purpose, any constraints and the relevant background. Less helpful is an unrelated life story that buries the request. Some careful, detail-minded people write eight paragraphs of background and hide the actual question at the very end, and the tool can lose track of what you want. And on privacy: leave out identifying details unless they're necessary and appropriate.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 9,
+   "heading": "2.1 A travel planning example",
+   "narration": "Here's a travel planning example. \"Help me compare ways to travel from Canberra to Melbourne in July. I prefer daytime travel and can be flexible by two days. Give me a checklist of fares, baggage and travel times to verify.\" Notice it asks for a checklist to verify, not an answer to trust. Current fares and availability need current sources, and this prompt does not establish a price.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 10,
+   "heading": "2.1 The task comes first",
+   "narration": "The task comes first, because a clear verb makes the job easier to see. Draft: create a starting message for you to review. Compare: use the criteria you name, such as cost or convenience. Explain: set the audience and the level of detail. \"Help me with my electricity bill\" is a topic. \"Draft a message to my provider about a billing error\" is a task.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 11,
+   "heading": "2.1 What a useful result looks like",
+   "narration": "Then say what a useful result looks like. Length: \"Keep it under 150 words.\" Structure: \"Use a table with cost, time and drawbacks.\" Boundaries: \"Flag missing information and use placeholders.\" One short line on each can save you three rounds of back-and-forth.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 12,
+   "heading": "2.1 Typing or speaking",
+   "narration": "You can type or you can speak, so choose the input method that suits you. Voice input is useful if speaking is more comfortable and your tool offers it. Explain the situation as if you were on the phone to a helpful friend; people naturally give context when they talk. Typing is useful when you want to edit the request carefully. Either way, before you send, check the transcript for names, numbers and anything you didn't mean to include.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 13,
+   "heading": "2.1 A useful correction",
+   "narration": "When the first reply isn't quite right, steer it. Here's a useful correction: \"That is more formal than I need. Keep the same facts, use plain English and reduce it to two short paragraphs.\" That's ask, read, steer. But review the revised facts as well as the style, because a follow-up can introduce new errors.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 14,
+   "heading": "2.1 Common Turbulence",
+   "narration": "Common Turbulence: a generic answer may need more context. First, identify the gap. Was the audience, the task or the expected result missing? Then clarify: add the one detail most likely to change the answer. And keep perspective. A weak answer isn't always about your prompt; it can also reflect the tool's limitations.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 15,
+   "heading": "2.1 Try It Now",
+   "narration": "Try It Now: rewrite one keyword prompt. Choose a low-risk task, such as an email to a community group. Write it first as keywords, the way you would for Google. Then add your situation, the task and a useful result, and send the improved version. In your Flight Log, save the first request and one improved version. You'll look back on that in a month and see how far you've come. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 16,
+   "heading": "2.1 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: why might a keyword request produce a generic answer? [pause] Two: what three questions help you shape a request? [pause] Three: name one phrase for steering the reply. [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 17,
+   "heading": "2.1 Check: answers",
+   "narration": "Here are the answers. One: the tool may have to guess the situation, the purpose or the expected result. Two: what is my situation? What is the task? What would a useful result look like? Three: any of these. \"Make that simpler.\" \"Give an everyday example.\" \"What useful question should I ask next?\" Recall first, then compare, and revisit any example you want to practise.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 18,
+   "heading": "Lesson 2.2: The Four-Line Prompt",
+   "narration": "Lesson 2.2: The Four-Line Prompt. Your flight plan. One: use Context, Task, Format and Tone. Two: recognise which part needs clarification. Three: keep relevant context safe to share.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 19,
+   "heading": "2.2 C-T-F-T",
+   "narration": "Think about ordering a coffee. \"A coffee, please\" will get you something. \"A large flat white, oat milk, extra hot, to take away\" gets you exactly what you wanted, first time. The barista didn't get smarter. [pause] Prompts have four parts, C, T, F, T. Context is the situation and the constraints. Task is the job you want done. Format is the shape and the length. Tone is the style of language.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 20,
+   "heading": "2.2 A complete four-line example",
+   "narration": "Let's put it together. A pothole you've reported still hasn't been fixed. Context: a pothole on your street remains after your previous report. Task: draft an email asking your council for an update. Format: under 180 words, with a subject line. Tone: firm, polite and factual. Use your own verified details. The tool should not invent dates, damage or previous contact.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 21,
+   "heading": "2.2 Context",
+   "narration": "Context is only the background needed for this job. To find it, ask yourself what you would tell a friend before asking them this. Useful: \"I am writing to a local community group.\" Usually unnecessary: member IDs, home addresses or private account numbers. That's the Postcard Rule again. A practical safeguard is to draft with placeholders and add the real details yourself.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 22,
+   "heading": "2.2 Task",
+   "narration": "Task means naming the action and the purpose. Task is where people most often go vague. Vague: \"Help with this letter.\" Clearer: \"Shorten this draft while keeping the request for a repair date.\" And you can add a boundary: \"Do not add facts that are absent from my notes.\"",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 23,
+   "heading": "2.2 Format and Tone",
+   "narration": "Format is the length, the layout and the required parts. It's the part people forget most, and often the quickest improvement. \"Five bullets.\" \"A comparison table.\" \"An email with a subject line.\" Tone is how the wording should sound. The tool has no idea whether you're writing to your local MP or your next-door neighbour unless you say so. \"Warm and conversational.\" \"Firm and professional.\" \"Plain English for a beginner.\"",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 24,
+   "heading": "2.2 A fictional celebration plan",
+   "narration": "Here's a different kind of example, a fictional celebration plan. Context: a celebration dinner for twenty people, with a planning budget of two thousand dollars. Task: suggest three possible approaches and questions to resolve. Format: a table with assumptions and likely trade-offs. Tone: practical and welcoming. The budget is illustrative only, so get current supplier quotes before you make any commitments.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 25,
+   "heading": "2.2 Diagnosing an unhelpful answer",
+   "narration": "When an answer disappoints you, run through the four parts like a checklist. Generic suggestions? Clarify the context: what makes this situation different? The wrong job? Clarify the task: draft, summarise, compare or explain? A wall of text? That's format: length, headings or a table. Wording feels wrong? That's tone: plain, warm, firm or formal. Usually one of the four is missing. Add it and ask again.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 26,
+   "heading": "2.2 A flexible checklist",
+   "narration": "Treat this as a flexible checklist. The four parts can fit in one paragraph, and they don't need to be in order or in separate sentences. There's no special syntax required; the labels just help you think through the request. Use what matters. A very small task may need only a short instruction, so you don't need four parts to ask the difference between two words. And remember, a clear prompt improves direction, but it cannot guarantee accuracy.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 27,
+   "heading": "2.2 A follow-up for a missing format",
+   "narration": "If the content is right but the shape is wrong, follow up on the format. \"Keep the same content, but turn it into a checklist with five items. Put the most important action first and flag any assumption.\" Specify the part that needs changing, then read the revised result.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 28,
+   "heading": "2.2 Try It Now",
+   "narration": "Try It Now: build your four-line prompt. Choose a real, low-risk task you can review, like an email or a message you need this week. Write four short lines: Context, Task, Format and Tone. Then check it. Remove sensitive details and fill the gaps with placeholders before you send. Pause the video now and build your prompt. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 29,
+   "heading": "2.2 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before you move on. One: what do C, T, F, T stand for? [pause] Two: which part helps prevent a wall of text? [pause] Three: what does the Postcard Rule remind you to consider? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 30,
+   "heading": "2.2 Check: answers",
+   "narration": "The answers. One: Context, Task, Format and Tone. Two: Format. Ask for a length, a structure or a number of points. Three: whether the information is suitable to share with this service. Recall first, then compare, and revisit any example you want to practise.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 31,
+   "heading": "Lesson 2.3: AI Can Ask Better Questions",
+   "narration": "Lesson 2.3: AI Can Ask Better Questions. Think about a good GP appointment. The doctor asks questions first, and those questions aren't a delay; they're what makes the answer fit you. Your flight plan. One: ask for clarification before an answer. Two: limit and review the questions. Three: check the assumptions behind a suggestion.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 32,
+   "heading": "2.3 The interview-me request",
+   "narration": "Often you don't know which parts of your situation matter. So you either pour everything in, which is exhausting, or you leave something out by accident. There's a third option: let the tool interview you. \"I want to plan a small community craft workshop. Before suggesting a plan, ask me up to three useful questions, one at a time. I will skip anything I do not want to share.\" The words \"one at a time\" turn a form into a gentle conversation. This is a fictional teaching example, and the questions should serve the task and respect your boundaries.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 33,
+   "heading": "2.3 A sample clarification exchange",
+   "narration": "Here's how an exchange might go. \"Roughly how many people will attend?\" \"About twelve.\" \"Is the activity for beginners?\" \"Yes, all beginners.\" \"What materials are already available?\" \"Paper and basic drawing supplies. Please work with those.\" You didn't need to know in advance which details mattered. This exchange was written for the lesson, so actual questions and answers will vary.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 34,
+   "heading": "2.3 One question at a time",
+   "narration": "A smaller exchange can be easier to manage. Set a limit: ask for two or three questions to start with. Answer what matters, and for practice, approximate or fictional details are fine. And if it asks for something it doesn't need, redirect it: \"That detail is not needed. Work with the information already supplied.\"",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 35,
+   "heading": "2.3 A useful assumptions check",
+   "narration": "When an answer feels too generic, check its assumptions. \"What assumptions are you making about the venue, budget and participants, and which would change your suggestion most?\" Correct the wrong ones and the next answer gets more useful. But review the answer yourself, because the tool may still overlook an important assumption.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 36,
+   "heading": "2.3 Questions do not create permission",
+   "narration": "A question from the tool does not create permission. You decide what to disclose. Pause: is this detail necessary for the task? Minimise: use broad ranges or placeholders when they'll do. A label like \"my eldest daughter\" works as well as a name. And skip: you can decline a question, or choose a different method altogether. The Postcard Rule still applies, even mid-interview.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 37,
+   "heading": "2.3 When the topic has higher stakes",
+   "narration": "When the topic has higher stakes, like health, money or a legal matter, use questions to prepare for a professional. A useful task is organising your questions for an appointment, so you arrive better informed. A clear boundary: avoid treating the conversation as a final diagnosis or decision. And your judgement: apply the Cost-of-Wrong Test and use appropriate qualified help.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 38,
+   "heading": "2.3 When an interview helps",
+   "narration": "So when does an interview help? When you know the goal but not the details: \"I want a useful plan, but I am not sure what details matter.\" Answering its questions often helps you organise your own thinking. When you already know the brief and the requirements are clear, skip the interview and give a direct C, T, F, T request.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 39,
+   "heading": "2.3 Common Turbulence",
+   "narration": "Common Turbulence: too many questions can stall the task. Narrow the scope: \"Ask only what changes the first draft.\" Set the next step: \"After these answers, suggest a simple starting plan.\" Then check the result, and correct any assumptions before you put the plan into practice.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 40,
+   "heading": "2.3 Try It Now",
+   "narration": "Try It Now: run a short interview. Pick a task, perhaps a hobby session, a celebration or a simple household plan. Ask the tool for up to three questions, one at a time, and answer only what you're comfortable sharing. In your Flight Log, note which question helped, and which detail you could safely leave out. Pause the video now and try it. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 41,
+   "heading": "2.3 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each before you move on. One: what phrase can help when you do not know where to start? [pause] Two: how can you uncover hidden assumptions? [pause] Three: must you provide exact private figures when the tool asks? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 42,
+   "heading": "2.3 Check: answers",
+   "narration": "The answers. One: \"Before answering, ask me up to three useful questions, one at a time.\" Two: ask what assumptions it is making, and which would most affect the answer. Three: no. Decline, use suitable placeholders or ranges, or choose another method. Recall first, then compare, and revisit any example you want to practise.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 43,
+   "heading": "Lesson 2.4: Specific, Open or a Fresh Start",
+   "narration": "Lesson 2.4: Specific, Open or a Fresh Start. Your flight plan. One: choose a prompting mode for the task. Two: use follow-ups to narrow ideas. Three: carry verified context into a new chat.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 44,
+   "heading": "2.4 Three ways to proceed",
+   "narration": "Here's a frustrating pattern. You correct an answer, then correct it again, and six messages later the tool is trying to follow six sets of instructions at once. It's like giving directions to a taxi driver: \"Left here. No, the next left. Actually, go back.\" [pause] There are three ways to proceed. Specific: you know the deliverable and the constraints. Open: you want to explore possibilities first. Fresh start: the conversation has become confused or contradictory.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 45,
+   "heading": "2.4 A specific request",
+   "narration": "Here's a specific request. \"Draft a 120-word invitation for a neighbourhood clean-up. Include the date, meeting place and contact. Use a warm tone. Leave out promises about equipment or refreshments.\" Notice that last line. Saying what you don't want is often the quickest way to get it right. The deliverable is clear, but check all the filled-in details before you share it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 46,
+   "heading": "2.4 An open request",
+   "narration": "Some tasks go better when you're deliberately open, because you don't yet know what you want. \"Suggest five different ways to spend a quiet weekend close to home. Ask about one constraint that would materially change the ideas. Avoid assuming a large budget.\" You're asking for help thinking, not for a finished product. Explore a range first, then choose one direction and add constraints.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 47,
+   "heading": "2.4 Exploration becomes a clearer brief",
+   "narration": "That's how exploration becomes a clearer brief. Explore: \"Give me five possible approaches.\" Select: \"The outdoor option appeals to me.\" Narrow: \"Make a two-hour plan with a wet-weather alternative.\" Start open, then narrow. That's the rhythm.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 48,
+   "heading": "2.4 Signs a fresh start may help",
+   "narration": "A fresh start may help when the thread keeps mixing incompatible instructions. Try a clarification first: \"Use the latest brief and ignore my earlier draft preference.\" Consider a new chat when unrelated topics or conflicting drafts keep interfering. The time you've already spent isn't wasted; it taught you what you want. But keep expectations realistic. A new chat can organise the context, but it does not guarantee a better answer.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 49,
+   "heading": "2.4 A handover request",
+   "narration": "Before you start fresh, ask the old conversation to do some of the work. It's like a nurse's handover at shift change. \"Summarise this task for a new chat under four headings: verified facts, decisions, open questions and next task. Flag uncertainty and leave out private details.\" Then read and correct the handover before you paste it into another conversation.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 50,
+   "heading": "2.4 A checked handover example",
+   "narration": "Here's a checked handover. Verified facts: a beginner workshop for about twelve adults. Decisions: a paper-based activity, using existing supplies. Open questions: venue access and participant availability. Next task: draft a simple materials checklist with placeholders. It's a fictional workshop example. Keep only the facts you have checked.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 51,
+   "heading": "2.4 New chat and memory",
+   "narration": "A new thread can still use account personalisation. A new chat changes the conversation context, the thread you're working in. But account features like memory or other personalisation may still apply. So when privacy matters, review your service's current settings. You're in control of them.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 52,
+   "heading": "2.4 Editing or retrying",
+   "narration": "Use the controls available in your tool. If editing is available, revise your original request to clarify the task. That's often cleaner than adding a correction underneath. Another option is to copy a corrected version into a new message or a new chat. And in a long conversation, the earliest details can carry less weight, so restate the important facts rather than assuming perfect recall.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 53,
+   "heading": "2.4 Try It Now",
+   "narration": "Try It Now: choose a mode and revise. Pick specific, open or a fresh start for a task of your own. Then practise: edit one prompt, or write a cleaner version. In your Flight Log, record why that mode suited the task. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 54,
+   "heading": "2.4 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each before you move on. One: which mode suits exploring weekend possibilities? [pause] Two: what belongs in a handover? [pause] Three: a draft sounds stiff. Which C, T, F, T part might you clarify? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 55,
+   "heading": "2.4 Check: answers",
+   "narration": "The answers. One: an open request, followed by narrowing the options. Two: checked facts, decisions, open questions and the next task, and review it before you reuse it. Three: tone. Explain how you want the wording to sound. Recall first, then compare, and revisit any example you want to practise.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 56,
+   "heading": "Lesson 2.5: Seven Common First-Week Mistakes",
+   "narration": "Lesson 2.5: Seven Common First-Week Mistakes. Pilots debrief after every flight, including the good ones. It isn't about blame; it's about noticing patterns while they're fresh. Your flight plan. One: recognise the habits that weaken a request. Two: choose a practical correction. Three: keep verification and memory limits in view.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 57,
+   "heading": "2.5 Seven habits and useful corrections",
+   "narration": "None of these habits is a failure. They just slow you down, and they're easier to spot once someone names them. One: keywords only. The correction is to add the situation, the task and the expected result. Two: treating the first reply as final. Review it and give a specific follow-up. Three: leaving current facts unchecked. Verify the claim in a current original source.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 58,
+   "heading": "2.5 More habits and corrections",
+   "narration": "Four: unrelated jobs together. Separate topics when their context gets mixed. Five: one weak reply ends the task. Clarify, restart or use another method. Six: assuming perfect memory. Recap the important facts and review your settings. And seven: only one use case. Try a different low-risk task you can review.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 59,
+   "heading": "2.5 Mistake 1: keywords only",
+   "narration": "Mistake one: keywords only. Under pressure, we slip back into Google mode without noticing. So make the purpose visible. Instead of \"Meeting email,\" try \"Draft a brief message asking volunteers for their preferred meeting time.\" Then add the audience, the format and any important constraint.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 60,
+   "heading": "2.5 Mistake 2: the first answer is final",
+   "narration": "Mistake two: treating the first answer as final. The first answer is a reasonable first attempt, not necessarily the best one, so treat it as a draft to review. Read: does it do the actual job? Steer: point to the specific omission or wording problem. The tool has no attachment to its first draft. And check: confirm the facts and any commitments before you use it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 61,
+   "heading": "2.5 Mistake 3: unchecked current facts",
+   "narration": "Mistake three: unchecked current facts. Many tools now search the web, and people see a confident answer with little source links and assume it must be right. The tool can still read an outdated page, misread a good one or mix up two sources. A source link is the start of checking. Open the original and find the exact statement, figure or rule. Match the context: check the date, the location and the conditions. And apply judgement, because higher consequences call for stronger verification.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 62,
+   "heading": "2.5 Mistake 4: unrelated jobs together",
+   "narration": "Mistake four: unrelated jobs together. \"Write my landlord a letter about the hot water, plan a trip to Cairns, and explain franking credits.\" Keep the relevant context clear. Separate topics, and use another chat for a different subject when that helps. Keep connected steps together, though; planning, drafting and revising the same event can stay in one conversation. And watch for confusion. If old details intrude, restate the current task.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 63,
+   "heading": "2.5 Mistake 5: giving up after one reply",
+   "narration": "Mistake five: giving up after one reply. This one is costly, because it stops people before they get to the good part. Choose the next step deliberately. Clarify, if a missing detail explains the problem. Try a fresh brief, if conflicting context has built up. And change method or stop, if the tool remains unreliable or the task is unsuitable for it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 64,
+   "heading": "2.5 Mistake 6: assuming perfect memory",
+   "narration": "Mistake six: assuming perfect memory. Restate what must be correct. Inside a chat, long threads may exceed what the tool can use reliably. Across chats, any personalisation depends on the settings and features available to you. It may remember you're renovating the kitchen, but not the tiles you chose. So make it your habit to give a brief, checked recap of the important facts.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 65,
+   "heading": "2.5 Mistake 7: using AI for one thing",
+   "narration": "Mistake seven: using AI for one thing. People discover it's handy for emails, and they use it for emails, full stop. Try another task you can judge. Drafting: a short community message. Explaining: a familiar topic in simpler words. Organising: a checklist made from your non-sensitive notes. When a task feels tedious, ask yourself, \"Could AI help with this?\"",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 66,
+   "heading": "2.5 Common Turbulence",
+   "narration": "Common Turbulence: a weak result is not always your fault. Prompting helps, and clear context and feedback can improve relevance. But limits remain. The model can misunderstand, omit details or invent claims. So hold it to your standard, and use the result only when it meets the task and passes your checks.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 67,
+   "heading": "2.5 Try It Now",
+   "narration": "Try It Now: correct one habit. Be honest with yourself and choose a recent request that disappointed you. Change it by adding one missing detail or a clearer instruction, then try again. In your Flight Log, note whether the correction helped, and what still needs checking. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 68,
+   "heading": "2.5 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each before you move on. One: how do you check a current factual claim? [pause] Two: what helps when the tool forgets an important detail? [pause] Three: what question sets the level of checking needed? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 69,
+   "heading": "2.5 Check: answers",
+   "narration": "The answers. One: open a suitable original source and check the specific claim, its date and its context. Two: restate the important facts in a short, checked recap. Three: \"What would it cost if this answer were wrong?\" Recall first, then compare, and revisit any example you want to practise.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 70,
+   "heading": "Lesson 2.6: Saving and Reusing Useful Prompts",
+   "narration": "Lesson 2.6: Saving and Reusing Useful Prompts. Think about a recipe you've perfected over the years. You wouldn't throw it away after cooking it once. A good prompt is a recipe too. Your flight plan. One: create a portable prompt library. Two: use placeholders and a verification step. Three: distinguish saved prompts from account features.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 71,
+   "heading": "2.6 Your prompt library",
+   "narration": "A prompt library sounds technical, but it isn't. Start with one request worth using again. Give it a simple home: your notes, a Word document, or another place you already use. A useful entry has a title, when to use it, the template, and a checking step. Then it's a small habit: save what helped, and revise it after you reuse it. Five prompts in a notes file beat an empty, beautifully organised spreadsheet.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 72,
+   "heading": "2.6 Anatomy of a saved prompt",
+   "narration": "Here's the anatomy of a saved prompt. Title: polite complaint email. Use when: I need a first draft about a service problem. Template: a reusable request with placeholders. Verify: facts, dates, recipient and the outcome you're asking for. Last reviewed: the date you last checked it. A short, useful entry is enough, and you can improve it as you go.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 73,
+   "heading": "2.6 Template: complaint letter",
+   "narration": "Here's a template for a complaint letter. The parts in square brackets on screen are the bits you fill in. \"Draft a firm, professional letter to the organisation about the problem. Background: the relevant facts. I have already tried the steps taken. I want this outcome. Keep it under three hundred words. Use placeholders and do not invent facts.\" Before you use it, check every factual detail, any claims and the recipient. Then adjust the wording so it sounds like you.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 74,
+   "heading": "2.6 Template: document summary",
+   "narration": "A template for a document summary. \"Summarise this suitable document in about 200 words. Include main points, actions, deadlines, costs and unusual conditions. Point me to the relevant section for each important detail. Flag anything unclear.\" Before you use the summary, compare the important points with the original. And check whether the document is appropriate to upload in the first place.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 75,
+   "heading": "2.6 Template: difficult conversation",
+   "narration": "And a template for a difficult conversation. \"Help me prepare for a conversation with the person's role about the topic. My goal is my goal. I am concerned about my concern. Suggest a calm opening and two possible replies I could practise.\" You can rehearse as many times as you like. But this is hypothetical rehearsal. It cannot predict another person's reaction, so use suitable human support for serious situations.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 76,
+   "heading": "2.6 Placeholders make prompts reusable",
+   "narration": "Placeholders make prompts reusable, because the brackets show what to change. Replace each item, such as organisation, topic, goal or date. Remove the leftovers, and check the final draft for any unfilled brackets before it goes anywhere. And keep details separate. Where it's practical, add private facts outside the tool.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 77,
+   "heading": "2.6 Prompts and account features",
+   "narration": "Your prompt library is different from the features built into your account. Your prompt library is portable requests that you save and revise yourself. Custom instructions are preferences the service may apply to its replies. Projects keep related chats, files and instructions in one workspace. And memory is personalisation using information across your interactions.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 78,
+   "heading": "2.6 Custom instructions",
+   "narration": "Custom instructions are useful for repeated style preferences. For example: Australian spelling, plain English and short answers. You can add a checking preference too: \"Flag uncertainty and distinguish assumptions from facts.\" And keep reviewing. Preferences can help with consistency, but they do not guarantee the tool will follow them.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 79,
+   "heading": "2.6 Projects",
+   "narration": "Projects keep related work together. They're useful for a continuing task, like a renovation or a family history, with relevant chats and suitable files. Check access, and review sharing and permissions before you add information. And keep expectations realistic: project context does not guarantee perfect recall or correct answers.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 80,
+   "heading": "2.6 Memory and a portable library",
+   "narration": "So why keep your own copy of reusable requests? Memory can personalise responses, depending on the service and its controls. A prompt library lets you review the exact request and reuse it elsewhere. If you change tools, your recipes come with you. A practical safeguard is to store your important templates somewhere you can find and edit them.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 81,
+   "heading": "2.6 Try It Now",
+   "narration": "Try It Now: save your first reusable prompt. Choose a request from this module that you'll use again. Save it with a title, placeholders and a checking step. And if you'd like, find the preference settings in your chosen tool and review them. Pause the video now. That's your library started. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 82,
+   "heading": "2.6 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each before you move on. One: where could you put Australian spelling preferences? [pause] Two: why keep your own prompt library? [pause] Three: what can you ask when you do not know what details to include? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 83,
+   "heading": "2.6 Check: answers",
+   "narration": "The answers. One: in custom instructions or equivalent preferences, if the service provides them. Two: you can inspect, edit and reuse the exact requests across tools. Three: \"Before answering, ask me up to three useful questions, one at a time.\" Recall first, then compare, and revisit any example you want to practise.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 84,
+   "heading": "Cleared To Try: one recurring task",
+   "narration": "Here's your Cleared To Try exercise for Module 2: one recurring task. Choose and ask: pick a low-risk task you repeat, and write a C, T, F, T request, or start with a short interview. Read and steer: check the first reply, and give one useful correction if needed. Verify: apply the Cost-of-Wrong Test, and check facts and commitments before use. Save and record: save the useful prompt, and compare the time spent, including checking and repairs, with your usual approach. In your Flight Log, write the task, the prompt, the result, the time comparison, and what you'd change next time. Pause the video if you'd like to plan it now. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 85,
+   "heading": "Module 2 complete",
+   "narration": "[warmly] Module 2 is done. You have a method for shaping requests. Your framework is Context, Task, Format and Tone. Your options are to ask for questions, explore ideas, or prepare a fresh brief. And your next action is to use and improve one saved prompt on a recurring task. In Module 3, we apply these skills to your actual life. See you on the runway.",
+   "script_reuse": "some"
+  }
+ ]
+}

@@ -1,0 +1,678 @@
+[
+ {
+  "id": "jr-w01",
+  "title": null,
+  "slides": [
+   1,
+   31
+  ],
+  "narration": "course-content/narration/junior-week-01.json",
+  "duration": "10:12",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators_-_Week_1_-_Website_Brand_v4.pdf",
+  "audio": "junior-ai-navigators/week-01"
+ },
+ {
+  "id": "sr-w01",
+  "title": null,
+  "slides": [
+   1,
+   42
+  ],
+  "narration": "course-content/narration/senior-week-01.json",
+  "duration": "15:01",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_1_How_AI_Systems_Work.pdf",
+  "audio": "senior-ai-pilots/week-01"
+ },
+ {
+  "id": "jr-w02",
+  "title": null,
+  "slides": [
+   1,
+   35
+  ],
+  "narration": "course-content/narration/junior-week-02.json",
+  "duration": "11:02",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators_-_Week_2_-_Talking_to_AI_Safely.pdf",
+  "audio": "junior-ai-navigators/week-02"
+ },
+ {
+  "id": "sr-w02",
+  "title": null,
+  "slides": [
+   1,
+   45
+  ],
+  "narration": "course-content/narration/senior-week-02.json",
+  "duration": "17:01",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_2_Prompt_Design_and_Evaluation.pdf",
+  "audio": "senior-ai-pilots/week-02"
+ },
+ {
+  "id": "jr-w03",
+  "title": null,
+  "slides": [
+   1,
+   37
+  ],
+  "narration": "course-content/narration/junior-week-03.json",
+  "duration": "12:23",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators_-_Week_3_-_Machines_That_See.pdf",
+  "audio": "junior-ai-navigators/week-03"
+ },
+ {
+  "id": "sr-w03",
+  "title": null,
+  "slides": [
+   1,
+   44
+  ],
+  "narration": "course-content/narration/senior-week-03.json",
+  "duration": "16:20",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_3_Data_and_Labelling.pdf",
+  "audio": "senior-ai-pilots/week-03"
+ },
+ {
+  "id": "jr-w04",
+  "title": null,
+  "slides": [
+   1,
+   42
+  ],
+  "narration": "course-content/narration/junior-week-04.json",
+  "duration": "13:52",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators_-_Week_4_-_Train_Your_First_Classifier.pdf",
+  "audio": "junior-ai-navigators/week-04"
+ },
+ {
+  "id": "sr-w04",
+  "title": null,
+  "slides": [
+   1,
+   47
+  ],
+  "narration": "course-content/narration/senior-week-04.json",
+  "duration": "16:11",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_4_Building_an_Image_Model.pdf",
+  "audio": "senior-ai-pilots/week-04"
+ },
+ {
+  "id": "jr-w05",
+  "title": null,
+  "slides": [
+   1,
+   39
+  ],
+  "narration": "course-content/narration/junior-week-05.json",
+  "duration": "12:46",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators_-_Week_5_-_When_AI_Gets_It_Wrong.pdf",
+  "audio": "junior-ai-navigators/week-05"
+ },
+ {
+  "id": "sr-w05",
+  "title": null,
+  "slides": [
+   1,
+   45
+  ],
+  "narration": "course-content/narration/senior-week-05.json",
+  "duration": "17:36",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_5_Bias_Fairness_and_Failure.pdf",
+  "audio": "senior-ai-pilots/week-05"
+ },
+ {
+  "id": "jr-w06",
+  "title": null,
+  "slides": [
+   1,
+   39
+  ],
+  "narration": "course-content/narration/junior-week-06.json",
+  "duration": "12:15",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators__Week_6_AI_Storytelling.pdf",
+  "audio": "junior-ai-navigators/week-06"
+ },
+ {
+  "id": "sr-w06",
+  "title": null,
+  "slides": [
+   1,
+   46
+  ],
+  "narration": "course-content/narration/senior-week-06.json",
+  "duration": "17:12",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_6_AI-Assisted_Storytelling_and_Media.pdf",
+  "audio": "senior-ai-pilots/week-06"
+ },
+ {
+  "id": "jr-w07",
+  "title": null,
+  "slides": [
+   1,
+   44
+  ],
+  "narration": "course-content/narration/junior-week-07.json",
+  "duration": "13:39",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators__Week_7_Scratch_Helpers-2.pdf",
+  "audio": "junior-ai-navigators/week-07"
+ },
+ {
+  "id": "sr-w07",
+  "title": null,
+  "slides": [
+   1,
+   49
+  ],
+  "narration": "course-content/narration/senior-week-07.json",
+  "duration": "17:33",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_7_Human-Centred_Design.pdf",
+  "audio": "senior-ai-pilots/week-07"
+ },
+ {
+  "id": "jr-w08",
+  "title": null,
+  "slides": [
+   1,
+   44
+  ],
+  "narration": "course-content/narration/junior-week-08.json",
+  "duration": "14:24",
+  "playbackId": null,
+  "deckPdf": "Junior_AI_Navigators__Week_8_Safe_and_Smart_Online.pdf",
+  "audio": "junior-ai-navigators/week-08"
+ },
+ {
+  "id": "sr-w08",
+  "title": null,
+  "slides": [
+   1,
+   47
+  ],
+  "narration": "course-content/narration/senior-week-08.json",
+  "duration": "17:18",
+  "playbackId": null,
+  "deckPdf": "Senior_AI_Pilots__Week_8_Ethics_Privacy_and_Copyright.pdf",
+  "audio": "senior-ai-pilots/week-08"
+ },
+ {
+  "id": "m01-l01",
+  "title": "What AI is and is not",
+  "slides": [
+   1,
+   16
+  ],
+  "narration": "course-content/narration/adult-module-01.json",
+  "duration": "7:56",
+  "playbackId": null,
+  "deckPdf": "AI_for_Real_Life__Module_1_Pre-Flight_Checks.pdf",
+  "audio": "ai-for-real-life/module-01"
+ },
+ {
+  "id": "m01-l02",
+  "title": "Strengths, limits and judgement",
+  "slides": [
+   17,
+   30
+  ],
+  "narration": "course-content/narration/adult-module-01.json",
+  "duration": "6:41",
+  "playbackId": null,
+  "deckPdf": "AI_for_Real_Life__Module_1_Pre-Flight_Checks.pdf",
+  "audio": "ai-for-real-life/module-01"
+ },
+ {
+  "id": "m01-l03",
+  "title": "Choosing your first tool",
+  "slides": [
+   31,
+   43
+  ],
+  "narration": "course-content/narration/adult-module-01.json",
+  "duration": "5:30",
+  "playbackId": null,
+  "deckPdf": "AI_for_Real_Life__Module_1_Pre-Flight_Checks.pdf",
+  "audio": "ai-for-real-life/module-01"
+ },
+ {
+  "id": "m01-l04",
+  "title": "Signing up safely",
+  "slides": [
+   44,
+   56
+  ],
+  "narration": "course-content/narration/adult-module-01.json",
+  "duration": "6:00",
+  "playbackId": null,
+  "deckPdf": "AI_for_Real_Life__Module_1_Pre-Flight_Checks.pdf",
+  "audio": "ai-for-real-life/module-01"
+ },
+ {
+  "id": "m01-l05",
+  "title": "Setting up your account",
+  "slides": [
+   57,
+   69
+  ],
+  "narration": "course-content/narration/adult-module-01.json",
+  "duration": "5:33",
+  "playbackId": null,
+  "deckPdf": "AI_for_Real_Life__Module_1_Pre-Flight_Checks.pdf",
+  "audio": "ai-for-real-life/module-01"
+ },
+ {
+  "id": "m01-l06",
+  "title": "Your dashboard and first hello",
+  "slides": [
+   70,
+   84
+  ],
+  "narration": "course-content/narration/adult-module-01.json",
+  "duration": "6:49",
+  "playbackId": null,
+  "deckPdf": "AI_for_Real_Life__Module_1_Pre-Flight_Checks.pdf",
+  "audio": "ai-for-real-life/module-01"
+ },
+ {
+  "id": "m02-l01",
+  "title": "Prompting in plain English",
+  "slides": [
+   1,
+   17
+  ],
+  "narration": "course-content/narration/adult-module-02.json",
+  "duration": "8:13",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_2_Cleared_For_Taxi.pdf",
+  "audio": "ai-for-real-life/module-02"
+ },
+ {
+  "id": "m02-l02",
+  "title": "The four-line prompt",
+  "slides": [
+   18,
+   30
+  ],
+  "narration": "course-content/narration/adult-module-02.json",
+  "duration": "5:31",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_2_Cleared_For_Taxi.pdf",
+  "audio": "ai-for-real-life/module-02"
+ },
+ {
+  "id": "m02-l03",
+  "title": "AI can ask better questions",
+  "slides": [
+   31,
+   42
+  ],
+  "narration": "course-content/narration/adult-module-02.json",
+  "duration": "5:01",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_2_Cleared_For_Taxi.pdf",
+  "audio": "ai-for-real-life/module-02"
+ },
+ {
+  "id": "m02-l04",
+  "title": "Specific, open or a fresh start",
+  "slides": [
+   43,
+   55
+  ],
+  "narration": "course-content/narration/adult-module-02.json",
+  "duration": "5:18",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_2_Cleared_For_Taxi.pdf",
+  "audio": "ai-for-real-life/module-02"
+ },
+ {
+  "id": "m02-l05",
+  "title": "Seven common first-week mistakes",
+  "slides": [
+   56,
+   69
+  ],
+  "narration": "course-content/narration/adult-module-02.json",
+  "duration": "6:01",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_2_Cleared_For_Taxi.pdf",
+  "audio": "ai-for-real-life/module-02"
+ },
+ {
+  "id": "m02-l06",
+  "title": "Saving and reusing useful prompts",
+  "slides": [
+   70,
+   85
+  ],
+  "narration": "course-content/narration/adult-module-02.json",
+  "duration": "7:06",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_2_Cleared_For_Taxi.pdf",
+  "audio": "ai-for-real-life/module-02"
+ },
+ {
+  "id": "m03-l01",
+  "title": "Welcome, and Path A: Emails and letters",
+  "slides": [
+   1,
+   17
+  ],
+  "narration": "course-content/narration/adult-module-03.json",
+  "duration": "8:21",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_3_Cleared_For_Takeoff__Complete.pdf",
+  "audio": "ai-for-real-life/module-03"
+ },
+ {
+  "id": "m03-l02",
+  "title": "Path B: Making sense of documents",
+  "slides": [
+   18,
+   33
+  ],
+  "narration": "course-content/narration/adult-module-03.json",
+  "duration": "7:00",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_3_Cleared_For_Takeoff__Complete.pdf",
+  "audio": "ai-for-real-life/module-03"
+ },
+ {
+  "id": "m03-l03",
+  "title": "Path C: Planning trips, events and projects",
+  "slides": [
+   34,
+   47
+  ],
+  "narration": "course-content/narration/adult-module-03.json",
+  "duration": "6:10",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_3_Cleared_For_Takeoff__Complete.pdf",
+  "audio": "ai-for-real-life/module-03"
+ },
+ {
+  "id": "m03-l04",
+  "title": "Path D: Research and fact-finding",
+  "slides": [
+   48,
+   62
+  ],
+  "narration": "course-content/narration/adult-module-03.json",
+  "duration": "6:12",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_3_Cleared_For_Takeoff__Complete.pdf",
+  "audio": "ai-for-real-life/module-03"
+ },
+ {
+  "id": "m03-l05",
+  "title": "Path E: Health information",
+  "slides": [
+   63,
+   78
+  ],
+  "narration": "course-content/narration/adult-module-03.json",
+  "duration": "7:13",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_3_Cleared_For_Takeoff__Complete.pdf",
+  "audio": "ai-for-real-life/module-03"
+ },
+ {
+  "id": "m03-l06",
+  "title": "Path F: Money and admin",
+  "slides": [
+   79,
+   98
+  ],
+  "narration": "course-content/narration/adult-module-03.json",
+  "duration": "9:10",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_3_Cleared_For_Takeoff__Complete.pdf",
+  "audio": "ai-for-real-life/module-03"
+ },
+ {
+  "id": "m04-l01",
+  "title": "Welcome, and choosing your track",
+  "slides": [
+   1,
+   5
+  ],
+  "narration": "course-content/narration/adult-module-04.json",
+  "duration": "2:41",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_4_In_The_Air.pdf",
+  "audio": "ai-for-real-life/module-04"
+ },
+ {
+  "id": "m04-track-a",
+  "title": "Track A: Write something",
+  "slides": [
+   6,
+   28
+  ],
+  "narration": "course-content/narration/adult-module-04.json",
+  "duration": "11:43",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_4_In_The_Air.pdf",
+  "audio": "ai-for-real-life/module-04"
+ },
+ {
+  "id": "m04-track-b",
+  "title": "Track B: Start something",
+  "slides": [
+   29,
+   51
+  ],
+  "narration": "course-content/narration/adult-module-04.json",
+  "duration": "11:17",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_4_In_The_Air.pdf",
+  "audio": "ai-for-real-life/module-04"
+ },
+ {
+  "id": "m04-track-c",
+  "title": "Track C: Sort something",
+  "slides": [
+   52,
+   71
+  ],
+  "narration": "course-content/narration/adult-module-04.json",
+  "duration": "10:04",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_4_In_The_Air.pdf",
+  "audio": "ai-for-real-life/module-04"
+ },
+ {
+  "id": "m04-track-d",
+  "title": "Track D: Learn something",
+  "slides": [
+   72,
+   93
+  ],
+  "narration": "course-content/narration/adult-module-04.json",
+  "duration": "10:25",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_4_In_The_Air.pdf",
+  "audio": "ai-for-real-life/module-04"
+ },
+ {
+  "id": "m04-l06",
+  "title": "Your toolkit, and your Cleared To Try",
+  "slides": [
+   94,
+   97
+  ],
+  "narration": "course-content/narration/adult-module-04.json",
+  "duration": "2:00",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_4_In_The_Air.pdf",
+  "audio": "ai-for-real-life/module-04"
+ },
+ {
+  "id": "m05-l01",
+  "title": "Hallucinations",
+  "slides": [
+   1,
+   16
+  ],
+  "narration": "course-content/narration/adult-module-05.json",
+  "duration": "8:12",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_5_Holding_Pattern.pdf",
+  "audio": "ai-for-real-life/module-05"
+ },
+ {
+  "id": "m05-l02",
+  "title": "Judgement and checking",
+  "slides": [
+   17,
+   28
+  ],
+  "narration": "course-content/narration/adult-module-05.json",
+  "duration": "5:39",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_5_Holding_Pattern.pdf",
+  "audio": "ai-for-real-life/module-05"
+ },
+ {
+  "id": "m05-l03",
+  "title": "Scam awareness",
+  "slides": [
+   29,
+   46
+  ],
+  "narration": "course-content/narration/adult-module-05.json",
+  "duration": "9:01",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_5_Holding_Pattern.pdf",
+  "audio": "ai-for-real-life/module-05"
+ },
+ {
+  "id": "m05-l04",
+  "title": "Privacy and Australian law",
+  "slides": [
+   47,
+   62
+  ],
+  "narration": "course-content/narration/adult-module-05.json",
+  "duration": "7:10",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_5_Holding_Pattern.pdf",
+  "audio": "ai-for-real-life/module-05"
+ },
+ {
+  "id": "m05-l05",
+  "title": "Information to leave out",
+  "slides": [
+   63,
+   74
+  ],
+  "narration": "course-content/narration/adult-module-05.json",
+  "duration": "5:40",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_5_Holding_Pattern.pdf",
+  "audio": "ai-for-real-life/module-05"
+ },
+ {
+  "id": "m05-l06",
+  "title": "Trust, verify, walk away",
+  "slides": [
+   75,
+   89
+  ],
+  "narration": "course-content/narration/adult-module-05.json",
+  "duration": "6:57",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_5_Holding_Pattern.pdf",
+  "audio": "ai-for-real-life/module-05"
+ },
+ {
+  "id": "m06-l01",
+  "title": "Building your routine",
+  "slides": [
+   1,
+   17
+  ],
+  "narration": "course-content/narration/adult-module-06.json",
+  "duration": "8:36",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_6_Final_Approach.pdf",
+  "audio": "ai-for-real-life/module-06"
+ },
+ {
+  "id": "m06-l02",
+  "title": "When another method fits better",
+  "slides": [
+   18,
+   30
+  ],
+  "narration": "course-content/narration/adult-module-06.json",
+  "duration": "6:16",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_6_Final_Approach.pdf",
+  "audio": "ai-for-real-life/module-06"
+ },
+ {
+  "id": "m06-l03",
+  "title": "Staying current without overload",
+  "slides": [
+   31,
+   43
+  ],
+  "narration": "course-content/narration/adult-module-06.json",
+  "duration": "5:32",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_6_Final_Approach.pdf",
+  "audio": "ai-for-real-life/module-06"
+ },
+ {
+  "id": "m06-l04",
+  "title": "Paid tools and value",
+  "slides": [
+   44,
+   57
+  ],
+  "narration": "course-content/narration/adult-module-06.json",
+  "duration": "5:52",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_6_Final_Approach.pdf",
+  "audio": "ai-for-real-life/module-06"
+ },
+ {
+  "id": "m06-l05",
+  "title": "Bringing someone along",
+  "slides": [
+   58,
+   71
+  ],
+  "narration": "course-content/narration/adult-module-06.json",
+  "duration": "6:04",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_6_Final_Approach.pdf",
+  "audio": "ai-for-real-life/module-06"
+ },
+ {
+  "id": "m06-l06",
+  "title": "Final reflection and graduation",
+  "slides": [
+   72,
+   83
+  ],
+  "narration": "course-content/narration/adult-module-06.json",
+  "duration": "5:15",
+  "playbackId": null,
+  "deckPdf": "CFTO_Adult_AI_for_Real_Life__Module_6_Final_Approach.pdf",
+  "audio": "ai-for-real-life/module-06"
+ }
+]

@@ -1,0 +1,227 @@
+{
+  "course": "senior",
+  "week": 3,
+  "title": "Week 3: Data and Labelling",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Senior AI Pilots, Week 3: Data and Labelling",
+      "narration": "[warmly] Welcome back to Ground School. I'm Captain Naomi, and this is Week 3: Data and Labelling. Before any model learns anything, someone has to decide what it learns from. This week, that someone is you."
+    },
+    {
+      "slide": 2,
+      "heading": "Mission Brief: Design the data before training the model",
+      "narration": "Here's your mission brief. We design the data before we train the model. That means three jobs. Plan: aim for useful volume, variety and class balance. Label: write consistent rules, including the awkward edge cases. And document: record how you collected the data, what permissions you had, and where the gaps and limits are."
+    },
+    {
+      "slide": 3,
+      "heading": "The Hook: a shortcut in the data",
+      "narration": "Let's start with a puzzle. What if every car in your photos sits on a blue mat? Here's the setup: mugs only ever appear on a cream mat, and cars only on blue. So the question is, is the model actually telling mugs from cars, or is it just telling cream from blue? [curious] Your test is simple. Swap the backgrounds and try it on new examples. If it suddenly calls a mug a car, you have your answer."
+    },
+    {
+      "slide": 4,
+      "heading": "A model learns from the examples available",
+      "narration": "A model can only learn from the examples you give it, so your dataset shapes the task. A dataset is a collection of examples organised for a purpose. A label is the category you assign under the rules you've chosen. And your responsibility is to check what the collection includes, what it leaves out, and what it might be signalling by accident, like that blue mat."
+    },
+    {
+      "slide": 5,
+      "heading": "Three properties to plan",
+      "narration": "There are three properties to plan. Volume: enough relevant, distinct examples for the task. Variety: examples that span useful conditions and appearances. And balance: a deliberate mix across your classes, with the counts written down. We'll take them one at a time."
+    },
+    {
+      "slide": 6,
+      "heading": "Volume: More frames are not always more information",
+      "narration": "First, volume. More frames are not always more information. Useful examples show genuinely different instances or conditions. If you film one mug for ten seconds, you get hundreds of near-duplicates, and lots of almost identical frames add very little variety. For next week, aim for fifty or more examples per class. Treat that as a classroom starting target, not a magic number."
+    },
+    {
+      "slide": 7,
+      "heading": "Variety: Represent the situations you expect to test",
+      "narration": "Next, variety. Your data should represent the situations you expect to test. That covers appearance: different objects within a class, from different angles and distances. It covers conditions: different lighting, backgrounds and locations. And it all serves generalisation, which means how well the model performs on new examples, not only on the familiar views it trained on."
+    },
+    {
+      "slide": 8,
+      "heading": "Balance: Inspect the count for every class",
+      "narration": "Then balance. Inspect the count for every class. Record how many examples belong to each category. For this classroom project, start with roughly similar counts per class. But keep the bigger picture in mind: beyond this exercise, equal counts alone do not establish fairness or reliable performance."
+    },
+    {
+      "slide": 9,
+      "heading": "The 90% accuracy trap",
+      "narration": "Here's a trap worth knowing. Picture a fictional test set of one hundred items: ninety mugs and ten cars. A lazy model guesses mug every single time. That's ninety correct out of one hundred, so ninety per cent overall. Sounds great. Now check the car class. Zero out of ten cars recognised. Zero per cent for cars. A high overall score can hide complete failure on a smaller class."
+    },
+    {
+      "slide": 10,
+      "heading": "Ask what the overall score hides",
+      "narration": "So always ask what the overall score is hiding, and evaluate each class separately. Overall accuracy is one summary of the whole test set. Per-class results show you whether particular groups are being missed. In the next lesson, you'll record predictions in something called a confusion table, which makes those misses much harder to ignore."
+    },
+    {
+      "slide": 11,
+      "heading": "Pilot's Tip: watch for shortcut learning",
+      "narration": "Pilot's tip: watch for shortcut learning. The easiest pattern might be the wrong one. A shortcut is an unintended cue that happens to line up with the label. In our object example, background colour predicts the class in the training set, so the model can score well without ever looking at the object. A good check is to vary the backgrounds within each class and test some swaps."
+    },
+    {
+      "slide": 12,
+      "heading": "Reduce accidental shortcuts",
+      "narration": "Three ways to reduce accidental shortcuts. Vary each class: use more than one setting for the cars, and for the mugs. Cross the conditions: avoid giving one background to one class. And test new views: try conditions and objects that weren't used in training. If the model still gets it right, you can trust it a little more."
+    },
+    {
+      "slide": 13,
+      "heading": "Labelling is a design decision",
+      "narration": "Now to labelling, which is a design decision, not a formality. A category needs an operational rule. A clear rule is one another person can apply without guessing what you meant. An edge case is an example near a boundary, or outside the cases you expected. One useful option: you can review or exclude unclear examples instead of forcing a label onto them."
+    },
+    {
+      "slide": 14,
+      "heading": "Banana labelling challenge",
+      "narration": "Time for the banana labelling challenge. Look at the row. A yellow banana with a green tip: which label would you assign? A yellow one with brown spots: does your rule cover it? One that's mostly brown: should it be outside the task altogether? Pause the video and decide for each one before we go on. [pause]"
+    },
+    {
+      "slide": 15,
+      "heading": "Avoid overlapping class rules",
+      "narration": "If your rules were something like \"mostly yellow\" and \"any green\", you've hit a problem. Those two can conflict. A yellow banana with a green tip fits both descriptions. The repair is to say which rule takes priority, or to make the categories exclusive so nothing fits both. Then comes the discipline part: apply the same rule across the whole collection, every time."
+    },
+    {
+      "slide": 16,
+      "heading": "A clearer colour-labelling guide",
+      "narration": "Here's a clearer colour-labelling guide, and the order matters. Rule one: mostly brown, obscured or unclear colour? Exclude it, or set it aside for review. Rule two: visible green, if it wasn't excluded above? That goes in the green-present class. Rule three: no green, mainly yellow, spots allowed? Yellow class. Rule four: doesn't fit any rule confidently? Exclude or review. You check them in that order, top to bottom."
+    },
+    {
+      "slide": 17,
+      "heading": "Write rules you can defend",
+      "narration": "Write rules you can defend, which means describing what the label actually means. Define your terms: explain ambiguous words like \"mostly\". Record your priorities: say which decision comes first. And keep the limit in view. A colour label is not proof that food is safe or ready to eat. It's a label about colour, nothing more."
+    },
+    {
+      "slide": 18,
+      "heading": "Instrument Check: Where does the green-tipped banana go?",
+      "narration": "Instrument check. Where does the green-tipped banana go? Use our guide. It's mostly yellow, with a visible green tip, and nothing triggers an exclusion. Your turn: choose the category, and cite the rule that puts it there. Pause the video and work it out. [pause]"
+    },
+    {
+      "slide": 19,
+      "heading": "Instrument Check: answer. Green-present class",
+      "narration": "The answer is the green-present class. Here's why. Priority: after the exclusions, visible green is checked first. And the yellow class explicitly requires no visible green, so it can't go there. If you're ever uncertain, review the example. Don't quietly invent a new rule halfway through, because then your labels stop being consistent."
+    },
+    {
+      "slide": 20,
+      "heading": "Test the guide with another person",
+      "narration": "Now test your guide with another person, and label independently before you discuss anything. Use the same set: for the Home Lab, start with ten borderline objects or images. Keep decisions separate, with each person applying the same written guide. Then compare. Count the exact matches and investigate every disagreement."
+    },
+    {
+      "slide": 21,
+      "heading": "A simple agreement calculation",
+      "narration": "Here's a simple agreement calculation. This is an illustrative result, not a class test. Say eight labels match out of ten examples. Eight divided by ten, times one hundred, gives eighty per cent agreement. Then discuss the two disagreements. And remember, high agreement does not prove the labels are correct or fair. Two people can agree on the same mistake."
+    },
+    {
+      "slide": 22,
+      "heading": "Disagreement is useful information",
+      "narration": "Disagreement is useful information. Use it to locate the source of the confusion. Look at the rule: does it leave a boundary undefined? Look at the example: is the object unclear, hidden, or outside the intended task? Then write the next version. Revise the guide, and label again independently."
+    },
+    {
+      "slide": 23,
+      "heading": "Privacy: objects only for this project",
+      "narration": "A word on privacy. For this project, it's objects only, so keep people out of the dataset. Use things like toys, mugs, leaves or packaging without identifying details. Do not use faces, or photos of classmates. And check the frame before you shoot: remove names, addresses, school badges and any private background details."
+    },
+    {
+      "slide": 24,
+      "heading": "Permission is part of the plan",
+      "narration": "Permission is part of the plan. Don't treat \"online\" as meaning \"free to use\". For your own collection, use objects and locations you're allowed to photograph. If you want to use someone else's image, check the permission or a suitable licence with your grown-up. And if you're unsure, leave it out and choose a safe alternative."
+    },
+    {
+      "slide": 25,
+      "heading": "The datasheet: Document what others need to know",
+      "narration": "Which brings us to the datasheet. It documents what other people need to know about your data. Purpose: what task was the dataset made for? Provenance: how was it collected and labelled? And limitations: what's missing, and what should it not be used to support?"
+    },
+    {
+      "slide": 26,
+      "heading": "Datasheet: questions 1 to 3",
+      "narration": "Your datasheet has six questions. Here are the first three. One, contents: your classes, their definitions, and how many examples of each. Two, collection: when and where you captured them, on what device, and under what conditions. Three, labelling: who labelled them, which guide they used, and how disagreements were handled."
+    },
+    {
+      "slide": 27,
+      "heading": "Datasheet: questions 4 to 6",
+      "narration": "And questions four to six. Four, gaps: missing conditions, missing object types, and any weaknesses you already know about. Five, permissions: any consent, access or image-use permissions you needed. Six, limits: the uses your collection should not support."
+    },
+    {
+      "slide": 28,
+      "heading": "Write a useful \"not for\" statement",
+      "narration": "That last one deserves its own slide. Write a useful \"not for\" statement, which defines where your evidence stops. For example: \"Made for a classroom mug and car demonstration.\" Then the excluded uses: \"Not tested for every mug or car, or for safety decisions.\" Why bother? Because it stops a small demonstration being treated as a dependable general tool."
+    },
+    {
+      "slide": 29,
+      "heading": "Try It Now: Choose two or three object classes",
+      "narration": "Try it now. Choose two or three object classes. Write a one-line rule for each class. Add one edge case, and your decision about it. Then check: could another person follow your guide without your help? Pause the video and have a go. [pause]"
+    },
+    {
+      "slide": 30,
+      "heading": "Plan collection across four conditions",
+      "narration": "Now plan your collection across four conditions. Pick two locations, A and B, and two kinds of lighting, bright or diffuse, and dimmer. Condition one is location A, bright. Two is location A, dimmer. Three is location B, bright. Four is location B, dimmer. And in every one of those four conditions, you capture every class. That last column is the important one."
+    },
+    {
+      "slide": 31,
+      "heading": "Separate collection from testing",
+      "narration": "Separate collection from testing, and keep genuinely new examples for evaluation. Next week's training uses the examples you select for learning. Held-out testing uses examples that were not included in training. And watch out for leakage: near-identical frames from one capture sequence are not a strong independent test, even if you split them between the two piles."
+    },
+    {
+      "slide": 32,
+      "heading": "Common Turbulence: one desk, one light",
+      "narration": "Common turbulence: one desk, one light. A narrow collection hides weaknesses. The problem is that everything gets captured under the same conditions. The risk is that results may get worse the moment you move to another setting. The repair is to vary your conditions and check performance on new examples."
+    },
+    {
+      "slide": 33,
+      "heading": "Memory Hook: Volume. Variety. Balance.",
+      "narration": "Here's your memory hook. Volume. Variety. Balance. Then, label it clearly. And document the gaps. One honest note to keep checking yourself against: these habits help, but they do not guarantee accuracy or fairness."
+    },
+    {
+      "slide": 34,
+      "heading": "Pre-Landing Check 1: How can 90% accuracy hide a serious failure?",
+      "narration": "Pre-landing check one. How can ninety per cent accuracy hide a serious failure? Your turn. Use the example with ninety mugs and ten cars. Pause the video and explain it in your own words. [pause]"
+    },
+    {
+      "slide": 35,
+      "heading": "Check 1: answer. Always guessing the larger class",
+      "narration": "Here's the answer: the model always guesses the larger class. For mugs, that's ninety correct out of ninety. For cars, zero correct out of ten. Overall, it's ninety correct out of one hundred, while every single car is missed."
+    },
+    {
+      "slide": 36,
+      "heading": "Pre-Landing Check 2: What is shortcut learning?",
+      "narration": "Pre-landing check two. What is shortcut learning? Your turn. Explain it using the car and mug backgrounds. Pause the video and give it a go. [pause]"
+    },
+    {
+      "slide": 37,
+      "heading": "Check 2: answer. Using an unintended cue",
+      "narration": "Shortcut learning means using an unintended cue. In our fictional example, background colour is associated with the class, so blue mat means car and cream mat means mug. Your response is to vary the backgrounds across each class and test new combinations."
+    },
+    {
+      "slide": 38,
+      "heading": "Pre-Landing Check 3: Name Week 2's four rubric criteria",
+      "narration": "Pre-landing check three takes you back a week. Can you name Week 2's four rubric criteria? Your turn. Here's a nudge: think truth, task, audience and structure. Pause the video and see if you can name all four. [pause]"
+    },
+    {
+      "slide": 39,
+      "heading": "Check 3: answer. Accuracy. Relevance. Clarity. Format.",
+      "narration": "The four criteria are accuracy, relevance, clarity and format. A reminder on accuracy: unverified is not the same as correct. And now apply it here. Review whether your own labelling guide is clear and fit for purpose. The rubric works on your own work, too."
+    },
+    {
+      "slide": 40,
+      "heading": "Home Lab: Design Your Dataset",
+      "narration": "Your Home Lab this week: design your dataset. Step one, define. Choose two or three object classes, and write rules plus two edge cases. Step two, compare. Two people label ten borderline examples independently. Step three, plan. Two locations times two lighting conditions, aiming for fifty or more examples per class. Step four, document. Draft the six-question datasheet, and mark any counts you haven't collected yet as planned. Allow about sixty minutes. Use objects without personal information, and never faces."
+    },
+    {
+      "slide": 41,
+      "heading": "Your Project Log: Entry 3",
+      "narration": "Time for your project log, entry three. Keep a record another person can understand. Your labelling guide: its version, the class rules, exclusions and edge cases. Your agreement check: the initial labels, the matches, the disagreements and what you revised. And your draft datasheet: the collection plan, gaps, permissions and limits."
+    },
+    {
+      "slide": 42,
+      "heading": "Offline option: Use objects in front of you",
+      "narration": "No camera, or no device? There's an offline option. Use objects in front of you. Inspect ten items or views directly. Keep decisions independent: record your labels privately, then compare. The deliverables stay the same. Write the guide, the collection plan and the datasheet on paper."
+    },
+    {
+      "slide": 43,
+      "heading": "Parent & Guardian Brief",
+      "narration": "This one's for your parent or guardian. Your job this week is to help with permissions and independent labelling. Before collection, check the scene for faces and identifying details. During the lab, use the guide without coaching the student's labels, so the agreement check stays honest. And afterwards, talk it through together: what's missing from this collection, and why does it matter?"
+    },
+    {
+      "slide": 44,
+      "heading": "Ready for Week 4: Building an Image Model",
+      "narration": "[warmly] That's Week 3 done. Next week is Building an Image Model. Bring your labelling guide and your collection plan. We'll train, test with held-out examples, and inspect the errors. Until then, keep the habit. Label clearly. Document the gaps. See you next week."
+    }
+  ]
+}

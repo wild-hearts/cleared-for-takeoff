@@ -1,0 +1,227 @@
+{
+ "course": "junior",
+ "week": 7,
+ "title": "Junior AI Navigators, Week 7: Scratch Helpers",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "Junior AI Navigators, Week 7: Scratch Helpers",
+   "narration": "[warmly] Hello, Navigators, and welcome back to Ground School with Captain Naomi. This is Week 7, and today we are Scratch Helpers. You are going to build a real game, and it has a cat in it. Buckle up."
+  },
+  {
+   "slide": 2,
+   "heading": "Pre-Flight",
+   "narration": "Here is today's flight plan. Write rules. Build. Test. Improve. First, we will compare two ways of making a computer do things: written rules, and learning from examples. Then you will build a cat that follows your pointer and catches a star. And then we will add a score, so you win at 10 catches."
+  },
+  {
+   "slide": 3,
+   "heading": "Take-Off Question",
+   "narration": "Here is your Take-Off Question. Think back to Week 4. How did you train your model? Did you write a rule for every picture? Or did you give it examples of each toy? Pause the video and talk it over with your grown-up. [pause]"
+  },
+  {
+   "slide": 4,
+   "heading": "Take-Off answer: You supplied examples",
+   "narration": "You gave it examples. Your training set was pictures of the teddy and the car. The model learned what those toys look like from those examples. Then, at test time, you showed it a new picture, and it guessed a label for it. No rule for every picture needed."
+  },
+  {
+   "slide": 5,
+   "heading": "Two approaches we are comparing",
+   "narration": "So we have two ways to compare today. The first is written rules. People spell out the instructions, and the conditions for when to follow them. The second is machine learning. People give the computer training examples, and a model learns patterns from them. Keep both of these in your pocket. We will use them all lesson."
+  },
+  {
+   "slide": 6,
+   "heading": "A written rule: If this happens, do this",
+   "narration": "A written rule works like this: if this happens, do this. The first part is the condition. That is something the program checks. The second part is the action. That is what the program does if the condition is true. Here is one from our game. If the score equals 10, say You win!"
+  },
+  {
+   "slide": 7,
+   "heading": "Learning from examples: Find patterns in labelled examples",
+   "narration": "Learning from examples means finding patterns in labelled examples. For training, you use lots of different bird pictures, each with a label. Then the model makes a prediction. It tries to tell a magpie from a kookaburra. Then comes checking. You test it on new pictures, because its guesses still need checking."
+  },
+  {
+   "slide": 8,
+   "heading": "Instrument Check 1",
+   "narration": "Instrument Check time. Here is a line of code: If Score equals 10, say You win! Your turn. Is that a written rule, or learning from examples? Pause the video and talk it over with your grown-up. [pause]"
+  },
+  {
+   "slide": 9,
+   "heading": "Instrument Check 1: answer: A written rule",
+   "narration": "It is a written rule. The condition is Score equals 10. The action is saying You win! And here is the clue that gives it away. A person decided exactly what to check and exactly what to do. Nobody showed the computer any examples."
+  },
+  {
+   "slide": 10,
+   "heading": "Instrument Check 2",
+   "narration": "Here is Instrument Check 2. A model trains on labelled bird pictures. Your turn. Is that a written rule, or learning from examples? Pause the video and have a chat with your grown-up. [pause]"
+  },
+  {
+   "slide": 11,
+   "heading": "Instrument Check 2: answer: Learning from examples",
+   "narration": "This one is learning from examples. The examples are labelled pictures of different birds. The model learns useful patterns while it trains. But there is a limit. It still makes predictions, which are guesses, and those need testing. A magpie might sometimes get called a kookaburra."
+  },
+  {
+   "slide": 12,
+   "heading": "Build: Catch the Star",
+   "narration": "Now for the fun part. Let's build Catch the Star. The cat catches a moving star. You are in control. You move your pointer around the Stage, and the cat follows. The rule is: if the star touches the cat, count one catch. The goal? Reach 10 catches to win."
+  },
+  {
+   "slide": 13,
+   "heading": "Open Scratch with your grown-up",
+   "narration": "Open Scratch with your grown-up. Start at scratch dot mit dot e d u. Choose Create to open the editor. You can start building without signing in. For this guide, use a computer with a mouse or a trackpad. And at the end, you will save a project file to your computer, so your game is safe."
+  },
+  {
+   "slide": 14,
+   "heading": "Meet the editor: Know where your work goes",
+   "narration": "Let's meet the editor, so you know where your work goes. The Stage is the area where your game runs. Sprites are the characters and objects in your game, like our cat and our star. The code area is where you connect blocks for whichever sprite you have selected."
+  },
+  {
+   "slide": 15,
+   "heading": "Set up your two sprites: Name them Cat and Star",
+   "narration": "Time to set up your two sprites, and name them Cat and Star. For the cat, select the cat that is already there and change its sprite name to Cat. For the star, use Choose a Sprite, search for Star, and add it. Names matter here. Later, you will pick Cat in the star's touching dropdown."
+  },
+  {
+   "slide": 16,
+   "heading": "Code the Cat",
+   "narration": "Let's code the Cat. Select Cat, then connect this stack. Start with when green flag clicked. Under it, go to x zero, y minus 120. Then a forever block. And inside forever, go to mouse pointer. That last block is what makes the cat chase your pointer."
+  },
+  {
+   "slide": 17,
+   "heading": "Test the Cat: Press the green flag",
+   "narration": "Now test it. Press the green flag. Move your pointer, and keep it inside the Stage. What should happen? The cat follows your pointer around. [laughs softly] Very obedient cat. If nothing happens, check that your blocks are all joined together, and that they are on Cat."
+  },
+  {
+   "slide": 18,
+   "heading": "The first Star rule",
+   "narration": "Now the first Star rule. Select Star. Start with when green flag clicked, then go to random position. Add a forever block. Inside it, put an if block, and put the touching Cat test inside the if. Then, inside the if, add say Caught me! for 1 second, and go to random position."
+  },
+  {
+   "slide": 19,
+   "heading": "What happens when the star is caught?",
+   "narration": "So what happens when the star is caught? Three things. First, check. Is Star touching Cat? Second, respond. The star says Caught me! for one second. Third, move. The star jumps to a random spot, and then it checks again. Over and over."
+  },
+  {
+   "slide": 20,
+   "heading": "Test your first rule: Move Cat onto Star",
+   "narration": "Test your first rule. Move the cat onto the star. With one touch, the star should say Caught me! and move away. Try again. Chase the cat to the star's new spot. And notice something. Everything the star just did came from the instructions you wrote."
+  },
+  {
+   "slide": 21,
+   "heading": "Mission: Add a score",
+   "narration": "New mission: add a score, so the game can remember how many catches you made. Go to Variables and choose Make a Variable. Name it Score. Choose For all sprites, so the whole game shares one score. Then keep the Score display showing on the Stage, so you can watch it go up."
+  },
+  {
+   "slide": 22,
+   "heading": "Reset before every game: Start Score at 0",
+   "narration": "Every game should start with Score at zero. On Star, put set Score to zero just after the green flag block. When there is a catch, put change Score by 1 inside the touching condition. And keep just one scoring script. Replace the old Star stack. Do not keep a copy of it."
+  },
+  {
+   "slide": 23,
+   "heading": "Star: start and catch",
+   "narration": "Here is the start of the new Star stack with scoring. When green flag clicked. Set Score to zero. Go to random position. Forever. Inside that, if touching Cat, then change Score by 1. We are not finished yet. We keep going on the next slide."
+  },
+  {
+   "slide": 24,
+   "heading": "Star: check for a win",
+   "narration": "Keep going inside the touching condition, after the change Score block. Add an if, else block. If Score equals 10, say You win! for 2 seconds, then stop all. Else, which means otherwise, say Caught me! for 1 second."
+  },
+  {
+   "slide": 25,
+   "heading": "Star: find a clear new position",
+   "narration": "Now help the star find a clear new spot. Put this loop inside the else part, under Caught me! Repeat until not touching Cat, go to random position. That means the star keeps jumping until it lands somewhere away from the cat."
+  },
+  {
+   "slide": 26,
+   "heading": "The complete Star logic",
+   "narration": "Here is the whole Star plan, in one green flag stack. Start, set Score to zero, go to a random position. Then forever, if touching Cat, change Score by 1. If Score equals 10, say You win! for 2 seconds and stop all. Otherwise, say Caught me! and jump until it is clear of Cat. That jumping loop sits inside else, so each catch counts once."
+  },
+  {
+   "slide": 27,
+   "heading": "Test before you call it finished",
+   "narration": "Before you call it finished, test it. Start again. The green flag should reset Score to zero. Catch once. One careful catch should add just 1. Keep playing. After a catch, the star should jump clear of the cat. Reach 10. You win! should appear, and both scripts should stop."
+  },
+  {
+   "slide": 28,
+   "heading": "A bug is something to investigate",
+   "narration": "If something goes wrong, that is a bug, and a bug is something to investigate. Compare what you expected with what really happened. First, write one clear sentence about what you wanted. Next, describe what happened instead. Then change one thing that might fix it, and test again."
+  },
+  {
+   "slide": 29,
+   "heading": "Bug check: the score rises too fast",
+   "narration": "Bug check. Is your score going up too fast? Each catch should only count once. Check for copies, and remove any extra scoring scripts on Star. Check where things are. Change Score by 1 belongs inside touching Cat. And check the star jumps away properly. Use repeat until not touching Cat before another catch can happen."
+  },
+  {
+   "slide": 30,
+   "heading": "Bug check: touching does nothing",
+   "narration": "Bug check. Does touching do nothing at all? Check the sprite and the dropdown. The catch stack belongs on Star. In the touching block, choose Cat, spelled exactly like the sprite's name. And make sure the blocks are joined, with the forever loop sitting under the green flag block."
+  },
+  {
+   "slide": 31,
+   "heading": "Bug check: no win at 10",
+   "narration": "Bug check. No win at 10? Check the order, and check which blocks sit inside which. First, change Score by 1. Then, test if Score equals 10, inside the catch condition. Finally, say You win! and stop all, in the part that runs when the answer is yes."
+  },
+  {
+   "slide": 32,
+   "heading": "Captain's Tip: change one thing",
+   "narration": "Captain's Tip. Make one small change, then test. Try a new message. Swap Caught me! for something funny. Try a new costume. If you change how the cat looks, keep its sprite name as Cat. And before you experiment, save, so you always have the version that works."
+  },
+  {
+   "slide": 33,
+   "heading": "Save your game: Keep a local project file",
+   "narration": "Now save your game, so it lives on your computer. In the File menu, choose Save to your computer. Call it Catch the Star dot s b 3. To open it later, use File, then Load from your computer. Ask first before you replace any work."
+  },
+  {
+   "slide": 34,
+   "heading": "Oops! Clever does not always mean AI",
+   "narration": "Oops! Clever does not always mean AI. Our game follows written rules. Catch the Star uses conditions, loops and actions that you spelled out. Your toy model from Week 4 used machine learning from examples. That is a useful difference to know, but some AI systems use rules too, or mix both."
+  },
+  {
+   "slide": 35,
+   "heading": "Remember Rhyme: Rules are told. Models are shown.",
+   "narration": "Here is a little saying to help you remember. Rules are told. Models are shown. In this lesson, you told the game its rules, and you showed the toy model examples. It is a handy way to remember the difference. It just does not describe every AI system out there."
+  },
+  {
+   "slide": 36,
+   "heading": "Quick Check 1",
+   "narration": "Quick Check 1. What two approaches did we compare today? Here is a hint. Think about game instructions, and think about labelled pictures. Pause the video and talk it over with your grown-up. [pause]"
+  },
+  {
+   "slide": 37,
+   "heading": "Quick Check 1: answer: Rules and learning from examples",
+   "narration": "We compared rules and learning from examples. With rules, people spell out the conditions and the actions. With machine learning, a model learns patterns from training examples."
+  },
+  {
+   "slide": 38,
+   "heading": "Quick Check 2",
+   "narration": "Quick Check 2. What is a bug? Here is a hint. What do programmers look into and fix? Pause the video and chat about it with your grown-up. [pause]"
+  },
+  {
+   "slide": 39,
+   "heading": "Quick Check 2: answer: A problem in a program",
+   "narration": "A bug is a problem in a program. Your clue is when something does not do what you meant it to do. Your next step is to describe the problem, test it, and fix it. Just like you did with the star."
+  },
+  {
+   "slide": 40,
+   "heading": "Quick Check 3",
+   "narration": "Quick Check 3 takes us way back to Week 2. Do you remember WHAT, WHO and HOW? What do you tell an AI tool when you ask it for help? Pause the video and talk it over with your grown-up. [pause]"
+  },
+  {
+   "slide": 41,
+   "heading": "Quick Check 3: answer",
+   "narration": "You tell it what you want, who it is for, and how you want it. WHAT is the task or information you need. WHO is the audience, the people it is for. HOW is the format or style you want the answer in."
+  },
+  {
+   "slide": 42,
+   "heading": "Your Flight Log: Write one of your rules",
+   "narration": "Time for your Flight Log. Write down one of your rules. Finish this sentence: If something happens, then something else happens. Record one bug you fixed, or one change you tested. Then think about this. Did you write rules for this game, or train it with examples? Pause the video and fill in your Flight Log. [pause]"
+  },
+  {
+   "slide": 43,
+   "heading": "Grown-Up Corner: Help them explain and test",
+   "narration": "This bit is for your grown-up. Help them explain and test. Ask: what do you want the game to do? Support them by checking one stack at a time, and saving the game on your computer. And on privacy, there is no need to share any projects publicly for this course."
+  },
+  {
+   "slide": 44,
+   "heading": "Programmer: Your Week 7 Flight Log stamp",
+   "narration": "[warmly] And that earns you your Week 7 Flight Log stamp. Programmer! You compared written rules and machine learning. You built a game you control with your pointer, with a score and a way to win. Next week is Safe and Smart Online, where we check media and learn to ask for help. See you then, Navigator."
+  }
+ ]
+}

@@ -1,0 +1,191 @@
+{
+  "week": 3,
+  "title": "Junior AI Navigators Week 3: Machines That See",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Week 3: Machines That See",
+      "narration": "[warmly] Hello, Navigators, and welcome back to Ground School with Captain Naomi. This is week three, and today's flight is called Machines That See. Grab your grown-up, buckle in, and let's get ready for take-off."
+    },
+    {
+      "slide": 2,
+      "heading": "Pre-Flight",
+      "narration": "Time for our Pre-Flight check. Today's big question: how does a computer recognise a picture? Your first goal is to explore how labelled pictures help a model learn patterns. Your second goal is to choose examples that are lots, different and fair. And your mission? Sort some objects into groups, then let your grown-up guess your rule."
+    },
+    {
+      "slide": 3,
+      "heading": "Meet the Zibs and Zobs",
+      "narration": "Meet the Zibs and the Zobs. The Zibs are on the left, and the Zobs are on the right. Look closely at the Zibs. What features do they all share? Now look at the Zobs. What makes that group different? Have a good look with your grown-up, because you'll need sharp eyes for the next question."
+    },
+    {
+      "slide": 4,
+      "heading": "Take-Off Question",
+      "narration": "Take-Off Question time. Which group does this creature belong to? Compare it with the Zibs and Zobs you just met. Then explain your guess. Which features helped you choose? Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 5,
+      "heading": "Take-Off Question: answer",
+      "narration": "Did you say a Zib? Well spotted. Its body has a round shape, and it's blue and spotty, just like the Zib examples. You had never seen this creature before, but you used a pattern to work out where it belongs. Hold on to that idea, because it's about to come in very handy."
+    },
+    {
+      "slide": 6,
+      "heading": "Learning from examples",
+      "narration": "So what just happened? You found a pattern in the pictures. You started with examples labelled Zib and Zob. You compared them, and noticed features that repeated in each group. Then you made a prediction, and chose the group that matched the new creature. Starting point, comparison, prediction. Keep those three steps handy."
+    },
+    {
+      "slide": 7,
+      "heading": "Image classifiers",
+      "narration": "Computers that sort pictures are called image classifiers. A classifier sorts inputs into groups. First, a picture goes in, like a photo of a cat. Next, a trained model responds, using patterns it learned from its training examples. Then a group comes out. The model predicts a label, such as Cat or Dog. See the cat photo going in, and the cat sign coming out?"
+    },
+    {
+      "slide": 8,
+      "heading": "Labelling",
+      "narration": "Those labels are important. A label tells us which group an example belongs to. A cat picture gets the label Cat. A dog picture gets the label Dog. But if the labels are wrong, they can teach the model unhelpful patterns. Imagine a dog photo labelled Cat. [laughs softly] That's exactly the kind of mix-up we want to avoid."
+    },
+    {
+      "slide": 9,
+      "heading": "Examples, labels and a prediction",
+      "narration": "Let's put it all together. First comes training. Labelled examples help a model learn visual patterns, which means patterns you can see. Then a new input arrives: a new picture goes to the trained model. Last comes the prediction. The model suggests the group that fits those patterns. In the picture, lots of cat and dog photos go in, a new cat photo comes along, and out pops Cat."
+    },
+    {
+      "slide": 10,
+      "heading": "A new picture",
+      "narration": "How do we know if a prediction is any good? A prediction needs a fair test. Keep a few examples aside, pictures the model did not train on. Try something different, like a new pose or background, to see whether the pattern still helps. Then check the result, because even a confident prediction might still be wrong."
+    },
+    {
+      "slide": 11,
+      "heading": "Good training examples",
+      "narration": "So what makes good training examples? Three words: lots, different and fair. Lots means enough of the right examples to learn useful patterns. Different means a range of views, looks and backgrounds. Fair means giving the groups a useful, reasonably balanced mix. Let's look at each one."
+    },
+    {
+      "slide": 12,
+      "heading": "1. Lots",
+      "narration": "Rule number one: lots. One example gives a limited view. A single picture shows only one look, one pose and one background. More of the right examples give the model more chances to find useful patterns. But quality still matters. Repeating mistakes or wrong labels does not solve the problem."
+    },
+    {
+      "slide": 13,
+      "heading": "2. Different",
+      "narration": "Rule number two: different. Show more than one version. Different looks: black cats, ginger cats, fluffy cats and short-haired cats. Different views: from the front, from the side, curled up or standing. And different backgrounds, because a cat should not have to sit on one particular rug. [curious] Hmm. A rug. Let's think about that rug."
+    },
+    {
+      "slide": 14,
+      "heading": "The red-rug mistake",
+      "narration": "Welcome to the red-rug mistake. What if every cat sits on the same rug? In the training examples, every cat picture has the same red rug. So the model might connect the rug with the label Cat. Now for the test. Show the model the rug without a cat. What might the model predict? Have a think with your grown-up. [pause]"
+    },
+    {
+      "slide": 15,
+      "heading": "A possible wrong prediction",
+      "narration": "Uh oh. Look at what the model saw: cats and the same rug, together, every single time. Now the test shows the rug still there, but the cat is missing. See the little warning sign? The model might still say Cat. So what do we learn? Change the backgrounds, and check with new examples."
+    },
+    {
+      "slide": 16,
+      "heading": "A better mix",
+      "narration": "Let's fix it with a better mix. Change the examples, then test again. Vary the background: show cats on grass, on cushions and on different floors. Vary the subject: include cats with different colours, coats and poses. Then test with new pictures, and check whether the model recognises cats in pictures it hasn't seen before."
+    },
+    {
+      "slide": 17,
+      "heading": "3. Fair",
+      "narration": "Rule number three: fair. Give each group a useful mix. A group with only a few examples might not show enough variety to learn from. A group with lots of examples still needs the right pictures and correct labels. In our activity, aim for roughly the same amount and variety in each group, then test the results. Zibs and Zobs both deserve a fair go."
+    },
+    {
+      "slide": 18,
+      "heading": "Instrument Check",
+      "narration": "Instrument Check, Navigators. What are the three rules for examples? Try to name all three before you see the answer. Here's a clue: think about amount, variety, and the mix between groups. Pause the video and say them out loud to your grown-up. [pause]"
+    },
+    {
+      "slide": 19,
+      "heading": "Instrument Check: answer",
+      "narration": "How did you go? The three rules are lots, different and fair. Lots: use enough of the right examples. Different: include a variety of looks, views and backgrounds. Fair: give the groups a useful, reasonably balanced mix. Got all three? Give yourself a pilot's salute."
+    },
+    {
+      "slide": 20,
+      "heading": "Captain's Tip: be the teacher",
+      "narration": "Captain's Tip: be the teacher. Your choices shape what the classifier learns. You choose the groups, so you decide what the classifier is learning to tell apart. You choose the examples, so look for a good range, not the same view over and over. And you check the guesses. Try new examples, and notice the mistakes."
+    },
+    {
+      "slide": 21,
+      "heading": "Mission: The Sorting Game",
+      "narration": "Now for your mission: The Sorting Game. It has three steps. Collect: find about twelve safe objects with your grown-up. Sort: choose a secret rule and make two groups. Guess: let your grown-up look carefully at your groups and try to guess your rule. [laughs softly] No peeking, grown-ups."
+    },
+    {
+      "slide": 22,
+      "heading": "A sorting example",
+      "narration": "Let's look at an example. The rule is: natural, or made by people? One group has leaves, stones, twigs and pine cones. The other group has wooden pieces, building bricks, spoons and buttons. For your challenge, choose your own secret rule, so your grown-up's guess really means something."
+    },
+    {
+      "slide": 23,
+      "heading": "Other sorting rules",
+      "narration": "Your objects might have a different pattern hiding in them. You could sort smooth from bumpy, by comparing how the objects feel. Or things with holes from things with no holes, by looking closely at their shapes. Whatever rule you pick, keep it the same all the way through. Check that every object belongs in the group you chose."
+    },
+    {
+      "slide": 24,
+      "heading": "Mission pause",
+      "narration": "Mission pause! Stop the video here and try your sorting game. Get ready with your objects, two bowls or paper circles, your Flight Log and a pencil. It takes about ten minutes, but work at your own pace. When you're ready, come back with your groups and be ready to explain what happened. [pause]"
+    },
+    {
+      "slide": 25,
+      "heading": "Welcome back, Navigators",
+      "narration": "[warmly] Welcome back, Navigators. So, did your grown-up find the pattern? If they guessed it, ask them which examples helped them most. If they didn't, try another example, or find a clearer way to show your groups. Then record the result. Draw your groups and write your secret rule in your Flight Log."
+    },
+    {
+      "slide": 26,
+      "heading": "Oops! Moment",
+      "narration": "Time for an Oops Moment. Recognising a picture has limits. An image classifier uses patterns it learned from pictures to predict a group. But a Cat label on its own does not mean the model knows everything cats do. That's why we test. A model might react to something unexpected, like a background or a tiny detail. Remember that red rug?"
+    },
+    {
+      "slide": 27,
+      "heading": "Remember Rhyme",
+      "narration": "Here's a rhyme to help you remember. Say it together with your grown-up. Lots, different, fair. Good examples everywhere! [short pause] And remember the checking habit, too. Useful examples help, but we still test the model's predictions."
+    },
+    {
+      "slide": 28,
+      "heading": "Quick Check 1",
+      "narration": "Quick Check number one. What do we call giving a picture its group? Think about a cat picture and the word Cat. Pause the video and tell your grown-up your answer. [pause]"
+    },
+    {
+      "slide": 29,
+      "heading": "Quick Check 1: answer",
+      "narration": "The answer is labelling. The label tells us which group the example belongs to. So, this is a cat picture, and its label is Cat. Nice work. On to the next one."
+    },
+    {
+      "slide": 30,
+      "heading": "Quick Check 2",
+      "narration": "Quick Check number two. Why might the red rug cause a problem? Think about what shows up in every single training picture. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 31,
+      "heading": "Quick Check 2: answer",
+      "narration": "The model might learn the wrong pattern. That's the confusion. The rug could become a clue for Cat, even when there's no cat there at all. What helps? Use different backgrounds, and test with new pictures."
+    },
+    {
+      "slide": 32,
+      "heading": "Quick Check 3",
+      "narration": "Quick Check number three takes us back to week two. What is the Playground Test? How does that memory aid help you protect private information? Pause the video and see if you and your grown-up can remember it. [pause]"
+    },
+    {
+      "slide": 33,
+      "heading": "Quick Check 3: answer",
+      "narration": "Private details stay out of AI prompts. The memory aid goes like this: if you would not shout it across the playground, do not put it into AI. And one extra check. Even public information is not automatically okay to share with AI."
+    },
+    {
+      "slide": 34,
+      "heading": "Your Flight Log",
+      "narration": "Now open your Flight Log. Draw your groups and explain the rule. For group one, draw or list a few of its examples. For group two, show how those examples are different. Then write your reflection. What was your secret rule? And which example helped your grown-up make their guess?"
+    },
+    {
+      "slide": 35,
+      "heading": "Our course rules",
+      "narration": "Before we land, here are our course rules. You decide: you choose the task, and you check the result. The co-pilot seat: a grown-up is in charge of any chat with a chatbot. Private stays private: keep names, addresses, passwords and personal photos out. And AI is a tool. Friendship and support come from people you trust."
+    },
+    {
+      "slide": 36,
+      "heading": "Ready for next week",
+      "narration": "Ready for next week? Choose two toys that look different, like a teddy and a toy car. Ask your grown-up to check the computer, the browser and the camera setup. And remember our picture rule. Use toys and objects, and keep faces and private details out."
+    },
+    {
+      "slide": 37,
+      "heading": "Machines That See",
+      "narration": "[warmly] That's Machines That See, and you've earned your week three Flight Log stamp. You learned that labelled examples help image classifiers learn visual patterns. You practised lots, different and fair with the Sorting Game. Next week is Train Your First Classifier, where you'll teach a model using two toys. See you on the runway, Navigators."
+    }
+  ]
+}

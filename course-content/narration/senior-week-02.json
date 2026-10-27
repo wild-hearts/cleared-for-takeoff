@@ -1,0 +1,232 @@
+{
+ "course": "senior",
+ "week": 2,
+ "title": "Week 2: Prompt Design and Evaluation",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "Senior AI Pilots, Week 2: Prompt Design and Evaluation",
+   "narration": "[warmly] Welcome back to Ground School. I'm Captain Naomi, and this is Week 2: Prompt Design and Evaluation. Last week you learned what these tools are. This week you learn to ask them properly, and then to check what comes back."
+  },
+  {
+   "slide": 2,
+   "heading": "Mission Brief",
+   "narration": "Here's your mission brief, and it fits in six words: write the request, measure the response. You'll structure your prompts using Context, Task, Format and Tone. You'll evaluate outputs by scoring them against criteria you set in advance. And you'll compare, testing one prompt change across repeated runs, so your conclusions rest on more than a single lucky answer."
+  },
+  {
+   "slide": 3,
+   "heading": "The Hook: Prompt A",
+   "narration": "Let's start with a real prompt. Prompt A, in full: \"W W 1 causes.\" That's it. Two words and an abbreviation. So, what's missing from this request? Think about the audience, the task, the scope and the format. Pause the video and make a quick list before you go on. [pause]"
+  },
+  {
+   "slide": 4,
+   "heading": "The Hook: Prompt B",
+   "narration": "Now Prompt B. \"I'm in Year 9. Explain four main long-term causes of World War One in a table. Include one brief explanation and one example per cause. Use plain English. Test me with three questions.\" Notice how much more the tool has to work with. One note: this is a prompt demonstration only. We're not showing a historical answer or claiming any actual output."
+  },
+  {
+   "slide": 5,
+   "heading": "Which request is easier to evaluate?",
+   "narration": "So which request is easier to evaluate? Prompt B, because it gives clearer requirements. The audience is Year 9. The deliverable is a table with explanations and examples, plus a quiz. You can hold the answer up against that and see whether it delivered. There's a limit, though. More structure does not guarantee historical accuracy. A tidy table can still be wrong."
+  },
+  {
+   "slide": 6,
+   "heading": "C-T-F-T: the prompt structure",
+   "narration": "That brings us to the structure we'll use all week: C-T-F-T. Context asks who the audience is and what situation matters. Task asks what the tool should actually do. Format asks what shape the answer should take. And Tone asks how the language should sound. Four questions, and each one closes a gap that Prompt A left wide open."
+  },
+  {
+   "slide": 7,
+   "heading": "Context",
+   "narration": "Context means supplying relevant background. Something like, \"This is for a Year 9 revision activity,\" is useful. What's unnecessary is names, addresses, school identifiers and other private details. The tool doesn't need them, so don't hand them over. Here's the test for any detail: does this help the tool meet the task? If it doesn't, leave it out."
+  },
+  {
+   "slide": 8,
+   "heading": "Task",
+   "narration": "Task is about using a concrete action. Choose a verb: explain, compare, quiz, summarise or critique. Then set the scope. Say which topic, and how much detail you need. And keep your role. You're the student here, so ask for learning support that fits the assignment rules, rather than asking the tool to do the assignment for you."
+  },
+  {
+   "slide": 9,
+   "heading": "Format",
+   "narration": "Format means defining an output you can check. A table, three questions, or a short paragraph are all good examples. Be specific: name the columns, the sections, or the number of items you want. Why does it help? Because then you can check whether the result actually follows your request. \"Three questions\" is easy to count. \"Some questions\" is anyone's guess."
+  },
+  {
+   "slide": 10,
+   "heading": "Tone",
+   "narration": "Tone is matching the language to the audience. Plain English is useful when you want an explanation of a new topic. A formal tone is useful when the task requires a formal register, like a report or an essay. But treat tone as a separate check from truth. Clear wording and a suitable tone do not establish that anything in the answer is correct."
+  },
+  {
+   "slide": 11,
+   "heading": "Upgrade 1: an example",
+   "narration": "Once you've got C-T-F-T down, there are two upgrades. Upgrade one is giving an example, to show the pattern you want. Keep it short: one relevant example of the style or structure. Use safe material, meaning something you wrote yourself or something you're permitted to use. Then check the result. Make sure the tool follows your pattern without copying across unwanted details from the example."
+  },
+  {
+   "slide": 12,
+   "heading": "Upgrade 2: constraints",
+   "narration": "Upgrade two is constraints, which are useful limits. A length constraint might be, \"Keep the explanation under 150 words.\" A scope constraint might be, \"Use only the passage supplied below.\" And for uncertainty, you can ask it to \"Flag uncertainty.\" Then check whether the tool actually does so reliably, because asking for something and getting it are two different events."
+  },
+  {
+   "slide": 13,
+   "heading": "Pilot's Tip: ask for questions first",
+   "narration": "Here's a Pilot's Tip. Before the tool answers, have it ask you questions first. Something like: \"Before you answer, ask me three questions, one at a time, so you understand what I need.\" It's a neat way to fill in the context you forgot. Just remember, you're still in charge. Answer only relevant, non-sensitive questions. You decide what information to share."
+  },
+  {
+   "slide": 14,
+   "heading": "How do you know an answer is good?",
+   "narration": "So, how do you know an answer is good? You set your criteria before reading the result, so a confident-sounding answer can't talk you into a higher score. The tool for this is a rubric, which is a scoring guide with clear descriptions. We'll use four criteria: accuracy, relevance, clarity and format. And for useful evidence, write a reason beside each score."
+  },
+  {
+   "slide": 15,
+   "heading": "The four-criterion rubric",
+   "narration": "Here's the rubric, scored from one to three. Accuracy: one means major checked errors, two means some checked errors, three means the checked claims are correct. Relevance: off-task, partly on-task, or meets the task. Clarity: hard to follow, understandable, or clear for the audience. Format: ignored, partly followed, or followed fully. Four criteria, three points each."
+  },
+  {
+   "slide": 16,
+   "heading": "Accuracy needs a separate check",
+   "narration": "Accuracy needs a separate check, because you must not score confidence as correctness. Verify the claims by comparing factual statements with suitable sources. If you haven't checked yet, mark accuracy as N C, for not checked, rather than guessing a score. And for your total, only calculate a full score out of 12 when all four criteria have actually been scored."
+  },
+  {
+   "slide": 17,
+   "heading": "Relevance",
+   "narration": "Relevance asks one thing: did the answer do the requested job? Look for the specified topic, audience and task. Watch for useful-looking material that answers a different question. It can be interesting and still miss the point. Then record one sentence showing why you chose the score, so future you knows what present you was thinking."
+  },
+  {
+   "slide": 18,
+   "heading": "Clarity",
+   "narration": "Clarity asks whether the intended reader can understand it. Check the language: are unfamiliar terms explained? Check the organisation: can you follow the order of ideas? Then try the reader test. Explain one part in your own words. If you can't, that tells you something about the clarity score."
+  },
+  {
+   "slide": 19,
+   "heading": "Format",
+   "narration": "Format asks whether the answer followed the requested structure. Check the details: the number of items, the table columns, and the word limit. Keep it as a separate criterion, because a perfect table can still contain false information. And score what you see. Use the rubric, rather than the amount of effort the output seems to show."
+  },
+  {
+   "slide": 20,
+   "heading": "A small scoring example",
+   "narration": "Let's try a small scoring example. The request: \"Explain evaporation for Year 8 in exactly three bullet points.\" The response: four clear paragraphs. Clear, yes, but not what was asked. So the format score is one, because the requested bullet structure was ignored. And accuracy still needs checking separately. Clear paragraphs tell you nothing about whether the facts are right."
+  },
+  {
+   "slide": 21,
+   "heading": "Two different comparisons",
+   "narration": "Now for comparing prompts. There are two different kinds of comparison, and a rewrite is not always a controlled test. A broad rewrite changes several parts at once, which is great for practising clearer prompting. A controlled A B test changes one selected feature while holding the others steady. The distinction matters, because a broad rewrite can't tell you which single change helped."
+  },
+  {
+   "slide": 22,
+   "heading": "A/B test design",
+   "narration": "Here's how to design an A B test. Keep steady the topic, task, audience, tone and relevant settings. Change one feature, for example, paragraph versus bullet format. Then measure, using the same rubric and the same evidence standards for both versions. Same everything, except the one thing you're testing."
+  },
+  {
+   "slide": 23,
+   "heading": "Controlled test: Prompt A",
+   "narration": "Here's Prompt A for a controlled test. \"For a Year 8 science revision task, explain evaporation. Cover what happens and how heating affects the process. Use plain English. Keep the answer under the word limit. Use one paragraph.\" The selected variable here is the output format. To try it, use an eligible tool, or the offline option."
+  },
+  {
+   "slide": 24,
+   "heading": "Controlled test: Prompt B",
+   "narration": "And Prompt B. It's identical, word for word, until the very end. Instead of \"Use one paragraph,\" it says, \"Use three bullet points.\" Only the final format instruction changed. When you score format, score each output against its own prompt's requirement. A paragraph is correct for A, and three bullets are correct for B."
+  },
+  {
+   "slide": 25,
+   "heading": "Keep the comparison useful",
+   "narration": "To keep the comparison useful, control the surrounding conditions. Same setup: use the same tool, and the same model when you can select it. Fresh conversations: start a new chat each time, to avoid one output influencing the next through chat history. And same evidence: use the same references and scoring criteria for both versions."
+  },
+  {
+   "slide": 26,
+   "heading": "Pilot's Tip: repeat both prompts",
+   "narration": "Another Pilot's Tip: repeat both prompts, because one result is weak evidence. For the Home Lab, run A twice and B twice. Keep every result. Record the order you ran them in, and don't discard the inconvenient outputs. Then interpret cautiously. Four outputs give you a small sample, not a universal ranking."
+  },
+  {
+   "slide": 27,
+   "heading": "Your results sheet",
+   "narration": "Here's your results sheet. There's a row for each run: A1, A2, B1 and B2. For each run you score accuracy from one to three, or N C if you haven't checked it yet. Relevance, clarity and format each get one to three. The total goes out of 12, or you write pending if accuracy is still unchecked."
+  },
+  {
+   "slide": 28,
+   "heading": "Read the pattern, not only the total",
+   "narration": "Once the sheet is filled in, read the pattern as well as the total. A higher score needs an explanation. Compare criteria: did clarity improve while accuracy stayed the same? Look across runs: did the result repeat, or was it inconsistent? And allow a tie. \"No clear winner in this small test\" is a perfectly valid conclusion."
+  },
+  {
+   "slide": 29,
+   "heading": "Verify a claim from the best output",
+   "narration": "Next, verify a claim from your best output, and record both the claim and the evidence. Choose a specific factual claim that matters to the task. Check it using your textbook or a reliable, relevant source. Then limit your conclusion. One supported claim does not verify every other statement in the answer."
+  },
+  {
+   "slide": 30,
+   "heading": "AI as tutor",
+   "narration": "Here's a prompt for using AI as a tutor. \"I'm studying, your topic, in Year, your year level. Don't give me the answer. Ask questions to help me work it out, and give me a hint only if I'm stuck.\" It keeps the thinking on your side of the desk. Before using AI for schoolwork, check your school's rules and the specific assignment instructions."
+  },
+  {
+   "slide": 31,
+   "heading": "Learning and academic integrity",
+   "narration": "Which brings us to learning and academic integrity. The aim is to keep your own thinking visible. Permission: find out what AI help this task allows. Contribution: do the reasoning and writing required of you. Disclosure: describe any AI help when your school or teacher requires it."
+  },
+  {
+   "slide": 32,
+   "heading": "Try It Now: rewrite and compare",
+   "narration": "Try it now. Practise C-T-F-T on a topic of your own. First, write a short, vague prompt, like our two-word history example. Then rewrite it using C-T-F-T, plus one useful constraint. Then compare by scoring both outputs, and mark any unverified accuracy as N C. Pause the video and give it a go. [pause]"
+  },
+  {
+   "slide": 33,
+   "heading": "Common Turbulence: the mega-prompt",
+   "narration": "Common turbulence: the mega-prompt. More instructions do not guarantee a better result. Start focused, with one clear task and relevant context. Avoid conflicts, so check whether your requirements contradict each other. And improve deliberately. Add a detail only when it addresses a weakness you've measured."
+  },
+  {
+   "slide": 34,
+   "heading": "Memory Hook",
+   "narration": "Here's your memory hook: structure it, score it, change one thing. Structure with Context, Task, Format and Tone. Score using criteria and evidence. And change by testing a specific modification, rather than guessing what made the difference."
+  },
+  {
+   "slide": 35,
+   "heading": "Pre-Landing Check 1",
+   "narration": "Time for your pre-landing checks. Check one: what does C-T-F-T stand for? Your turn. Name the four parts. Pause the video and say them out loud, or write them down. [pause]"
+  },
+  {
+   "slide": 36,
+   "heading": "Check 1: answer",
+   "narration": "The answer: Context, Task, Format, Tone. Then consider the upgrades: a relevant example and useful constraints. And remember, structure helps communicate the task. It does not guarantee accuracy."
+  },
+  {
+   "slide": 37,
+   "heading": "Pre-Landing Check 2",
+   "narration": "Check two: why change only one feature in an A B test? Your turn. Think about what becomes harder if several features change together. Pause the video and work out your answer. [pause]"
+  },
+  {
+   "slide": 38,
+   "heading": "Check 2: answer",
+   "narration": "The answer: to make the comparison easier to interpret. One selected change gives you a clearer question to investigate. There are remaining limits, though. Random variation and other conditions still matter. So for your conclusion, use cautious language, and repeat the comparison."
+  },
+  {
+   "slide": 39,
+   "heading": "Pre-Landing Check 3",
+   "narration": "Check three reaches back to Week 1. What separates fluency from accuracy? Explain why an answer can have one without the other. Pause the video and put it in your own words. [pause]"
+  },
+  {
+   "slide": 40,
+   "heading": "Check 3: answer",
+   "narration": "The answer: sounding good is different from being correct. Fluency is readable, coherent language. Accuracy is making correct claims about the topic. An answer can be beautifully written and wrong. So the check is evidence, not confidence or polish."
+  },
+  {
+   "slide": 41,
+   "heading": "Project Log: Entry 2",
+   "narration": "Time for Project Log, entry two. The goal is to keep your test reproducible, so someone else could run it again. Under prompts and setup, save A, B, the changed feature and the tool used. Under results, keep all four outputs, your rubric scores and your checking notes. And for reflection: which version helped? Why? What will you test next?"
+  },
+  {
+   "slide": 42,
+   "heading": "Home Lab: The Prompt Lab",
+   "narration": "Your Home Lab this week is the Prompt Lab, in four steps. One, design: choose a school topic and write A and B with one changed feature. Two, run: use the same setup and run each version twice. Three, evaluate: score all outputs, verify claims and label uncertainty. Four, reflect: write three sentences about the result and your next test. Allow about 60 minutes. Follow the assignment rules, and use an age-appropriate setup."
+  },
+  {
+   "slide": 43,
+   "heading": "No-chatbot option",
+   "narration": "If you're not using a chatbot, there's an option for you too: compare two existing explanations. Choose two textbook or reliable website explanations on the same topic. Before reading, define the audience, the task and the rubric you'll apply. And be precise about what this is. It's an evaluation exercise, rather than a controlled prompt experiment."
+  },
+  {
+   "slide": 44,
+   "heading": "Parent & Guardian Brief",
+   "narration": "This one is the Parent and Guardian Brief, so share it with whoever helps you at home. The theme is supporting evidence and honest work. On school rules, review the school policy and the particular task instructions together. On accounts, keep Week 1's age, consent and privacy setup in place. And here's a good question to discuss: \"What evidence makes you prefer this answer?\""
+  },
+  {
+   "slide": 45,
+   "heading": "Ready for Week 3",
+   "narration": "[warmly] That's Week 2 landed. This week you structured prompts, scored outputs and compared a change. Next week is Data and Labelling, where you'll design useful datasets and consistent labelling rules. Until then, keep the habit: structure it, score it, change one thing. See you next week."
+  }
+ ]
+}

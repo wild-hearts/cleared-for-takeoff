@@ -1,0 +1,541 @@
+{
+ "course": "adult",
+ "module": 5,
+ "title": "AI for Real Life, Module 5: Holding Pattern",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "AI for Real Life, Module 5: Holding Pattern",
+   "narration": "Welcome to Module 5 of AI for Real Life: Holding Pattern. You've been using AI for real things now. This module is where we talk honestly about what can go wrong. [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 2,
+   "heading": "Welcome to Module 5",
+   "narration": "In aviation, a holding pattern is when a plane circles calmly at a safe height while the pilot checks conditions before landing. It isn't an emergency. It's what careful pilots do. That's the spirit of this module: using AI with clear checks and limits. Your aim is to recognise where errors, or sharing the wrong information, could cause harm. Your habits are to review, verify and choose appropriate help. And keep perspective. Useful output still needs your judgement, and no method removes every risk. It isn't zero risk, because nothing is, but it can be managed. [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 3,
+   "heading": "Your Module 5 route",
+   "narration": "There are six lessons. Lesson 5.1 is hallucinations: plausible information that needs checking. 5.2 is judgement, matching your checking to the consequences. 5.3 is scams, and the habit of pausing and verifying independently. 5.4 covers privacy law: your rights, your settings, and some legal changes with dates attached. 5.5 is sensitive information, what to leave out and safer alternatives. And 5.6 brings it together so you can decide: Trust, Verify or Walk Away. Lesson 5.3, on scams, is the one most worth sharing with your family. Plan to watch it with someone, or tell them about it afterwards.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 4,
+   "heading": "Your existing habits",
+   "narration": "Before we start, let's keep the course tools together, because you'll use all three in this module. The Cost-of-Wrong Test from Lesson 1.2: what would it cost if this were wrong? The Postcard Rule from Lesson 1.4: is this information suitable to share with the service? And the Placeholder Trick: replace unnecessary identifying details before you send anything. Let's circle.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 5,
+   "heading": "Lesson 5.1: Hallucinations",
+   "narration": "Lesson 5.1: Hallucinations. By the end of this lesson, you'll be able to explain what an unsupported or fabricated response is, identify the details that need verification, and use checking habits before you rely on a claim.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 6,
+   "heading": "5.1 What a hallucination is",
+   "narration": "Imagine a very confident dinner guest who's read a little about everything. Most of the time, they're right. But every so often, when they don't actually know, they fill the gap with something that sounds right. That's a hallucination: generated content that's false or unsupported. It might be an invented source, an incorrect detail or a claim with nothing behind it. And it might sound confident, cautious or entirely ordinary. So the wording won't tell you. Your task is to assess the evidence rather than the wording.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 7,
+   "heading": "5.1 Why plausible errors occur",
+   "narration": "Generating language doesn't guarantee truth. When an AI answers, it isn't looking up a fact in a filing cabinet. A response draws on learned patterns, the context you've supplied, and whatever tools it has available. Errors can come from missing information, incorrect associations, or material it misread. Many tools now search the web, and search does add information. But it can still pull in weak sources, or support a mistaken interpretation, or blend two sources into one claim that neither actually makes.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 8,
+   "heading": "5.1 Details worth checking",
+   "narration": "There are three kinds of detail worth checking. Specific facts: names, dates, figures and exact claims. These are tricky, because specific details feel like evidence of accuracy, and they aren't necessarily. Specialist details: eligibility, legal rules, medication and financial terms. AI is very useful for explaining these areas, but the specific details are where an error has real consequences. And references: quotations, studies, books and source links. The quote that was never said, the study that doesn't exist, or a real link that doesn't say what the AI claimed.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 9,
+   "heading": "5.1 A fictional unsupported claim",
+   "narration": "Here's an invented example. \"A 2024 study by the Southern Coast Institute found that 73 per cent of local residents support the proposal.\" It sounds tidy and authoritative. What to ask: which study, which author and which publication? What to check: does the study exist, and does it support this exact claim? And to be clear, this is an invented teaching example. The institution, the study and the statistic are all fictional.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 10,
+   "heading": "5.1 Five checking habits",
+   "narration": "Often you can't spot a hallucination just by reading it. What you can do is build habits that stop it from mattering. There are five. One: identify the claim. Separate wording suggestions from factual assertions. Two: ask for evidence. Request the original source and the relevant passage. Three: open the source, and check what it actually says and where it applies. Four: check the exact details, the names, dates, units and conditions. Precision sounds like accuracy, but it isn't the same thing. And five: check before sharing. Review claims before you repeat them, publish them or act on them, because if you pass on a wrong fact, the consequences spread beyond you.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 11,
+   "heading": "5.1 An evidence request",
+   "narration": "Here's a prompt you can use for habit two. \"Separate factual claims from suggestions in this answer. For each important claim, identify the original source and relevant passage. Flag anything you cannot support. Do not invent references.\" Then read the references yourself. The tool telling you it has checked something is not verification.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 12,
+   "heading": "5.1 Reading a source",
+   "narration": "When you open a source, match the passage to the claim. You've met these questions before. Who created it, and what expertise or interest do they have? When and where: does it apply to the right time, the right jurisdiction and your situation? And exact support: does the source support this particular claim, including its qualifications? If you can't find the actual sentence, treat the claim as unconfirmed.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 13,
+   "heading": "5.1 Try It Now",
+   "narration": "Try It Now. Here's a gentle way to see this for yourself. Ask your AI a non-sensitive question about a hobby or your local history, something you already know well. Choose one detail from the answer and check it in a suitable source. Then record it in your Flight Log as supported, unsupported, incorrect or still uncertain. It's a safe lesson, because you already know the territory. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 14,
+   "heading": "5.1 Common Turbulence",
+   "narration": "Common Turbulence: letting past good answers replace today's check. After fifty good answers, it's natural to stop checking. But a useful earlier answer doesn't establish that this answer is accurate. Different topics, tools and questions carry different risks, so assess the task in front of you. The habits aren't about whether AI has earned your trust. They're about whether this particular fact matters. Memory Hook: plausible wording needs evidence when facts matter.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 15,
+   "heading": "5.1 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what is a hallucination? [pause] Two: name two types of detail to check. [pause] Three: what three questions help you assess a source? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 16,
+   "heading": "5.1 Check: answers",
+   "narration": "Here are the answers. One: a hallucination is false, fabricated or unsupported generated content that might appear plausible. Two: specific facts, specialist details, or references and quotations. Three: who created it, when it applies and where it applies. Then check the exact claim. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 17,
+   "heading": "Lesson 5.2: Judgement and Checking",
+   "narration": "Lesson 5.2: Judgement and Checking. By the end of this lesson, you'll be able to identify warning signs in an answer, choose a proportionate level of checking, and use neutral questions and independent evidence.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 18,
+   "heading": "5.2 Task and consequences",
+   "narration": "Think about the weather forecast. You'd plan a picnic on it, but you probably wouldn't plan a wedding on a ten-day forecast without a wet-weather backup. You've calibrated your trust without thinking about it, and AI needs the same calibration, because a guess and a certainty sound exactly the same. As a starting point, drafting wording or organising your own notes can be useful when you can review the result. The risk is a poor draft or the wrong tone, and you can see that by reading it. But details you rely on, like current prices, rules, medical details or formal obligations, need suitable verification.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 19,
+   "heading": "5.2 A task label is not a risk rating",
+   "narration": "Careful, though. A task label is not a risk rating. \"It's just a letter\" can still mean a letter full of consequential claims. Look inside the output for facts, promises, legal admissions or private information. Consider the audience, because a personal note and a formal submission need different review. And ask the test: what would it cost if this were wrong?",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 20,
+   "heading": "5.2 Four warning signs",
+   "narration": "Here are four warning signs that should make you check before relying on an answer. No source: a statistic or factual assertion without evidence. \"Studies show 72 per cent\" with no study attached. No conditions: a simple answer to a complex or contested issue, with no \"it depends\" anywhere. No match: you can't find the named source or the claim when you look. And easy agreement: the answer repeats your assumption without examining it. AI tools tend to be agreeable, so ask \"Isn't it true that\" and you may get agreement rather than accuracy.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 21,
+   "heading": "5.2 A neutral question",
+   "narration": "So ask neutrally. Instead of \"Isn't magnesium good for sleep?\", try this. \"What evidence supports and challenges this claim? What conditions or uncertainties matter? Identify sources and distinguish established findings from assumptions.\" Neutral wording helps frame the inquiry. It doesn't guarantee an accurate or balanced answer, so you still check.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 22,
+   "heading": "5.2 Four checking levels",
+   "narration": "How much checking do you need? Match it to what's at stake. There are four levels. Level one: you're exploring or drafting. Read it, adjust it, and treat the output as provisional. Level two: a fact affects a choice. Verify that specific fact in a suitable original source. Level three: you'll publish, repeat or act on it. Check the material claims and seek independent corroboration. Level four: personal, high-stakes advice. Use AI to prepare your questions, then use appropriate qualified help. You'll notice this is the Cost-of-Wrong Test from Lesson 1.2, in more detail.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 23,
+   "heading": "5.2 Asking about uncertainty",
+   "narration": "Build in a question after any answer that matters, and use the reply to find your checking tasks. Ask: \"What assumptions could change this answer?\" Request: \"Which claims need independent checking?\" Asking moves you from passively receiving information to actively evaluating it. But keep the limit in mind. When a tool tells you it's confident, or gives itself a percentage, that is not proof it's correct.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 24,
+   "heading": "5.2 A second AI answer",
+   "narration": "You might ask a second AI tool the same question. Agreement between them doesn't create independent evidence. The possible benefit is that disagreement can reveal an issue worth investigating. The possible problem is that both tools can repeat the same error, or lean on the same source. So your standard stays the same: resolve the claim against suitable evidence or qualified advice.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 25,
+   "heading": "5.2 Try It Now",
+   "narration": "Try It Now. Choose a recent, non-sensitive AI response, or use a teaching example. Identify the claim in it, and what an error would cost you. Then record which checking level it belongs in, and your next verification step. Pause the video now and work through it. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 26,
+   "heading": "5.2 Common Turbulence",
+   "narration": "Common Turbulence: checking without a clear purpose. Some people, after learning about hallucinations, start checking everything, including dinner ideas and birthday card wording. That's exhausting. Focus instead on verifying the details that affect how you'll use the result. And escalate when you need to: an unresolved disagreement, or high consequences, justify further help. Memory Hook: match the checking effort to the consequences.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 27,
+   "heading": "5.2 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before you move on. One: name a warning sign in an answer. [pause] Two: why does agreement between two AI tools not prove a claim? [pause] Three: what makes a neutral question useful? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 28,
+   "heading": "5.2 Check: answers",
+   "narration": "The answers. One: any of these. An unsourced statistic, missing conditions, a source you cannot find, or uncritical agreement. Two: the tools might share sources or repeat the same mistake. Three: a neutral question invites examination of evidence and alternatives, rather than simple agreement. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 29,
+   "heading": "Lesson 5.3: Scam Awareness",
+   "narration": "Lesson 5.3: Scam Awareness. This lesson deserves plain speaking. By the end of it, you'll be able to recognise common impersonation patterns, pause and check through independent channels, and find appropriate help if you suspect something has already gone wrong.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 30,
+   "heading": "5.3 AI-assisted deception",
+   "narration": "AI has made it much easier to create convincing scams. I'm not telling you this to frighten you. The best defence is knowing what a scam looks like before it reaches you. A familiar voice or a polished message can mislead. Voice: a recording can help create an impersonation, sometimes from a short clip taken from a social media video or a voicemail greeting. Messages: poor grammar used to give scams away, and that's gone. Fluent wording and copied branding don't prove who sent it. Images and video: generated or manipulated media can support a false identity.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 31,
+   "heading": "5.3 Common scam patterns",
+   "narration": "Here are the common patterns. Impersonation: family emergency calls, and messages from organisations you trust. Fake endorsements: manipulated celebrity or news-style media. Relationship scams: trust-building, followed by requests for money or access. And AI as bait: fake apps, trading bots and investment platforms.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 32,
+   "heading": "5.3 A fictional family-emergency call",
+   "narration": "Here's how a family emergency call can sound. This one is fictional. \"It's me. I need money urgently. Please don't tell anyone. Use the account I am sending now.\" The voice sounds real. The urgency feels real. Look at the pressure: urgency, secrecy and an unexpected payment request. The response: end the call, and contact the person using details you already trust. And if there is ever an immediate threat to life or safety, call triple zero.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 33,
+   "heading": "5.3 Family verification",
+   "narration": "For family, use more than one safeguard. First, a known contact. Call back on a number you already have. Second, a private phrase. Agree a word or phrase with your family, something that isn't in public posts, like a silly in-joke, and keep it out of AI chats. But know its limit. A phrase can be exposed, so it doesn't replace independent checking. It's an extra layer, not the whole defence.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 34,
+   "heading": "5.3 Messages from trusted organisations",
+   "narration": "Messages pretending to be the A.T.O., your bank or a delivery company can look exactly like the real thing. So use a route you find yourself. Avoid supplied links: open the official app, or type the known address yourself. Avoid supplied numbers: find the contact details independently, or use the number on your card. And for the \"Hi Mum, this is my new number\" text, check through an existing contact method, or another trusted person. Call the old number. If it works, there was no dropped phone.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 35,
+   "heading": "5.3 Deepfakes and endorsements",
+   "narration": "A deepfake is a video or image that's been generated or manipulated to show a real person saying or doing something they never did. Appearance doesn't authenticate a person. Odd features might prompt caution, but their absence proves nothing. Modern fakes are often too good to spot by looking. A live video call, or asking someone to do a gesture on camera, is not conclusive identity verification either. And for investment claims, a famous face in an ad is not a credential. Check the provider and its licensing through official channels.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 36,
+   "heading": "5.3 Romance and friendship scams",
+   "narration": "Romance and friendship scams aren't new, but AI help means one person can keep up a warm, attentive persona for months. The messages are thoughtful. They remember everything you told them. The possible pattern is intense trust-building, followed by an urgent financial problem. Treat a money request as a serious warning. Don't rely on a long conversation, a profile photo or a video call as proof. The next step is to stop any transfers, and get an independent view from someone you trust.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 37,
+   "heading": "5.3 Fake AI apps and investment schemes",
+   "narration": "Some scams use AI itself as the bait. The AI label does not establish legitimacy. Check the publisher: use the provider's official website to find its app, rather than trusting a lookalike in the store. Be cautious: guaranteed returns or withdrawal fees are warning signs, with or without the word AI. And verify independently. A dashboard showing profit is not evidence you can get your money back.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 38,
+   "heading": "5.3 Pause. Check. Then decide.",
+   "narration": "Now the habit that works against all of these: pause, check, then decide. Pause: stop the payment, the disclosure or the pressured action. Check: use independent, trusted contact details, and get help if you need it. Decide: act only when you have appropriate evidence and support. A real emergency can wait while you call someone. A real organisation can be called back on a number you find yourself. A real relationship can survive you asking a question before you send money.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 39,
+   "heading": "5.3 AI as a second view",
+   "narration": "AI can give you a second view on a suspicious message. Try something like this. \"This is a fictional or de-identified suspicious message. Identify possible warning signs and suggest independent checks. Do not certify it as safe or open its links.\" Inspect the text before you share it, and take out anything personal. And remember, an AI opinion can't establish who the sender really is. Your pause-and-check habit is still the real protection.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 40,
+   "heading": "5.3 If something has already happened",
+   "narration": "If you think something has already happened, act quickly. If money or account access is involved, contact your bank immediately through a verified channel. Ask how to secure your access and how to respond to the transfer. If identity details are involved, seek a recovery plan from I.D. Care, and secure affected accounts using the official provider's guidance. Keep the relevant messages and transaction records. Take the urgent protective steps first, then report it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 41,
+   "heading": "5.3 Australian support and reporting",
+   "narration": "Here's where to go in Australia. If money or bank access is affected, contact your bank, using details you've verified independently. For identity support, I.D. Care is on one eight hundred, five nine five, one six oh. For cyber security assistance, call thirteen hundred, two nine two, three seven one, twenty-four seven. To report a scam, go to scamwatch dot gov dot au. And to report cybercrime, go to cyber dot gov dot au and follow the official reporting options.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 42,
+   "heading": "5.3 Scam protections: dated update",
+   "narration": "There's a change coming that's worth knowing about, with dates attached. Australia's scam protection framework is being introduced in stages. Most obligations are scheduled to apply from the thirty-first of March, twenty twenty-seven, for regulated services. From that date, for eligible complaints that aren't resolved internally, the Australian Financial Complaints Authority, AFCA, has a role under the framework. Before you rely on it, check the current eligibility and process. And recovery is not guaranteed.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 43,
+   "heading": "5.3 Try It Now",
+   "narration": "Try It Now. Plan a family verification method. Discuss a private phrase and trusted callback details with someone in your family. Practise explaining how you would respond to an urgent request. And keep it private: don't write the phrase down in this exercise, or type it into an AI conversation. Pause the video now and make a start, even if it's just sending a message to arrange the conversation. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 44,
+   "heading": "5.3 Common Turbulence",
+   "narration": "Common Turbulence: assuming careful people never get scammed. Scams work because they catch you at a vulnerable moment. Fear, fatigue or urgency can affect anyone's decisions, and smart, careful people are targeted every day. So use the process. Pause and verify, rather than judging how polished the message looks. And if you're targeted, seek help promptly. There's no shame in it, and blame doesn't improve recovery. Reporting it protects the next person.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 45,
+   "heading": "5.3 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before you move on. One: a familiar voice urgently asks for money. What do you do? [pause] Two: does a convincing video prove identity? [pause] Three: where can an individual seek identity recovery help? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 46,
+   "heading": "5.3 Check: answers",
+   "narration": "The answers. One: pause and end the call. Verify through contact details you already know. Use emergency services if immediate safety is at risk. Two: no. Verify independently. A private phrase is only an additional safeguard. Three: I.D. Care, on one eight hundred, five nine five, one six oh. And contact your bank immediately if money or bank access is affected. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 47,
+   "heading": "Lesson 5.4: Privacy and Australian Law",
+   "narration": "Lesson 5.4: Privacy and Australian Law. Think about the last time you clicked \"I agree\" on a long privacy policy without reading it. Almost everyone has. By the end of this lesson, you'll be able to identify practical privacy rights and their limits, distinguish current law from future changes, and review your service's privacy controls.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 48,
+   "heading": "5.4 Where information goes",
+   "narration": "When you type into many online tools and press enter, your input goes to the provider's systems to be processed. What happens next depends on the service and your account terms. Retention, human access, training use and storage location all vary. And connected tools and sharing features can add more recipients. None of this is secret. It's in the terms and privacy policies. Most people just don't read them, which is completely understandable.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 49,
+   "heading": "5.4 Read the relevant policy",
+   "narration": "So read the relevant policy, and note that consumer and workplace accounts can differ. Check what the service collects, uses, retains and discloses. Ask who receives it, and which settings apply to your account. And minimise. Share only what's necessary and permitted. You can't control what happens to information once it's entered, but you can control what you enter.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 50,
+   "heading": "5.4 Australian privacy law",
+   "narration": "Now, Australian law. The main federal privacy law is the Privacy Act nineteen eighty-eight. It includes the Australian Privacy Principles, which set rules for how covered organisations handle personal information. But the Act covers specified entities, and obligations depend on the entity and the circumstances. So your next step is to use the Office of the Australian Information Commissioner's guidance, the O.A.I.C., rather than assuming every service or situation is covered.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 51,
+   "heading": "5.4 Practical privacy rights",
+   "narration": "Here are your practical rights. Access: you can request the personal information an organisation holds about you, subject to the applicable rules. Correction: you can ask for inaccurate personal information to be corrected. And complaint: you can raise mishandling with the organisation first, and then consider the O.A.I.C.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 52,
+   "heading": "5.4 Making a privacy complaint",
+   "narration": "If you need to make a privacy complaint, start with the organisation or agency. Write down what happened and the outcome you're seeking. If it's unresolved, or you get no response within thirty days, check the O.A.I.C.'s complaint criteria. And keep records: your complaint, any replies, and the relevant evidence.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 53,
+   "heading": "5.4 Health and other sensitive information",
+   "narration": "Health information receives additional protection under the applicable privacy rules. But identifying details are only part of the risk. Re-identification is real: a rare condition, a location or a detailed history can identify someone even without a name. The practical choice is to ask a general question, or use a fictional example where you can.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 54,
+   "heading": "5.4 Privacy law: dates matter",
+   "narration": "Australia's privacy law is being updated in stages, so dates matter. In force since the tenth of June, twenty twenty-five: a statutory tort, which is a legal right to sue, gives a court avenue for serious invasions of privacy, subject to legal requirements. Upcoming on the tenth of December, twenty twenty-six: covered entities must add specified information to their privacy policies about relevant automated decisions. This status was checked on the twenty-first of October, twenty twenty-six. Legal conditions, exceptions and scope matter, so seek legal advice for your own case.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 55,
+   "heading": "5.4 Serious invasions of privacy",
+   "narration": "This new court pathway comes with conditions and limits. The possible conduct is intrusion into someone's private life, or misuse of their private information. Seriousness and other legal tests apply, along with defences and exemptions. It's a meaningful protection, but you'd need independent legal advice to use it. And note that the O.A.I.C. does not administer this tort.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 56,
+   "heading": "5.4 Automated decisions: upcoming change",
+   "narration": "The automated decisions change starts on the tenth of December, twenty twenty-six. It covers programs that use personal information to make, or substantially support, significant decisions. Think of decisions about a loan, an insurance claim or an application. Where the law applies, privacy policies must describe the kinds of personal information and decisions involved. Keep the distinction clear, though. This is about transparency in the policy. It is not a blanket right to a full explanation of every individual decision.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 57,
+   "heading": "5.4 Further reforms",
+   "narration": "More reform has been proposed, but a proposal doesn't create a current right. Separate the stages: consultation, legislation and commencement are different things. Check the current status with the O.A.I.C. and official legislation sources. And before you act, confirm the rule that applies on the relevant date.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 58,
+   "heading": "5.4 Privacy controls to review",
+   "narration": "Now the part you control. Here are four controls to review in your AI tool. Training or improvement: whether your account's content helps improve models. Memory and personalisation: what carries across chats, and how to manage it. History and retention: storage, deletion, and the conditions on temporary chats. And sharing and connected tools: who else can receive or access the information. Companies update their policies, so your settings deserve a regular check-up too.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 59,
+   "heading": "5.4 Settings have limits",
+   "narration": "Settings have limits, so review the controls directly in the service. Memory: if you ask a chatbot what it remembers about you, its answer may be incomplete. Check the actual controls. Temporary chat: the label doesn't guarantee confidentiality or immediate deletion. And deletion: saved memory, other copies, or the provider's retention obligations may need separate action.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 60,
+   "heading": "5.4 Try It Now",
+   "narration": "Try It Now. Open your AI tool's settings and find the training, memory, history and sharing controls. Read the current explanations for your account type. Then record one setting or habit you want to change. Don't log any secrets while you do it. Pause the video now and have a look. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 61,
+   "heading": "5.4 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before you move on. One: where can you check whether the O.A.I.C. can consider a complaint? [pause] Two: when does the automated-decision transparency obligation start? [pause] Three: does temporary chat guarantee confidentiality? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 62,
+   "heading": "5.4 Check: answers",
+   "narration": "The answers. One: the O.A.I.C.'s current privacy complaint guidance, after first raising the issue with the organisation or agency. Two: the tenth of December, twenty twenty-six, for covered entities and decisions meeting the statutory conditions. Three: no. Review the retention, personalisation and sharing conditions, and minimise what you disclose. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 63,
+   "heading": "Lesson 5.5: Information to Leave Out",
+   "narration": "Lesson 5.5: Information to Leave Out. This is the full version of the Postcard Rule. By the end of this lesson, you'll be able to recognise six categories of information to protect, use practical alternatives before disclosing anything, and respond appropriately if details have already been exposed.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 64,
+   "heading": "5.5 Six categories and safer alternatives",
+   "narration": "Here are six categories to leave out of a general AI chat, each with a safer alternative, so following the rule never stops you getting help. One: financial access and account details. Use a placeholder like \"bank\" or \"account\", with fictional figures. Two: government identity numbers. Describe the document or process instead. Three: passwords and security codes. Use the official sign-in and recovery flows. Four: identifiable health records. Ask a general question, or use a suitable excerpt. Five: other people's private information. Use broad context, with appropriate authority. And six: confidential material. Use an approved system, or ask a general question.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 65,
+   "heading": "5.5 Financial and identity details",
+   "narration": "The explanation rarely needs an identifier. Replace account, card, tax file, passport and member numbers. Describe instead: \"an insurance renewal\" or \"a payment notice\". The AI can explain a statement or draft a letter to your bank without a single account number. If the final document needs an identifier, add it later, yourself, into the checked final version.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 66,
+   "heading": "5.5 Passwords and codes",
+   "narration": "Keep credentials out of prompts. Never paste passwords, PINs, one-time codes or recovery answers. There's no legitimate AI task that needs them, and if anyone asks for a password or a one-time code, treat that as a warning sign. For account help, use the service's official authentication and recovery process. And if you've disclosed one, change or revoke the affected credentials through the official controls.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 67,
+   "heading": "5.5 Health and other people's information",
+   "narration": "With health and other people's information, a placeholder doesn't remove every risk. Minimise: consider whether the clinical or personal detail is needed at all. Respect others: your friend's diagnosis or your son-in-law's financial troubles are their information, so check permission and your authority to share. And choose another route, qualified support, when the task requires sensitive records.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 68,
+   "heading": "5.5 Confidential material",
+   "narration": "For confidential material, use the rules that apply to the material. Examples include workplace files, client records, board minutes or legal settlements. Before uploading anything like that, check the policy, your permission, and whether the tool is approved. The alternative is to ask about the type of document without revealing its protected content. For example, \"How do settlement deeds usually handle confidentiality?\"",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 69,
+   "heading": "5.5 The stored-and-seen test",
+   "narration": "Here's a test for anything you're unsure about. Ask yourself: \"If this detail were stored or seen by an unintended person, could it harm me or someone else?\" If yes, or you're unsure, leave it out, generalise it, or use an appropriate approved route. If no, still check necessity, permission and the service's terms. This question helps you pause. It doesn't certify an upload as safe.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 70,
+   "heading": "5.5 A practical pre-send scan",
+   "narration": "Most oversharing isn't deliberate. It happens when you paste a whole email thread because it's quicker. So look beyond the paragraph you meant to share. In messages, check signatures, quoted threads and attachments. In images and files, inspect backgrounds, metadata and hidden text. Metadata is the background information a file carries, like dates or locations. Before sending, use a safe excerpt or genuine redaction, then inspect the resulting copy.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 71,
+   "heading": "5.5 If details were already shared",
+   "narration": "If details were already shared, respond to what was exposed. Credentials: change or revoke them, and secure the affected accounts. Financial or identity data: contact the provider, your bank or I.D. Care, as appropriate. Confidential work material: follow your organisation's incident process. Deleting the conversation alone is not a complete remedy.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 72,
+   "heading": "5.5 Try It Now",
+   "narration": "Try It Now. Practise removing details before upload, using a fictional sample. Find the identifiers, signatures and unnecessary context. Replace them with placeholders, or remove entire sections. And do this review yourself, before you use any online AI tool to look at the text. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 73,
+   "heading": "5.5 Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each one before you move on. One: name four categories to protect. [pause] Two: what does the stored-and-seen test ask? [pause] Three: what is the Placeholder Trick? [pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 74,
+   "heading": "5.5 Check: answers",
+   "narration": "The answers. One: any four of account details, government IDs, credentials, identifiable health data, other people's private information, or confidential material. Two: it asks whether unintended storage or access could harm someone. Permission and necessity still matter. Three: the Placeholder Trick means replacing unnecessary identifying details with labels before sharing. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 75,
+   "heading": "Lesson 5.6: Trust, Verify, Walk Away",
+   "narration": "Lesson 5.6: Trust, Verify, Walk Away. You now know about hallucinations, judgement, scams, privacy and what to leave out. This lesson pulls it all into three words you can carry around. By the end of it, you'll be able to choose an appropriate mode for each part of a task, find suitable verification sources, and recognise when to use qualified or emergency help.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 76,
+   "heading": "5.6 Three modes",
+   "narration": "Think of them like traffic lights. Trust: use a low-risk draft or idea provisionally, with review. Verify: check consequential facts before relying on them. Walk Away: stop using the output as advice, and choose appropriate help.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 77,
+   "heading": "5.6 Trust mode",
+   "narration": "Trust mode is a useful starting point you can judge. The typical task is adjusting wording or organising non-sensitive notes. Treat it as you'd treat advice from a knowledgeable friend: worth taking seriously, and worth adjusting to your situation. You still review the facts, commitments, tone and missing context. And change mode when you need to. Verify any detail that affects a decision, or another person.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 78,
+   "heading": "5.6 Verify mode",
+   "narration": "Verify mode means slowing down, because the specific details matter. Define the particular claim to check. Find the original, using a suitable authority or the original evidence. You don't throw the AI's answer away. You use it as your map. Match the context: the date, location, units, conditions, and your own situation. And resolve any uncertainty by cross-checking independently, or seeking qualified clarification.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 79,
+   "heading": "5.6 Australian source starting points",
+   "narration": "Here are some Australian starting points for Verify mode. For tax and Commonwealth legislation: A.T.O. dot gov dot au, and legislation dot gov dot au. For payments, aged care and disability: services australia dot gov dot au, my aged care dot gov dot au, and N.D.I.S. dot gov dot au. For health information: healthdirect dot gov dot au. For money and scams: moneysmart dot gov dot au and scamwatch dot gov dot au. And for tenancy or consumer rights: your state or territory's responsible authority.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 80,
+   "heading": "5.6 Reasons to walk away",
+   "narration": "Walk Away is a small category, but an important one, and walking away isn't a failure. It's good judgement. Personal high stakes: where to invest or how to structure your estate calls for qualified financial, legal or other professional advice. Urgent health: use appropriate clinical or emergency services. Suspected deception: stop the requested action and verify independently. And unresolved error: use another method when the output remains unreliable.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 81,
+   "heading": "5.6 Health help in Australia",
+   "narration": "For health help in Australia: in an emergency, call triple zero. For health advice when you're unsure what to do, call healthdirect on one eight hundred, oh two two, two two two. Registered nurses answer twenty-four hours a day, seven days a week. Don't delay urgent care while you're seeking an AI answer. And ask a clinician or pharmacist to clarify care or medication instructions.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 82,
+   "heading": "5.6 One task can use several modes",
+   "narration": "One task can use several modes. Drafting a council message: trust it provisionally, then check the facts and commitments. Understanding a payment rule: explore, verify the current criteria, and confirm your own eligibility. Choosing an investment: that's qualified personal financial advice. An urgent family payment request: stop, and verify through trusted contact details. And a formal tenancy dispute: check your local rules, and use suitable tenant or legal support.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 83,
+   "heading": "5.6 A verification plan",
+   "narration": "AI can help you plan the checking. Try this. \"Separate this task into wording, factual claims and decisions needing qualified help. Suggest how I should verify each important claim. Flag what you cannot establish.\" Then review the plan yourself. The model can't decide that all the necessary checks are complete. That part is yours.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 84,
+   "heading": "5.6 Try It Now",
+   "narration": "Try It Now. Choose three tasks you've used AI for, or plan to. Separate each one into low-risk drafting, claims to verify, and decisions that need help. Some tasks will have more than one part. Then in your Flight Log, write the next check or the appropriate service for each task. Pause the video now and work through your three. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 85,
+   "heading": "5.6 Common Turbulence",
+   "narration": "Common Turbulence: an unresolved claim stays in the plan. Name the gap. What exactly is unverified? Then choose your response. Find stronger evidence, ask for qualified help, change your method, or defer the decision. Memory Hook: trust provisionally, verify what matters, and walk away when needed.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 86,
+   "heading": "5.6 Pre-Landing Check",
+   "narration": "Pre-Landing Check. This one reviews the whole module. Answer each question before you move on. One: what is a hallucination? [pause] Two: what is the three-step scam response? [pause] Three: who should assess whether an investment suits your circumstances? [pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 87,
+   "heading": "5.6 Check: answers",
+   "narration": "The answers. One: false, fabricated or unsupported generated content. Its tone doesn't establish accuracy. Two: pause, check independently, then decide. Three: an appropriately licensed financial adviser. Use AI only for general preparation and questions. Recall first, then compare, and revisit any example you need.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 88,
+   "heading": "Cleared To Try: Module 5",
+   "narration": "Your Cleared To Try for Module 5 has four parts. Family check: discuss a private phrase and a trusted callback method with someone in your family, and keep the phrase out of AI chats. Privacy review: inspect your training, memory, history, retention and sharing settings. Verify a claim: check one recent consequential claim in a suitable original source. And in your Flight Log, record whether it was supported, partly supported, wrong or unresolved, plus what you changed. Over time, that record will teach you more about calibrating your trust than any lesson can.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 89,
+   "heading": "Module 5 complete",
+   "narration": "That's Module 5 complete. Keep your checks tied to the task. The useful habits are protecting information and verifying consequential claims. And for appropriate help, use people and services qualified for the situation. One module left. Module 6, Final Approach, is about building a routine, reviewing value, and keeping learning at a manageable pace. See you on final approach.",
+   "script_reuse": "some"
+  }
+ ]
+}

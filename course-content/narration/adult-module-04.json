@@ -1,0 +1,589 @@
+{
+ "course": "adult",
+ "module": 4,
+ "title": "AI for Real Life, Module 4: In The Air",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "AI for Real Life, Module 4: In The Air",
+   "narration": "Welcome to Module 4, In The Air. There's a question underneath a lot of conversations about AI. It isn't \"How does it work?\" or \"Is it safe?\" It's a quieter one: \"Will I actually keep using it, once the novelty wears off?\" [pause] It's a fair question, and the honest answer is that it depends on what you point it at.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 2,
+   "heading": "Welcome to Module 4",
+   "narration": "People who keep using AI don't have more technical knowledge than you. They found something that mattered to them, and discovered AI could help them make progress on it. That's what this module is for: working on one project that matters to you. Choose one track: Write, Start, Sort or Learn. Then make time to practise. Aim for two hours of project work this week, split however suits you. And measure your progress by recording something you made, learned or clarified. It doesn't need to be impressive. It just needs to be true.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 3,
+   "heading": "Your four project tracks",
+   "narration": "There are four tracks, and each one is built around a real project. Track A is Write: a memoir, a family story, a speech or a tribute. Track B is Start: an offer, a local service or a community project. Track C is Sort: a transition, a property task, paperwork or a trip. And Track D is Learn: a language, a practical skill, a creative practice or a subject. [pause] My tip: choose the track that reflects something you really want, not the one that seems most practical or impressive. Motivation is what carries a project through the hard middle part.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 4,
+   "heading": "A pace you can sustain",
+   "narration": "Each track has numbered sections, like the legs of a long flight. You don't have to do them all in one sitting. Stop at a practice pause, complete one section, and come back later if you'd prefer. Keep a restart note: save the section number, your draft and your next action, so picking it up again takes seconds rather than half an hour of remembering. And choose your depth. You do not need to finish every track, or every project, this week. The other tracks don't expire.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 5,
+   "heading": "Your checks still apply",
+   "narration": "Everything you've practised so far still applies here. Protect your information and review the results. Minimise details: use placeholders and suitable excerpts rather than the whole private document. Verify facts: check important claims in original sources. And use qualified help. For legal, financial or safety decisions with real consequences, seek appropriate advice. AI can help you prepare for that conversation. It doesn't replace it.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 6,
+   "heading": "Track A: Write Something",
+   "narration": "Track A: Write Something. If you chose this track, there's probably something you've been meaning to write for a long time. A story from your life, your family's history, a speech for someone you love. [pause] AI won't write it for you. The experiences are yours, and so is the voice: the way you tell a story and the details only you would think to include. Here's your flight plan. One: begin with your purpose and your material. Two: organise and revise while keeping your voice. Three: develop a memoir, a family history, a tribute or a speech.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 7,
+   "heading": "Track A: five sections",
+   "narration": "Track A has five sections. One, Begin: define the project through questions. Two, Gather: recall details and collect your material. Three, Structure: choose how the story unfolds. Four, Revise: improve clarity without inventing details. And five, Choose a form: adapt the approach to your particular writing project. What AI can do is help you past the things that stop most people finishing: the blank page, drawing out the story, organising a mountain of material, and finding the right words when you know what you mean.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 8,
+   "heading": "Track A, Leg 1 of 5: Getting started",
+   "narration": "Leg one: getting started. The hardest part of writing isn't the writing. It's beginning. And the best way to begin with AI isn't to start writing. It's to start talking. Explain what you want to write, the way you'd tell a friend. Think about purpose: who is it for, and what do you want to preserve or express? Then the material: a period, a person, an event or a set of memories. A useful first step is to ask for a few questions before you ask for an outline.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 9,
+   "heading": "A.1 Getting-started template",
+   "narration": "Here's the getting-started template. Wherever you see brackets on screen, put in your own details. \"I want to write your project. My audience is your audience. Here is what I know so far: your notes. Before giving me a plan, ask up to three questions, one at a time, about what I want this piece to do.\" [pause] You choose which questions to answer. And keep private family details out unless sharing them is appropriate.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 10,
+   "heading": "Try It Now: Track A, Leg 1",
+   "narration": "Try It Now. Choose a writing project you want to work on and use the template. Answer three of its questions. You can type, or use voice input if it's available and you're comfortable with it. People often tell stories far more naturally out loud than they write them. Then save one sentence stating the project's purpose and its audience. Pause the video now, and come back when you have your sentence. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 11,
+   "heading": "Track A, Leg 2 of 5: Drawing out material",
+   "narration": "Leg two: drawing out the material. For personal writing, the material already exists, in your memory and in the memories of people around you. The challenge is getting it out. Use questions to recall specific details: what you noticed, what happened, and why it mattered. Keep your uncertainty, and label what you remember imperfectly. And protect the record. If the AI suggests a detail, that suggestion is not a memory and it is not a fact. Don't accept it as either.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 12,
+   "heading": "A.2 Memory-interview template",
+   "narration": "Here's the memory-interview template. \"Ask me about your event or period, one question at a time. Use open questions about the details I remember. Do not supply or invent events, dialogue or sensory detail. Keep uncertain memories clearly labelled.\" [pause] Answer as fully as you can, and don't worry about grammar. Your rough answers are your raw writing. Memory is fallible, so preserve your uncertainty, and check dates or details against suitable records.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 13,
+   "heading": "A.2 Photographs as a starting point",
+   "narration": "A photo can prompt your own recollection in a way few other things can. If it's appropriate to upload, think first about other people's privacy, especially living people, and about anything sensitive in the background. Then ask about the image: \"What questions could help me describe this day?\" And keep a boundary. Whatever the AI says about the photo is an interpretation. It doesn't establish who was there, when it was, or what happened. You and your records do that.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 14,
+   "heading": "Try It Now: Track A, Leg 2",
+   "narration": "Try It Now. Choose one moment from your life and record it. Spend up to five minutes answering open questions in a memory interview. Then mark your answers: separate the details you remember from the facts that need confirming. Save it in your own wording, with any uncertainty still visible. Pause the video now and run your interview. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 15,
+   "heading": "Track A, Leg 3 of 5: Organising the material",
+   "narration": "Leg three: organising. Once you have material, the challenge becomes shape. Compare structures before choosing one. Start by describing what you have: notes, interviews, photos or source documents. Ask for options, two or three possible structures, with the trade-offs of each. Then choose, and request headings with one sentence per section. That outline is your working map. You don't have to follow it strictly, but you'll always know where you are.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 16,
+   "heading": "A.3 Four ways to organise a story",
+   "narration": "There are four common ways to organise a story. Chronological, telling it in order, is useful when the order of events matters. Thematic is useful when several stories explore the same idea. Single event works when one episode carries the main focus, and you radiate outwards from it. And braided is where related storylines alternate, with a clear connection between them.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 17,
+   "heading": "Try It Now: Track A, Leg 3",
+   "narration": "Try It Now. Choose a working outline. Ask for two structures for your material and compare them. Select the approach that suits your purpose. Then save a short outline and the one section you want to draft next. Pause the video now, and come back with your outline. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 18,
+   "heading": "Track A, Leg 4 of 5: Drafting and editing",
+   "narration": "Leg four: drafting and editing. This is where AI's help is most visible, and where it matters most that you stay in the driver's seat. Review one section at a time. Start with your own material: a rough paragraph, or a passage you dictated. Ask for reasons: what is clear, and what needs clarification? Then choose your edits. Keep the wording that expresses what you intended. The test is always: would I say this?",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 19,
+   "heading": "A.4 Editing template",
+   "narration": "Here's the editing template. \"Review this draft for clarity and flow. Explain what works and identify unclear passages. Suggest revisions where useful. Keep my voice and meaning. Do not add events, facts, dialogue or flourishes.\" Then paste a suitable draft. [pause] Compare each revision with your original. Read it aloud, and reject any wording you would not use.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 20,
+   "heading": "A.4 Common Turbulence",
+   "narration": "Common Turbulence: the revised paragraph loses your voice. AI has habits. Watch for extra formality, tidy clichés, or emotional claims you never made. If you accept every suggestion, your memoir ends up sounding like everyone else's. Steer it back: \"Use my everyday wording and keep the specific detail.\" And keep your versions. Save the original, so you can recover a stronger sentence if the edit flattened it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 21,
+   "heading": "Try It Now: Track A, Leg 4",
+   "narration": "Try It Now. Revise one paragraph. Paste in a suitable paragraph, or one of your interview answers, and use the editing template. Compare the result with your original. Identify one helpful edit and one you reject. Then save the version you prefer, with a short reason. Pause the video now and give it a go. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 22,
+   "heading": "Track A, Leg 5 of 5: Particular forms",
+   "narration": "Leg five: particular forms. Match the form to the purpose. Memoir: choose a focused experience rather than your whole life. The strongest memoirs often focus on one period, one relationship or one experience. Family history: separate sourced facts, recollection and interpretation, because it combines all three. And spoken pieces, like a eulogy or a speech: shape the draft for the audience, and rehearse it aloud.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 23,
+   "heading": "A.5 Family-history template",
+   "narration": "Here's the family-history template. \"Help me organise these family-history notes. Separate documented facts, recollections and questions to research. Suggest relevant record types and search terms. Do not invent records, sources, quotations or family details.\" [pause] This is research, so verify historical claims and catalogue entries. AI can occasionally suggest a book or record that doesn't exist. Trove, the National Library of Australia's search service, and library catalogues help you check books and records.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 24,
+   "heading": "A.5 Eulogy or speech template",
+   "narration": "A eulogy is written under emotional pressure, to a deadline, about someone you loved, and a speech has its own nerves. Here's the template. \"Help shape a eulogy or speech for the occasion, aimed at about however many minutes. Include these verified stories and qualities: your notes. Tone: your tone. Use placeholders and questions where my own detail would help. Invent nothing.\" [pause] Then read it slowly with a timer. Word count only estimates length, and pauses affect delivery. Add the details only your family knows: the nickname, the saying, the story.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 25,
+   "heading": "Try It Now: Track A, Leg 5",
+   "narration": "Try It Now. Adapt one section to your chosen form: memoir, family history, eulogy or speech. Then test it. Check one source, or rehearse a spoken section aloud. Save a section you're ready to develop, plus your next step. Pause the video now and work on your section. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 26,
+   "heading": "Track A: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: how can an interview help you begin? [pause] Two: which instruction protects your voice during editing? [pause] Three: what should you verify in an AI reading or research list? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 27,
+   "heading": "Track A: Check answers",
+   "narration": "Here are the answers. One: an interview helps clarify your purpose and draws out your material through open questions. Two: \"Keep my voice and meaning. Improve clarity and flow without adding details.\" Three: check that each item exists, that the author and details match, and that it actually supports your research. Compare these with your answers, and revisit an example if you need to.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 28,
+   "heading": "Cleared To Try: Track A",
+   "narration": "Cleared To Try for Track A: spend two hours on your writing this week. Treat those two hours as a commitment, not a wish. Focus on whichever part feels hardest: starting, gathering, structuring or revising. Keep control: verify facts and preserve your own voice. In your Flight Log, save your strongest sentence and your next writing step. Writing becomes ready by being written, revised and written again.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 29,
+   "heading": "Track B: Start Something",
+   "narration": "Track B: Start Something. You have an idea. Maybe it's been with you for years: a small business, an income from a skill, a community group, or something you'd love to offer but haven't worked out how to package. AI won't talk to your first customers or make the calls. But it's a very good thinking partner for the early stages. Your flight plan. One: test an idea and identify assumptions. Two: order the first steps and verify requirements. Three: draft an offer and choose a practical action.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 30,
+   "heading": "Track B: five sections",
+   "narration": "Track B has five sections. One, Test: strengths, weaknesses and assumptions. Two, Research: current alternatives and customer needs. Three, Sequence: dependencies and professional advice. Four, Describe: a name, an offer and a clear message. And five, Act: prepare an announcement or a small first test.",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 31,
+   "heading": "Track B, Leg 1 of 5: Stress-testing an idea",
+   "narration": "Leg one: stress-testing the idea. Ask for objections as well as strengths. AI tends to be encouraging, a little too agreeable, and it may tell you your idea is wonderful because that's what most people want to hear. So describe the idea, the intended audience and where you're up to now. Then challenge it: what assumptions or risks need testing? And separate the evidence. An AI critique is a source of questions. It is not customer validation.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 32,
+   "heading": "B.1 Stress-test template",
+   "narration": "Here's the stress-test template. \"My idea is your description, for your audience. Assess possible strengths, weaknesses and assumptions. Give the strongest objections and questions to resolve before spending money. Distinguish evidence from speculation and flag what needs real-world testing.\" [pause] Hearing the strongest case against your idea early is the cheapest lesson you'll get. Just remember that a simulated critic does not provide an independent market assessment.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 33,
+   "heading": "Try It Now: Track B, Leg 1",
+   "narration": "Try It Now. Identify one assumption to test. Run the stress test, then request a sceptical view: \"Now argue against this idea as a sceptical investor would.\" Choose one assumption that would change your decision if it turned out to be wrong. Then record what evidence would support it or challenge it. Pause the video now and run your test. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 34,
+   "heading": "Track B, Leg 2 of 5: Current alternatives",
+   "narration": "Leg two: current alternatives. Before you start, find out what people already use. Research similar offers, their audience, their terms and their current prices. Then verify: open the supplier's own page and note the date. A business AI describes confidently may have closed last year. And then do the most valuable research of all, which AI can't do for you: talk to real people. Ask about their actual needs, the alternatives they use, and what they've done recently.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 35,
+   "heading": "B.2 Research template",
+   "narration": "Here's the research template. \"Find current examples of your type of offer, for your audience or location. Compare what they provide, published pricing and conditions. Link to original pages and flag unavailable details. Suggest customer questions to test my assumptions.\" [pause] Search availability varies between tools. Click the links, and verify every business, every price and every claimed gap before you rely on the comparison.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 36,
+   "heading": "Try It Now: Track B, Leg 2",
+   "narration": "Try It Now. Check one real example. Open a supplier's current, original page. Record the offer, the terms, and any missing information. Then prepare two neutral questions for a potential customer, questions that don't lead them towards the answer you're hoping for. Pause the video now. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 37,
+   "heading": "Track B, Leg 3 of 5: First steps in order",
+   "narration": "Leg three: first steps, in order. One of the most paralysing things about starting is not knowing what to do first. People build a website before they have a customer. So identify what each step depends on. Describe your stage: an idea, an existing skill or an early interest. Request a sequence: first actions, dependencies and the evidence to collect. And flag the decisions, such as legal structure, tax, insurance or permits, that need verifying.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 38,
+   "heading": "B.3 First-steps template",
+   "narration": "Here's the first-steps template. \"I want to start your idea. Current stage: your stage. Give me five to ten initial steps in dependency order. Identify what I need before each step, what I can test cheaply and what requires qualified advice or official confirmation.\" [pause] Most checklists are complete but not in order. Knowing what comes first is what makes a list usable. Treat the list as a draft, and check the requirements for your activity and your location.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 39,
+   "heading": "B.3 Australian business starting points",
+   "narration": "Here are the official Australian starting points. For registrations and setup, business dot gov dot au. It's free, it walks you through registrations, and it's the place to check whatever the AI tells you. For A B N eligibility and applications, A B R dot gov dot au. For business names, asic dot gov dot au. For trade mark checks, I P australia dot gov dot au. And for tax and G S T requirements, A T O dot gov dot au.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 40,
+   "heading": "Try It Now: Track B, Leg 3",
+   "narration": "Try It Now. Choose a verified first step. Review your draft sequence for missing dependencies. Verify one relevant requirement through an official source. Then save your next action, and a question for an accountant or another professional. An hour with an accountant at the right moment can save you years of headaches, and AI can help you prepare the questions so you get full value from it. Pause the video now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 41,
+   "heading": "Track B, Leg 4 of 5: Name, offer and message",
+   "narration": "Leg four: the name, the offer and the message. Describe what someone actually receives. Audience: who is the offer for? Deliverable: what will you provide, and what falls outside the scope? And plain language: use the wording you'd say to a potential customer. Real customers respond to real language, not marketing speak.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 42,
+   "heading": "B.4 Offer template",
+   "narration": "Here's the offer template. \"I offer your service or product to your audience. Help describe what they receive, what problem it addresses and any limits. Give one paragraph and one sentence. Avoid invented benefits, qualifications, customer results or testimonials.\" [pause] Read both versions. Review the wording against what you're actually able and willing to deliver. If it doesn't sound like something you'd say about your own work, change it until it does.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 43,
+   "heading": "B.4 Name checks",
+   "narration": "A suggested name needs separate checking. Don't get stuck on the name, it won't make or break you, but check it before you commit. Business name: check availability through the official register. Domain: check the website address separately. AI can't reliably tell you either of those, so check it yourself. And trade marks: search the relevant marks, and get advice where you need it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 44,
+   "heading": "Try It Now: Track B, Leg 4",
+   "narration": "Try It Now. Read your offer aloud. Draft a one-sentence description, then read it as if you were introducing yourself at a barbecue. Review it: is the deliverable clear, and is the claim supportable? Then revise it in your own everyday wording. If it sounds stiff, steer: \"Make it sound more like how I'd say it to a neighbour.\" Pause the video now and try it. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 45,
+   "heading": "Track B, Leg 5 of 5: Starting in public",
+   "narration": "Leg five: starting in public, if that's part of your plan. Choose a small, appropriate test. A possible first step might be a checked introduction, an expression-of-interest request, or a sample. Starting small is one of the most sustainable ways to begin: you learn what people value without big investment or risk. Check permission, and read the community or platform rules before posting. And keep your claims honest. Represent your experience and your evidence accurately.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 46,
+   "heading": "B.5 Announcement template",
+   "narration": "Here's the announcement template. \"Draft a short introduction for your audience or channel about your offer or project. Use these verified details: your notes. Explain what I am testing and the next step for interested people. Do not imply proven results or endorsements.\" [pause] Then review the draft yourself. Your voice and your experience are what make it worth reading. Check any disclosure requirements that apply, and the platform's rules for AI-assisted content.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 47,
+   "heading": "Try It Now: Track B, Leg 5",
+   "narration": "Try It Now. Prepare one practical action. Choose a customer conversation, a checked introduction or a small test. Review it for claims, permissions, privacy and any setup requirements. Then decide, and take the action yourself when it's appropriate. Pause the video now. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 48,
+   "heading": "B.5 Common Turbulence",
+   "narration": "Common Turbulence: the plan keeps growing without a test. AI makes planning so easy and pleasant that some people plan endlessly. Notice the signs: repeated name lists, or business-plan revisions. Version seven of the plan, the twentieth name list, and not a single customer has heard of it. Narrow it down: choose the smallest action that produces useful evidence. [pause] Memory Hook: test assumptions, order the steps and act on one checked task.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 49,
+   "heading": "Track B: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what helps challenge an overly positive idea assessment? [pause] Two: where should you begin checking Australian business requirements? [pause] Three, from Module 2: how can you expose hidden assumptions? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 50,
+   "heading": "Track B: Check answers",
+   "narration": "Here are the answers. One: ask for strong objections, and identify what requires real-world evidence. Two: start at business dot gov dot au, then go to the responsible authority for the specific requirement. Three: ask what the tool is assuming, and which of those assumptions might be wrong. Compare these with your answers, and revisit an example if you need to.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 51,
+   "heading": "Cleared To Try: Track B",
+   "narration": "Cleared To Try for Track B: take one concrete step this week, a doing step, not a thinking step. Prepare a clear offer, a verified name check, or a question for a customer. Then act: choose a small, appropriate test after you've done your checks. In your Flight Log, record what happened and what evidence you still need.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 52,
+   "heading": "Track C: Sort Something",
+   "narration": "Track C: Sort Something. If you chose this track, there's probably something significant that needs sorting. It's been in the background, half done or not started, because it has too many moving parts, or it's emotionally heavy, or there's never been the time. Think of a knotted ball of string. Pulling harder doesn't help. You find one loose end, then the next. Your flight plan. One: break a significant task into ordered actions. Two: identify the decisions that need qualified support. Three: complete a first visible step.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 53,
+   "heading": "Track C: four sections",
+   "narration": "Track C has four sections. One, Retirement: money, weekly life, relationships and purpose. Two, Property: scope, quotes and the decisions to verify. Three, Life admin: paperwork, responsibilities and professional support. And four, A meaningful trip: constraints, obstacles and a feasible next step. AI doesn't know your situation better than you do, but it's good at breaking big, tangled things into smaller steps.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 54,
+   "heading": "Track C, Leg 1 of 4: Retirement",
+   "narration": "Leg one: retirement. It's one of life's biggest transitions, so consider more than the financial questions. Financial: prepare your questions about income, super, tax and documents. Practical: explore how a week might actually work, and what gives it shape. Social and personal: consider your relationships, your interests, and what gives your time meaning. Most retirement planning covers only the money. It's important, but it's not the whole picture.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 55,
+   "heading": "C.1 Retirement template",
+   "narration": "Here's the retirement template. \"Help me think through retirement using financial, practical, social and personal headings. Use this broad context: your non-sensitive summary. Separate questions to explore, possible actions and matters to discuss with a qualified professional.\" [pause] Use minimal details or fictional figures, ranges rather than account numbers. Verify current rules, and seek suitable financial advice for personal decisions. Use AI to arrive at that meeting clear about your situation and your questions.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 56,
+   "heading": "Try It Now: Track C, Leg 1",
+   "narration": "Try It Now. Draft a sample week, or a transition checklist. Choose retirement, or a comparable change in your routine. Explore the one area you've considered least. Then save a manageable experiment, and the questions that need advice. You might try living that sample week, adjusting it and trying again. It doesn't have to be designed perfectly upfront. Pause the video now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 57,
+   "heading": "Track C, Leg 2 of 4: Renovation and property",
+   "narration": "Leg two: renovation and property. AI won't tell you what it will cost or whether your builder is reputable, but it can help you go in well prepared. Define the job before comparing prices. Scope: what must change, and what is optional? Requirements: approvals, licences and insurance to verify. And comparable quotes: use a consistent brief and the same questions for everyone, so you're comparing like with like.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 58,
+   "heading": "C.2 Property template",
+   "narration": "Here's the property template. \"I am considering your project or property decision, in your state or territory. Help me define the scope, identify decisions before requesting quotes, list approvals to check and prepare consistent supplier questions. Separate assumptions from verified facts.\" [pause] Confirm requirements with the responsible regulator, council or strata manager. And AI cannot certify a builder, or a design, as safe.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 59,
+   "heading": "C.2 Renovate or move: questions to resolve",
+   "narration": "Then there's the classic dilemma: renovate, or move? Each side has its own questions to resolve. If you renovate: scope, disruption, contingency, permissions and accessibility, including what it's like living through the work. If you move: purchase and sale costs, timing, how suitable the new place is, and the moving arrangements themselves.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 60,
+   "heading": "Try It Now: Track C, Leg 2",
+   "narration": "Try It Now. Prepare a consistent supplier brief. List the scope, the exclusions and your questions. Then verify where to check one licence or approval requirement. Most state building or fair trading regulators have a free online licence check, and it takes a couple of minutes. Save the first enquiry you need to make. Pause the video now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 61,
+   "heading": "Track C, Leg 3 of 4: Life administration",
+   "narration": "Leg three: life administration, the significant paperwork that's never quite urgent, until something happens that makes it urgent. Separate preparation from legal decisions. Organise the document types, contacts and questions. Use qualified services: wills, powers of attorney, advance care directives and other legal instruments need suitable professional preparation. The rules differ between states, and a mistake can cause real distress for your family. And respect authority. Don't assume you can act for another person or an estate.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 62,
+   "heading": "C.3 Life-admin template",
+   "narration": "Here's the life-admin template. \"Help me organise your task, in your state or territory. Draft a checklist in suggested order. Distinguish information gathering from decisions requiring a solicitor, accountant or financial adviser. Flag deadlines to verify and avoid drafting legal instruments.\" [pause] Use placeholders. Then confirm the current requirements, and your authority, with the responsible professional or service. AI can explain what each document does and help you prepare your questions, so the appointment is quicker.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 63,
+   "heading": "C.3 A shared checklist",
+   "narration": "When grief and paperwork arrive together, splitting the load across family makes a real difference. So share the actions without unnecessary private detail. Before sharing, remove identifiers, balances, health details and access credentials. For each action, assign an owner who has agreed to it, and a due date to confirm. And for documents, use a suitable secure location with appropriate access.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 64,
+   "heading": "Try It Now: Track C, Leg 3",
+   "narration": "Try It Now. Choose one preparation task. Organise a list of document types or professional questions. Check your authority, and what information should stay private. Then save one suitable appointment, enquiry or information-gathering step. Pause the video now. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 65,
+   "heading": "Track C, Leg 4 of 4: A meaningful trip",
+   "narration": "Leg four: a meaningful trip. Sometimes sorting something isn't paperwork. It's the journey that means something. These trips rarely fail to happen because they're impossible. They don't happen because the planning feels overwhelming. So turn the obstacle into a question to resolve. Explain why the trip matters, and what your constraints are. Separate the fixed limits, the assumptions and the missing information. Then choose a feasible next enquiry, before you make a commitment.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 66,
+   "heading": "C.4 Meaningful-trip template",
+   "narration": "Here's the meaningful-trip template. \"I want to take your trip or experience. It matters because your reason. Constraints: your budget range, timing and access needs. What I know: your notes. Obstacles: your list. Help me assess feasibility, identify live details to verify and choose the next practical step.\" [pause] Before booking, verify safety advice, entry requirements, access, insurance and cancellation terms.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 67,
+   "heading": "Try It Now: Track C, Leg 4",
+   "narration": "Try It Now. Resolve one travel question. Choose an obstacle that affects whether the trip is feasible. Verify one detail with an official source or the provider. Then record what you learned and your next decision, without making an unnecessary commitment. Pause the video now. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 68,
+   "heading": "C.4 Common Turbulence",
+   "narration": "Common Turbulence: a checklist feels like completion. AI produces wonderfully organised checklists, and you can feel as if you've done something. But a checklist sitting in a chat window hasn't moved anything. Make the action visible: a checked enquiry, an organised record or an appointment request. Keep it proportionate, though. A research step counts when a decision genuinely needs more evidence. [pause] Memory Hook: choose a clear next action and complete it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 69,
+   "heading": "Track C: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what four areas help structure retirement thinking? [pause] Two: who should prepare consequential legal documents? [pause] Three, from Module 3: what question helps identify omissions? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 70,
+   "heading": "Track C: Check answers",
+   "narration": "Here are the answers. One: financial, practical, social and personal. Two: a solicitor, or an appropriate recognised professional service. AI helps you organise your questions. Three: \"What am I forgetting?\" Treat the response as possible gaps to investigate. Compare these with your answers, and revisit an example if you need to.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 71,
+   "heading": "Cleared To Try: Track C",
+   "narration": "Cleared To Try for Track C: take one appropriate step on the thing you're sorting this week. Choose an enquiry, an appointment, a record or another concrete action. Verify first: check your authority, the requirements and the consequences. In your Flight Log, record what you completed, the date, and what remains unresolved.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 72,
+   "heading": "Track D: Learn Something",
+   "narration": "Track D: Learn Something. You've decided to learn something: a language, a craft, a practical skill or a subject you never had time for. The barrier for adult learners usually isn't motivation. It's structure, and having someone patient enough to answer the same question three times without a sigh. Your flight plan. One: set a goal and a manageable learning path. Two: practise with feedback and appropriate checks. Three: use recall, spacing and explanation.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 73,
+   "heading": "Track D: three learning habits",
+   "narration": "Three learning habits run all through this track, and you've actually been using them all course. Retrieval: try recalling before you look at the answer. Pulling something out of memory strengthens it more than re-reading does. Spacing: return to the material on later days. Short sessions spread out beat one long cram. And explaining: describe the idea in your own words, and check for gaps. That shows you what you really understand.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 74,
+   "heading": "Track D, Leg 1 of 4: A language",
+   "narration": "Leg one: a language. Set the level and the purpose. Your starting point: are you a beginner, rusty, or working on a particular skill? Your goal: travel, family conversation or another practical use. And your practice: produce the language yourself and review the corrections. The big barrier for adults was always conversation practice with someone who'd correct you. Producing the language and getting feedback is what turns AI from a phrasebook into a tutor.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 75,
+   "heading": "D.1 Language-tutor template",
+   "narration": "Here's the language-tutor template. \"Help me practise your language at your level for your goal. Start with five useful phrases and a short exercise. Explain corrections in plain English. Flag uncertainty and use a beginner-friendly pace.\" [pause] Check important wording and usage with reliable language resources or a teacher.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 76,
+   "heading": "D.1 Role-play template",
+   "narration": "For conversation, try the role-play template. \"Role-play a shopkeeper, receptionist or other role in your language at my level. Use short exchanges. Let me respond first, then explain corrections. Start with a greeting and wait for my reply.\" [pause] If voice mode is available, try speaking. Speaking out loud, even badly, is what builds confidence. Pronunciation feedback varies, though, and how your data is handled depends on the service.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 77,
+   "heading": "Try It Now: Track D, Leg 1",
+   "narration": "Try It Now. Try a short language exchange, typed or with voice, whichever your tool offers. Respond with a phrase yourself before you check the suggested wording. That's retrieval at work. Then save one correction to practise again on another day. That's spacing. Pause the video now and have your exchange. [long pause]",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 78,
+   "heading": "Track D, Leg 2 of 4: A practical skill",
+   "narration": "Leg two: a practical skill, like bookkeeping, gardening, cooking or getting more confident with technology. Choose a safe, limited first lesson. State your level: name what you know and the gap you want to fill. Request a sequence: the equipment, a first task, and a way to check it. And keep safety boundaries. For hazardous work, use qualified help.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 79,
+   "heading": "D.2 Practical-skill template",
+   "narration": "Here's the practical-skill template. \"I want to learn your low-risk skill for your goal. My level is your level. Explain the basics I need and a sequence of small lessons. Give me one first exercise and a way to check it. Flag safety limits and suitable authoritative instructions.\" [pause] For electrical work, gas, brakes, structural work or hazardous materials, use qualified instruction and professional help. Use AI to understand the problem, and a licensed professional to fix it.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 80,
+   "heading": "D.2 Troubleshooting and photos",
+   "narration": "When something goes wrong, describe the specific result and what you tried. \"It didn't work\" can't be troubleshot. \"The sauce split after I added the butter\" can. Useful context is the steps, the result you expected, and the result you actually got. If you're using a photo, remove private details and show the relevant area clearly. And keep your uncertainty. Image interpretation can miss causes, or misidentify the problem altogether.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 81,
+   "heading": "Try It Now: Track D, Leg 2",
+   "narration": "Try It Now. Complete a safe first exercise. Choose a low-risk task within your current ability. Describe what you tried and what happened. Then review the feedback against suitable instructions before you change your method. Pause the video now. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 82,
+   "heading": "Track D, Leg 3 of 4: A creative practice",
+   "narration": "Leg three: a creative practice, such as painting, photography, poetry, an instrument or textiles. Ask about a specific aspect of the work. Technique: composition, rhythm, colour, or another skill you've chosen. Feedback: ask for observations, and the reasons behind each suggestion. And your judgement: decide whether the suggestion serves your intention. AI can't tell you whether something is beautiful. That judgement is yours.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 83,
+   "heading": "D.3 Creative-feedback template",
+   "narration": "Here's the creative-feedback template. \"I am practising your creative skill and want to improve your chosen aspect. Explain a relevant principle and suggest an exercise. When I share suitable work, describe what you observe, explain possible changes and flag uncertainty. Avoid empty reassurance.\" [pause] Only share work you're entitled to upload. And remember, a model's critique reflects a perspective. It is not an objective verdict.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 84,
+   "heading": "Try It Now: Track D, Leg 3",
+   "narration": "Try It Now. Test one piece of feedback. Share a suitable excerpt or image, if your tool supports it. Question it: ask why the proposed change would help your stated goal. If you disagree, say so. The discussion that follows is an education in itself. Then compare: try the change if it's useful, and decide which version you prefer. Pause the video now. [long pause]",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 85,
+   "heading": "Track D, Leg 4 of 4: A subject in depth",
+   "narration": "Leg four: a subject in depth. History, science, philosophy, an era, a person or an idea you want to understand properly. Build your understanding through questions and sources. Context: ask how the topic developed and why it matters. Debate: compare interpretations and the evidence behind them. \"What did the people who disagreed actually think?\" And verification: check factual claims and any suggested reading.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 86,
+   "heading": "D.4 Subject-study template",
+   "narration": "Here's the subject-study template. \"Help me understand your topic at your level. Explain essential context, key ideas, disagreements and common misunderstandings. Suggest a short reading list with verifiable author and publication details. Separate evidence, interpretation and uncertainty.\" [pause] Before buying or citing anything, check the titles and authors in a library catalogue, Trove, or a publisher's catalogue.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 87,
+   "heading": "D.4 Recall and teach-back",
+   "narration": "This template builds in retrieval and explaining. \"Ask me five short questions about this material, one at a time. Wait for my attempt before explaining the answer. Then ask me to explain the central idea in my own words and help me identify gaps.\" [pause] Use checked source material, and review the feedback against that source rather than assuming the model is right.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 88,
+   "heading": "Try It Now: Track D, Leg 4",
+   "narration": "Try It Now. Explain one idea without looking. Recall: answer a question before you read the explanation. Teach back: describe the idea in your own words. Then verify: check one factual point, or one reading-list entry. Pause the video now. [long pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 89,
+   "heading": "D.4 Common Turbulence",
+   "narration": "Common Turbulence: a reading-list entry sounds plausible. AI reading lists are often excellent, but occasionally one includes a book that sounds perfect and doesn't exist, or credits a real book to the wrong author. So check the title, the author and the publication details. Find a matching library or publisher record. It takes about thirty seconds. And if it's missing, mark it unverified and choose an established alternative.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 90,
+   "heading": "Track D: a two-hour practice plan",
+   "narration": "Here's an example two-hour plan. Session one, thirty minutes: set a goal and try the first exercise. Session two, thirty minutes: recall first, then practise and review the feedback. Session three: recall again, and work on one gap. Session four: explain what you learned, and choose your next exercise. Use different days, and adjust the session length to suit you. AI gives you access and structure. The hours come from you.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 91,
+   "heading": "Track D: Pre-Landing Check",
+   "narration": "Pre-Landing Check. Answer each question before you move on. One: what three learning habits did this track use? [pause] Two: how might you practise speaking with an AI tool? [pause] Three: what should you check before buying a recommended book? [pause]",
+   "script_reuse": "none"
+  },
+  {
+   "slide": 92,
+   "heading": "Track D: Check answers",
+   "narration": "Here are the answers. One: retrieval, spacing, and explanation in your own words. Two: use a short role-play in voice mode, if it's available. Check the corrections, and remember your privacy settings. Three: check that the book exists, and that the title, author and publication details match a reliable catalogue. Compare these with your answers, and revisit an example if you need to.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 93,
+   "heading": "Cleared To Try: Track D",
+   "narration": "Cleared To Try for Track D: spend two hours learning this week. Split the time: try four half-hour sessions on different days. Recall first: review earlier material before adding anything new. And in your Flight Log, write one idea or skill you understand better now, and how you checked it.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 94,
+   "heading": "Your Module 4 toolkit",
+   "narration": "You've just spent real time with AI on something that matters to you. Here's your Module 4 toolkit. Write: gather your material, choose a structure and keep your voice. Start: test your assumptions and take one checked practical step. Sort: organise the task and identify the professional support you need. Learn: practise, recall, return later and explain the idea.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 95,
+   "heading": "Cleared To Try: Module 4",
+   "narration": "Your Cleared To Try for the whole module: make time for your chosen project. Plan: set aside two hours this week, in a way that suits you. Put them in your calendar now, as an appointment with yourself. Projects with a time slot happen. Projects with \"when I get a chance\" mostly don't. Work: spend that time on the project itself, including the practice and the checks. Then, in your Flight Log, write one true sentence about what you made, learned or clarified.",
+   "script_reuse": "high"
+  },
+  {
+   "slide": 96,
+   "heading": "A useful stopping point",
+   "narration": "Before you close the chat, save what lets you resume. Your current work: a draft, a checklist, an offer or your learning notes. Your open questions: what needs evidence, advice, or another attempt? And your next action: one specific step to begin the next session with. If you spent your whole time on one section, that's fine. Depth beats breadth at this stage.",
+   "script_reuse": "some"
+  },
+  {
+   "slide": 97,
+   "heading": "Module 4 complete",
+   "narration": "That's Module 4 complete. Review your progress before moving on. Your project: continue where it's useful, and change your approach when you need to. Your judgement: notice where AI helped, and where checking took more effort. You may have found it gave you more than you expected, or that it took several attempts. Both are learning. [pause] Next is Module 5, Holding Pattern: limits, verification, scams and privacy. These aren't reasons to be afraid of AI. They're reasons to be informed. See you in the holding pattern.",
+   "script_reuse": "some"
+  }
+ ]
+}

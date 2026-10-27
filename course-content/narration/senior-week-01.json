@@ -1,0 +1,217 @@
+{
+ "course": "senior",
+ "week": 1,
+ "title": "Week 1: How AI Systems Work",
+ "slides": [
+  {
+   "slide": 1,
+   "heading": "Senior AI Pilots, Week 1: How AI Systems Work",
+   "narration": "[warmly] Welcome to Ground School. I'm Captain Naomi, and this is Senior AI Pilots, Week 1: How AI Systems Work. Before you trust anything an AI tells you, it helps to know what is actually going on under the panel. So that is where we start."
+  },
+  {
+   "slide": 2,
+   "heading": "Mission Brief",
+   "narration": "Here's your Mission Brief: understand the system, then evaluate the output. By the end of today you should be able to do three things. Explain, by tracing a machine-learning system from data all the way to output. Distinguish between prediction, classification and generation. And challenge, which means explaining why a fluent answer still needs evidence behind it."
+  },
+  {
+   "slide": 3,
+   "heading": "The Hook",
+   "narration": "Let's start with three systems you probably used this week. Your keyboard suggests a word as you type. Your streaming app recommends something to watch. A chatbot produces a whole paragraph in response to a prompt. Three very different jobs. So what links them? Pause the video and have a think before we go on. [pause]"
+  },
+  {
+   "slide": 4,
+   "heading": "A shared idea",
+   "narration": "Here's the link: patterns support predictions. Each system takes an input, which might be text, a picture, your listening history or some other signal. A trained model then uses patterns it learned from data. And out comes the output: a suggestion, a label, a ranking, or generated content. Keyboard, streaming app, chatbot. Same basic shape."
+  },
+  {
+   "slide": 5,
+   "heading": "A common machine-learning pipeline",
+   "narration": "Now let's lay that shape out as a pipeline, in four stages. One, data: the examples used to develop the system. Two, training: adjusting the model's parameters using those examples. Three, the model: the learned numerical structure that training leaves behind. And four, output: a result produced for a new input. We'll fly through each stage in turn."
+  },
+  {
+   "slide": 6,
+   "heading": "1. Data",
+   "narration": "Stage one, data. Examples shape what the model learns. Those examples can come in lots of forms: text, images, audio, and records of interactions, like what people clicked on. Quality matters. Missing, misleading or unbalanced examples all affect how well the system performs. So get into the habit of asking one question: does the data actually fit the task the system is meant to do?"
+  },
+  {
+   "slide": 7,
+   "heading": "2. Training",
+   "narration": "Stage two, training. The goal is to adjust parameters to improve an objective. Parameters are just numbers that control how a model behaves. During training, the system compares its outputs with a training objective, then updates those numbers to do better. And it's rarely a one-off. Systems can be trained, fine-tuned and updated in stages."
+  },
+  {
+   "slide": 8,
+   "heading": "3. Model",
+   "narration": "Stage three, the model. Training produces a numerical system. Its parameters encode useful statistical relationships, which is the learned structure. What a model isn't is a source catalogue: an answer doesn't automatically come with its original evidence attached. And one important limit to remember. Models can also memorise parts of their training data."
+  },
+  {
+   "slide": 9,
+   "heading": "4. Using the model",
+   "narration": "Stage four is using the model, where new input produces an output. The input might be a prompt, an image or other information you supply to the system. Running the model to produce a result has a proper name: inference. Then comes the step that belongs to you, evaluation. Check whether the result actually meets the task and stands up against the evidence."
+  },
+  {
+   "slide": 10,
+   "heading": "Training and inference",
+   "narration": "Two words worth keeping straight. Training means adjusting parameters using training data, and that can happen across several stages. Inference means using the current parameters to produce an output from an input. One changes the model. The other uses it as it is."
+  },
+  {
+   "slide": 11,
+   "heading": "Does chatting train the model?",
+   "narration": "[curious] So, does chatting with a chatbot train it? Context is different from a model update. Within a conversation, your messages give context for the responses that come later. But ordinary chatting is not the same as retraining the underlying model's parameters live. Whether your chats help with future training is a separate question, and that depends on the service and its settings."
+  },
+  {
+   "slide": 12,
+   "heading": "Three useful job labels",
+   "narration": "Now for three useful job labels. Predict: estimate a likely value, event or next item. Classify: assign an input to a category. Generate: produce text, images, audio or code. Let's take them one at a time."
+  },
+  {
+   "slide": 13,
+   "heading": "Predict",
+   "narration": "Predicting means estimating what is likely. Your keyboard suggesting the next word is one example. A system estimating tomorrow's temperature is another. To check a predictor, compare its predictions with what actually happens, over time. One lucky guess about tomorrow's weather tells you very little."
+  },
+  {
+   "slide": 14,
+   "heading": "Classify",
+   "narration": "Classifying means choosing a category for an input. Spam or not spam is the classic example. Another is identifying a plant disease from a photo of a leaf. The check here is about mistakes: which cases get mislabelled, and what happens when they do? A real email dumped in spam and a sick plant labelled healthy are very different problems."
+  },
+  {
+   "slide": 15,
+   "heading": "Generate",
+   "narration": "Generating means producing a new output. That could be a paragraph, an illustration, a sound clip or some code. The risk is that a polished output might still contain errors, or copied patterns. So check it for accuracy, for suitability, for evidence, and for your own contribution. What part of this is actually yours?"
+  },
+  {
+   "slide": 16,
+   "heading": "These categories overlap",
+   "narration": "Here's a twist: these categories overlap, and one system can do several jobs. Classification often predicts a category. Recommendation often predicts or ranks your likely preferences. And text generation uses predictions while it produces a sequence, one piece after another. The labels are handy, but real systems don't stay in neat boxes."
+  },
+  {
+   "slide": 17,
+   "heading": "How a language model generates text",
+   "narration": "So how does a language model actually generate text? It works in tokens, which are small units of text. A token might be a word, part of a word, or another text unit. At each step the model estimates probabilities for the possible continuations. That's called the next-token distribution. Then a decoding method selects tokens and keeps the sequence going."
+  },
+  {
+   "slide": 18,
+   "heading": "Try a continuation",
+   "narration": "Try it yourself. \"The student opened the...\" What comes next? Book is a possible next word. Door is another possibility. So is laptop. Add more context and a different continuation might fit better. But notice this: a good continuation is not proof of a factual claim. It just sounds right."
+  },
+  {
+   "slide": 19,
+   "heading": "Why a fluent answer might be wrong",
+   "narration": "Which is exactly why a fluent answer might be wrong. Readable language is not proof. A plausible continuation can include an incorrect or invented detail. An unsupported citation can look credible without actually supporting the claim. So the responsibility sits with you. Check the claims that matter before you rely on them."
+  },
+  {
+   "slide": 20,
+   "heading": "Fluency ≠ accuracy",
+   "narration": "Fluency is not accuracy. A smooth explanation can still contain a false claim. So evaluate the evidence and the reasoning, and ignore the confident tone. Confidence is a style, and it costs the system nothing."
+  },
+  {
+   "slide": 21,
+   "heading": "What is a hallucination?",
+   "narration": "You'll hear the word hallucination a lot. It means an incorrect or invented output. In this course, we use the term for plausible but unsupported model content. Don't read intent into it. The error doesn't prove the system deliberately lied. What helps is checking reliable sources, then correcting or rejecting the claim."
+  },
+  {
+   "slide": 22,
+   "heading": "What about web search?",
+   "narration": "What about when a chatbot uses web search? Search does add information. A system can retrieve material beyond its training data. But errors are still possible. It might use a weak page, misread a source or mix up claims. So open the source yourself, and check whether the cited passage actually supports the specific claim."
+  },
+  {
+   "slide": 23,
+   "heading": "Pilot's Tip: define the check",
+   "narration": "Pilot's Tip: define the check. Before you trust an answer, choose how you'll judge it. For a factual claim, use a relevant, reliable source. For a calculation, recalculate it, or test the method. For code, run appropriate checks before you use the result. Different cargo, different inspection."
+  },
+  {
+   "slide": 24,
+   "heading": "Account briefing",
+   "narration": "Time for an account briefing, because you need an age-appropriate setup. If you're thirteen to sixteen, parental consent is required for ChatGPT, so review the controls together with your parent. If you're twelve, an adult conducts the interaction for this course. And every lab includes an option without a chatbot, so nobody gets left on the ground."
+  },
+  {
+   "slide": 25,
+   "heading": "Privacy before the first prompt",
+   "narration": "Privacy comes before the first prompt. Choose your settings with your parent or guardian. With linked controls, review the sensitive-content safeguards and quiet hours. In data settings, review whether your conversations help improve models. And set expectations clearly: linked controls do not let parents read teen chat histories."
+  },
+  {
+   "slide": 26,
+   "heading": "Course tool boundaries",
+   "narration": "Some course tool boundaries: use only tools approved for your age. The Claude consumer service requires users to be eighteen or older, so it isn't a student tool in this course. For other services, a parent checks current eligibility and which features are available. And whatever you use, keep passwords and other people's private data out of it."
+  },
+  {
+   "slide": 27,
+   "heading": "Try It Now",
+   "narration": "Try it now. Ask an eligible chatbot this: \"Explain in three sentences how you produce an answer. Be honest about your limitations.\" Give it about ninety seconds, then compare its explanation with what you've learned in this lesson. Pause the video and give it a go. [pause]"
+  },
+  {
+   "slide": 28,
+   "heading": "Evaluate the explanation",
+   "narration": "Now evaluate that explanation, because a chatbot's description of itself also needs scrutiny. Look for prediction, learned patterns and limitations. Question any claim of perfect accuracy or automatic fact-checking. Then compare what it said with the course explanation and reliable documentation."
+  },
+  {
+   "slide": 29,
+   "heading": "No-chatbot option",
+   "narration": "No chatbot? No problem. Explain the pipeline to a family member instead. In under two minutes, describe data, training, model and output. Give an example, like a keyboard suggestion or a spam filter. Then finish with a limit, explaining one way the system could be wrong. Pause the video and try it now. [pause]"
+  },
+  {
+   "slide": 30,
+   "heading": "Common Turbulence: \"It knows\"",
+   "narration": "Common Turbulence: \"It knows.\" People say this about AI all the time. Your job is to translate vague language like that into a testable claim. Instead of assuming, ask what output the system actually produced. Then investigate what input, patterns or sources influenced that result. Finally, ask what evidence would show whether it's correct."
+  },
+  {
+   "slide": 31,
+   "heading": "Memory Hook",
+   "narration": "Here's your Memory Hook. Data in. Patterns learned. Predictions out. The second line: fluency is not accuracy. And the habit to carry with you: pause, check, then decide."
+  },
+  {
+   "slide": 32,
+   "heading": "Pre-Landing Check 1",
+   "narration": "Pre-Landing Check 1. Name the four stages of the pipeline. Your turn: say the stages out loud, in order. Pause the video and answer before we move on. [pause]"
+  },
+  {
+   "slide": 33,
+   "heading": "Check 1: answer",
+   "narration": "The answer: data, training, model, output. Remember, at inference time, new input goes into the trained model. And keep the distinction clear: using a model is different from updating its parameters."
+  },
+  {
+   "slide": 34,
+   "heading": "Pre-Landing Check 2",
+   "narration": "Pre-Landing Check 2. What job is spam filtering? Is it predict, classify or generate? Your turn: pick one and explain your choice. Pause the video and work it out. [pause]"
+  },
+  {
+   "slide": 35,
+   "heading": "Check 2: answer",
+   "narration": "The answer is classification. The output is a category, such as spam or not spam. But remember the overlap. It does that by predicting a category, so the job labels aren't exclusive. If you said predict and explained it well, you were on the right flight path."
+  },
+  {
+   "slide": 36,
+   "heading": "Pre-Landing Check 3",
+   "narration": "Pre-Landing Check 3. Why might a chatbot be confidently wrong? Your turn: explain it without blaming its tone, and without assuming it checked a database. Pause the video and give your answer. [pause]"
+  },
+  {
+   "slide": 37,
+   "heading": "Check 3: answer",
+   "narration": "Here's the answer: plausible text can contain unsupported claims. Language fluency does not guarantee reliable facts. Tools help, since search and other tools add evidence, but what they bring back still needs evaluating. Your response is the same every time: open the sources, and check the important claims."
+  },
+  {
+   "slide": 38,
+   "heading": "Project Log: Entry 1",
+   "narration": "Project Log, Entry 1: map the AI systems in your week. Start now. List five systems and label each one's main job. For each one, write one way its output could be wrong. And label your uncertainty: if you don't know a system's design or data, say so. Pause the video and get started. [pause]"
+  },
+  {
+   "slide": 39,
+   "heading": "Home Lab: Map Your AI",
+   "narration": "Your Home Lab is Map Your AI. One, list eight systems you used or came across. Two, analyse each one: its job, its possible training data, and one way it could fail. Three, sketch the pipeline for one system you choose. Four, explain it, with the optional chatbot test or a two-minute explanation to your family. Allow about forty-five minutes. And remember, your guesses about data are hypotheses, not established facts."
+  },
+  {
+   "slide": 40,
+   "heading": "Your AI Map entry",
+   "narration": "Each entry in your AI Map has three parts. System and job: name the system and explain its main output. Possible data: what examples might it use? Mark your guesses clearly. Failure and check: how could it go wrong, and how would you investigate?"
+  },
+  {
+   "slide": 41,
+   "heading": "Parent & Guardian Brief",
+   "narration": "This one's the Parent and Guardian Brief, so set up access and expectations together. On account and controls, confirm age eligibility, consent and the relevant settings. For privacy, use fictional examples and keep identifying details out. And for the conversation, parents, ask which system surprised them, and how they would check it."
+  },
+  {
+   "slide": 42,
+   "heading": "Ready for Week 2",
+   "narration": "That's Week 1 done. This week you traced the system and challenged fluent answers. Next week is Prompt Design and Evaluation, where you'll write structured prompts and judge outputs with a rubric. Keep the habit going: fluency is not accuracy. [warmly] See you on the flight deck."
+  }
+ ]
+}

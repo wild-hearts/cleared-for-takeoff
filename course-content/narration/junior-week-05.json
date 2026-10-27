@@ -1,0 +1,201 @@
+{
+  "week": 5,
+  "title": "Week 5: When AI Gets It Wrong",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Junior AI Navigators",
+      "narration": "[warmly] Welcome back to Ground School, navigators. I'm Captain Naomi. This is Week 5 of Junior AI Navigators, and today's flight is all about when AI gets it wrong. Grab your grown-up and let's go."
+    },
+    {
+      "slide": 2,
+      "heading": "Pre-Flight",
+      "narration": "Time for Pre-Flight. Today's big idea is that a useful answer still needs checking. Your first goal is to explore how missing or unfair examples can change what a model predicts. Your second goal is to spot why an answer that sounds very sure might still be wrong. And your mission? Check three AI answers using the Captain's Check."
+    },
+    {
+      "slide": 3,
+      "heading": "Take-Off Question",
+      "narration": "Here's your Take-Off Question. Last week you trained your own model. What happened when you showed it the spoon? Think back to the label your model predicted. Then explain it. What groups had you trained it to choose between? Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 4,
+      "heading": "A model's available choices",
+      "narration": "Your model learned two labels, Teddy and Car. Those toy groups were the only choices it had. So a different object, like the spoon, could still get one of the toy labels. That's a useful lesson. A prediction can be limited by the task, and by the examples the model learned from."
+    },
+    {
+      "slide": 5,
+      "heading": "Two kinds of mistakes",
+      "narration": "Today we're looking at two kinds of mistakes. The first is limited examples. When a model only learns from a few kinds of examples, it may miss important differences. The second is made-up answers. An answer can sound very sure without anything reliable backing it up. Let's look at each one."
+    },
+    {
+      "slide": 6,
+      "heading": "1. Limited training examples",
+      "narration": "Mistake number one is limited training examples. What if every dog example a model saw was brown? It would only know a narrow range of what dogs look like. Now show it a new test picture, a white, fluffy dog. That dog looks different, and the model might not recognise it as a dog at all."
+    },
+    {
+      "slide": 7,
+      "heading": "A missing part of the picture",
+      "narration": "Look at the picture. On the left, the training examples are only brown dogs. Remember, this is a made-up example. On the right is a new picture, the white, fluffy dog, and it falls outside that narrow set. So the thing to check is this: does the model work on all the different kinds of things it will meet?"
+    },
+    {
+      "slide": 8,
+      "heading": "A more useful range",
+      "narration": "So how do we help? Different looks need examples. Include dogs with different colours, sizes and body shapes. Use different poses, angles and backgrounds too. Then test what changed. Check with new pictures, rather than guessing that more variety fixed every problem."
+    },
+    {
+      "slide": 9,
+      "heading": "Fairness matters for people too",
+      "narration": "Fairness matters for people too, because missing examples can leave people out. A limited set of examples may show some groups of people much better than others. Then the result can be uneven, and a system may work better for some people than for others. That's why people who build and use AI need to test for those differences."
+    },
+    {
+      "slide": 10,
+      "heading": "A fairness question",
+      "narration": "So ask a fairness question. Who is missing from the examples? Look for variety. Notice different people, looks, voices and situations. Ask about the test. Who did the system work well for, and who did it struggle with? And keep checking, because a bigger pile of examples isn't automatically a fairer one."
+    },
+    {
+      "slide": 11,
+      "heading": "2. Made-up answers",
+      "narration": "Mistake number two is made-up answers. AI can say something that nothing backs up. A language tool, like a chatbot, builds its answer from patterns it has learned. Sometimes that answer includes invented or wrong information. The tricky part? The words can still sound confident and polished."
+    },
+    {
+      "slide": 12,
+      "heading": "A made-up example",
+      "narration": "Here's an invented claim. [laughs softly] 'The tallest tree in Australia is made of chocolate.' This is a deliberately silly example. It isn't a real tree fact, and no chatbot actually said it. So, what would you do before believing it? Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 13,
+      "heading": "Confident words and correct facts",
+      "narration": "Sounding sure doesn't make something true. Words like 'definitely' or 'of course' can make an answer feel convincing. But a sure-sounding voice is no proof. Look for a reliable source that backs up that exact claim. Your job is to check the information, rather than trust the tone."
+    },
+    {
+      "slide": 14,
+      "heading": "A less obvious mistake",
+      "narration": "Not every mistake is as easy to spot as a chocolate tree. A believable detail might still be wrong. An answer that sounds fine might have a wrong name, a wrong date or a wrong description. Or it might leave out something important. The same habit helps every time. Check the claims that matter before you use them."
+    },
+    {
+      "slide": 15,
+      "heading": "Instrument Check",
+      "narration": "Instrument Check! Which two kinds of mistakes did we explore today? Here's a hint. Think about training examples, and about answers that sound very confident. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 16,
+      "heading": "Instrument Check: answer",
+      "narration": "Let's see how you went. The two mistakes were limited examples and made-up answers. Limited examples can leave important people, objects or situations not shown well enough. Made-up answers can sound convincing while including invented information. So our habit is the same either way. Check important answers, whichever kind of mistake is possible."
+    },
+    {
+      "slide": 17,
+      "heading": "The Captain's Check",
+      "narration": "Now for your best tool today, the Captain's Check. It has three steps. One, does it make sense? Notice anything odd, or anything that doesn't fit together. Two, check elsewhere. Compare it with another trusted source, a separate one. Three, ask a grown-up. Get help if you're not sure."
+    },
+    {
+      "slide": 18,
+      "heading": "1. Does this make sense?",
+      "narration": "Step one. Does this make sense? Start by looking closely. Is something surprising, like a tree made of chocolate? Pause, instead of believing it straight away. Is something inconsistent? Compare the answer with what you already know. And if it still sounds possible, remember that a claim that sounds sensible still needs evidence."
+    },
+    {
+      "slide": 19,
+      "heading": "2. Can I check it elsewhere?",
+      "narration": "Step two. Can I check it somewhere else? Compare with another reliable source. You could look in a reference book for a part on the same topic. You could use a trusted website, like a zoo or a museum, for a suitable animal or history question. Or ask a knowledgeable person, like a teacher or grown-up who can help you check."
+    },
+    {
+      "slide": 20,
+      "heading": "Check the actual claim",
+      "narration": "Careful, detectives. A source has to support the actual answer. Finding the same topic isn't enough. Find information about the exact fact you're checking. Read what the source really says, and don't assume a link proves the claim sitting next to it. If you can't check it, mark it as not checked yet and ask for help."
+    },
+    {
+      "slide": 21,
+      "heading": "3. Ask a grown-up",
+      "narration": "Step three. Ask a grown-up. You don't have to decide alone. Show them the whole answer, so they can see the claim and the question you asked. Explain what's worrying you, what seems wrong or what you couldn't check. Then choose the next step together. Find another source, change the question, or leave that answer unused."
+    },
+    {
+      "slide": 22,
+      "heading": "Captain's Tip: be a detective",
+      "narration": "Captain's Tip. Be a detective. Whenever an answer tells you something, ask, how could I check that? Look for support, because a useful answer should stand up to checking. Notice missing information. What did the answer leave out? And keep your notes. Write down the source and what it helped you confirm."
+    },
+    {
+      "slide": 23,
+      "heading": "Mission: AI Detective",
+      "narration": "Now it's your mission. AI Detective! Choose a topic you know really well. A favourite animal, book or sport can work. Then choose three questions about it. Keep them clear, and leave private information out. And remember the co-pilot seat. Your grown-up is the one who uses the chatbot, with a suitable tool."
+    },
+    {
+      "slide": 24,
+      "heading": "Check all three answers",
+      "narration": "When the three answers come back, use the Captain's Check on every one. Read carefully. Notice each fact the answer claims, and anything that's missing. Compare elsewhere, using a book, a trusted website or a person who knows the topic. And keep a record. Write down the answer, your source and your decision."
+    },
+    {
+      "slide": 25,
+      "heading": "Your answer-checking labels",
+      "narration": "Your decision gets a label, but only after you've checked. Right means your checking source supports the claim. Partly right means some details are supported, but others need fixing. Wrong means your checking source shows the claim is incorrect. And not checked yet means you don't have enough evidence to decide."
+    },
+    {
+      "slide": 26,
+      "heading": "Mission pause",
+      "narration": "[warmly] Mission pause. Pause the video here and check your answers with your grown-up. Give it about fifteen minutes, or longer if you need. Keep your questions and sources close by. When you're ready to come back, bring one example of how you checked a claim. [pause]"
+    },
+    {
+      "slide": 27,
+      "heading": "Welcome back, detectives",
+      "narration": "Welcome back, detectives! What did your checking show? If you found a mistake, explain the claim and the evidence that corrected it. If everything checked out, that's useful too. The checking is the achievement. And if you're still unsure, keep that claim marked not checked yet."
+    },
+    {
+      "slide": 28,
+      "heading": "A fairness activity",
+      "narration": "Here's one more thing to try, a fairness activity. Open a picture book or a magazine with your grown-up and look together. Which kinds of people and families appear? Who is missing? Then talk about it. How might a narrow set of examples change what someone learns? Pause the video and explore it together. [pause]"
+    },
+    {
+      "slide": 29,
+      "heading": "Oops! Moment",
+      "narration": "Time for an Oops Moment. Being right last time doesn't prove an AI tool is right now. A new answer can have a different mistake in it. Even a tool you know well still needs checking on the claims that matter. So stick with a useful routine, and keep using the Captain's Check."
+    },
+    {
+      "slide": 30,
+      "heading": "Remember Rhyme",
+      "narration": "Here's our Remember Rhyme. Say it with me, and with your grown-up. Sounds sure? Check for sure. [short pause] Once more. Sounds sure? Check for sure. Use it next time an answer sounds very certain. Pause, find evidence, and ask a grown-up if you're unsure."
+    },
+    {
+      "slide": 31,
+      "heading": "Quick Check 1",
+      "narration": "Quick Check one. What can happen when the examples are unfair? Think about people or things that might be missing from the examples. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 32,
+      "heading": "Quick Check 1: answer",
+      "narration": "Here's the answer. Results can be uneven. Some people or things may be shown much better in the examples. Others may get results that are less reliable. So what matters is checking who the system works for, and where it struggles."
+    },
+    {
+      "slide": 33,
+      "heading": "Quick Check 2",
+      "narration": "Quick Check two. Name one way to check an AI answer. Choose a source, or a person who could help you. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 34,
+      "heading": "Quick Check 2: answer",
+      "narration": "The answer is a trusted source, or a person who knows the topic. That could be a relevant book, a trusted website, a teacher or a grown-up. And remember the key test. Does the evidence support the exact claim you're checking?"
+    },
+    {
+      "slide": 35,
+      "heading": "Quick Check 3",
+      "narration": "Quick Check three takes you back to Week 3. What makes good training examples? Can you name the three rules? Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 36,
+      "heading": "Quick Check 3: answer",
+      "narration": "Did you remember? Lots, different and fair. Lots means enough examples that fit the task. Different means a useful variety of looks and situations. Fair means a useful mix across the groups, followed by careful testing. Think of our brown dogs and that white, fluffy dog."
+    },
+    {
+      "slide": 37,
+      "heading": "Your Flight Log",
+      "narration": "Time to fill in your Flight Log. What did you check today? First, the claim. Write down one answer you investigated. Next, the evidence. Name the source or person that helped you check. Last, your reflection. Did you find a mistake, a missing detail, or an answer that was supported?"
+    },
+    {
+      "slide": 38,
+      "heading": "Our course rules",
+      "narration": "Before we land, let's remember our course rules. You decide. You choose the question and you check the answer. The co-pilot seat. A grown-up uses the chatbot. Private stays private. Keep names, addresses, passwords and personal photos out. And AI is a tool. Friendship and support come from people you trust."
+    },
+    {
+      "slide": 39,
+      "heading": "AI Detective",
+      "narration": "[warmly] Well done, AI Detective. You've earned your Week 5 Flight Log stamp. You explored limited examples, uneven results and made-up answers. You practised the Captain's Check. Does it make sense? Check elsewhere. Ask a grown-up. Next week is AI Storytelling, where you'll use ideas while staying the author. See you then, navigators."
+    }
+  ]
+}

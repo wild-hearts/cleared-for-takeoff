@@ -1,0 +1,162 @@
+{
+  "course": "junior",
+  "week": 1,
+  "title": "Junior AI Navigators Week 1: What Is AI?",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Junior AI Navigators",
+      "narration": "Hello, Navigators, and welcome to Ground School. I'm Captain Naomi, and this is Week One: What Is AI? Find a comfy seat, grab your grown-up, and let's get ready for take-off."
+    },
+    {
+      "slide": 2,
+      "heading": "Pre-Flight",
+      "narration": "Time for our Pre-Flight check. Today you will learn what AI does. First, you'll find out how examples help a computer make a prediction. Next, you'll explore your home and spot tools that might use AI, and explain what they predict. And last, you'll remember the most important bit: people make the decisions. You stay in charge."
+    },
+    {
+      "slide": 3,
+      "heading": "Take-Off Question",
+      "narration": "Here's our Take-Off Question, and it's a sing-along. Twinkle, twinkle, little... [curious] What comes next? Say the next word out loud. Take a moment to think before we move to the answer. Pause the video and say it with your grown-up. [pause]"
+    },
+    {
+      "slide": 4,
+      "heading": "A familiar pattern",
+      "narration": "Star! [laughs softly] I bet you got that one. You've heard that song before, so you recognised the words. The earlier words helped you predict the next word. Here's a useful starting idea: AI also uses patterns. But a computer works differently from a human brain, so it doesn't hum along the way you do."
+    },
+    {
+      "slide": 5,
+      "heading": "Artificial intelligence",
+      "narration": "So what does AI actually mean? AI is short for artificial intelligence, and it's a tool built by people. Artificial means made by people. Intelligence, here, is a name for things a computer can do, like recognising patterns. In this course, we'll explore tools that learn from examples and make predictions."
+    },
+    {
+      "slide": 6,
+      "heading": "How AI learns",
+      "narration": "Let's see how AI learns, in three steps. Step one, training examples. People give the computer examples, like lots of pictures labelled cat and lots labelled dog. Step two, finding patterns. Training builds a model that responds to useful patterns. Step three, making a prediction. The trained model looks at something new, like this cat photo, and suggests an answer."
+    },
+    {
+      "slide": 7,
+      "heading": "Training and using a model",
+      "narration": "Here's the order things happen in. The learning comes first, before any prediction. During training, a model learns patterns from many examples. Then, when we use it, we give the trained model something new: a picture, a sound or a question. The result? It predicts an answer using the patterns it learned."
+    },
+    {
+      "slide": 8,
+      "heading": "What examples look like",
+      "narration": "Different tools learn different patterns. Some learn from words. Patterns in language help a tool predict the next word, just like you did with Twinkle, Twinkle. Some learn from pictures. Patterns in pictures help a tool recognise objects or find faces. And some learn from sounds. Sound patterns help a tool recognise spoken words."
+    },
+    {
+      "slide": 9,
+      "heading": "AI and people",
+      "narration": "Now, an important one. AI has no human feelings. People have experiences, feelings and relationships. You laugh, you miss people, you have a favourite song. AI tools don't. They make their answers using computer steps and the patterns they learned. And your job? [warmly] You decide whether the answer is useful, and what to do next."
+    },
+    {
+      "slide": 10,
+      "heading": "People build the technology",
+      "narration": "AI runs on computers, and people build it. People choose the job the tool will do, and they build the system. The training examples they choose shape the patterns a model learns. And people check it. The people who make it, and the people who use it, like you, need to test the results."
+    },
+    {
+      "slide": 11,
+      "heading": "A prediction might be wrong",
+      "narration": "Here's something to remember. A prediction might be wrong. Sounding sure does not prove an answer is right. So check important things by comparing them with a trusted book, website or a grown-up who knows about it. And look for missing details, because an answer can sound helpful and still leave something out. Later in the course, you'll practise checking AI answers like a detective."
+    },
+    {
+      "slide": 12,
+      "heading": "Instrument Check",
+      "narration": "Instrument Check, Navigators. What kind of machine are we calling AI? Think about examples, patterns and predictions. Then say your answer out loud. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 13,
+      "heading": "Instrument Check: answer",
+      "narration": "Here's the answer. AI is a fast pattern guesser. Examples help the model learn patterns during training. A new input, like a new picture, gives the trained model something to work on. And the prediction it makes is an answer to check, not proof that it's true. How did you go?"
+    },
+    {
+      "slide": 14,
+      "heading": "Where is AI hiding?",
+      "narration": "So, where is AI hiding? Maybe in your home! A phone can predict the next word you might type. A camera can find the faces in a picture. A video app suggests videos you might like to watch. And a smart speaker recognises the words someone says. [curious] Do any of these look familiar?"
+    },
+    {
+      "slide": 15,
+      "heading": "The tool and its task",
+      "narration": "When you spot a tool, ask one question: what is this feature working out? Predictive typing uses the words you've already typed to suggest another word. Video suggestions use clues, like what you've watched before, to suggest more to watch. And voice recognition turns the patterns in recorded sound into words it recognises."
+    },
+    {
+      "slide": 16,
+      "heading": "A useful distinction",
+      "narration": "Here's a handy thing to know. Not every digital device uses AI. A basic timer just follows the time you set, and rings when the time runs out. No guessing at all. A word suggestion is different. It uses learned patterns to predict what might come next. So on your AI Hunt, look for a particular feature, and if you're not sure, ask a grown-up."
+    },
+    {
+      "slide": 17,
+      "heading": "Captain's Tip: you decide",
+      "narration": "Captain's Tip, Navigators. You decide. [warmly] Think of it like flying a plane. You're the captain. You choose the goal, give the instructions and decide what to use. AI is there to help. It works with what you give it and suggests a result. But you are still responsible for your choice."
+    },
+    {
+      "slide": 18,
+      "heading": "Our course rules",
+      "narration": "Before our mission, here are our course rules. A grown-up supports your learning. When we do chatbot activities, a grown-up does the typing and talking with the chatbot. And this week, we don't use a chatbot at all. Keep names, addresses, passwords and private photos out of anything you type into AI. And if you have feelings or worries, talk to someone you trust."
+    },
+    {
+      "slide": 19,
+      "heading": "Mission: The AI Hunt",
+      "narration": "Now for your mission: The AI Hunt! There are four steps. One, find. Explore with your grown-up and find three possible examples. Two, draw. Sketch each device, or write its name. Three, ask. What is the feature predicting or recognising? And four, record. Add your explanation to your Flight Log."
+    },
+    {
+      "slide": 20,
+      "heading": "Your Flight Log",
+      "narration": "Here's how a Flight Log entry might look. Remember to write down the feature, not just the device. Device: phone. Feature: the suggestions above the keyboard. My explanation: it is guessing which word I might type next. See? The feature is the part doing the guessing."
+    },
+    {
+      "slide": 21,
+      "heading": "Mission pause",
+      "narration": "Time to pause the video and explore. Take your Flight Log, a pencil and your grown-up. Give yourself about ten minutes, or take longer if you need it. There's no rush. When you're ready, come back to the lesson and share what you found. Happy hunting, Navigators! [pause]"
+    },
+    {
+      "slide": 22,
+      "heading": "Welcome back, Navigators",
+      "narration": "Welcome back, Navigators! So, what did you find? Show your grown-up an example, and name the device and the feature you noticed. Then explain the guess. Tell your grown-up what the tool predicts or recognises. Not sure about something? Write a question mark. [warmly] Checking is part of learning."
+    },
+    {
+      "slide": 23,
+      "heading": "Oops! Moment",
+      "narration": "Oops! Moment. Have you ever heard AI say \"I think\"? Why would it say that? Well, language tools learn patterns from human writing, and people write that phrase all the time. It sounds human, but using those words does not give a tool human feelings. So remember the difference. Treat what it says as a computer's answer to think about."
+    },
+    {
+      "slide": 24,
+      "heading": "Remember Rhyme",
+      "narration": "Here's a rhyme to help you remember. AI's a guesser, fast and clever. Now say this part together: A person? No, not ever. One more time, all the way through. AI's a guesser, fast and clever. A person? No, not ever."
+    },
+    {
+      "slide": 25,
+      "heading": "Quick Check 1",
+      "narration": "Quick Check one. What does the A in AI stand for? Say the word, and explain what it means. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 26,
+      "heading": "Quick Check 1: answer",
+      "narration": "The answer is artificial. Artificial means made by people. Remember, AI is a tool built by people. Put it together, and AI stands for artificial intelligence. Did you get it? Give yourself a thumbs up."
+    },
+    {
+      "slide": 27,
+      "heading": "Quick Check 2",
+      "narration": "Quick Check two. How does this kind of AI learn? Think back to the pictures, words and sounds we looked at. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 28,
+      "heading": "Quick Check 2: answer",
+      "narration": "Here's the answer. It learns patterns from examples. During training, examples help the computer build a model. Then, when we use the model, a new input leads to a prediction. Nicely done, Navigators."
+    },
+    {
+      "slide": 29,
+      "heading": "Quick Check 3",
+      "narration": "Quick Check three. Is AI always right? Choose your answer, then explain why you chose it. Pause the video and talk it over with your grown-up. [pause]"
+    },
+    {
+      "slide": 30,
+      "heading": "Quick Check 3: answer",
+      "narration": "The answer is no. A prediction might be wrong. So what helps? Checking important answers with a trusted source. And who helps? [warmly] Your grown-up. Ask them whenever you're unsure."
+    },
+    {
+      "slide": 31,
+      "heading": "Ground School Begins",
+      "narration": "Well done, Navigators. That's your first Flight Log stamp! You learned that AI uses patterns to make predictions, and that people check the results. You explored everyday tools and the features they use to predict or recognise things. Next week: Talking to AI Safely, with clear instructions and private information. See you then."
+    }
+  ]
+}

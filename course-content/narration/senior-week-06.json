@@ -1,0 +1,237 @@
+{
+  "course": "senior",
+  "week": 6,
+  "title": "Week 6: AI-Assisted Storytelling and Media",
+  "slides": [
+    {
+      "slide": 1,
+      "heading": "Senior AI Pilots, Week 6: AI-Assisted Storytelling and Media",
+      "narration": "[warmly] Welcome back to Ground School. I'm Captain Naomi, and this is Week 6: AI-assisted storytelling and media. This week you'll design a story where the reader gets to choose the route, and you'll work out exactly where AI fits in, and where it doesn't. Buckle in."
+    },
+    {
+      "slide": 2,
+      "heading": "Mission Brief",
+      "narration": "Here's the mission brief, and it comes down to one idea: keep the creative decisions visible. First, design. You'll plan a branching story with meaningful choices. Second, use AI selectively, for brainstorming, for challenging your plan, and for requesting editing notes. Third, disclose. When you're done, you explain exactly how AI contributed to your story."
+    },
+    {
+      "slide": 3,
+      "heading": "The Hook",
+      "narration": "Start with this. A polished story is not automatically your story. Picture a generic request: \"Write a story about a dragon.\" You'd get something back, probably quite smooth. So ask yourself, who chose the character? The conflict? The ending? If the honest answer is the tool, that's a problem. Your role this week is to develop decisions you can explain, and passages you actually wrote."
+    },
+    {
+      "slide": 4,
+      "heading": "What is a branching story?",
+      "narration": "So, what is a branching story? It's one where the reader's choices change the route. Three terms to know. A passage is a section of the story with its own identifier, like a letter or a number. A choice is an action or decision that sends the reader somewhere else. And a consequence is something that changes because of that choice. If nothing changes, it wasn't really a choice."
+    },
+    {
+      "slide": 5,
+      "heading": "Meaningful choices",
+      "narration": "A meaningful choice connects the decision to the story. Run three checks on every one. Character: does the choice show a value, a fear or a priority? Consequence: does it change information, relationships or the ending? Expectation: does the reader understand enough to actually make a decision, or are they just guessing?"
+    },
+    {
+      "slide": 6,
+      "heading": "Improve a choice",
+      "narration": "Here's a weak choice, without context: \"Left or right?\" And here's a stronger one, with stakes: \"Share the evidence now, or first check whether it's authentic?\" [short pause] To be fair to left and right, a direction choice can work when the story gives the directions meaning. The problem is consequence and context, not the words themselves."
+    },
+    {
+      "slide": 7,
+      "heading": "A worked story premise",
+      "narration": "Let's work through an example premise called The Observatory Message. The setting: a student team helps prepare a local observatory exhibition. The discovery: a sealed case contains a message that conflicts with the exhibit notes. And the decision: do they verify the evidence, consult someone, or publish too early? Every one of those options can lead somewhere different."
+    },
+    {
+      "slide": 8,
+      "heading": "A complete nine-passage map",
+      "narration": "Here's the whole route mapped out. It starts at S, the opening. From there the reader picks A, check the record, or B, ask the curator. A leads to C, find the date, or D, inspect the photo. B leads to E, seek a source, or F, publish too soon. C and E end at G, a verified exhibit. D and F end at H, a correction issued. That's nine passages: one opening, two decision passages, four scenes and two endings."
+    },
+    {
+      "slide": 9,
+      "heading": "Make every link explicit",
+      "narration": "Now write every link down as a table. Passage S goes to A or B, and its job is choosing an investigation approach. A goes to C or D, and B goes to E or F. Their job is a decision with consequences. C and E both go to G, completing the verification. D and F both go to H, where someone discovers and corrects a mistaken claim. No link left to memory."
+    },
+    {
+      "slide": 10,
+      "heading": "Keep the scope manageable",
+      "narration": "Keep the scope manageable, and plan the whole route before you write a word. The suggested target is the worked map, with nine passages. The Home Lab minimum is at least six written passages, so a smaller map is perfectly acceptable. But there's one completion rule you can't skip: every choice you offer must lead to a written passage or an ending. No dead links."
+    },
+    {
+      "slide": 11,
+      "heading": "The Creative Control Ladder",
+      "narration": "Now for where AI fits. Think of it as the Creative Control Ladder, with three rungs. Brainstorm: request options, then you choose, combine or reject them. Challenge: ask for criticism of your plan. Edit: request notes on your own draft. Notice that at every rung, you're the one holding the pen."
+    },
+    {
+      "slide": 12,
+      "heading": "1. Brainstorm",
+      "narration": "Rung one, brainstorm. Use suggestions as starting points, not finished ideas. Request options, say ten premises or settings. Then exercise judgement: reject at least seven, and explain why. Finally, develop your own version. Combine two of the remaining ideas and make substantial creative choices of your own, so the result is clearly yours."
+    },
+    {
+      "slide": 13,
+      "heading": "A brainstorm prompt",
+      "narration": "Here's what a brainstorm prompt might look like. \"Give me ten unusual premises for a short mystery aimed at readers my age, one sentence per premise. Avoid graphic content. Do not write the story.\" That last line matters. Change the genre or setting to suit your own project, and review every suggestion before you use it."
+    },
+    {
+      "slide": 14,
+      "heading": "2. Challenge",
+      "narration": "Rung two, challenge. Ask for weaknesses before you start drafting, while changes are still cheap. On plot: which choice has no meaningful consequence? On structure: is an ending unreachable, or is a route missing? Then comes judgement, and that part is yours. You decide whether the criticism actually fits the story you're trying to tell."
+    },
+    {
+      "slide": 15,
+      "heading": "A challenge prompt",
+      "narration": "A challenge prompt could sound like this. \"Here is my branching map and premise. Identify unclear motivations, predictable choices and missing consequences. Give notes only. Do not rewrite or add passages.\" When the notes come back, check them against your actual map. A tool can overlook real errors, or invent problems that aren't there."
+    },
+    {
+      "slide": 16,
+      "heading": "3. Edit",
+      "narration": "Rung three, edit. The order matters here: write first, then request feedback. Your draft comes first, the passage in your own words. Then your request: ask what works and what is unclear. Then your revision, where you choose which notes to accept, which to reject, and which to adapt."
+    },
+    {
+      "slide": 17,
+      "heading": "Pilot's Tip: notes, not rewrites",
+      "narration": "Pilot's tip: notes, not rewrites. Try a request like this. \"What is working in this passage? What is unclear? Give three editing notes. Do not rewrite it.\" That instruction states your intention, but it doesn't guarantee anything. Check whether the tool actually follows it, and keep the actual wording decisions yours."
+    },
+    {
+      "slide": 18,
+      "heading": "Keep a decision log",
+      "narration": "Keep a decision log, so you can show what you did with the suggestions. For each one, save the suggestion, meaning the relevant idea or note. Record your decision: accepted, changed or rejected, with a reason. And record the result, the passage or choice you revised. It takes a few minutes and it makes your process visible."
+    },
+    {
+      "slide": 19,
+      "heading": "A process-log template",
+      "narration": "Here's a simple process-log template with three columns: the stage, the AI suggestion or other help, and your decision and reason. At the brainstorm stage, record the suggestion and what you changed or rejected. At the challenge stage, record a plot note and your response. At the edit stage, record a feedback point and your own revision."
+    },
+    {
+      "slide": 20,
+      "heading": "The replacement risk",
+      "narration": "Now, the replacement risk. Pasting in a full story bypasses this whole learning task. This course asks you to choose the plot and write the passages yourself. If a tool rewrites something, don't treat its wording as your unaided draft. And if you do use generated material, describe that contribution honestly and follow the assignment rules."
+    },
+    {
+      "slide": 21,
+      "heading": "An editable passage plan",
+      "narration": "Here's a plan you can use for each passage. Passage ID and purpose: where does this scene sit, and what changes? What the reader learns: enough context to understand the choice. Your draft: the scene, written in your own voice. Choices and destinations: label each action and the passage it leads to. For an ending, state the outcome, and only offer a restart if your format supports it."
+    },
+    {
+      "slide": 22,
+      "heading": "Write consequences into the scene",
+      "narration": "Don't rely on the map alone. Write the consequences into the scene itself. Before the choice, give the reader relevant information. After the choice, show what changed because of the action. And at the ending, connect the outcome back to the earlier decisions, so the reader can see how they got there."
+    },
+    {
+      "slide": 23,
+      "heading": "Choose a build format",
+      "narration": "Time to choose a build format. Use the simplest one that supports your story. Twine is a free, open-source tool for interactive, nonlinear stories. Other options include Scratch, slides with links, or numbered paper pages. Whatever you pick, keep a saved copy, and test every destination."
+    },
+    {
+      "slide": 24,
+      "heading": "Paper works too",
+      "narration": "And yes, paper works too. Number each passage and link by page. Each choice tells the reader where to go, like \"To check the photo, go to Passage D.\" Each destination must exist and match its label. Then test it: read every route without relying on the author, that's you, to explain anything."
+    },
+    {
+      "slide": 25,
+      "heading": "Images and media",
+      "narration": "Now images and media. Use visuals that serve the story. Original options are great: your own drawings, simple shapes, or photos of objects. On permissions, use material you made yourself or have permission to use. And on account rules, a parent checks image-feature eligibility before any AI-media activity."
+    },
+    {
+      "slide": 26,
+      "heading": "Copyright and disclosure are separate",
+      "narration": "Copyright and disclosure are two separate things. Saying who helped does not give you permission to use something. So keep records: your drafts, sources, licences and creative decisions. Check the conditions, and follow assignment, competition and platform rules. And avoid shortcuts. Changing a fixed number of details does not guarantee ownership or clearance."
+    },
+    {
+      "slide": 27,
+      "heading": "Specific disclosure",
+      "narration": "Disclosure should be specific. Describe what AI actually did. Name the contribution, whether that was brainstorming, feedback, generated wording or another role. Describe your own work: what you selected, changed, wrote and drew. And use accurate language. Don't claim all the writing or art is yours if some of it was generated."
+    },
+    {
+      "slide": 28,
+      "heading": "Disclosure example: ideas and notes",
+      "narration": "Here's one example of a disclosure. \"AI use: I used an AI tool to suggest settings and give editing notes on Passage E. I selected and changed the setting, wrote every passage and created the artwork.\" Only use wording like that when it accurately describes your process. And if the assignment requires it, name the actual tool."
+    },
+    {
+      "slide": 29,
+      "heading": "Disclosure example: generated wording retained",
+      "narration": "Here's another, for when generated wording stays in. \"AI use: I used an AI tool for brainstorming and retained one generated sentence in Passage D. I wrote the remaining text and created the artwork. My log identifies the sentence and my revisions.\" Keep in mind, this disclosure does not override school rules. If generated wording is prohibited, remove it and complete the required work yourself."
+    },
+    {
+      "slide": 30,
+      "heading": "Try It Now",
+      "narration": "Your turn. Try it now, and choose ideas deliberately. Generate or invent ten premises in a suitable genre. Reject at least seven, with brief reasons. Then combine two of the remaining ideas into a premise you actually want to write. Pause the video and give it a go. [pause]"
+    },
+    {
+      "slide": 31,
+      "heading": "No-chatbot option",
+      "narration": "Not using a chatbot? No problem. Make your own idea list. Your sources can be your imagination, a family discussion, or a permitted writing prompt. You still make the same decisions: reject, combine and develop. And keep an honest record. If no AI was used, say so, and acknowledge any human help you had."
+    },
+    {
+      "slide": 32,
+      "heading": "Playtest with another reader",
+      "narration": "Once it's built, playtest with another reader, and watch what they do. Before starting, ask them to follow the choices without any explanations from you. While they read, observe: look for confusing wording, dead ends and unexpected routes. Afterwards, ask them which choice mattered most, and why."
+    },
+    {
+      "slide": 33,
+      "heading": "Your playtest checklist",
+      "narration": "Here's your playtest checklist. Links: every destination exists. Mark that pass or revise. Routes: every route reaches an intended ending. Again, pass or revise. Choices: the consequences match the stated action. Record the reader's notes. Readability: the reader understands without coaching. Record their notes on that too."
+    },
+    {
+      "slide": 34,
+      "heading": "Revise one issue, then test again",
+      "narration": "When something goes wrong, revise one issue, then test again. The aim is to separate what you intended from what the reader actually experienced. Identify the specific confusion or broken link. Change the wording, the information or a destination. Then verify: check the affected route and any shared passages, because one fix can ripple."
+    },
+    {
+      "slide": 35,
+      "heading": "Common Turbulence: polished but generic",
+      "narration": "Common turbulence: writing that's polished but generic. Choose details that belong to your story. Look for vague descriptions and stock phrases without a clear purpose. Ask yourself, what would this character notice, or choose? Then revise it yourself. Use any feedback as notes, and write the new line in your own words."
+    },
+    {
+      "slide": 36,
+      "heading": "Memory Hook",
+      "narration": "Here's your memory hook. Brainstorm. Challenge. Edit. For this assignment, keep the writing and the creative choices yours. And for honesty, disclose the help you actually used."
+    },
+    {
+      "slide": 37,
+      "heading": "Pre-Landing Check 1",
+      "narration": "Pre-landing check one. What makes a branching choice meaningful? Here's a hint: think character and consequence. Pause the video and work out your answer before we go on. [pause]"
+    },
+    {
+      "slide": 38,
+      "heading": "Check 1: answer",
+      "narration": "Here's the answer. A meaningful choice reveals character or changes the outcome. The context gives the reader a reason to choose. And the consequence makes that decision matter later in the story."
+    },
+    {
+      "slide": 39,
+      "heading": "Pre-Landing Check 2",
+      "narration": "Pre-landing check two. What instruction requests editing feedback? Or put another way, how do you keep a suggestion from becoming an unwanted rewrite? Pause the video and think it through. [pause]"
+    },
+    {
+      "slide": 40,
+      "heading": "Check 2: answer",
+      "narration": "The answer: notes, not rewrites. Then, check the tool actually followed your request. And the decision is yours. Accept, change or reject the notes, and revise the text yourself."
+    },
+    {
+      "slide": 41,
+      "heading": "Pre-Landing Check 3",
+      "narration": "Pre-landing check three, reaching back to Week 5. Name one route for bias. How could a generative output carry an assumption? Pause the video and see what you remember. [pause]"
+    },
+    {
+      "slide": 42,
+      "heading": "Check 3: answer",
+      "narration": "The answer: data, labels or deployment. Here's one example. Patterns in training data can contribute to stereotyped descriptions. But a word of caution. A single output does not prove the cause of a bias, or how often it happens."
+    },
+    {
+      "slide": 43,
+      "heading": "Home Lab: Build a Branching Story",
+      "narration": "Now for your Home Lab: build a branching story, in four steps. One, plan: your premise, a complete map and meaningful choices. Two, write: at least six passages in a complete smaller story, or the nine-passage example structure. Three, review and build: for two passages, request notes or human feedback, then build the links. Four, test and disclose: playtest every route, revise, and write a specific disclosure. Allow sixty to ninety minutes, or split it over sessions, and keep your drafts, decisions and source records."
+    },
+    {
+      "slide": 44,
+      "heading": "Project Log: Entry 6",
+      "narration": "Project log, entry six. Show the process and the finished routes. In the lesson, save your map, two drafted passages and a draft disclosure. For the Home Lab, complete at least six passages and every route you offer. Then add your evidence: your decision log, playtest notes, revisions and final disclosure."
+    },
+    {
+      "slide": 45,
+      "heading": "Parent & Guardian Brief",
+      "narration": "This one's for your parent or guardian: supporting creative judgement and safe access. Access: use age-appropriate accounts under the Week 1 rules. Media: review permissions and feature eligibility, and original art is always welcome. And something to discuss together: which choices and passages did you create, and what help should be credited?"
+    },
+    {
+      "slide": 46,
+      "heading": "Ready for Week 7",
+      "narration": "That's a wrap on Week 6. You planned, wrote, tested and disclosed a branching story. Next week is human-centred design, where you'll investigate a person's needs before proposing a solution. Until then, keep the habit. Your choices. Your revision. An honest record. [warmly] See you next week, pilots."
+    }
+  ]
+}
